@@ -1,0 +1,20 @@
+- title: "EE-322 Electrical Engineering Lab II — Final Portfolio"
+  summary: "MOSFET analog circuit labs with LTspice simulations and Python-based analysis."
+  tags:
+    - Analog
+    - MOSFETs
+    - LTspice
+    - Python
+  view: "https://spkhz.github.io/EE-322-Electrical-Engineering-Lab-II--Final-Portfolio/"
+  source: "https://github.com/SPkHz/EE-322-Electrical-Engineering-Lab-II--Final-Portfolio"
+  pdf: "" # TODO: add a stable PDF link
+  featured: true
+
+# Template for new entries:
+# - title: "..."
+#   summary: "..."
+#   tags: [RF, DSP, MATLAB]
+#   view: "https://spkhz.github.io/REPO-NAME/"
+#   source: "https://github.com/SPkHz/REPO-NAME"
+#   pdf: ""
+#   featured: false

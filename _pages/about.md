@@ -2,19 +2,18 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: "RF / DSP / EE — analog circuits, SDR signal processing, and measurement-driven design."
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p><a href="https://github.com/SPkHz">github.com/SPkHz</a></p>
+    <p><a href="https://www.linkedin.com/in/PLACE-LINKEDIN-HERE/">LinkedIn</a></p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false # includes a list of papers marked as "selected={true}"
+social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
@@ -27,8 +26,64 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I build and document engineering projects end-to-end: design intent, simulation, measurements, and the writeup (usually LaTeX + a compiled PDF).
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+<div class="d-flex flex-wrap" style="gap: .5rem; margin: 1rem 0 1.25rem 0;">
+  <a class="btn btn-primary btn-sm" href="{{ '/projects/' | relative_url }}">Projects</a>
+  <a class="btn btn-outline-secondary btn-sm" href="https://github.com/SPkHz">GitHub</a>
+  <a class="btn btn-outline-secondary btn-sm" href="https://www.linkedin.com/in/YOUR-LINKEDIN-HERE/">LinkedIn</a>
+  <a class="btn btn-outline-secondary btn-sm" href="{{ '/assets/pdf/Steven_Placzek_Resume.pdf' | relative_url }}">Resume PDF</a>
+</div>
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+## Featured projects
+
+<style>
+.tag {
+  display: inline-block;
+  padding: .15rem .5rem;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 999px;
+  font-size: .8rem;
+  margin: 0 .25rem .25rem 0;
+  color: rgba(0,0,0,.75);
+  background: rgba(0,0,0,.02);
+}
+</style>
+
+{% assign featured = site.data.projects | where: "featured", true %}
+{% if featured.size == 0 %}
+  {% assign featured = site.data.projects | slice: 0, 3 %}
+{% endif %}
+
+<div class="row">
+{% for p in featured %}
+  <div class="col-12 col-md-6 col-lg-4 mb-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">{{ p.title }}</h5>
+        {% if p.summary and p.summary != "" %}
+        <p class="card-text">{{ p.summary }}</p>
+        {% endif %}
+
+        {% if p.tags and p.tags.size > 0 %}
+        <div style="margin: .25rem 0 .75rem 0;">
+          {% for t in p.tags %}
+            <span class="tag">{{ t }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="d-flex flex-wrap" style="gap: .5rem;">
+          {% if p.view and p.view != "" %}<a class="btn btn-sm btn-primary" href="{{ p.view }}">View</a>{% endif %}
+          {% if p.source and p.source != "" %}<a class="btn btn-sm btn-outline-secondary" href="{{ p.source }}">Source</a>{% endif %}
+          {% if p.pdf and p.pdf != "" %}<a class="btn btn-sm btn-outline-secondary" href="{{ p.pdf }}">PDF</a>{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+
+<p style="margin-top:.75rem;">
+  Full list: <a href="{{ '/projects/' | relative_url }}">Projects</a>
+</p>

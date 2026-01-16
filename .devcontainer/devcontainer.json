@@ -21,7 +21,6 @@
   },
   "remoteUser": "vscode",
   "mounts": [
-    "source=profile,target=/home/vscode,type=volume,U",
     "target=/home/vscode/.vscode-server,type=volume,U"
   ]
 }

@@ -8,6 +8,7 @@
     "ghcr.io/devcontainers-extra/features/prettier:1.0.2": {}
   },
   "postAttachCommand": "./bin/entry_point.sh",
+  "postCreateCommand": "cp .devcontainer/.gitconfig ~/.gitconfig",
   "customizations": {
     "vscode": {
       "extensions": ["esbenp.prettier-vscode", "sissel.shopify-liquid", "yzhang.markdown-all-in-one"],

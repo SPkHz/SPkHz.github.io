@@ -20,7 +20,9 @@
     }
   },
   "remoteUser": "vscode",
+  "initializeCommand": "docker volume inspect vscode-server-SPkHz >/dev/null 2>&1 || docker volume create vscode-server-SPkHz",
+  "postStartCommand": "chown -R vscode:vscode /home/vscode/.vscode-server || true",
   "mounts": [
-    "source=vscode-server-SPkHz,target=/home/vscode/.vscode-server,type=volume,U"
+    "source=vscode-server-SPkHz,target=/home/vscode/.vscode-server,type=volume"
   ]
 }

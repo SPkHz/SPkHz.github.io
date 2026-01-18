@@ -1,0 +1,352 @@
+\documentclass[
+	a4paper, % Paper size, use either a4paper or letterpaper
+	10pt, % Default font size, can also use 11pt or 12pt, although this is not recommended
+	% unnumberedsections, % Uncomment to remove section numbering
+	% twoside, % Uncomment to enable two side traditional mode where headers and footers change between odd and even pages
+]{LTJournalArticle}
+
+\addbibresource{bibliography.bib} % BibLaTeX bibliography file
+
+\setcounter{page}{1} % Page number of the first page, set this to a higher number if the article is to be part of a larger publication
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+
+\title{Technical, Economic, and Environmental Analysis of \\ an Optimized Silicon Solar Cell Design} % Article title, max 3 lines recommended
+
+\author{
+     Steven Placzek \hfill \fontsize{9pt}{12pt}\selectfont 
+}
+
+\date{May 8th, 2025}
+
+\renewcommand{\maketitlehookd}{
+	\begin{abstract}
+            \textbf{Abstract:} \textit{This project presents the optimization of a silicon-based solar cell using ANSYS Lumerical Device simulator, with the goal of maximizing power output and efficiency. The design employs a p-type substrate with a resistivity of 1.0 -cm and a 1.5,m n-emitter region doped at . The resulting short circuit current density was , with an open circuit voltage of . The maximum power output reached , yielding a fill factor of  and an overall efficiency of . Design elements include carefully tuned doping profiles, use of an Si$_3$N$_4$ ARC layer, and aluminum front and back contacts. This report also provides a cost estimate, environmental impact evaluation, and discussion of societal benefits.}
+
+        \vspace{0.5cm}
+
+	\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Output the title section
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+The need for sustainable energy sources has driven significant innovation in solar photovoltaic (PV) technologies. Silicon-based solar cells dominate the market due to their maturity, reliability, and balance between cost and efficiency. This design project, conducted as part of the EE-212 Fundamentals of Electro-optics course at Western New England University, involved the optimization of a planar silicon solar cell design using Lumerical DEVICE. The objective was to tune doping levels and layer geometries to maximize power and efficiency within a constrained design space.
+
+\section{Design Overview}
+
+The cell design includes multiple layers which are listed in the following table:
+% \begin{itemize}
+% \item \textbf{Substrate:} 1.0 -cm p-type Si, 100,m thick
+% \item \textbf{N-emitter:} 1.5,m, 
+% \item \textbf{N-contact and P-contact:} 0.3,m, , Al
+% \item \textbf{ARC:} 2.5,m Si$_3$N$_4$
+% \item \textbf{Back contact:} 5,m Al
+% \end{itemize}
+\begin{table}[ht]
+    \caption{Layer structure of the solar cell design.}
+    \centering
+    \begin{tabular}{l l r}
+        \toprule
+        \textbf{Layer} & \textbf{Material} & \textbf{Thickness} \\
+        \midrule
+        Substrate & p-type Si & 100 µm \\
+        N-emitter Width & -- & 1.5 µm \\
+        N-contact and P-contact & Al & 0.3 µm \\
+        Anti-Reflective Coating (ARC) & Si$_3$N$_4$ & 2.5 µm \\
+        Back contact & Al & 5 µm \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:cellstructure}
+\end{table}
+
+
+Geometrical spans were symmetric around the x-y plane, with full cell dimensions being $100$ $\mu m$ by $100$ $\mu m$.
+\par
+The choice of a $1.0$ $\ohm$-cm\textsuperscript{-3} resistivity for the p-type substrate represents a trade-off between achieving a strong built-in electric field and limiting recombination. Higher resistivity substrates can reduce carrier recombination but may impair field strength and fill factor. The selected doping level ($2$ $\times$ $10^{16}$ cm$^{-3}$) ensures adequate field formation while maintaining carrier lifetime.
+
+Highly doped contacts ($1$ $\times$ $10^{18}$ cm$^{-3}$) were chosen to reduce contact resistance and enhance ohmic behavior. The n-emitter was kept at($1$ $\times$ $10^{17}$ cm\textsuperscript{-3}) to strike a balance between efficient carrier collection and minimal surface recombination.
+
+A 1-$\ohm$ series resistance was used to realistically model metallization and contact resistance. This value avoids excessive IR losses while still reflecting practical manufacturing conditions, keeping the fill factor above $80$ \% and enabling an efficient power output.
+
+The electric field in the depletion region is governed by the built-in potential \( V_{bi} \), computed using Equation~\ref{eq:Vbi}, which depends on the doping concentrations and intrinsic carrier density. This potential determines the total depletion width (Equation~\ref{eq:depletionwidth}), which in turn controls carrier drift and recombination rates within the junction.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{Adamshick_Report_Template/Figures/Design_Model.png}
+\caption{Design modeled and simulated using ANSYS Lumerical}
+\label{fig:model}
+\end{figure}
+\subsection{\textbf{Device Model}}
+
+The 3D structure shown in Figure~\ref{fig:model} was constructed and simulated using ANSYS Lumerical DEVICE. The platform allows spatial definition of doping regions, material assignments, and mesh control, enabling accurate modeling of internal electric fields, carrier behavior, and recombination. Lumerical's drift-diffusion solver was used under AM1.5 solar spectrum to extract the key JV performance metrics presented in later sections.
+
+\section{Simulation Results}
+\subsection{\textbf{Current-Voltage Plot}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{Cubic_Spline_Fit_vs_Sim_Data_FINAL.png}
+\caption{Cubic spline fit vs. simulated current-voltage data.}
+\label{fig:ivcurve}
+\end{figure}
+
+The blue curve in Figure~\ref{fig:ivcurve} represents the simulated JV characteristics of the device, while the red points show the interpolated spline fit. This highlights the near-constant short-circuit current density up to approximately $0.45$ $V$, beyond which recombination dominates. The shape of the curve reflects efficient charge separation and low series resistance.
+
+\subsection{\textbf{Power Density Plot}}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{Adamshick_Report_Template/Figures/Power_Density_of_Cubic_Spline_Fit_v9.png}
+\caption{Power density of cubic spline fit.}
+\label{fig:powercurve}
+\end{figure}
+
+Figure~\ref{fig:powercurve} plots the product of current density and voltage, showing a peak power output of 16.08 mW/cm$^2$. The maximum occurs around the knee of the IV curve, indicating optimal balance between voltage and current. This value directly correlates with efficiency and validates the design's performance under standard illumination.
+
+\subsection{\textbf{Electrical Performance Metrics}}
+
+\begin{table}[H]
+\caption{Electrical performance metrics of the solar cell.}
+\centering
+\begin{tabular}{l r l}
+\toprule
+\textbf{Parameter} & \textbf{Value} & \textbf{Units} \\
+\midrule
+Wafer Type & 1.0 & \ohm-cm\textsuperscript{-3} \\
+Short Circuit Current Density ($P_D$) & 34.5 & mA/cm$^2$ \\
+Open Circuit Voltage ($V_o$) & 0.56 & V \\
+Maximum Power Density ($P$) & 16.08 & mW/cm$^2$ \\
+Fill Factor ($FF$) & 83.3 & \% \\
+Efficiency & 16.08 & \% \\
+\bottomrule
+\end{tabular}
+\label{tab:electricalmetrics}
+\end{table}
+
+The power conversion efficiency, calculated using Equation~\ref{eq:efficiency}, confirms the device's ability to extract electrical energy from light with minimal losses.
+
+\section{Economic Analysis}
+
+This design used a moderate-resistivity wafer (1.0~$\Omega$-cm), a single junction, and a minimal number of implant steps (n-emitter and two contacts). The estimated cost breakdown\footnotemark is shown in table 3.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l r l}
+        \toprule
+        \textbf{Cost Component} & \textbf{Cost} & \textbf{Units} \\
+        \midrule
+        Wafer Cost & \$0.60 & USD \\
+        Doping/Implant Steps & \$0.30 & USD \\
+        ARC Deposition & \$0.20 & USD \\
+        Materialization (Al) & \$0.10 & USD \\
+        \textbf{Total Estimated Cost} & \$1.20 & USD/ m$^2$ \\
+        \textbf{Projected per Watt Cost} & \$0.075 & USD/W \\
+        Efficiency Reference & 16.08 & mW/cm$^2$ \\
+        \bottomrule
+    \end{tabular}
+    \caption{Cost breakdown \& projected cost per watt.}
+    \label{tab:costbreakdown}
+\end{table}
+\footnotetext{The projected per watt cost is based on the simulated maximum power density of 16.08 mW/cm$^2$ (i.e., 160.8 W/m$^2$). At a total manufacturing cost of \$0.012/m$^2$, the resulting cost per watt is approximately \$0.075/W.}
+
+A thorough economic assessment of the proposed solar cell design was conducted to evaluate its feasibility for residential implementation. The analysis considers both the energy output and the cost-effectiveness of the cell when deployed in standard solar modules.
+
+\subsection*{Energy Offset Calculation}
+
+To determine the number of solar modules required to fully offset the energy usage of a typical 2000 sq.ft. home (consuming approximately 1000 kWh per month), the following analysis was performed:
+
+\begin{enumerate}
+    \item \textbf{Daily Energy Requirement:}
+    \[
+    \frac{1000\ \text{kWh}}{30\ \text{days}} \approx 33.3\ \text{kWh/day}
+    \]
+    
+    \item \textbf{Power Output per Module:}
+    \begin{itemize}
+        \item Power density of design: 16.08 mW/cm\textsuperscript{2} = 160.8 W/m\textsuperscript{2}
+        \item Each cell has area: 156 mm $\times$ 156 mm = 0.0243 m\textsuperscript{2}
+        \item Total module area (60 cells): 
+        \[
+        60 \times 0.0243 = 1.458\ \text{m}^2
+        \]
+        \item Power per module:
+        \[
+        160.8\ \text{W/m}^2 \times 1.458\ \text{m}^2 = 234.6\ \text{W}
+        \]
+    \end{itemize}
+
+    \item \textbf{Daily Energy Production per Module:}
+    \[
+    234.6\ \text{W} \times 5\ \text{hours/day} = 1.173\ \text{kWh/day/module}
+    \]
+
+    \item \textbf{Number of Modules Required:}
+    \[
+    \frac{33.3\ \text{kWh/day}}{1.173\ \text{kWh/day/module}} \approx 28.4
+    \]
+
+    \item \textbf{Conclusion:} Approximately \textbf{29 solar modules} based on this design are required to offset a household consuming 1000 kWh/month.
+\end{enumerate}
+
+\subsection*{\textbf{Cost Projection and Viability}}
+
+Assuming a manufacturing cost of \$0.075/Watt for this design (as previously estimated), and using the calculated output per module (234.6 W), the estimated cost per module is:
+
+\[
+234.6\ \text{W} \times 0.075\ \text{\$/W} = \$17.60\ \text{per module}
+\]
+
+Thus, the total module cost to fully power a household is:
+
+\[
+29 \times \$17.60 \approx \$510.40
+\]
+
+This figure represents only the module manufacturing cost and does not include installation, inverter, mounting hardware, or labor. However, even with these added, the projected total system cost would be substantially lower than commercial installations that typically range from \$2.50–\$4.00 per Watt.
+
+This represents the cost of fabricating the solar cells alone. It does not include additional system costs such as module assembly, inverters, mounting hardware, wiring, installation labor, or permitting fees.
+
+To estimate a more realistic system cost, we reference industry data indicating an average residential solar installation cost of approximately \$3.13 per watt in Massachusetts\cite{mass_solar_cost2025}. This results in a total system installation cost of:
+\[
+6,804\ \text{W} \times \$3.13/\text{W} = \$21,308.52
+\]
+
+After applying the 30\% Federal Investment Tax Credit (ITC), the net cost is:
+\[
+\$21,308.52 \times 0.30 = \$6,392.56
+\]
+\[
+\$21,308.52 - \$6,392.56 = \$14,915.96
+\]
+
+Thus, the estimated \textbf{installed system cost} after the federal tax credit is approximately \textbf{\$14,915.96}, which is consistent with current market expectations for residential photovoltaic systems.
+
+
+
+
+
+\subsection{\textbf{Economic and Social Impacts}}
+
+This design presents a viable path to reducing energy costs for homeowners, especially in regions with high utility rates. With a cost-per-watt significantly below market average and materials that are environmentally abundant (Si and Al), the technology supports both economic feasibility and sustainability. Socially, the adoption of such systems could reduce energy poverty, decentralize grid dependence, and support climate resilience goals in working-class communities.
+
+\par
+These cost estimates position the design competitively against utility-scale photovoltaic benchmarks. According to Zafoschnig et al. report manufacturing costs for commercial silicon PV modules at approximately \$42.70/m\textsuperscript{2}, translating to \$0.22–\$0.27/W at 19–22\% efficiency under utility deployment scenarios~\cite{zafoschnig2020race}. In contrast, the projected cost of \$0.075/W for this design demonstrates the economic viability of simplified, single-junction silicon cells at smaller production scales.
+
+While high-efficiency tandem technologies (e.g., perovskite/silicon) are gaining traction, the reliability, low cost, and straightforward fabrication of crystalline silicon continue to make it the most practical choice in the near term—especially for modest-scale and decentralized applications. This design further distinguishes itself through minimal material requirements: it avoids rare or supply-constrained elements such as silver or indium, instead using widely available aluminum and silicon.
+
+As the solar industry moves toward the 1 Tera-Watt production milestone, economies of scale are expected to reduce manufacturing costs to \$0.16–\$0.18/W. The simplicity and low material overhead of this architecture make it particularly suitable for distributed manufacturing environments, including microgrids and emergency relief infrastructure.
+
+This solar cell design contributes meaningfully to the broader transition away from fossil fuels by leveraging abundant, non-toxic materials and a low-complexity fabrication process. By avoiding rare or geopolitically constrained elements like silver and indium, this design supports more equitable access to solar manufacturing, especially in decentralized and resource-constrained environments. Its simplicity makes it ideal for small-scale, community-based deployments such as microgrids, rural electrification, and disaster-relief infrastructure—contexts where complex supply chains or expensive capital equipment are infeasible.
+
+The democratization of energy access enabled by affordable solar solutions has well-documented social benefits, including reduced household energy expenses, improved resilience to grid instability, and expanded opportunities for education and commerce in remote areas. Ogunrinde et al. emphasize that the growth of renewable energy infrastructure improves societal welfare, particularly when paired with supportive policy instruments such as renewable portfolio standards (RPS)~\cite{ogunrinde2018investing}. Even in regions with limited political or financial support, solar technology has proven its capacity to catalyze inclusive development by enhancing environmental stewardship and public health through reduced air pollution and greenhouse gas emissions.
+
+\section{Sustainability Discussion}
+
+Crystalline silicon solar cells remain among the most sustainable photovoltaic technologies due to their long service life (20–30+ years), mature recycling pathways, and the absence of toxic heavy metals like cadmium or lead. This design further enhances sustainability by minimizing the material footprint and avoiding scarce or hazardous substances. The use of Si$_3$N$_4$ as an anti-reflective coating (ARC) improves optical performance without introducing environmental risk, contributing to higher power output per gram of material consumed.
+
+From a life cycle perspective, the environmental impacts of this design are significantly lower than many thin-film or tandem alternatives, which often involve toxic precursors or complex end-of-life treatment. Furthermore, Zafoschnig et al. note that while tandem technologies offer future efficiency gains, their cost and complexity currently limit their advantage to specific residential contexts~\cite{zafoschnig2020race}. In contrast, this single-junction approach provides a lower barrier to adoption and faster scalability, which is crucial as the solar industry accelerates toward the 1 TWp deployment threshold.
+
+Importantly, the design aligns well with circular economy principles: it can be manufactured with common equipment, its materials are readily separable for recycling, and its operational efficiency supports a favorable energy return on investment (EROI). As global learning rates continue to drive down solar module costs, designs like this—grounded in accessibility, material efficiency, and operational longevity—will remain vital to achieving climate mitigation goals with minimal ecological trade-offs.
+
+\section{Conclusion}
+
+This project demonstrates that a carefully optimized, single-junction silicon solar cell can deliver strong performance while remaining cost-effective and environmentally sustainable. Using standard fabrication processes and accessible materials such as aluminum and silicon, the cell achieves a short-circuit current density of $34.5$ mA/cm\textsuperscript{2}, an open-circuit voltage of $0.56$ V, and a fill factor of $83.3$\%, resulting in a total efficiency of $16.08$ \%, as determined via Equation~\ref{eq:efficiency}.
+ These metrics reflect a well-balanced trade-off between doping levels, junction depth, and optical enhancement using an Si$_3$N$_4$ anti-reflective coating.
+
+Economically, the design is competitive even against industrial benchmarks. With a projected cost of \$$0.075/W$, it significantly undercuts the \$0.22–\$$0.27/W$ manufacturing cost range cited for commercial modules~\cite{zafoschnig2020race}. Its simplified layer stack and avoidance of rare elements enable scalable, decentralized manufacturing in both high- and low-income regions.
+
+From a societal and environmental standpoint, this design aligns with sustainability goals. It minimizes supply-chain risk, supports circular economy principles, and enhances energy access equity. As discussed in Ogunrinde et al.~\cite{ogunrinde2018investing}, solar adoption correlates with broader societal benefits, particularly when coupled with policy mechanisms like RPS.
+
+Looking ahead, further performance gains could be achieved through surface texturing, passivation layers, or tandem architectures. However, this study underscores that even modest-efficiency designs can be economically and socially impactful when optimized holistically. As the industry scales toward terawatt-level deployment, innovations that prioritize simplicity, reliability, and inclusivity—like this one—will remain crucial to meeting global clean energy targets.
+
+
+\subsection{\textbf{Equations}}
+
+\begin{equation}
+V_{bi} = \frac{k_B T}{q} \ln\left(\frac{N_a N_d}{n_i^2}\right)
+\label{eq:Vbi}
+\end{equation}
+
+\begin{equation}
+W = \sqrt{ \frac{2 \varepsilon_r \varepsilon_0 V_j}{q} \left( \frac{1}{N_a} + \frac{1}{N_d} \right) }
+\label{eq:depletionwidth}
+\end{equation}
+
+\begin{equation}
+n_0 p_0 = n_i^2
+\label{eq:massaction}
+\end{equation}
+
+\begin{equation}
+\eta = \frac{P_{max}}{P_{in}} = \frac{J_{sc} V_{oc} FF}{P_{in}}
+\label{eq:efficiency}
+\end{equation}
+
+
+% \subsection{Pages}
+% An example of how to include a subsection if necessary.
+
+
+% \section{Figures, Tables, and Equations}
+
+% \subsection{Figures}
+% A sample figure is shown below. Using the labels defined in the figure, the figure can be referenced by like this: Figure \ref{fig:sample} shows a sample figure. The figure number is a clickable link, and remains synchronized regardless of other figures inserted before or after it. Full-width figures are shown on the following page.
+
+% \begin{figure}[h] % Single column figure
+%         \centering
+% 	\includegraphics[width=3cm]{Figures/Picture1.png} % Use [width=\linewidth] for full-column figure width
+% 	\caption{Insert figure caption here}
+% 	\label{fig:sample}
+% \end{figure}
+
+% \subsection{Tables}
+% Similarly, tables can be shown and labeled like figures. Referencing a table using its label: Table \ref{tab:distcounts}.
+
+% \begin{table}[ht] % Single column table
+% 	\caption{Example single column table.}
+% 	\centering
+% 	\begin{tabular}{l l r}
+% 		\toprule
+% 		\multicolumn{2}{c}{Location} \\
+% 		\cmidrule(r){1-2}
+% 		East Distance & West Distance & Count \\
+% 		\midrule
+% 		100km & 200km & 422 \\
+% 		350km & 1000km & 1833 \\
+% 		600km & 1200km & 890 \\
+% 		\bottomrule
+% 	\end{tabular}
+% 	\label{tab:distcounts}
+% \end{table}
+
+
+% \subsection{References}
+% This template utilizes an IEEE-style citation standard, which includes in-text citations, numbered in square brackets, which refer to the full citation listed in the reference list at the end of the paper. The reference list is organized numerically, not alphabetically.
+% To cite a source, first, the source's information should be added to the bibliography.bib file as a new entry. Those sources can then be cited here using the cite function. For example: According to \cite{Smith:2024jd}, this hypothesis is incorrect. This statement requires multiple citations \autocite{Smith:2023qr, Smith:2024jd}. This statement contains an in-text citation, for directly referring to a citation like so: \textcite{Smith:2024jd}.
+
+% %------------------------------------------------
+
+% \section{Conclusion}
+% Example of including a conclusion section
+
+% %----------------------------------------------------------------------------------------
+% %	 REFERENCES
+% %----------------------------------------------------------------------------------------
+
+\printbibliography % Output the bibliography
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

@@ -449,8 +449,8 @@ ninja.data = [{
           description: "Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee302_hearing_aid/";
-            },},{id: "projects-ee-456-microwave-active-circuits-design-project-01",
-          title: 'EE-456 Microwave Active Circuits Design Project 01',
+            },},{id: "projects-15-ghz-ingaas-hemt-amplifier-design",
+          title: '15 GHz InGaAs HEMT Amplifier Design',
           description: "15 GHz InGaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_01_15GHz_GaAs_HEMT_amp/";
@@ -459,6 +459,11 @@ ninja.data = [{
           description: "15 GHz low-noise amplifier matching network design (MGF4941AL). Gain/noise/VSWR trade-space + ADS/MATLAB cross-verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_02_lna_matching_network_for_mgf4941al/";
+            },},{id: "projects-ee-456-microwave-active-circuits-design-project-3",
+          title: 'EE-456 Microwave Active Circuits — Design Project 3',
+          description: "Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee456_design_03_10_ghz_to_20_ghz_chebyshev_synthesis/";
             },},{id: "projects-ee-470-satellite-tracking-servo-control",
           title: 'EE-470 Satellite Tracking Servo Control',
           description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",

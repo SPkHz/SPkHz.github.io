@@ -2,12 +2,12 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Steven Placzek | Electrical Engineer # the website title (if blank, full name will be used instead)
+title: Steven Placzek, Electrical Engineer # the website title (if blank, full name will be used instead)
 first_name: Steven
 middle_name: M.
 last_name: Placzek
 contact_note: "Feel free to reach out to me via email or connect on LinkedIn."
-description: "RF / DSP / EE — analog circuits, SDR signal processing, and measurement-driven design."
+description: "EE / RF / DSP — analog circuits, SDR signal processing, and measurement-driven design."
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -647,7 +647,6 @@ jsonresume:
   - basics
   - work
   - education
-  - publications
   - projects
   - volunteer
   - awards
@@ -656,3 +655,4 @@ jsonresume:
   - languages
   - interests
   - references
+  # - publications

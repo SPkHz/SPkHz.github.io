@@ -454,6 +454,11 @@ ninja.data = [{
           description: "15 GHz InGaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_01_15GHz_GaAs_HEMT_amp/";
+            },},{id: "projects-ee-456-microwave-active-circuits-design-project-02",
+          title: 'EE-456 Microwave Active Circuits — Design Project 02',
+          description: "15 GHz low-noise amplifier matching network design (MGF4941AL). Gain/noise/VSWR trade-space + ADS/MATLAB cross-verification.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee456_design_02_lna_matching_network_for_mgf4941al/";
             },},{id: "projects-ee-470-satellite-tracking-servo-control",
           title: 'EE-470 Satellite Tracking Servo Control',
           description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",

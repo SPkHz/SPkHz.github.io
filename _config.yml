@@ -91,8 +91,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Steven M. Placzek - Electrical Engineering Portfolio # blog_name will be displayed in your blog page
+blog_description: A Portfolio of all my coursework from throughout my time at Western New England University, done while completing my Bachelor's of Science in Electrical Engineering degree, and featuring a variety of different Electrical Engineering Design Projects.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 

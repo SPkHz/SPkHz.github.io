@@ -9,7 +9,7 @@ related_publications: false
 ---
 
 This project designs a **personalized “virtual hearing aid” audio equalizer** using **FIR filter-banks**. Given a user audiogram (hearing loss vs. frequency), the goal is to generate a composite FIR response that **adds frequency-dependent gain** to counteract the loss—ideally pulling the effective response back toward **0 dB** across the audible band of interest (0–10 kHz at **fs = 20 kHz**).
-
+**Course:** EE-302 - Introduction to Digital Signal Processing 
 **Team:** Steven Placzek, Bryam Garcia Yanza  
 **Tools:** MATLAB (`fir1`, `fir2`, `freqz`, `pwelch`, `audioread`, `audiowrite`)
 

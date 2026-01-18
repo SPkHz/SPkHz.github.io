@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-456 Microwave Active Circuits — Design Project 3
+title: Chebyshev Network Synthesis
 description: Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.
 img: assets/img/ee456_dp3/ADS_Schematic_of_Design.png
 importance: 2

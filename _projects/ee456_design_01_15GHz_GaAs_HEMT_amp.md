@@ -9,7 +9,7 @@ related_publications: false
 ---
 
 <!--
-Suggested asset placement (copy from your project zip -> "EE 456 Design Project Placzek PLOTS"):
+asset placement:
 assets/img/ee456/ALL_TRLs_Schematic_ADS.png
 assets/img/ee456/ADS_IMN_SCHEMATIC.png
 assets/img/ee456/ADS_OMN_Schematic.png
@@ -17,7 +17,6 @@ assets/img/ee456/ADS_all_TRL_Simulation.png
 assets/img/ee456/S11.png
 assets/img/ee456/S21.png
 assets/img/ee456/S22.png
-(optional)
 assets/img/ee456/All_Params_vs_Frequency_ADS_ALL_TRLs.png
 -->
 

@@ -429,9 +429,9 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-ee-302-hearing-aid-fir-filter-bank-equalizer",
+          title: 'EE-302 Hearing Aid FIR Filter-Bank Equalizer',
+          description: "Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
@@ -474,6 +474,11 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-ee-302-hearing-aid-fir-filter-bank-equalizer",
+          title: 'EE-302 Hearing Aid FIR Filter-Bank Equalizer',
+          description: "Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee302_hearing_aid/";
             },},{
         id: 'social-cv',
         title: 'CV',

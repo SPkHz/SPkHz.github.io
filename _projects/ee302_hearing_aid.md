@@ -2,7 +2,7 @@
 layout: page
 title: EE-302 Hearing Aid FIR Filter-Bank Equalizer
 description: Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).
-img: /assets/img/ee302/design1/Audiogram__FilterBank_Response_Direct_Sum.png
+img: /assets/img/ee302/design01/Audiogram__FilterBank_Response_Direct_Sum.png
 importance: 1
 category: work
 related_publications: false

@@ -449,8 +449,8 @@ ninja.data = [{
           description: "Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee302_hearing_aid/";
-            },},{id: "projects-ee-456-microwave-active-circuits-design-project-1",
-          title: 'EE-456 Microwave Active Circuits Design Project 1',
+            },},{id: "projects-ee-456-microwave-active-circuits-design-project-01",
+          title: 'EE-456 Microwave Active Circuits Design Project 01',
           description: "15 GHz InGaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_01_15GHz_GaAs_HEMT_amp/";

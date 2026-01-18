@@ -51,13 +51,13 @@ A more efficient approach: **5 Hamming-window band-pass filters** designed with 
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/design1/Audiogram_with_Bandwidth-Expanded_Key_Points.png" title="Audiogram (PCHIP smoothed)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/design1/Audiogram_with_Bandwidth-Expanded_Key_Points.png" title="Audiogram (PCHIP smoothed)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/design1/Individual_Filter_Responses_v2.png" title="Design 1 — Individual filter responses" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/design1/Individual_Filter_Responses_v2.png" title="Design 01 — Individual filter responses" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/design1/Audiogram__FilterBank_Response_Direct_Sum.png" title="Design 1 — Compensation check (audiogram + filter-bank)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/design1/Audiogram__FilterBank_Response_Direct_Sum.png" title="Design 1 — Compensation check (audiogram + filter-bank)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
@@ -87,13 +87,13 @@ To validate practical behavior, the composite FIR filter-bank was applied to rea
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/Fur_Spec.jpg" title="Fur Elise — Welch spectrum (input vs filtered)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/Fur_Spec.jpg" title="Fur Elise — Welch spectrum (input vs filtered)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/Beethoven_Spec.jpg" title="Beethoven — Welch spectrum (input vs filtered)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/Beethoven_Spec.jpg" title="Beethoven — Welch spectrum (input vs filtered)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/Bensound_Spec.jpg" title="Bensound — Welch spectrum (input vs filtered)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/Bensound_Spec.jpg" title="Bensound — Welch spectrum (input vs filtered)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
@@ -106,8 +106,6 @@ To validate practical behavior, the composite FIR filter-bank was applied to rea
 
 - **Design 1 (fir2):** Appendix/Matlab/Design_1_Final.m  
 - **Design 2 (fir1):** Appendix/Matlab/Design_2_Final.m
-
-If you want the audio demo portion, update the audio file paths in the script to point at your local `.wav` test clips (the provided script expects 20 kHz audio).
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-212 Optimized Silicon Solar Cell Design
+title: Optimized Silicon Solar Cell Design
 description: Single-junction silicon PV cell optimized in ANSYS Lumerical DEVICE (AM1.5). 16.08% efficiency with Si3N4 ARC + Al contacts, plus cost and sustainability analysis.
 img: /assets/img/ee212/Design_Model.png
 importance: 2
@@ -17,7 +17,8 @@ assets/img/ee212/Power_Density_of_Cubic_Spline_Fit_v9.png
 
 This project (EE-212: Fundamentals of Electro-optics) models and optimizes a **planar, single-junction silicon solar cell** using **ANSYS Lumerical DEVICE**. The goal was straightforward: tune **layer geometry** and **doping profiles** to maximize **power density**, **fill factor**, and **conversion efficiency** under the **AM1.5 solar spectrum**, then sanity-check feasibility with a lightweight **economic + environmental** analysis.
 
-**Toolchain:** ANSYS Lumerical DEVICE (drift–diffusion solver)  
+**Course:** EE-212 Fundamentals of Electro-optics
+**Toolchain:** ANSYS Lumerical DEVICE (drift–diffusion solver), MATLAB, LaTeX 
 **Focus:** Junction design, recombination tradeoffs, series resistance realism, and optical improvement via ARC.
 
 ---

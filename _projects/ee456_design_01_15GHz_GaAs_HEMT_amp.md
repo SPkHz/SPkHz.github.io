@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-456 Microwave Active Circuits Design Project 01
+title: 15 GHz InGaAs HEMT Amplifier Design
 description: 15 GHz InGaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.
 img:
 importance: 4
@@ -23,6 +23,7 @@ assets/img/ee456/All_Params_vs_Frequency_ADS_ALL_TRLs.png
 This project (EE-456/556: RF & Microwave Active Circuit Design) designs a **15 GHz microwave amplifier** using the **MGF4941AL super–low-noise InGaAs HEMT**, biased at **V<sub>DS</sub> = 2 V** and **I<sub>DS</sub> = 10 mA**. The design goal was **maximum gain at 15 GHz** by synthesizing **input and output matching networks** using transmission-line sections, then validating performance with **S-parameter simulations** in both **MATLAB** and **Keysight ADS**.
 
 **Course:** EE-456 Microwave Active Circuits
+**Assignment:** Design Project 01
 **Tools:** Keysight ADS + MATLAB (Touchstone workflows, Smith chart synthesis, S-parameter comparison)  
 **Frequency sweep:** 14–16 GHz (centered at 15 GHz)
 

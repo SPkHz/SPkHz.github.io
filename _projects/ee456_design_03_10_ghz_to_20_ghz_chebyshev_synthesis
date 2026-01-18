@@ -1,0 +1,110 @@
+---
+layout: page
+title: EE-456 Microwave Active Circuits — Design Project 3
+description: Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.
+img: assets/img/ee456_dp3/ADS_Schematic_of_Design.png
+importance: 2
+category: work
+giscus_comments: true
+---
+
+<!--
+Suggested assets:
+assets/img/ee456_dp3/Design_Objective.png
+assets/img/ee456_dp3/Design_and_Simulation_Results_Table.png
+assets/img/ee456_dp3/ADS_Schematic_of_Design.png
+assets/img/ee456_dp3/Matlab_S21_Matching_Network.png
+assets/img/ee456_dp3/Matlab_S22_Matching_Network.png
+assets/img/ee456_dp3/Matlab_S11_IMN.png
+assets/img/ee456_dp3/Matlab_IL_IMN.png
+assets/img/ee456_dp3/Matlab_S11_OMN.png
+assets/img/ee456_dp3/Matlab_IL_OMN.png
+assets/img/ee456_dp3/Matlab_vs_ADS_Overlay.png
+assets/img/ee456_dp3/Noise_Figure_ADS_vs_MATLAB.png
+assets/img/ee456_dp3/Simulation_Comparison_Summary.png
+-->
+
+This project (EE-456: RF & mm-Wave Active Circuits) implements **wideband matching-network synthesis** using **Chebyshev-polynomial (insertion-loss) methods** to design a **10–20 GHz amplifier** around the **NEC NE321000 ultra-low-noise pseudomorphic pHEMT**, biased at **VDS = 2 V** and **IDS = 10 mA**.
+
+The core requirement was a **flat-ish wideband response**: an amplifier gain of approximately **8.15 dB ± 0.17 dB** across **10–20 GHz**, achieved by synthesizing:
+- a **7-element input matching network (IMN)** over **9–20 GHz** with a **sloped response (~6 dB/octave)** and **0.1 dB Chebyshev ripple**
+- a **7-element output matching network (OMN)** over **9–20 GHz** with a **non-sloped response** and **0.1 dB ripple**
+
+Both **MATLAB** and **Keysight ADS** were used as independent toolchains. Final MATLAB vs ADS comparisons match extremely closely (reported as <0.0001% difference for the compared metrics in the final summary slide).
+
+---
+
+## Design Objective and Final Network (at a glance)
+
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Design_Objective.png" title="Design objective (specs, device, and band)" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Design_and_Simulation_Results_Table.png" title="Final element values (IMN + OMN)" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/ADS_Schematic_of_Design.png" title="ADS schematic of the final design" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Objective, final element values, and the ADS implementation. Both IMN and OMN use <b>7 reactive elements</b> synthesized from Chebyshev insertion-loss constraints.
+</div>
+
+---
+
+## Method: Chebyshev Insertion-Loss Synthesis (What I actually did)
+
+1. **Set band edges and ripple constraints** (9–20 GHz networks supporting 10–20 GHz amplifier target band).
+2. Build the **Chebyshev insertion-loss polynomial** \( IL(s) \) (order determined by element count; 7 elements → 3rd-order Chebyshev form).
+3. Solve for the **reflection / impedance functions** and extract elements sequentially (series/shunt L and C ladder synthesis).
+4. Apply **impedance scaling + transformer-equivalent steps** to land in a practical **50 Ω environment** while keeping the target response intact.
+5. Cascade: **IMN → NE321000 (Touchstone) → OMN**, then compute full **S-parameter response vs frequency**.
+6. Rebuild the same network in **ADS**, export Touchstone, and overlay results against MATLAB.
+
+---
+
+## Key Responses (MATLAB + ADS verification)
+
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Matlab_S21_Matching_Network.png" title="MATLAB: |S21| response (wideband target)" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Matlab_S22_Matching_Network.png" title="MATLAB: output-side behavior (|S22| trend)" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Matlab_vs_ADS_Overlay.png" title="MATLAB vs ADS overlay (verification)" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Wideband response shaping and cross-tool verification. The ADS overlay is used as an independent sanity check on the MATLAB synthesis + ABCD→S implementation.
+</div>
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Noise_Figure_ADS_vs_MATLAB.png" title="Noise figure comparison (ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm-4 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Simulation_Comparison_Summary.png" title="Final comparison summary" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Noise figure was also evaluated and compared across tools. Final summary notes that the design met the required specs and that MATLAB/ADS results agree extremely closely.
+</div>
+
+---
+
+## Repo Contents (what you’ll find here)
+
+- **MATLAB synthesis + verification**
+  - Chebyshev/insertion-loss functions, Z-function, element extraction, ABCD/S-parameter plumbing
+  - Full cascade simulation: IMN → NE321000 → OMN
+- **GPU-accelerated MATLAB variants**
+  - Faster sweeps / search loops for synthesis and validation runs
+- **Touchstone**
+  - `NE321000.s2p` device file
+  - exported network / full-chain `.s2p` used for ADS↔MATLAB overlays
+- **ADS project artifacts**
+  - Schematic implementation + simulation plots (exported for comparison)
+

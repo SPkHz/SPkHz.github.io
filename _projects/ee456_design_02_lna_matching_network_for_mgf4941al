@@ -23,6 +23,8 @@ assets/img/ee456_dp2/S22_ADSvsMtLb.jpg
 
 This project (EE-456: RF & mm-Wave Active Circuits) designs a **15 GHz low-noise amplifier (LNA) matching network** for the **MGF4941AL InGaAs HEMT** at **VDS = 2 V** and **IDS = 10 mA**. Unlike Project 1 (pure max-gain), the goal here is a **practical compromise** that meets **gain + noise + matching** specifications simultaneously, while validating results in **both MATLAB and Keysight ADS**.
 
+**Course:** EE-456 Microwave Active Circuits
+**Assignment:** Design Project 02
 **Toolchain:** MATLAB + Keysight ADS (ideal transmission-line matching + Touchstone verification)  
 **Center frequency:** f0 = 15 GHz (swept ~14–16 GHz)
 

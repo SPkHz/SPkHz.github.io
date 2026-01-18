@@ -226,10 +226,10 @@ plugins:
   - jekyll-twitter-plugin
   - jemoji
 
-exclude:
-  - _bibliography/
-  - _pages/publications.md
-  
+# exclude:
+#   - _bibliography/
+#   - _pages/publications.md
+
 # Sitemap settings
 defaults:
   - scope:

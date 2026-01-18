@@ -484,6 +484,11 @@ ninja.data = [{
           description: "Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee302_hearing_aid/";
+            },},{id: "projects-ee-470-satellite-tracking-servo-control",
+          title: 'EE-470 Satellite Tracking Servo Control',
+          description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee470_discrete_control_system_design/";
             },},{
         id: 'social-cv',
         title: 'CV',

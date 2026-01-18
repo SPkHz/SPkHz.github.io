@@ -474,6 +474,11 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-ee-212-optimized-silicon-solar-cell-design",
+          title: 'EE-212 Optimized Silicon Solar Cell Design',
+          description: "Single-junction silicon PV cell optimized in ANSYS Lumerical DEVICE (AM1.5). 16.08% efficiency with Si3N4 ARC + Al contacts, plus cost and sustainability analysis.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee212_solar_cell_design/";
             },},{id: "projects-ee-302-hearing-aid-fir-filter-bank-equalizer",
           title: 'EE-302 Hearing Aid FIR Filter-Bank Equalizer',
           description: "Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).",

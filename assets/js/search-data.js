@@ -418,16 +418,16 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
+            },},{id: "news-a-long-announcement-with-details",
           title: 'A long announcement with details',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          description: "",
+          section: "News",},{id: "news-digital-signal-processing-design-project-see-the-ee-302-fir-hearing-aid-filter-design-project-page-for-more-details",
+          title: 'Digital Signal Processing Design Project See the EE-302 FIR Hearing Aid Filter Design...',
           description: "",
           section: "News",},{id: "projects-ee-302-hearing-aid-fir-filter-bank-equalizer",
           title: 'EE-302 Hearing Aid FIR Filter-Bank Equalizer',

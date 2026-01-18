@@ -4,7 +4,7 @@ title: EE-212 Optimized Silicon Solar Cell Design
 description: Single-junction silicon PV cell optimized in ANSYS Lumerical DEVICE (AM1.5). 16.08% efficiency with Si3N4 ARC + Al contacts, plus cost and sustainability analysis.
 img: /assets/img/ee212/Design_Model.png
 importance: 2
-category: coursework
+category: work
 related_publications: false
 ---
 

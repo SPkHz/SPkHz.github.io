@@ -2,6 +2,9 @@
 layout: post
 title: "Report Published: Fourier Transform Applications for Signal Analysis"
 date: 2024-11-27 10:11:00-0500
+tags: [signal-processing, fourier-transform, spectral-analysis, dsp, filtering, audio, imaging, radar]
+categories: coursework
+thumbnail: assets/img/ee301/ee301-ft-banner.jpg
 inline: false
 related_posts: true
 show_on_home: false

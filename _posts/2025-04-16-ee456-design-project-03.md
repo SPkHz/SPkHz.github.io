@@ -2,6 +2,9 @@
 layout: post
 title: "EE-456 Design Project 03 Published: Chebyshev Insertion-Loss Matching for a 10–20 GHz pHEMT Amplifier"
 date: 2025-04-16 09:08:12-0500
+tags: [rf, microwave, amplifier, phemt, matching-networks, chebyshev, ads, matlab]
+categories: coursework
+thumbnail: assets/img/ee456/design03/Design_Objective.png
 inline: false
 related_posts: true
 show_on_home: false

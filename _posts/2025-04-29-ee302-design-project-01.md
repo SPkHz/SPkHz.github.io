@@ -2,6 +2,9 @@
 layout: post
 title: "EE-302 Project Published: Audiogram-Driven FIR Filter-Bank “Virtual Hearing Aid” Equalizer"
 date: 2025-04-29 11:48:00-0400
+tags: [signal-processing, dsp, fir, filter-bank, audio, audiogram, equalization, matlab]
+categories: coursework
+thumbnail: assets/img/ee302/design01/design2_combined_response.png
 inline: false
 related_posts: true
 show_on_home: false

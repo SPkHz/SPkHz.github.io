@@ -125,15 +125,15 @@ ninja.data = [{
             window.location.href = "/blog/2026/2024-11-18-ee314-design-project-01/";
           
         },
-      },{id: "post-ee-456-design-project-05",
+      },{id: "post-ee-456-design-project-05-published-8-ghz-negative-resistance-oscillator-using-atf-33143-gaas-phemt",
         
-          title: "EE-456 Design Project 05",
+          title: "EE-456 Design Project 05 Published: 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT...",
         
         description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/ee-456-design-project-05/";
+            window.location.href = "/blog/2025/ee456-design-project-05/";
           
         },
       },{id: "post-ee-456-design-project-04",
@@ -176,8 +176,8 @@ ninja.data = [{
           section: "News",},{id: "news-discrete-control-for-receiver-positioning-and-satellite-tracking-or-view-the-project-page",
           title: 'Discrete Control for Receiver Positioning and Satellite Tracking — or view the project...',
           description: "",
-          section: "News",},{id: "news-digital-signal-processing-design-project-or-view-the-project-page",
-          title: 'Digital Signal Processing Design Project — or view the project page.',
+          section: "News",},{id: "news-design-of-a-fir-virtual-filter-bank-customized-for-individual-patients-audiograms-for-use-in-hearing-aids-or-view-the-project-page",
+          title: 'Design of a FIR Virtual Filter-bank Customized for Individual Patients’ Audiograms for use...',
           description: "",
           section: "News",},{id: "news-8-ghz-negative-feedback-oscillator-design-or-view-the-project-page",
           title: '8 GHz Negative-Feedback Oscillator Design — or view the project page.',

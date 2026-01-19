@@ -424,11 +424,16 @@ ninja.data = [{
           description: "Single-junction silicon PV cell optimized in ANSYS Lumerical DEVICE (AM1.5). 16.08% efficiency with Si3N4 ARC + Al contacts, plus cost and sustainability analysis.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee212_design_01_optimized_solar_cell/";
-            },},{id: "projects-engineering-applications-of-the-fourier-transform",
-          title: 'Engineering Applications of the Fourier Transform',
+            },},{id: "projects-fourier-transform-applications-within-electrical-engineering",
+          title: 'Fourier Transform Applications within Electrical Engineering',
           description: "Fourier Transform applications across audio, ECG, imaging, SDR spectrum analysis, and vibration diagnostics (MATLAB-based examples).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee301_report_01_fourier_transform/";
+            },},{id: "projects-laplace-transform-applications-within-electrical-engineering",
+          title: 'Laplace Transform Applications within Electrical Engineering',
+          description: "Applications of the Laplace Transform across neural decoding (BCIs), DC-DC converter stability, electromagnetic partial inductance modeling, and memristor simulation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee301_report_02_laplace_transform/";
             },},{id: "projects-fir-filter-bank-for-hearing-aid-audio-response",
           title: 'FIR Filter-Bank for Hearing Aid Audio Response',
           description: "Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).",

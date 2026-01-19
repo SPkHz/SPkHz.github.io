@@ -208,9 +208,9 @@ ninja.data = [{
           description: "Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_03_10_ghz_to_20_ghz_chebyshev_synthesis/";
-            },},{id: "projects-ee-456-design-project-04",
-          title: 'EE-456 Design Project 04',
-          description: "Placeholder for EE-456 Design Project 04.",
+            },},{id: "projects-",
+          title: '',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_04/";
             },},{id: "projects-ee-456-design-project-05",

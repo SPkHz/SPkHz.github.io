@@ -4,6 +4,7 @@ title: EE-456 Design Project 02 Published: 15 GHz LNA Matching (Joint Gain/NF/VS
 date: 2024-03-28 09:24:48-0500
 inline: false
 related_posts: true
+show_on_home: false
 ---
 
 I’ve published **EE-456 (RF & mm-Wave Active Circuits) — Design Project 02**: a **15 GHz LNA input/output matching design** for the **MGF4941AL InGaAs HEMT** biased at **VDS = 2 V** and **IDS = 10 mA**.

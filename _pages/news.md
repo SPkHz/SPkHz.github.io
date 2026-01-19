@@ -4,4 +4,4 @@ title: news
 permalink: /news/
 ---
 
-{% assign news = site.news | where: "inline", true | sort: "date" | reverse %}
+{% assign news = site.news | where_exp: "item", "item.show_on_home != false" | sort: "date" | reverse %}

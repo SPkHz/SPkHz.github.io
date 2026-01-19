@@ -3,6 +3,7 @@ layout: post
 date: 2025-04-16 08:08:00-0500
 inline: true
 related_posts: false
+show_on_home: true
 ---
 
 **10-20 GHz Chebyshev Insertion-Loss Matching**

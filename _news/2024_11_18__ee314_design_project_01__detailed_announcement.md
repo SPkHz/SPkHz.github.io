@@ -4,6 +4,7 @@ title: EE-314 Final Project Published: GHz Transmission-Line Matching Networks (
 date: 2024-11-18 09:00:00-0500
 inline: false
 related_posts: true
+show_on_home: false
 ---
 
 I’ve published my **EE-314 (Electromagnetic Fields and Waves)** final design project: **Millimeter-Wave Impedance Matching Network Designs**.

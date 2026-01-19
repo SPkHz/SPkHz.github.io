@@ -4,6 +4,7 @@ title: EE-456 Design Project 01 Published: 15 GHz HEMT Amplifier (IMN/OMN TL Syn
 date: 2025-02-25 09:24:33-0500
 inline: false
 related_posts: true
+show_on_home: false
 ---
 
 I’ve published **EE-456 Microwave Active Circuits — Design Project 01**: a **15 GHz single-stage amplifier** designed around the **MGF4941AL super–low-noise InGaAs HEMT** at **VDS = 2 V** and **IDS = 10 mA**.

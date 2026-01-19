@@ -3,6 +3,7 @@ layout: post
 date: 2024-12-06 08:24:00-0500
 inline: true
 related_posts: false
+show_on_home: true
 ---
 
 **Laplace Transform Applications for System Analysis**

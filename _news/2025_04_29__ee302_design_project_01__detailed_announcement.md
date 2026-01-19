@@ -4,6 +4,7 @@ title: EE-302 Project Published: Audiogram-Driven FIR Filter-Bank “Virtual Hea
 date: 2025-04-29 11:48:00-0400
 inline: false
 related_posts: true
+show_on_home: false
 ---
 
 I’ve published an **EE-302 (Introduction to Digital Signal Processing)** project that designs a **personalized “virtual hearing aid” audio equalizer** using **linear-phase FIR filter banks**.

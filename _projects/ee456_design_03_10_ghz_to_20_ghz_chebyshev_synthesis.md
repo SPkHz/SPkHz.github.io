@@ -112,7 +112,7 @@ Both **MATLAB** and **Keysight ADS** were used as independent toolchains. Final 
 
 ---
 
-## Repo Contents (what you’ll find here)
+## Repository Contents
 
 - **MATLAB synthesis + verification**
   - Chebyshev/insertion-loss functions, Z-function, element extraction, ABCD/S-parameter plumbing

@@ -16,12 +16,16 @@ _styles: |
   }
 ---
 
-This project (EE-470: Discrete Digital Computer Control Systems) designs a **discrete-time controller** for a **servo-driven receiver positioning system** (satellite tracking use-case). The design target was a tight transient response—**~1% overshoot** and **~0.05 s peak time**—so the actuator can reposition quickly without hunting or ringing that would break alignment.
+## Overview
 
-**Course:** EE-470 Digital Computer Control Systems.
-**Project:** Final Design Project 01
-**Team:** Steven Placzek, Bryam Yanza  
-**Tools:** MATLAB + Simulink (state-space modeling, ZOH discretization, pole placement via `acker`)  
+**Course:** EE-470 Discrete Digital Computer Control Systems
+**Project:** Final Design Project 01 - Discrete Control for Receiver Positioning and Satellite Tracking
+**Team:** Steven Placzek, Bryam Yanza
+**Date:** 2025-04-28
+
+This project designs a **discrete-time controller** for a **servo-driven receiver positioning system** (satellite tracking use-case). The design target was a tight transient response—**~1% overshoot** and **~0.05 s peak time**—so the actuator can reposition quickly without hunting or ringing that would break alignment.
+
+**Tools:** MATLAB + Simulink (state-space modeling, ZOH discretization, pole placement via `acker`)
 **Deliverable:** Digital controller design + simulation validation + rapid-prototyping readiness notes
 
 ---
@@ -133,7 +137,7 @@ The report also documents practical constraints that matter when you leave MATLA
 
 ---
 
-## What’s in the repo
+## Repository Contents
 
 - Full technical report (PDF + LaTeX source)
 - MATLAB scripts for discretization, pole placement, and plotting

@@ -131,12 +131,3 @@ The MATLAB cascade model (ABCD/T conversions + S-parameter interpolation) and AD
 #### Two-tone power output (low-level IMD)
 
 {% include figure.liquid loading="lazy" path="assets/img/ee456/design04/05_two_tone_table4.png" title="Two-tone output power and third-order intermodulation products at low input level" class="img-fluid rounded z-depth-1" %}
-
-<!-- ## Repo drop-in checklist
-
-Place files as:
-
-```text
-_posts/2025-05-02-ee456-design-project-04.md
-assets/img/ee456/design04/*.png
--->

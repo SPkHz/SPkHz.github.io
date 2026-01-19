@@ -24,9 +24,10 @@ _styles: |
 
 ## Overview
 
-**Course:** EE-456 RF & Microwave Active Circuit Design  
-**Project:** Design Project 05  
-**Author:** Steven Placzek  
+**Course:** EE-456 RF & Microwave Active Circuit Design
+**Project:** Design Project 05 - 8 GHz Negative-Resistance Oscillator
+**Author:** Steven Placzek
+**Date:** 2025-05-08
 **Frequency:** 8 GHz  
 **Device / bias:** ATF-33143 GaAs pHEMT @ **V<sub>DS</sub> = 4 V**, **I<sub>DS</sub> = 80 mA**  
 **Tooling:** MATLAB (Touchstone I/O, indefinite-admittance conversion, parameter sweeps)
@@ -184,7 +185,7 @@ Note: A complete oscillator design would additionally check the start-up/phase c
 
 ---
 
-## What’s included in the repo
+## Repository Contents
 
 - MATLAB synthesis/verification script(s): indefinite-Y conversion, feedback sweep, stability metrics, Γ sweeps
 - Touchstone file(s): ATF-33143 S-parameters at the specified bias

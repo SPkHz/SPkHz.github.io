@@ -17,22 +17,10 @@ _styles: |
   }
 ---
 
-<!--
-asset placement:
-assets/img/ee456/design02/ADS_Complete_Schematic.png
-assets/img/ee456/design02/Stab_Cirs.png
-assets/img/ee456/design02/Gamma_A_and_Gamma_S.png
-assets/img/ee456/design02/S21_dB---ADSvsMtLb.jpg
-assets/img/ee456/design02/NF_ADSvsMtLB.jpg
-assets/img/ee456/design02/VSWR_OMN__ADSvsMtLb.jpg
-assets/img/ee456/design02/VSWR_IMN_ADSvsMtLb.jpg
-assets/img/ee456/design02/S11_ADSvsMtLb.jpg
-assets/img/ee456/design02/S22_ADSvsMtLb.jpg
--->
 ## Overview
 
 **Course:** EE-456 Microwave Active Circuits
-**Project:** Design Project 01
+**Project:** Design Project 02 - 15 GHz LNA Matching Network Design
 **Author:** Steven Placzek
 **Date:** 2024-11-18 9:00 AM
 **Tools:** Keysight ADS (circuit verification) + MATLAB (Touchstone workflows, Smith chart synthesis, S-parameter comparison)  
@@ -95,8 +83,8 @@ At $15~\text{GHz}$, the selected terminations are:
   Cross-verification: MATLAB and ADS were run as independent toolchains (Touchstone export + re-plot). Overlays confirm the same operating point and consistent behavior near 15 GHz.
 </div>
 
-**What’s in the repo:**
-- Slides (**PDF/PPTX**) + plots/screenshots used in the deck
+**Repository Contents:**
+- Slides (**PDF/PPTX**) + plots/screenshots used in slide deck
 - **MATLAB** (design + verification scripts)
 - **ADS** project (schematics + simulations)
 - **Excel** summary tables (trade-space + final selection)

@@ -7,6 +7,14 @@ related_posts: true
 show_on_home: false
 tags: RF microwave oscillator GaAs pHEMT
 categories: coursework
+_styles: |
+  .post article .mjx-container[display="true"] {
+    font-size: 1.3em;
+    margin: 0.9em 0 1.1em;
+  }
+  .post article .mjx-container {
+    font-size: 1.12em;
+  }
 ---
 
 I've published **EE-456 (RF & mm-Wave Active Circuits) — Design Project 05**: an **8 GHz negative-resistance oscillator** built around the **Avago ATF-33143 GaAs pHEMT** (biased at **V<sub>DS</sub> = 4 V**, **I<sub>DS</sub> = 80 mA**) using **common-gate topology with inductive gate feedback**.
@@ -262,7 +270,7 @@ The oscillator design follows the **negative-resistance** approach:
 
 ---
 
-## Key Takeaways
+## Conclusion
 
 This project demonstrates systematic negative-resistance oscillator design:
 

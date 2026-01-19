@@ -23,10 +23,16 @@ assets/img/ee212/Cubic_Spline_Fit_vs_Sim_Data_FINAL.png
 assets/img/ee212/Power_Density_of_Cubic_Spline_Fit_v9.png
 -->
 
-This project (EE-212: Fundamentals of Electro-optics) models and optimizes a **planar, single-junction silicon solar cell** using **ANSYS Lumerical DEVICE**. The goal was straightforward: tune **layer geometry** and **doping profiles** to maximize **power density**, **fill factor**, and **conversion efficiency** under the **AM1.5 solar spectrum**, then sanity-check feasibility with a lightweight **economic + environmental** analysis.
+## Overview
 
 **Course:** EE-212 Fundamentals of Electro-optics
-**Toolchain:** ANSYS Lumerical DEVICE (drift–diffusion solver), MATLAB, LaTeX 
+**Project:** Design Project 01 - Optimized Silicon Solar Cell Design
+**Author:** Steven Placzek
+**Date:** 2024-12-10
+
+This project models and optimizes a **planar, single-junction silicon solar cell** using **ANSYS Lumerical DEVICE**. The goal was straightforward: tune **layer geometry** and **doping profiles** to maximize **power density**, **fill factor**, and **conversion efficiency** under the **AM1.5 solar spectrum**, then sanity-check feasibility with a lightweight **economic + environmental** analysis.
+
+**Toolchain:** ANSYS Lumerical DEVICE (drift–diffusion solver), MATLAB, LaTeX
 **Focus:** Junction design, recombination tradeoffs, series resistance realism, and optical improvement via ARC.
 
 ---
@@ -110,7 +116,7 @@ This design stays intentionally **boring (in a good way)**:
 
 ---
 
-## What’s in the repo
+## Repository Contents
 
 - Report source (`.tex`) + bibliography
 - Exported figures (device model, JV curve, power curve)

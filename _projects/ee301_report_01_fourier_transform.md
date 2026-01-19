@@ -101,4 +101,4 @@ Fourier tools are the backbone of SDR spectrum visibility: FFT-based displays ma
 
 ## Files
 
-- Full report PDF (source document): `assets/img/ee301/fourier_transform_project_01/EE_301_FT-Project_01_Placzek.pdf`
+- Full report PDF (source document): `assets/pdf/ee301/fourier_transform_project_01/EE_301_FT-Project_01_Placzek.pdf`

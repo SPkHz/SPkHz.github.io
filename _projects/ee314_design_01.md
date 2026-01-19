@@ -162,7 +162,7 @@ This ensures the microstrip results reflect realistic dispersion/loss compared t
 
 ---
 
-## Repository Contents (What’s Included)
+## Repository Contents
 
 This repo is organized so someone can reproduce the work end-to-end:
 

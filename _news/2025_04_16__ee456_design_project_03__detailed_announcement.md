@@ -2,7 +2,7 @@
 layout: post
 title: EE-456 Design Project 03 Published: Chebyshev Insertion-Loss Matching for a 10–20 GHz pHEMT Amplifier
 date: 2025-04-16 09:08:12-0500
-inline: true
+inline: false
 related_posts: true
 ---
 

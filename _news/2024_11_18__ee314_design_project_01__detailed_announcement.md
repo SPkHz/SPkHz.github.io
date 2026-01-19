@@ -2,7 +2,7 @@
 layout: post
 title: EE-314 Final Project Published: GHz Transmission-Line Matching Networks (ADS + Microstrip Layout)
 date: 2024-11-18 09:00:00-0500
-inline: true
+inline: false
 related_posts: true
 ---
 

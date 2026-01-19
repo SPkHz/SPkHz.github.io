@@ -2,7 +2,7 @@
 layout: post
 title: Report Published: Laplace Transform Applications for System Analysis
 date: 2024-12-06 09:24:00-0500
-inline: true
+inline: false
 related_posts: true
 ---
 

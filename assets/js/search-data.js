@@ -37,84 +37,138 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "books-the-godfather",
+        },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2025-04-29-ee302-design-project-01/";
+          
+        },
+      },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2025-04-16-ee456-design-project-03/";
+          
+        },
+      },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2025-03-28-ee456-design-project-02/";
+          
+        },
+      },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2025-02-25-ee456-design-project-01/";
+          
+        },
+      },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2024-12-06-ee301-laplace-transform/";
+          
+        },
+      },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2024-11-27-ee301-fourier-transform/";
+          
+        },
+      },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2024-11-18-ee314-design-project-01/";
+          
+        },
+      },{id: "post-ee-456-design-project-05",
+        
+          title: "EE-456 Design Project 05",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee456-design-project-05/";
+          
+        },
+      },{id: "post-ee-456-design-project-04",
+        
+          title: "EE-456 Design Project 04",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee456-design-project-04/";
+          
+        },
+      },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-",
-          title: '',
+            },},{id: "news-ghz-transmission-line-matching-networks-or-view-the-project-page",
+          title: 'GHz Transmission-Line Matching Networks — or view the project page.',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/2024_11_18__ee314_design_project_01__detailed_announcement/";
-            },},{id: "news-ghz-transmission-line-matching-networks-see-the-detailed-announcement-for-more-details",
-          title: 'GHz Transmission-Line Matching Networks  See the detailed announcement for more details.',
+          section: "News",},{id: "news-fourier-transform-applications-for-signal-analysis-or-view-the-project-page",
+          title: 'Fourier Transform Applications for Signal Analysis — or view the project page.',
           description: "",
-          section: "News",},{id: "news-",
-          title: '',
+          section: "News",},{id: "news-laplace-transform-applications-for-system-analysis-or-view-the-project-page",
+          title: 'Laplace Transform Applications for System Analysis — or view the project page.',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/2024_11_27__ee301_FT_project_01__detailed_announcement/";
-            },},{id: "news-fourier-transform-applications-for-signal-analysis-see-the-detailed-announcement-for-more-details",
-          title: 'Fourier Transform Applications for Signal Analysis See the detailed announcement for more details....',
+          section: "News",},{id: "news-15-ghz-gaas-hemt-amplifier-design-or-view-the-project-page",
+          title: '15 GHz GaAs HEMT Amplifier Design — or view the project page.',
           description: "",
-          section: "News",},{id: "news-",
-          title: '',
+          section: "News",},{id: "news-15-ghz-lna-matching-network-design-or-view-the-project-page",
+          title: '15 GHz LNA Matching Network Design — or view the project page.',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/2024_12_06__ee301_LT_project_02__detailed_announcement/";
-            },},{id: "news-laplace-transform-applications-for-system-analysis-see-the-detailed-announcement-for-more-details",
-          title: 'Laplace Transform Applications for System Analysis See the detailed announcement for more details....',
+          section: "News",},{id: "news-10-20-ghz-chebyshev-insertion-loss-matching-or-view-the-project-page",
+          title: '10-20 GHz Chebyshev Insertion-Loss Matching — or view the project page.',
           description: "",
-          section: "News",},{id: "news-",
-          title: '',
+          section: "News",},{id: "news-ee-456-design-project-04-or-view-the-project-page",
+          title: 'EE-456 Design Project 04 — or view the project page.',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/2025_02_25__ee456_design_project_01__detailed_announcement/";
-            },},{id: "news-15-ghz-gaas-hemt-amplifier-design-see-the-detailed-announcement-for-more-details",
-          title: '15 GHz GaAs HEMT Amplifier Design See the detailed announcement for more details....',
+          section: "News",},{id: "news-digital-signal-processing-design-project-or-view-the-project-page",
+          title: 'Digital Signal Processing Design Project — or view the project page.',
           description: "",
-          section: "News",},{id: "news-",
-          title: '',
+          section: "News",},{id: "news-ee-456-design-project-05-or-view-the-project-page",
+          title: 'EE-456 Design Project 05 — or view the project page.',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/2025_03_28__ee456_design_project_02__detailed_announcement/";
-            },},{id: "news-15-ghz-lna-matching-network-design-see-the-detailed-announcement-for-more-details",
-          title: '15 GHz LNA Matching Network Design See the detailed announcement for more details....',
-          description: "",
-          section: "News",},{id: "news-",
-          title: '',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/2025_04_16__ee456_design_project_03__detailed_announcement/";
-            },},{id: "news-10-20-ghz-chebyshev-insertion-loss-matching-see-the-detailed-announcement-for-more-details",
-          title: '10-20 GHz Chebyshev Insertion-Loss Matching  See the detailed announcement for more details.',
-          description: "",
-          section: "News",},{id: "news-ee-456-design-project-04-see-the-detailed-announcement-for-more-details",
-          title: 'EE-456 Design Project 04  See the detailed announcement for more details.',
-          description: "",
-          section: "News",},{id: "news-ee-456-design-project-04",
-          title: 'EE-456 Design Project 04',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/2025_04_28__ee456_design_project_04__detailed_announcement/";
-            },},{id: "news-",
-          title: '',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/2025_04_29__ee302_design_project_01__detailed_announcement/";
-            },},{id: "news-digital-signal-processing-design-project-see-the-detailed-announcement-for-more-details",
-          title: 'Digital Signal Processing Design Project  See the detailed announcement for more details.',
-          description: "",
-          section: "News",},{id: "news-ee-456-design-project-05-see-the-detailed-announcement-for-more-details",
-          title: 'EE-456 Design Project 05  See the detailed announcement for more details.',
-          description: "",
-          section: "News",},{id: "news-ee-456-design-project-05",
-          title: 'EE-456 Design Project 05',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/2025_05_12__ee456_design_project_05__detailed_announcement/";
-            },},{id: "projects-optimized-silicon-solar-cell-design",
+          section: "News",},{id: "projects-optimized-silicon-solar-cell-design",
           title: 'Optimized Silicon Solar Cell Design',
           description: "Single-junction silicon PV cell optimized in ANSYS Lumerical DEVICE (AM1.5). 16.08% efficiency with Si3N4 ARC + Al contacts, plus cost and sustainability analysis.",
           section: "Projects",handler: () => {
@@ -154,6 +208,16 @@ ninja.data = [{
           description: "Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_03_10_ghz_to_20_ghz_chebyshev_synthesis/";
+            },},{id: "projects-ee-456-design-project-04",
+          title: 'EE-456 Design Project 04',
+          description: "Placeholder for EE-456 Design Project 04.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee456_design_04/";
+            },},{id: "projects-ee-456-design-project-05",
+          title: 'EE-456 Design Project 05',
+          description: "Placeholder for EE-456 Design Project 05.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee456_design_05/";
             },},{id: "projects-discrete-control-system-design-for-receiver-positioning-and-accurate-satellite-tracking",
           title: 'Discrete Control System Design for Receiver Positioning and Accurate Satellite Tracking',
           description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",

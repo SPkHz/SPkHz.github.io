@@ -40,13 +40,19 @@ I design RF/microwave circuits, DSP systems, and digital controllers—from Smit
 <style>
 .tag {
   display: inline-block;
-  padding: .15rem .5rem;
-  border: 1px solid rgba(0,0,0,.12);
+  padding: 0.15rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 999px;
-  font-size: .8rem;
-  margin: 0 .25rem .25rem 0;
-  color: rgba(0,0,0,.75);
-  background: rgba(0,0,0,.02);
+  font-size: 0.8rem;
+  margin: 0 0.25rem 0.25rem 0;
+  color: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+html[data-theme="dark"] .tag {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.06);
 }
 </style>
 

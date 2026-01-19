@@ -37,9 +37,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-ee-456-design-project-05-published-8-ghz-negative-resistance-oscillator-using-atf-33143-gaas-phemt",
+        },{id: "post-designing-an-8-ghz-negative-resistance-oscillator-with-an-atf-33143-gaas-phemt",
         
-          title: "EE-456 Design Project 05 Published: 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT...",
+          title: "Designing an 8 GHz Negative-Resistance Oscillator with an ATF-33143 GaAs pHEMT",
         
         description: "",
         section: "Posts",
@@ -48,9 +48,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee456-design-project-05/";
           
         },
-      },{id: "post-ee-302-project-published-audiogram-driven-fir-filter-bank-virtual-hearing-aid-equalizer",
+      },{id: "post-designing-a-personalized-audiogram-driven-fir-filter-bank-for-a-virtual-hearing-aid",
         
-          title: "EE-302 Project Published: Audiogram-Driven FIR Filter-Bank “Virtual Hearing Aid” Equalizer",
+          title: "Designing a Personalized Audiogram-Driven FIR Filter-Bank for a Virtual Hearing Aid",
         
         description: "",
         section: "Posts",
@@ -59,9 +59,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee302-design-project-01/";
           
         },
-      },{id: "post-ee-470-final-design-project-01-published-discrete-control-for-receiver-positioning-and-satellite-tracking",
+      },{id: "post-discrete-time-control-for-receiver-positioning-and-satellite-tracking",
         
-          title: "EE-470 Final Design Project 01 Published: Discrete Control for Receiver Positioning and Satellite...",
+          title: "Discrete-Time Control for Receiver Positioning and Satellite Tracking",
         
         description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",
         section: "Posts",
@@ -70,9 +70,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee470-design-project-01/";
           
         },
-      },{id: "post-ee-456-design-project-04",
+      },{id: "post-designing-an-8-ghz-mag-amplifier-with-nonlinear-verification-and-ip3-analysis",
         
-          title: "EE-456 Design Project 04",
+          title: "Designing an 8 GHz MAG Amplifier with Nonlinear Verification and IP3 Analysis",
         
         description: "",
         section: "Posts",
@@ -81,9 +81,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee-456-design-project-04/";
           
         },
-      },{id: "post-ee-456-design-project-03-published-chebyshev-insertion-loss-matching-for-a-10-20-ghz-phemt-amplifier",
+      },{id: "post-chebyshev-insertion-loss-matching-for-a-10-20-ghz-phemt-amplifier",
         
-          title: "EE-456 Design Project 03 Published: Chebyshev Insertion-Loss Matching for a 10–20 GHz pHEMT...",
+          title: "Chebyshev Insertion-Loss Matching for a 10–20 GHz pHEMT Amplifier",
         
         description: "",
         section: "Posts",
@@ -92,9 +92,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee456-design-project-03/";
           
         },
-      },{id: "post-ee-456-design-project-01-published-15-ghz-hemt-amplifier-imn-omn-tl-synthesis-ads-matlab-verification",
+      },{id: "post-15-ghz-hemt-amplifier-with-imn-omn-synthesis-and-ads-matlab-verification",
         
-          title: "EE-456 Design Project 01 Published: 15 GHz HEMT Amplifier (IMN/OMN TL Synthesis +...",
+          title: "15 GHz HEMT Amplifier with IMN/OMN Synthesis and ADS/MATLAB Verification",
         
         description: "",
         section: "Posts",
@@ -103,9 +103,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee456-design-project-01/";
           
         },
-      },{id: "post-report-published-laplace-transform-applications-for-system-analysis",
+      },{id: "post-laplace-transform-applications-for-system-analysis-and-modeling",
         
-          title: "Report Published: Laplace Transform Applications for System Analysis",
+          title: "Laplace Transform Applications for System Analysis and Modeling",
         
         description: "",
         section: "Posts",
@@ -114,9 +114,9 @@ ninja.data = [{
             window.location.href = "/blog/2024/ee301-laplace-transform/";
           
         },
-      },{id: "post-report-published-fourier-transform-applications-for-signal-analysis",
+      },{id: "post-fourier-transform-applications-for-signal-analysis-in-engineering",
         
-          title: "Report Published: Fourier Transform Applications for Signal Analysis",
+          title: "Fourier Transform Applications for Signal Analysis in Engineering",
         
         description: "",
         section: "Posts",
@@ -125,9 +125,9 @@ ninja.data = [{
             window.location.href = "/blog/2024/ee301-fourier-transform/";
           
         },
-      },{id: "post-ee-314-final-project-published-ghz-transmission-line-matching-networks-ads-microstrip-layout",
+      },{id: "post-ghz-transmission-line-matching-networks-with-ads-and-microstrip-layout",
         
-          title: "EE-314 Final Project Published: GHz Transmission-Line Matching Networks (ADS + Microstrip Layout)",
+          title: "GHz Transmission-Line Matching Networks with ADS and Microstrip Layout",
         
         description: "",
         section: "Posts",
@@ -136,9 +136,9 @@ ninja.data = [{
             window.location.href = "/blog/2024/ee314-design-project-01/";
           
         },
-      },{id: "post-ee-456-design-project-02-published-15-ghz-lna-matching-joint-gain-nf-vswr-optimization-ads-matlab-cross-verification",
+      },{id: "post-15-ghz-lna-matching-with-joint-gain-noise-and-vswr-optimization",
         
-          title: "EE-456 Design Project 02 Published: 15 GHz LNA Matching (Joint Gain/NF/VSWR Optimization +...",
+          title: "15 GHz LNA Matching with Joint Gain, Noise, and VSWR Optimization",
         
         description: "",
         section: "Posts",
@@ -207,6 +207,11 @@ ninja.data = [{
           description: "Transmission-line impedance matching in Keysight ADS — shunt-stub + quarter-wave transformer designs (ideal + microstrip), with Smith-chart synthesis and layout verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee314_design_01/";
+            },},{id: "projects-ee-319-lab-01-low-pass-filter-measurements",
+          title: 'EE 319 Lab 01 — Low-Pass Filter Measurements',
+          description: "First-order RC low-pass filter build + Bode measurement (10 Hz–100 kHz) with MATLAB/LTspice validation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319_lab_01_low_pass_filter/";
             },},{id: "projects-eelab-ii-final-lab-portfolio",
           title: 'eeLab II — Final Lab Portfolio',
           description: "MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).",

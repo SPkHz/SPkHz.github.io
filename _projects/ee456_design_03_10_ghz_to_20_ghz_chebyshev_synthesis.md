@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chebyshev Impedance Matching Network Synthesis
+title: Using Chebyshev Polynomials for the Synthesis of Impedance-Matching Networks
 description: Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.
 img: assets/img/ee456/design03/ADS_Schematic_of_Design.png
 importance: 2
@@ -17,7 +17,7 @@ _styles: |
 ---
 
 <!--
-Suggested assets:
+assets:
 assets/img/ee456/design03/Design_Objective.png
 assets/img/ee456/design03/Design_and_Simulation_Results_Table.png
 assets/img/ee456/design03/ADS_Schematic_of_Design.png
@@ -31,6 +31,15 @@ assets/img/ee456/design03/Matlab_vs_ADS_Overlay.png
 assets/img/ee456/design03/Noise_Figure_ADS_vs_MATLAB.png
 assets/img/ee456/design03/Simulation_Comparison_Summary.png
 -->
+
+## Overview
+
+**Course:** EE-456 Microwave Active Circuits
+**Project:** Design Project 03
+**Author:** Steven Placzek
+**Date:** 2025-04-16 9:03 AM
+**Tools:** Keysight ADS + MATLAB (Touchstone workflows, Smith chart synthesis, S-parameter comparison)  
+**Frequency sweep:** 10–20 GHz (centered at 15 GHz)
 
 This project (EE-456: RF & mm-Wave Active Circuits) implements **wideband matching-network synthesis** using **Chebyshev-polynomial (insertion-loss) methods** to design a **10–20 GHz amplifier** around the **NEC NE321000 ultra-low-noise pseudomorphic pHEMT**, biased at **VDS = 2 V** and **IDS = 10 mA**.
 

@@ -16,24 +16,16 @@ _styles: |
   }
 ---
 
-<!--
-asset placement:
-assets/img/ee456/design01/ALL_TRLs_Schematic_ADS.png
-assets/img/ee456/design01/ADS_IMN_SCHEMATIC.png
-assets/img/ee456/design01/ADS_OMN_Schematic.png
-assets/img/ee456/design01/ADS_all_TRL_Simulation.png
-assets/img/ee456/design01/S11.png
-assets/img/ee456/design01/S21.png
-assets/img/ee456/design01/S22.png
-assets/img/ee456/design01/All_Params_vs_Frequency_ADS_ALL_TRLs.png
--->
-
-This project (completed for the EE-456/556: RF & Microwave Active Circuit Design course at Western New England University College of Engineering) designs a **15 GHz microwave amplifier** using the **MGF4941AL super–low-noise InGaAs HEMT**, biased at **V<sub>DS</sub> = 2 V** and **I<sub>DS</sub> = 10 mA**. The design goal was **maximum gain at 15 GHz** by synthesizing **input and output matching networks** using transmission-line sections, then validating performance with **S-parameter simulations** in both **MATLAB** and **Keysight ADS**.
+## Overview
 
 **Course:** EE-456 Microwave Active Circuits
-**Assignment:** Design Project 01
+**Project:** Design Project 01
+**Author:** Steven Placzek
+**Date:** 2024-11-18 9:00 AM
 **Tools:** Keysight ADS + MATLAB (Touchstone workflows, Smith chart synthesis, S-parameter comparison)  
 **Frequency sweep:** 14–16 GHz (centered at 15 GHz)
+
+This project (completed for the EE-456/556: RF & Microwave Active Circuit Design course at Western New England University College of Engineering) designs a **15 GHz microwave amplifier** using the **MGF4941AL super–low-noise InGaAs HEMT**, biased at **V<sub>DS</sub> = 2 V** and **I<sub>DS</sub> = 10 mA**. The design goal was **maximum gain at 15 GHz** by synthesizing **input and output matching networks** using transmission-line sections, then validating performance with **S-parameter simulations** in both **MATLAB** and **Keysight ADS**.
 
 ---
 

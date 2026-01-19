@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "A growing collection of all of my electrical engineering design projects and coursework.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -394,22 +394,7 @@ ninja.data = [{
           section: "News",},{id: "news-digital-signal-processing-design-project-see-the-ee-302-fir-hearing-aid-filter-design-project-page-for-more-details",
           title: 'Digital Signal Processing Design Project See the EE-302 FIR Hearing Aid Filter Design...',
           description: "",
-          section: "News",},{id: "projects-ee-302-hearing-aid-fir-filter-bank-equalizer",
-          title: 'EE-302 Hearing Aid FIR Filter-Bank Equalizer',
-          description: "Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
+          section: "News",},{id: "projects-project-4",
           title: 'project 4',
           description: "another without an image",
           section: "Projects",handler: () => {
@@ -429,11 +414,6 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
             },},{id: "projects-project-9",
           title: 'project 9',
           description: "another project with an image 🎉",

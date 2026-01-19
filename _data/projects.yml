@@ -18,3 +18,60 @@
 #   source: "https://github.com/SPkHz/REPO-NAME"
 #   pdf: ""
 #   featured: false
+
+- title: "Vector Network Analyzer Basics & S-Parameter De-Embedding"
+  summary: "VNA measurements of LPF/HPF frequency response with 2x-thru de-embedding."
+  tags:
+    - VNA
+    - S-parameters
+    - De-embedding
+    - Python
+  view: "/projects/ee322_lab_08_de-embedding_s-parameters/"
+  source: ""
+  pdf: ""
+  featured: true
+
+- title: "MAG Amplifier Design & Nonlinear Verification (8 GHz)"
+  summary: "8 GHz pHEMT MAG amplifier with TL matching, 1 dB compression, and two-tone IP3."
+  tags:
+    - RF
+    - Amplifier
+    - Matching
+    - ADS
+  view: "/projects/ee456_design_04/"
+  source: ""
+  pdf: ""
+  featured: true
+
+- title: "MOS Differential Pair with Current Mirror Load"
+  summary: "Differential-to-single-ended MOS amp with CMRR analysis using ALD1105."
+  tags:
+    - Analog
+    - MOSFETs
+    - CMRR
+  view: "/projects/ee322_lab_07_MOS_differential_pair_with_current_mirror_load/"
+  source: ""
+  pdf: ""
+  featured: true
+
+- title: "Satellite Tracking Control"
+  summary: "Discrete-time state-space controller for receiver positioning, validated in Simulink."
+  tags:
+    - Control
+    - State-space
+    - MATLAB
+  view: "/projects/ee470_design_01_servomotor_control_sys/"
+  source: ""
+  pdf: ""
+  featured: true
+
+- title: "Audiogram-Tuned FIR Filter Bank"
+  summary: "Personalized FIR filter-bank audio equalizer from patient audiograms."
+  tags:
+    - DSP
+    - FIR
+    - MATLAB
+  view: "/projects/ee302_design_01_fir_filterbank_for_hearing_aid/"
+  source: ""
+  pdf: ""
+  featured: true

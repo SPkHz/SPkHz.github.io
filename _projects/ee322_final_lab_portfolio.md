@@ -1,6 +1,6 @@
 ---
 layout: page
-title: eeLab II — Final Lab Portfolio
+title: Final Lab Portfolio (eeLab II | Spring '25)
 description: MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).
 img: /assets/img/ee322/hero/Lab_05_Bode_Sim_Vs_Meas_Gain_Phase.png
 importance: 1

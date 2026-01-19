@@ -459,8 +459,8 @@ ninja.data = [{
           description: "15 GHz low-noise amplifier matching network design (MGF4941AL). Gain/noise/VSWR trade-space + ADS/MATLAB cross-verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_02_lna_matching_network_for_mgf4941al/";
-            },},{id: "projects-ee-456-microwave-active-circuits-design-project-3",
-          title: 'EE-456 Microwave Active Circuits — Design Project 3',
+            },},{id: "projects-chebyshev-network-synthesis",
+          title: 'Chebyshev Network Synthesis',
           description: "Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_03_10_ghz_to_20_ghz_chebyshev_synthesis/";

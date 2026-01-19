@@ -424,6 +424,11 @@ ninja.data = [{
           description: "Single-junction silicon PV cell optimized in ANSYS Lumerical DEVICE (AM1.5). 16.08% efficiency with Si3N4 ARC + Al contacts, plus cost and sustainability analysis.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee212_design_01_optimized_solar_cell/";
+            },},{id: "projects-fourier-transform-project-01",
+          title: 'Fourier Transform Project 01',
+          description: "Fourier Transform applications across audio, ECG, imaging, SDR spectrum analysis, and vibration diagnostics (MATLAB-based examples).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee301_report_01_fourier_transform/";
             },},{id: "projects-fir-filter-bank-for-hearing-aid-audio-response",
           title: 'FIR Filter-Bank for Hearing Aid Audio Response',
           description: "Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).",

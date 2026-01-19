@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Discrete Control System Design for Receiver Positioning and Accurate Satellite Tracking"
+title: "Discrete-Time Control System Design for a Satellite Receiver Servo-motor Actuator achieving Accurate Satellite-Sky Tracking"
 date: 2025-04-28 09:00:00-0500
 categories: coursework
 thumbnail: /assets/img/ee470/Position_Full_Plot.jpg

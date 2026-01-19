@@ -4,7 +4,7 @@ title: 15 GHz Low-Noise Amplifier Input/Output Matching Network Design
 description: 15 GHz LNA IMN/OMN for the MGF4941AL (VDS = 2 V, IDS = 10 mA). Joint gain/NF/VSWR optimization with MATLAB + Keysight ADS cross-verification.
 img: assets/img/ee456/design02/Stab_Cirs.png
 importance: 4
-category: work
+category: coursework
 giscus_comments: true
 related_publications: false
 _styles: |

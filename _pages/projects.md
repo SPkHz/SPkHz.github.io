@@ -5,7 +5,7 @@ permalink: /projects/
 description: A growing collection of all of my electrical engineering design projects and coursework.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [coursework, fun]
 horizontal: false
 ---
 

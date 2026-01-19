@@ -1,11 +1,19 @@
 ---
+
 layout: page
 title: Boost Converter Analysis
 description: DC waveform analysis and boost converter duty cycle calculations (Week 13 Assignment • DC-DC Converters • Switching Power Supplies).
 img: /assets/img/ee336/assignment-13/boost_converter_circuit.png
-importance: 2
 category: coursework
-related_publications: false
+importance: 8720809056
+related_publications: true
+tags:
+  - boost converter
+  - duty cycle
+  - inductor current ripple
+  - dc-dc converter
+  - power electronics
+  - switching waveforms
 ---
 
 This assignment explores **DC-DC power conversion** fundamentals, focusing on **boost converters** and their operating characteristics. The problems cover waveform DC value analysis and a complete boost converter design calculation including duty cycle determination and average current analysis.

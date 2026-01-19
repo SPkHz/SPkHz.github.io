@@ -1,11 +1,20 @@
 ---
+
 layout: page
 title: Discrete Control System Design for Receiver Positioning and Accurate Satellite Tracking
 description: Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.
 img: /assets/img/ee470/Position_Full_Plot.jpg
-importance: 3
 category: coursework
-related_publications: false
+importance: 4506758246
+related_publications: true
+tags:
+  - discrete control
+  - state-space
+  - pole placement
+  - servomotor
+  - satellite tracking
+  - matlab
+  - simulink
 _styles: |
   .post article .mjx-container[display="true"] {
     font-size: 1.3em;

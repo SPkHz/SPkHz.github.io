@@ -1,11 +1,22 @@
 ---
+
 layout: page
 title: Using Chebyshev Polynomials for the Synthesis of Impedance-Matching Networks
 description: Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.
 img: assets/img/ee456/design03/ADS_Schematic_of_Design.png
-importance: 2
 category: coursework
 giscus_comments: true
+importance: 7323114428
+related_publications: true
+tags:
+  - chebyshev matching
+  - 10-20ghz
+  - wideband amplifier
+  - insertion-loss method
+  - phemt
+  - s-parameter synthesis
+  - keysight ads
+  - matlab
 _styles: |
   .post article .mjx-container[display="true"] {
     font-size: 1.3em;

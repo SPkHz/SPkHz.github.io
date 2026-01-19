@@ -1,11 +1,20 @@
 ---
+
 layout: page
 title: Induction Motor Phasor Analysis
 description: Phasor diagram analysis of induction motor equivalent circuit at multiple operating points (MATLAB • Python • Complex Impedance Analysis).
 img: /assets/img/ee336/assignment-06/phasor_all_points.png
-importance: 2
 category: coursework
-related_publications: false
+importance: 97253416240
+related_publications: true
+tags:
+  - induction motor
+  - phasor analysis
+  - equivalent circuit
+  - slip
+  - torque
+  - matlab
+  - complex impedance
 ---
 
 This assignment analyzes an **induction motor per-phase equivalent circuit** by computing and visualizing **phasor diagrams** for stator voltage ($\bar{V}_s$), air-gap voltage ($\bar{V}_r$), and load voltage ($\bar{V}_L$) at four different operating points on the motor's speed-torque characteristic curve.

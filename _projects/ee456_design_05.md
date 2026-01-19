@@ -1,17 +1,25 @@
 ---
+
 layout: page
 title: Design of an 8 GHz Oscillator using Negative-Resistance (ATF-33143)
 description: Negative-resistance oscillator synthesis at 8 GHz using common-gate conversion, feedback-reactance optimization, and transmission-line termination/resonator networks (MATLAB • Touchstone).
 img: /assets/img/ee456/design05/thumbnail.png
-importance: 1
 category: coursework
 date: 2025-05-08
-tags: RF microwave oscillator GaAs pHEMT negative-resistance MATLAB
 giscus_comments: false
-related_publications: false
 pretty_table: true
 images:
   slider: true
+importance: 543198617
+related_publications: true
+tags:
+  - negative-resistance oscillator
+  - 8ghz
+  - atf-33143
+  - resonator design
+  - stability analysis
+  - transmission-line matching
+  - matlab
 _styles: |
   .post article .mjx-container[display="true"] {
     font-size: 1.3em;

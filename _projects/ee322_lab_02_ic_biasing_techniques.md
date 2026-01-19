@@ -1,14 +1,23 @@
 ---
+
 layout: page
 title: Integrated Circuit Biasing Techniques
 description: MOSFET-resistor bias vs. beta-multiplier bias using ALD1106/ALD1105 (LTSpice + breadboard). Focus: operating point accuracy and power-supply sensitivity. (2025-01-28)
 img: /assets/img/ee322/lab-01/lab02_cover.png
-importance: 2
 category: coursework
-tags: [EE-322, analog, MOSFET, biasing, current-mirror, beta-multiplier, LTSpice]
 toc:
   sidebar: left
-related_publications: false
+importance: 6
+related_publications: true
+tags:
+  - ic biasing
+  - beta multiplier
+  - mosfet bias
+  - ald1105
+  - ald1106
+  - operating point
+  - supply sensitivity
+  - ltspice
 ---
 
 This page summarizes **Lab 02 (2025-01-28)** for **EE-322 - Electrical Engineering Lab II**.

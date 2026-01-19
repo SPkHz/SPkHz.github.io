@@ -1,11 +1,18 @@
 ---
+
 layout: page
 title: Induction Motor Slip Analysis
 description: Induction motor fundamentals — slip, synchronous speed, and rotor frequency calculations for 2-pole motors.
 img: /assets/img/ee336/assignment-05/slip_vs_speed.png
-importance: 2
 category: coursework
-related_publications: false
+importance: 601642448185
+related_publications: true
+tags:
+  - induction motor
+  - slip calculation
+  - rotor frequency
+  - synchronous speed
+  - power systems
 ---
 
 This assignment explores the fundamental operating principles of **three-phase induction motors**, focusing on the relationships between **slip**, **synchronous speed**, **rotor speed**, and **rotor voltage frequency**. The problems analyze a 2-pole induction motor at two key operating conditions: startup and steady-state operation.

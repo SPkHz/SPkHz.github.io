@@ -1,13 +1,23 @@
 ---
+
 layout: page
 title: Analysis of the MOS Differential Pair (with a Current Mirror Load)
 description: Differential-to-single-ended MOS amplifier using an ALD1105 current-mirror load; DC operating point, differential/common-mode gain, and CMRR (2025-04-08).
 img: /assets/img/ee322/lab-07/thumbnail.png
-importance: 1
 category: coursework
-related_publications: true
 toc:
   beginning: true
+importance: 6
+related_publications: true
+tags:
+  - mos differential pair
+  - current mirror load
+  - ald1105
+  - differential gain
+  - common-mode gain
+  - cmrr
+  - ltspice
+  - lab measurement
 ---
 
 **Course:** EE-322 - Electrical Engineering Lab II  

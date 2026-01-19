@@ -1,11 +1,18 @@
 ---
+
 layout: page
 title: Faraday's Law, Synchronous Generator Speed, and Phasor Analysis
 description: Faraday's Law, Synchronous Generator Speed, and Phasor Analysis
 img: assets/img/ee336/assignment-02/problem4_phasor.png
-importance: 9
 category: coursework
+importance: 7737497135077
 related_publications: true
+tags:
+  - faradays law
+  - synchronous speed
+  - phasor analysis
+  - generator fundamentals
+  - power systems
 ---
 
 ## Course Information

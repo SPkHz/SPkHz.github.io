@@ -1,25 +1,25 @@
 ---
+
 layout: page
 title: Low-Pass Filter Measurement and Analysis
 description: First-order RC low-pass filter build + Bode measurement (10 Hz–100 kHz) with MATLAB/LTspice validation.
 img: /assets/img/ee319/lab-01/lpf/thumbnail.png
-importance: 9
 category: coursework
 date: 2024-09-04 00:00:00-0400
-related_publications: true
 giscus_comments: false
 pretty_table: true
-tags:
-  - EE-319
-  - analog circuits
-  - filters
-  - Bode plot
-  - measurement
-  - MATLAB
-  - LTspice
-  - WaveForms
 images:
   slider: true
+importance: 64198247165515853
+related_publications: true
+tags:
+  - rc low-pass
+  - first-order filter
+  - bode magnitude
+  - phase response
+  - ltspice
+  - waveforms
+  - matlab
 _styles: |
   /* Slightly larger MathJax without blowing up inline math */
   .post article .mjx-container[display="true"] {

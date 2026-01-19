@@ -1,11 +1,21 @@
 ---
+
 layout: page
 title: Transistor Characterization Techniques
 description: Extracting NMOS SPICE parameters (VTn, KN, VA) from automated SMU sweeps + Python analysis.
 img: /assets/img/ee322/lab-01/plot_exp1_id_vs_vds.png
-importance: 1
 category: coursework
-related_publications: false
+importance: 9
+related_publications: true
+tags:
+  - mosfet characterization
+  - spice parameter extraction
+  - vt
+  - kn
+  - va
+  - smu sweeps
+  - python analysis
+  - curve fitting
 ---
 
 This page documents **Lab 01 (2025-01-16)** for **EE-322 — Electrical Engineering Lab II**.

@@ -1,9 +1,8 @@
 ---
+
 layout: page
 title: Design Project 04 Published: MAG Amplifier Design \& Non-Linear Simulation (8 GHz)
 description: Maximum-Available-Gain (MAG) amplifier design at 8 GHz using transmission-line + stub matching (ATF34143 pHEMT). Verified in MATLAB vs Keysight ADS; evaluated with 1 dB compression, harmonic balance, and two-tone IP3.
-tags: [RF, mm-wave, amplifier, matching, MAG, ADS, MATLAB, harmonic balance, IP3]
-importance: 1
 category: coursework
 date: 2025-05-02 09:08:12-0500
 thumbnail: assets/img/ee456/design04/00_cover.png
@@ -14,6 +13,18 @@ giscus_comments: false
 pretty_table: true
 images:
   slider: true
+importance: 195834824
+related_publications: true
+tags:
+  - mag amplifier
+  - 8ghz
+  - atf34143
+  - transmission-line matching
+  - harmonic balance
+  - p1db
+  - ip3
+  - keysight ads
+  - matlab
 _styles: |
   .post article .mjx-container[display="true"] {
     font-size: 1.3em;

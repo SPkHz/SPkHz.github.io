@@ -1,11 +1,19 @@
 ---
+
 layout: page
 title: Autotransformer Power Rating
 description: Isolation transformer to autotransformer conversion analysis (3:1 turns ratio • power rating comparison • step-up vs step-down configurations).
 img: /assets/img/ee336/assignment-04/04_power_comparison.png
-importance: 2
 category: coursework
-related_publications: false
+importance: 904225214604
+related_publications: true
+tags:
+  - autotransformer
+  - power rating
+  - turns ratio
+  - step-up step-down
+  - apparent power
+  - transformer analysis
 ---
 
 This assignment analyzes how a **3:1 isolation transformer** rated at **10 kVA** can be rewired as an **autotransformer** to achieve higher power capacity. The key insight is that **two distinct autotransformer configurations exist**, and identifying the **maximum power rating** requires evaluating both.

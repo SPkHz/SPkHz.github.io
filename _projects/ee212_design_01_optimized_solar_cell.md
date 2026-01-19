@@ -1,11 +1,20 @@
 ---
+
 layout: page
 title: Optimized Silicon Solar Cell Design
 description: Single-junction silicon PV cell optimized in ANSYS Lumerical DEVICE (AM1.5). 16.08% efficiency with Si3N4 ARC + Al contacts, plus cost and sustainability analysis.
 img: /assets/img/ee212/Design_Model.png
-importance: 2
 category: coursework
-related_publications: false
+importance: 57696958149258
+related_publications: true
+tags:
+  - silicon solar cell
+  - ansys lumerical
+  - antireflection coating
+  - si3n4
+  - iv curve
+  - efficiency optimization
+  - pv modeling
 _styles: |
   .post article .mjx-container[display="true"] {
     font-size: 1.3em;

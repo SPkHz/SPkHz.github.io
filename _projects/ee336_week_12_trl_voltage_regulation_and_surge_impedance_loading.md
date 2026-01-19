@@ -1,11 +1,18 @@
 ---
+
 layout: page
 title: Transmission Line Analysis
 description: Voltage regulation and surge impedance loading analysis for power transmission lines (MATLAB/Python • Two-port networks • SIL concepts).
 img: /assets/img/ee336/assignment-12/two_port_model.png
-importance: 2
 category: coursework
-related_publications: false
+importance: 7631136280
+related_publications: true
+tags:
+  - transmission line
+  - voltage regulation
+  - surge impedance loading
+  - two-port network
+  - power systems
 ---
 
 This assignment analyzes **transmission line voltage regulation** and **surge impedance loading (SIL)** using two-port network models. The problems explore how ABCD parameters relate sending and receiving-end quantities, and how load magnitude relative to SIL affects voltage profiles.

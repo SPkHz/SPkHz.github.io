@@ -1,11 +1,19 @@
 ---
+
 layout: page
 title: Power Transfer & Frequency Droop Analysis
 description: Generator power transfer calculation via transformer and frequency droop characteristic analysis for parallel generators (Per-unit analysis • Power-angle relationship • Droop control).
 img: /assets/img/ee336/assignment-09/problem1_power_angle.png
-importance: 2
 category: coursework
-related_publications: false
+importance: 16581919891
+related_publications: true
+tags:
+  - power transfer
+  - frequency droop
+  - per-unit system
+  - power-angle equation
+  - parallel generators
+  - power systems
 ---
 
 This assignment analyzes **real power transfer** from a generator to the grid through a transformer using **per-unit analysis**, and examines **frequency droop characteristics** for parallel generator operation.

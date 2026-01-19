@@ -1,11 +1,18 @@
 ---
+
 layout: page
 title: Single-Phase H-Bridge Inverter Analysis
 description: H-bridge inverter switching analysis and load voltage waveform generation (MATLAB • Power Electronics • DC-AC Conversion).
 img: /assets/img/ee336/assignment-14/switch_signals_and_vload.png
-importance: 2
 category: coursework
-related_publications: false
+importance: 87646031790
+related_publications: true
+tags:
+  - h-bridge inverter
+  - switching analysis
+  - dc-ac conversion
+  - load waveform
+  - power electronics
 ---
 
 This assignment analyzes a **single-phase H-bridge inverter** circuit, a fundamental topology in power electronics for DC-to-AC conversion. Given a set of switching functions for four switches (SW1–SW4), the goal is to determine the resulting **load voltage waveform** $$V_{\text{load}}(t)$$.

@@ -1,13 +1,22 @@
 ---
+
 layout: page
 title: Building, Simulating, and Measuring a Common-Source Amplifier with an Active Load 
 description: DC biasing + small-signal gain sensitivity to Rsig and RL using an ALD1105 MOSFET array (bench + LTspice).
 img: /assets/img/ee322/lab-03/cover.png
-importance: 3
 category: coursework
-related_publications: false
 toc:
   sidebar: left
+importance: 9
+related_publications: true
+tags:
+  - common-source amplifier
+  - active load
+  - dc biasing
+  - small-signal gain
+  - ald1105
+  - ltspice
+  - bench measurement
 ---
 
 **Course:** EE-322 — Electrical Engineering Lab II  

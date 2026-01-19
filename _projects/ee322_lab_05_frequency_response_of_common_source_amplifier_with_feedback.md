@@ -1,14 +1,24 @@
 ---
+
 layout: page
 title: "Frequency Response Analysis of a Common-Source Amplifier with Feedback"
 description: "Measured Bode magnitude/phase, −3 dB bandwidth, and gain-bandwidth product for a drain-to-gate feedback common-source MOSFET amplifier (ALD1105)."
 img: /assets/img/ee322/lab-05/cover.png
-importance: 5
 category: coursework
 date: 2025-03-18 00:11:30-0400
-related_publications: true
 toc:
   sidebar: right
+importance: 60397079021
+related_publications: true
+tags:
+  - common-source amplifier
+  - drain-to-gate feedback
+  - bode magnitude
+  - -3db bandwidth
+  - gain-bandwidth product
+  - ald1105
+  - ltspice
+  - bench measurement
 ---
 
 **Course:** EE-322 — Electrical Engineering Lab II  \

@@ -1,11 +1,19 @@
 ---
+
 layout: page
 title: Delta-Y Transformer Analysis
 description: Three-phase transformer voltage analysis for Δ-Y configuration (Electrical Energy Systems • 480V line-to-line • Turns ratio derivation).
 img: /assets/img/ee336/assignment-03/circuit_diagram.png
-importance: 2
 category: coursework
-related_publications: false
+importance: 1213772857596
+related_publications: true
+tags:
+  - delta-wye transformer
+  - line-to-line voltage
+  - turns ratio
+  - three-phase
+  - phasor analysis
+  - power systems
 ---
 
 This assignment analyzes a **three-phase Delta-Y (Δ-Y) transformer** to determine the secondary line-to-line voltage magnitude given the primary configuration and voltage.

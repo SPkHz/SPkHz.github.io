@@ -1,11 +1,21 @@
 ---
+
 layout: page
 title: FIR Filter-Bank for Hearing Aid Audio Response
 description: Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).
 img: /assets/img/ee302/design01/design1/Audiogram__FilterBank_Response_Direct_Sum.png
-importance: 2
 category: coursework
+importance: 9885046005
 related_publications: true
+tags:
+  - fir filter bank
+  - hearing aid
+  - audiogram compensation
+  - linear-phase
+  - matlab
+  - fir1
+  - fir2
+  - equalization
 _styles: |
   .post article .mjx-container[display="true"] {
     font-size: 1.3em;

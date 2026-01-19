@@ -1,11 +1,21 @@
 ---
+
 layout: page
 title: Millimeter-Wave Impedance Matching Network Designs
 description: Transmission-line impedance matching in Keysight ADS — shunt-stub + quarter-wave transformer designs (ideal + microstrip), with Smith-chart synthesis and layout verification.
 img: assets/img/ee314/Microstrip_1_Layout.JPG
-importance: 6
 category: coursework
 giscus_comments: false
+importance: 553355078410098
+related_publications: true
+tags:
+  - millimeter-wave
+  - impedance matching
+  - shunt stub
+  - quarter-wave transformer
+  - smith chart
+  - keysight ads
+  - microstrip layout
 _styles: |
   .post article .mjx-container[display="true"] {
     font-size: 1.3em;

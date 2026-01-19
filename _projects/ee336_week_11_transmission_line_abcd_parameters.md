@@ -1,12 +1,19 @@
 ---
+
 layout: page
 title: Transmission Line ABCD Parameters
 description: 100-mile transmission line analysis using two-port ABCD parameters and the nominal π-model (60 Hz power system).
 img: /assets/img/ee336/assignment-11/phasor_diagram_B.png
-importance: 2
 category: coursework
 date: 2025-04-14 00:10:30-0500
-related_publications: false
+importance: 7391195634
+related_publications: true
+tags:
+  - transmission line
+  - abcd parameters
+  - nominal pi model
+  - power systems
+  - two-port network
 ---
 
 This assignment analyzes a **100-mile transmission line** using **two-port ABCD parameters**. Given the per-unit-length electrical parameters, we determine the **B parameter** (series impedance) of the transmission line model, which relates sending-end and receiving-end voltages and currents.

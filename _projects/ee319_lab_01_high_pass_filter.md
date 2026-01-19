@@ -1,17 +1,25 @@
 ---
+
 layout: page
 title: High-Pass Filter Measurement Techniques
 description: First-order RC high-pass filter characterization (theory vs. LTspice vs. WaveForms measurements) with MATLAB Bode magnitude/phase plots.
 img: /assets/img/ee319/lab-01/hpf/thumbnail.jpg
-importance: 3
 category: coursework
 date: 2024-09-04 00:00:00-0400
-tags: circuits filters bode-plot ltspice matlab measurements waveforms
-related_publications: false
 giscus_comments: false
 pretty_table: true
 images:
   slider: true
+importance: 19683917889536129
+related_publications: true
+tags:
+  - rc high-pass
+  - first-order filter
+  - bode magnitude
+  - phase response
+  - ltspice
+  - waveforms
+  - matlab
 _styles: |
   /* Slightly larger MathJax without blowing up inline math */
   .post article .mjx-container[display="true"] {

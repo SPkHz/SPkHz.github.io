@@ -1,16 +1,24 @@
 ---
+
 layout: page
 title: Passive RC Band-Pass Filter Measurement and Analysis
 description: "Two-pole passive RC band-pass filter: analytic frequency response + LTspice AC sweep + Analog Discovery Studio measurements (MATLAB post-processing)."
 img: /assets/img/ee319/lab-01/bpf/thumbnail.png
-importance: 9
 category: coursework
 date: 2024-09-04 00:00:00-0400
-related_publications: true
 giscus_comments: false
 pretty_table: true
-tags: electronics filters RC band-pass Bode MATLAB LTspice Digilent
 date: 2024-09-04
+importance: 58022536485320760
+related_publications: true
+tags:
+  - passive band-pass filter
+  - rc filter
+  - bode plot
+  - ltspice
+  - analog discovery
+  - matlab
+  - frequency response
 _styles: |
   /* Slightly larger MathJax without blowing up inline math */
   .post article .mjx-container[display="true"] {

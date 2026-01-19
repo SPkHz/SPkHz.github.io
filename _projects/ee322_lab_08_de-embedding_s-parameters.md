@@ -1,11 +1,20 @@
 ---
+
 layout: page
 title: "De-Embedding Device S-Parameters from Vector Network Analyzer Measurments"
 description: "Vector Network Analyzer (VNA) measurements of LPF/HPF frequency response with 2x-thru de-embedding (Touchstone • Python • SciPy)."
 img: /assets/img/ee322/lab-08/thumbnail.png
-importance: 1
 category: coursework
+importance: 5597803095
 related_publications: true
+tags:
+  - vna
+  - s-parameter de-embedding
+  - 2x-thru
+  - touchstone
+  - python
+  - scipy
+  - lpf hpf measurement
 ---
 
 **Course:** EE-322 — Electrical Engineering Lab II  \

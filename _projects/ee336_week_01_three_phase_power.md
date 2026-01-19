@@ -1,11 +1,19 @@
 ---
+
 layout: page
 title: Three-Phase Apparent Power
 description: Calculating total 3-phase apparent power for a Δ-connected balanced load (MATLAB • phasor analysis • power systems).
 img: /assets/img/ee336/assignment-01/delta_connected_circuit.png
-importance: 2
 category: coursework
-related_publications: false
+importance: 2124651598013
+related_publications: true
+tags:
+  - three-phase power
+  - apparent power
+  - delta load
+  - balanced load
+  - phasor analysis
+  - power systems
 ---
 
 This assignment analyzes a **balanced three-phase system** with a **delta (Δ)-connected load** to compute the total apparent power. The problem reinforces the critical distinction between **Y-connected** and **Δ-connected** configurations—a common source of errors in power systems calculations.

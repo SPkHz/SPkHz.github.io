@@ -1,11 +1,20 @@
 ---
+
 layout: page
 title: Analysis of the MOS Differential Pair (Single-Ended vs. Differential Signaling)
 description: Characterization a MOS differential pair (ALD1105) in DC and AC; compare single-ended vs differential output and quantify CMRR.
 img: /assets/img/ee322/lab-06/lab06_cover.png
-importance: 1
 category: coursework
-related_publications: false
+importance: 97157844802
+related_publications: true
+tags:
+  - mos differential pair
+  - single-ended output
+  - differential signaling
+  - cmrr
+  - ald1105
+  - ltspice
+  - measurement
 ---
 
 **Course:** EE-322 — Electrical Engineering Lab II  \\

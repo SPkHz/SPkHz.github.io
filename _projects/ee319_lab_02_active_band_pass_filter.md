@@ -1,18 +1,28 @@
 ---
+
 layout: page
 title: Active Band-Pass Filter Measurement and Analysis
 description: Measurement + modeling of a 2nd-order active band-pass filter (LM741). Bode sweep (10 Hz–100 kHz), time-domain validation, and harmonic/spectrum analysis (MATLAB + LTspice + Digilent WaveForms).
 img: /assets/img/ee319/lab-02/thumbnail.png
-importance: 2
 category: coursework
 date: 2024-10-01 00:11:30-0400
-related_publications: true
 giscus_comments: false
 pretty_table: true
 images:
   slider: true
   compare: true
 tabs: true
+importance: 6178927185569738
+related_publications: true
+tags:
+  - active band-pass filter
+  - second-order filter
+  - lm741
+  - bode plot
+  - harmonic analysis
+  - ltspice
+  - analog discovery
+  - matlab
 _styles: |
   /* Slightly larger MathJax without blowing up inline math */
   .post article .mjx-container[display="true"],

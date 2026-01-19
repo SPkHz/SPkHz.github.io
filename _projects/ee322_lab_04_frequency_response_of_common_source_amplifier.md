@@ -1,12 +1,21 @@
 ---
+
 layout: page
 title: "Common-Source Amplifier: Frequency Response Measurement and Analysis"
 description: "DC bias + Bode magnitude response (Measured vs LTspice), using discrete capacitors to emulate MOSFET parasitics."
 img: /assets/img/ee322/lab-04/bode_mag_hero.png
-importance: 4
 category: coursework
-related_publications: false
 date: 2025-03-05
+importance: 52390946791
+related_publications: true
+tags:
+  - common-source amplifier
+  - frequency response
+  - mosfet parasitics
+  - bode plot
+  - ald1105
+  - ltspice
+  - measurement
 ---
 
 **Course:** EE-322 - Electrical Engineering Lab II  

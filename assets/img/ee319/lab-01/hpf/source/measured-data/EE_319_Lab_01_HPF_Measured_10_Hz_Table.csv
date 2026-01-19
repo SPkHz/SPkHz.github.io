@@ -1,0 +1,24 @@
+#Digilent WaveForms Oscilloscope Measurements
+#Device Name: DiscoveryStudio
+#Serial Number: SN:210384B2F9A0
+#Date Time: 2024-09-04 00:38:47.783
+#Sample rate: 27300Hz
+#Samples: 8192
+#Trigger: Source: Channel 1 Type: Edge Condition: Rising Level: 0 V Hyst.: Auto HoldOff: 0 s
+#Channel 1: Range: 450 mV/div Offset: 0 V Sample Mode: Average
+#Channel 2: Range: 220 mV/div Offset: 0 V Sample Mode: Average
+#Wavegen Channel 1: Running
+#Mode: Simple
+#Type: Sine
+#Frequency: 10 Hz
+#Period: 100 ms
+#Amplitude: 2 V
+#Offset: 0 V
+#Symmetry: 50 %
+#Phase: 0 °
+
+#
+,Extent,Name
+C1,Amplitude, 2.0009 V
+C2,Amplitude, 71.963 mV
+,Phase, 85.722 °

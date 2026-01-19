@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-470 Satellite Tracking Servo Control
+title: Discrete Computer Control System Receiver Positioning and Accurate Satellite Tracking
 description: Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.
 img: /assets/img/ee470/Position_Full_Plot.jpg
 importance: 3

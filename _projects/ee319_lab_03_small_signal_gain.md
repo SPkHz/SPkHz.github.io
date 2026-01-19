@@ -209,7 +209,7 @@ A mid-band reference frequency was selected at **f**<sub>x</sub> = **872.8567 Hz
 
 ---
 
-## Add to an al-folio site
+<!-- ## Add to an al-folio site
 
 1. Place this markdown file at: `/_projects/ee319-lab-03.md`
 2. Unzip the provided assets into your repo root so the images land at: `assets/img/ee319/lab-03/`
@@ -228,4 +228,4 @@ Referenced image files:
 - `small-signal-gain-table.png`
 - `scope-fx-872hz.png`, `spectrum-fx-872hz.png`
 - `scope-1-32fx-27hz.png`, `spectrum-1-32fx-27hz.png`
-- `scope-64fx-56khz.png`, `spectrum-64fx-56khz.png`
+- `scope-64fx-56khz.png`, `spectrum-64fx-56khz.png` -->

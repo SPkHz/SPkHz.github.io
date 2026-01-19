@@ -213,11 +213,16 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_04/";
-            },},{id: "projects-ee-456-design-project-05",
-          title: 'EE-456 Design Project 05',
-          description: "Placeholder for EE-456 Design Project 05.",
+            },},{id: "projects-ee-456-design-project-05-8-ghz-oscillator-atf-33143-via-negative-resistance",
+          title: 'EE-456 Design Project 05 — 8 GHz Oscillator (ATF-33143) via Negative Resistance',
+          description: "Negative-resistance oscillator synthesis at 8 GHz using common-gate conversion, feedback-reactance optimization, and transmission-line termination/resonator networks (MATLAB • Touchstone).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_05/";
+            },},{id: "projects-design-of-an-8-ghz-negative-resistance-oscillator-using-atf-33143-gaas-phemt",
+          title: 'Design of an 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT',
+          description: "EE-456 Design Project 05 -- 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee456_design_05_old/";
             },},{id: "projects-discrete-control-system-design-for-receiver-positioning-and-accurate-satellite-tracking",
           title: 'Discrete Control System Design for Receiver Positioning and Accurate Satellite Tracking',
           description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",

@@ -1,6 +1,7 @@
 ---
+
 layout: post
-date: 2026-01-19 13:58:19+0000
+date: 2025-05-03 07:03:00-0400
 inline: true
 related_posts: false
 show_on_home: true

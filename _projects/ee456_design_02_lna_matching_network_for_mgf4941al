@@ -1,7 +1,7 @@
 ---
 layout: page
-title: EE-456 Microwave Active Circuits — Design Project 02
-description: 15 GHz low-noise amplifier matching network design (MGF4941AL). Gain/noise/VSWR trade-space + ADS/MATLAB cross-verification.
+title: 15 GHz Low-Noise Amplifier Input/Output Matching Network Design
+description: 15 GHz low-noise amplifier input matching network and output matching network design (MGF4941AL). Gain/noise/VSWR trade-space + ADS/MATLAB cross-verification.
 img:
 importance: 4
 category: work
@@ -10,15 +10,15 @@ related_publications: false
 
 <!--
 asset placement:
-assets/img/ee456_dp2/ADS_Complete_Schematic.png
-assets/img/ee456_dp2/Stab_Cirs.png
-assets/img/ee456_dp2/Gamma_A and Gamma_S.png
-assets/img/ee456_dp2/S21_dB---ADSvsMtLb.jpg
-assets/img/ee456_dp2/NF_ADSvsMtLB.jpg
-assets/img/ee456_dp2/VSWR_OMN__ADSvsMtLb.jpg
-assets/img/ee456_dp2/VSWR_IMN_ADSvsMtLb.jpg
-assets/img/ee456_dp2/S11_ADSvsMtLb.jpg
-assets/img/ee456_dp2/S22_ADSvsMtLb.jpg
+assets/img/ee456/design02/ADS_Complete_Schematic.png
+assets/img/ee456/design02/Stab_Cirs.png
+assets/img/ee456/design02/Gamma_A and Gamma_S.png
+assets/img/ee456/design02/S21_dB---ADSvsMtLb.jpg
+assets/img/ee456/design02/NF_ADSvsMtLB.jpg
+assets/img/ee456/design02/VSWR_OMN__ADSvsMtLb.jpg
+assets/img/ee456/design02/VSWR_IMN_ADSvsMtLb.jpg
+assets/img/ee456/design02/S11_ADSvsMtLb.jpg
+assets/img/ee456/design02/S22_ADSvsMtLb.jpg
 -->
 
 This project (EE-456: RF & mm-Wave Active Circuits) designs a **15 GHz low-noise amplifier (LNA) matching network** for the **MGF4941AL InGaAs HEMT** at **VDS = 2 V** and **IDS = 10 mA**. Unlike Project 1 (pure max-gain), the goal here is a **practical compromise** that meets **gain + noise + matching** specifications simultaneously, while validating results in **both MATLAB and Keysight ADS**.
@@ -52,13 +52,13 @@ The design begins with device S-parameters and noise parameters at **15 GHz**, t
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp2/ADS_Complete_Schematic.png" title="Final ADS schematic (IMN + device + OMN)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/ADS_Complete_Schematic.png" title="Final ADS schematic (IMN + device + OMN)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp2/Stab_Cirs.png" title="Stability / gain / noise circles (design space)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/Stab_Cirs.png" title="Stability / gain / noise circles (design space)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp2/Gamma_A and Gamma_S.png" title="Selected intersection point for source matching" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/Gamma_A and Gamma_S.png" title="Selected intersection point for source matching" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
@@ -88,13 +88,13 @@ The design begins with device S-parameters and noise parameters at **15 GHz**, t
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp2/S21_dB---ADSvsMtLb.jpg" title="Gain overlay (ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/S21_dB---ADSvsMtLb.jpg" title="Gain overlay (ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp2/NF_ADSvsMtLB.jpg" title="Noise figure overlay (ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/NF_ADSvsMtLB.jpg" title="Noise figure overlay (ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp2/VSWR_OMN__ADSvsMtLb.jpg" title="VSWR overlay (OMN, ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/VSWR_OMN__ADSvsMtLb.jpg" title="VSWR overlay (OMN, ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

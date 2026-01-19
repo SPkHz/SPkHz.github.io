@@ -67,7 +67,7 @@ Both the **Input Matching Network (IMN)** and **Output Matching Network (OMN)** 
 At 15 GHz, the design hits a strong conjugate-match condition and produces near-theoretical maximum transducer gain for the chosen device/bias point.
 
 **Representative performance near 15 GHz (from the final simulations):**
-- **Peak |S21| / gain:** ~12.9 dB near 15 GHz  
+- **Peak gain:** peak |S21| / gain = ~12.9 dB near 15 GHz  
 - **Input return loss:** deep notch near 15 GHz (|S11| well below −30 dB)  
 - **Output return loss:** deep notch near 15 GHz (|S22| well below −30 dB)  
 - **Reverse transmission:** |S12| around the mid −10s dB near 15 GHz

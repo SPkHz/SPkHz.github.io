@@ -1,6 +1,7 @@
 ---
 
 
+
 layout: post
 title: "Discrete-Time Control System Design for a Satellite Receiver Servo-motor Actuator achieving Accurate Satellite-Sky Tracking"
 date: 2025-04-28 09:00:00-0500

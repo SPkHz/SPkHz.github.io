@@ -1,6 +1,7 @@
 ---
 
 
+
 layout: post
 title: "Optimized Silicon Solar Cell Design"
 date: 2025-05-03 11:22:00-0400

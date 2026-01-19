@@ -6,4 +6,4 @@ related_posts: false
 show_on_home: true
 ---
 
-**[LM741 Non-Ideality Measurements](/blog/2024/ee319-lab-06-detailed-announcement/)** — or [view the project page](/projects/ee319-lab-06/).
+**[Op-Amp Non-Ideality Measurements](/blog/2024/ee319-lab-06-detailed-announcement/)** — or [view the project page](/projects/ee319-lab-06/).

@@ -6,4 +6,4 @@ related_posts: false
 show_on_home: true
 ---
 
-**[EE Lab II Portfolio](/blog/2025/ee322-final-lab-portfolio-detailed-announcement/)** — or [view the project page](/projects/ee322_final_lab_portfolio/).
+**[Device-to-System Portfolio](/blog/2025/ee322-final-lab-portfolio-detailed-announcement/)** — or [view the project page](/projects/ee322_final_lab_portfolio/).

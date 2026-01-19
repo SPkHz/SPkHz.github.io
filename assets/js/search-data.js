@@ -387,37 +387,55 @@ ninja.data = [{
           title: '',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/2024_11_18__ee314_design_project_01__announcement/";
-            },},{id: "news-",
+              window.location.href = "/news/2024_11_18__ee314_design_project_01__detailed_announcement/";
+            },},{id: "news-ghz-transmission-line-matching-networks-see-the-detailed-announcement-for-more-details",
+          title: 'GHz Transmission-Line Matching Networks  See the detailed announcement for more details.',
+          description: "",
+          section: "News",},{id: "news-",
           title: '',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/2024_11_27__ee301_FT_project_01__announcement/";
-            },},{id: "news-",
+              window.location.href = "/news/2024_11_27__ee301_FT_project_01__detailed_announcement/";
+            },},{id: "news-fourier-transform-applications-for-signal-analysis-see-the-detailed-announcement-for-more-details",
+          title: 'Fourier Transform Applications for Signal Analysis See the detailed announcement for more details....',
+          description: "",
+          section: "News",},{id: "news-",
           title: '',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/2024_12_06__ee301_LT_project_02__announcement/";
-            },},{id: "news-",
+              window.location.href = "/news/2024_12_06__ee301_LT_project_02__detailed_announcement/";
+            },},{id: "news-laplace-transform-applications-for-system-analysis-see-the-detailed-announcement-for-more-details",
+          title: 'Laplace Transform Applications for System Analysis See the detailed announcement for more details....',
+          description: "",
+          section: "News",},{id: "news-",
           title: '',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/2025_02_25__ee456_design_project_01__announcement/";
-            },},{id: "news-",
+              window.location.href = "/news/2025_02_25__ee456_design_project_01__detailed_announcement/";
+            },},{id: "news-15-ghz-gaas-hemt-amplifier-design-see-the-detailed-announcement-for-more-details",
+          title: '15 GHz GaAs HEMT Amplifier Design See the detailed announcement for more details....',
+          description: "",
+          section: "News",},{id: "news-",
           title: '',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/2025_03_28__ee456_design_project_02__announcement/";
-            },},{id: "news-",
+              window.location.href = "/news/2025_03_28__ee456_design_project_02__detailed_announcement/";
+            },},{id: "news-15-ghz-lna-matching-network-design-see-the-detailed-announcement-for-more-details",
+          title: '15 GHz LNA Matching Network Design See the detailed announcement for more details....',
+          description: "",
+          section: "News",},{id: "news-",
           title: '',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/2025_04_16__ee456_design_project_03__announcement/";
-            },},{id: "news-",
+              window.location.href = "/news/2025_04_16__ee456_design_project_03__detailed_announcement/";
+            },},{id: "news-10-20-ghz-chebyshev-insertion-loss-matching-see-the-detailed-announcement-for-more-details",
+          title: '10-20 GHz Chebyshev Insertion-Loss Matching  See the detailed announcement for more details.',
+          description: "",
+          section: "News",},{id: "news-",
           title: '',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/2025_04_29__ee302_design_project_01__announcement/";
+              window.location.href = "/news/2025_04_29__ee302_design_project_01__detailed_announcement/";
             },},{id: "news-a-long-announcement-with-details",
           title: 'A long announcement with details',
           description: "",
@@ -425,6 +443,9 @@ ninja.data = [{
               window.location.href = "/news/announcement_2/";
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          description: "",
+          section: "News",},{id: "news-digital-signal-processing-design-project-see-the-detailed-announcement-for-more-details",
+          title: 'Digital Signal Processing Design Project  See the detailed announcement for more details.',
           description: "",
           section: "News",},{id: "news-digital-signal-processing-design-project-see-the-ee-302-fir-hearing-aid-filter-design-project-page-for-more-details",
           title: 'Digital Signal Processing Design Project See the EE-302 FIR Hearing Aid Filter Design...',

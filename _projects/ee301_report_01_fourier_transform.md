@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Engineering Applications of the Fourier Transform
+title: Fourier Transform Applications within Electrical Engineering
 description: Fourier Transform applications across audio, ECG, imaging, SDR spectrum analysis, and vibration diagnostics (MATLAB-based examples).
 img: assets/img/ee301/ee301-ft-banner.jpg
 importance: 6
@@ -9,6 +9,11 @@ giscus_comments: false
 ---
 
 ## Overview
+
+**Course:** EE-301 Signals and Systems
+**Project:** Project 01 - Electrical Engineering Applications of the Fourier Transform
+**Author:** Steven Placzek
+**Date:** 2024-11-27 10:11 AM
 
 This project explores the Fourier Transform as a practical engineering tool: converting time-domain complexity into frequency-domain structure so signals can be analyzed, filtered, and interpreted. The report walks through four application areas, with MATLAB-style examples and supporting figures:
 

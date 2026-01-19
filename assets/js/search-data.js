@@ -653,31 +653,6 @@ ninja.data = [{
           description: "Transmission-line impedance matching in Keysight ADS — shunt-stub + quarter-wave transformer designs (ideal + microstrip), with Smith-chart synthesis and layout verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee314_design_01/";
-            },},{id: "projects-measurements",
-          title: 'Measurements',
-          description: "BJT common-emitter amplifier (2N3904): DC bias, midband gain, frequency response, and distortion limits.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ee319-lab-05/";
-            },},{id: "projects-measurements-lm741-op-amp",
-          title: 'Measurements (LM741 Op-Amp)',
-          description: "Non-ideal op-amp characteristics measured in LTspice—offset voltage, input bias currents, slew rate, and gain-bandwidth product.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ee319-lab-06/";
-            },},{id: "projects-measurements",
-          title: 'Measurements',
-          description: "Differential-mode gain, common-mode gain, and CMRR for a single-op-amp difference amplifier and a 3-op-amp instrumentation amplifier (LM741).",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ee319/lab-07/";
-            },},{id: "projects-passive-rc-band-pass-filter-measurement-and-analysis",
-          title: 'Passive RC Band-Pass Filter Measurement and Analysis',
-          description: "Two-pole passive RC band-pass filter: analytic frequency response + LTspice AC sweep + Analog Discovery Studio measurements (MATLAB post-processing).",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ee319_lab_01_band_pass_filter/";
-            },},{id: "projects-high-pass-filter-measurement-techniques",
-          title: 'High-Pass Filter Measurement Techniques',
-          description: "First-order RC high-pass filter characterization (theory vs. LTspice vs. WaveForms measurements) with MATLAB Bode magnitude/phase plots.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ee319_lab_01_high_pass_filter/";
             },},{id: "projects-low-pass-filter-measurement-and-analysis",
           title: 'Low-Pass Filter Measurement and Analysis',
           description: "First-order RC low-pass filter build + Bode measurement (10 Hz–100 kHz) with MATLAB/LTspice validation.",
@@ -698,6 +673,31 @@ ninja.data = [{
           description: "MOSFET amplification with the ALD1105 dual complementary pair NMOS/PMOS transistors (MATLAB • LTspice • Analog Discovery Studio).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319_lab_04/";
+            },},{id: "projects-distortion-measurements-of-a-common-emmiter-bipolar-junction-transistor",
+          title: 'Distortion Measurements of a Common-Emmiter BiPolar Junction Transistor',
+          description: "BJT common-emitter amplifier (2N3904): DC bias, midband gain, frequency response, and distortion limits.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319-lab-05/";
+            },},{id: "projects-measuring-the-non-ideal-characteristics-of-an-operational-amplifier-lm741-op-amp",
+          title: 'Measuring the Non-Ideal Characteristics of an Operational Amplifier (LM741 Op-Amp)',
+          description: "Non-ideal op-amp characteristics measured in LTspice—offset voltage, input bias currents, slew rate, and gain-bandwidth product.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319-lab-06/";
+            },},{id: "projects-measurements",
+          title: 'Measurements',
+          description: "Differential-mode gain, common-mode gain, and CMRR for a single-op-amp difference amplifier and a 3-op-amp instrumentation amplifier (LM741).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319/lab-07/";
+            },},{id: "projects-passive-rc-band-pass-filter-measurement-and-analysis",
+          title: 'Passive RC Band-Pass Filter Measurement and Analysis',
+          description: "Two-pole passive RC band-pass filter: analytic frequency response + LTspice AC sweep + Analog Discovery Studio measurements (MATLAB post-processing).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319_lab_01_band_pass_filter/";
+            },},{id: "projects-high-pass-filter-measurement-techniques",
+          title: 'High-Pass Filter Measurement Techniques',
+          description: "First-order RC high-pass filter characterization (theory vs. LTspice vs. WaveForms measurements) with MATLAB Bode magnitude/phase plots.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319_lab_01_high_pass_filter/";
             },},{id: "projects-eelab-ii-final-lab-portfolio",
           title: 'eeLab II — Final Lab Portfolio',
           description: "MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).",

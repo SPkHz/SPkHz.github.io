@@ -1,11 +1,12 @@
 ---
 layout: page
-title: EE 319 Lab 01 — Low-Pass Filter Measurements
+title: Low-Pass Filter Measurement and Analysis
 description: First-order RC low-pass filter build + Bode measurement (10 Hz–100 kHz) with MATLAB/LTspice validation.
 img: /assets/img/ee319/lab-01/lpf/thumbnail.png
-importance: 3
+importance: 9
 category: coursework
-related_publications: false
+date: 2024-09-04 00:00:00-0400
+related_publications: true
 giscus_comments: false
 pretty_table: true
 tags:

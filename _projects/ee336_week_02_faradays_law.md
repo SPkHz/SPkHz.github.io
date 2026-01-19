@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Assignment 02
+title: Faraday's Law, Synchronous Generator Speed, and Phasor Analysis
 description: Faraday's Law, Synchronous Generator Speed, and Phasor Analysis
 img: assets/img/ee336/assignment-02/problem4_phasor.png
-importance: 2
-category: EE-336
-related_publications: false
+importance: 9
+category: coursework
+related_publications: true
 ---
 
 ## Course Information

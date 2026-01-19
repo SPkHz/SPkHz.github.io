@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-319 Lab 01 — High-Pass Filter Measurements
+title: High-Pass Filter Measurement Techniques
 description: First-order RC high-pass filter characterization (theory vs. LTspice vs. WaveForms measurements) with MATLAB Bode magnitude/phase plots.
 img: /assets/img/ee319/lab-01/hpf/thumbnail.jpg
 importance: 3

@@ -1,10 +1,11 @@
 ---
 layout: page
-title: EE-336 Transmission Line ABCD Parameters
+title: Transmission Line ABCD Parameters
 description: 100-mile transmission line analysis using two-port ABCD parameters and the nominal π-model (60 Hz power system).
 img: /assets/img/ee336/assignment-11/phasor_diagram_B.png
 importance: 2
 category: coursework
+date: 2025-04-14 00:10:30-0500
 related_publications: false
 ---
 

@@ -1,11 +1,12 @@
 ---
 layout: page
-title: EE-319 Lab 02 — Active Band-Pass Filter Measurements
+title: Active Band-Pass Filter Measurement and Analysis
 description: Measurement + modeling of a 2nd-order active band-pass filter (LM741). Bode sweep (10 Hz–100 kHz), time-domain validation, and harmonic/spectrum analysis (MATLAB + LTspice + Digilent WaveForms).
 img: /assets/img/ee319/lab-02/thumbnail.png
 importance: 2
 category: coursework
-related_publications: false
+date: 2024-10-01 00:11:30-0400
+related_publications: true
 giscus_comments: false
 pretty_table: true
 images:

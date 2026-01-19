@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "EE-322 Lab 04 — Frequency Response of the Common-Source Amplifier"
+title: "Common-Source Amplifier: Frequency Response Measurement and Analysis"
 description: "DC bias + Bode magnitude response (Measured vs LTspice), using discrete capacitors to emulate MOSFET parasitics."
 img: /assets/img/ee322/lab-04/bode_mag_hero.png
 importance: 4

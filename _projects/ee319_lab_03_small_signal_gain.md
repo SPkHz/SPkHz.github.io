@@ -1,10 +1,11 @@
 ---
 layout: page
-title: EE 319 Lab 03 — Bode Plot & Small-Signal Gain
+title: Utilizing Bode Plots to Determine Small-Signal Gain
 description: Calculated vs LTspice vs Analog Discovery measurements for a diode-biased LM741 amplifier (mid-band gain, cutoff frequencies, and small-signal limits).
 img: assets/img/ee319/lab-03/midband-gain.png
-importance: 3
+importance: 9
 category: coursework
+date: 2024-10-15 00:11:30-0400
 ---
 
 ## Overview

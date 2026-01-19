@@ -58,7 +58,7 @@ The design begins with device S-parameters and noise parameters at **15 GHz**, t
     {% include figure.liquid loading="eager" path="assets/img/ee456/design02/Stab_Cirs.png" title="Stability / gain / noise circles (design space)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/Gamma_A and Gamma_S.png" title="Selected intersection point for source matching" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/Gamma_A_and_Gamma_S.png" title="Selected intersection point for source matching" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

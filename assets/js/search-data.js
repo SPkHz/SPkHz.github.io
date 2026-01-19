@@ -232,8 +232,8 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_04/";
-            },},{id: "projects-ee-456-design-project-05-8-ghz-oscillator-atf-33143-via-negative-resistance",
-          title: 'EE-456 Design Project 05 — 8 GHz Oscillator (ATF-33143) via Negative Resistance',
+            },},{id: "projects-8-ghz-negative-resistance-oscillator-design-atf-33143",
+          title: '8 GHz Negative Resistance Oscillator Design (ATF-33143)',
           description: "Negative-resistance oscillator synthesis at 8 GHz using common-gate conversion, feedback-reactance optimization, and transmission-line termination/resonator networks (MATLAB • Touchstone).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_05/";

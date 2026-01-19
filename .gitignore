@@ -14,3 +14,5 @@ vendor
 .venv
 .claude/*
 .codex/*
+.devcontainer/.claude/*
+.devcontainer/.codex/*

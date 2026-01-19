@@ -70,9 +70,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee470-design-project-01/";
           
         },
-      },{id: "post-designing-an-8-ghz-mag-amplifier-with-nonlinear-verification-and-ip3-analysis",
+      },{id: "post-design-of-an-8-ghz-maximum-absolute-gain-or-mag-amplifier-with-non-linear-simulations-and-ip3-analysis",
         
-          title: "Designing an 8 GHz MAG Amplifier with Nonlinear Verification and IP3 Analysis",
+          title: "Design of an 8 GHz Maximum Absolute Gain (or MAG) Amplifier with Non-linear...",
         
         description: "",
         section: "Posts",

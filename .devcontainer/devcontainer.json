@@ -3,7 +3,8 @@
   "image": "mcr.microsoft.com/devcontainers/jekyll",
   "mounts": [
     "source=${localEnv:HOME}/.config/claude,target=/home/vscode/.config/claude,type=bind,consistency=cached",
-    "source=${localEnv:HOME}/.config/openai,target=/home/vscode/.config/openai,type=bind,consistency=cached"
+    "source=${localEnv:HOME}/.config/openai,target=/home/vscode/.config/openai,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.codex,target=/home/vscode/.codex,type=bind,consistency=cached"
   ],
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
@@ -13,9 +14,7 @@
   },
   "postAttachCommand": "./bin/entry_point.sh",
   "postCreateCommand": [
-    "cp .devcontainer/.gitconfig ~/.gitconfig",
-    "mkdir -p /home/vscode/.codex && cp .devcontainer/.codex/config.toml /home/vscode/.codex/config.toml",
-    "mkdir -p /home/vscode/.claude && cp .devcontainer/.claude/settings.local.json /home/vscode/.claude/settings.local.json"
+    "cp .devcontainer/.gitconfig ~/.gitconfig"
   ],
   "customizations": {
     "vscode": {

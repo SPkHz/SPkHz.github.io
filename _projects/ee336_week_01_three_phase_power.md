@@ -26,6 +26,7 @@ Consider the following balanced 3-phase system with a Δ-connected load:
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-01/delta_connected_circuit.png" title="Three-phase delta-connected load circuit" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Three-phase system with Y-connected source and Δ-connected load. Each phase impedance has magnitude |Z̃| = 48 Ω.
 </div>
@@ -55,6 +56,7 @@ In contrast, for a Y-connected load: $$V_{phase} = V_{LL}/\sqrt{3}$$
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-01/formula_summary.png" title="Delta connection formulas" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Summary of delta (Δ) connection formulas for balanced three-phase systems.
 </div>

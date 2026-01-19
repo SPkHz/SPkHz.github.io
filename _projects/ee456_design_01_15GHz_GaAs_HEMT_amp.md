@@ -56,6 +56,7 @@ Both the **Input Matching Network (IMN)** and **Output Matching Network (OMN)** 
     {% include figure.liquid loading="eager" path="assets/img/ee456/design01/ADS_OMN_Schematic.png" title="Output Matching Network (OMN) schematic" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   ADS schematics for the complete amplifier and the standalone IMN/OMN. Simulations use ideal transmission-line models at <b>f<sub>0</sub> = 15 GHz</b>.
 </div>
@@ -80,6 +81,7 @@ At 15 GHz, the design hits a strong conjugate-match condition and produces near-
     {% include figure.liquid loading="eager" path="assets/img/ee456/design01/S21.png" title="MATLAB vs ADS comparison: |S21| (gain) overlay" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Full-design ADS outputs (Smith + S-parameters) and a direct MATLAB-vs-ADS overlay for |S21|. The agreement confirms the Touchstone workflow and the ideal-TL implementation.
 </div>
@@ -95,6 +97,7 @@ At 15 GHz, the design hits a strong conjugate-match condition and produces near-
     {% include figure.liquid loading="eager" path="assets/img/ee456/design01/S22.png" title="MATLAB vs ADS comparison: |S22| overlay" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   MATLAB and ADS comparisons for the key S-parameters, verifying that both toolchains predict essentially the same matching behavior and gain across 14–16 GHz.
 </div>

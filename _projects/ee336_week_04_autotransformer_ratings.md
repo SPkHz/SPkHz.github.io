@@ -25,6 +25,7 @@ Consider a two-winding transformer with turns ratio **N₁ = 3** and **N₂ = 1*
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-04/01_isolation_transformer.png" title="Isolation transformer configuration" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   <b>Isolation Transformer:</b> Standard configuration with electrically isolated primary (N₁=3) and secondary (N₂=1) windings. Power rating S<sub>iso</sub> = 10 kVA.
 </div>
@@ -62,6 +63,7 @@ When windings are connected in series-additive configuration, an autotransformer
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-04/02_autotransformer_config_a.png" title="Autotransformer Configuration A" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   <b>Configuration A:</b> Input applied across both windings (V<sub>H</sub> = V₁ + V₂), output tapped from N₂ only. This creates a <b>step-down</b> autotransformer.
 </div>
@@ -101,6 +103,7 @@ This represents a **+33.3%** increase over the isolation rating.
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-04/03_autotransformer_config_b.png" title="Autotransformer Configuration B" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   <b>Configuration B:</b> Input applied across N₂ only (V<sub>H</sub> = V₂), output taken across both windings. This creates a <b>step-up</b> autotransformer with <b>maximum power transfer</b>.
 </div>
@@ -171,6 +174,7 @@ The formula shows that **smaller values of x yield larger power ratings**. For a
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-04/04_power_comparison.png" title="Power rating comparison" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   <b>Comparison:</b> The step-up autotransformer configuration (B) achieves the maximum power rating of <b>40 kVA</b>, a 4× improvement over the isolation transformer.
 </div>
@@ -180,6 +184,7 @@ The formula shows that **smaller values of x yield larger power ratings**. For a
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-04/05_autotransformer_principles.png" title="Autotransformer principles" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   <b>Key Principle:</b> Autotransformers achieve higher power ratings by utilizing <i>conduction</i> (direct electrical connection) in addition to <i>transformation</i> (magnetic coupling). The step-up configuration maximizes this benefit.
 </div>

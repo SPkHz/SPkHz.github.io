@@ -32,6 +32,7 @@ The primary deliverables were the **mid-band gain**, the **low/high cutoff frequ
     {% include figure.liquid loading="eager" path="assets/img/ee319/lab-03/midband-gain.png" title="Mid-band gain (calculated vs simulated vs measured)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Bode magnitude showing the mid-band gain plateau and the measured/simulated cutoff markers.
 </div>
@@ -44,6 +45,7 @@ The primary deliverables were the **mid-band gain**, the **low/high cutoff frequ
     {% include figure.liquid loading="lazy" path="assets/img/ee319/lab-03/phase-response.png" title="Phase response" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Left: zoomed magnitude response around the passband. Right: phase response across frequency.
 </div>
@@ -57,6 +59,7 @@ The primary deliverables were the **mid-band gain**, the **low/high cutoff frequ
     {% include figure.liquid loading="lazy" path="assets/img/ee319/lab-03/ltspice-schematic.png" title="LTspice schematic" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   LTspice schematic used for AC analysis (LM741 model), including coupling capacitors and a diode bias network.
 </div>
@@ -83,6 +86,7 @@ The primary deliverables were the **mid-band gain**, the **low/high cutoff frequ
     {% include figure.liquid loading="lazy" path="assets/img/ee319/lab-03/ltspice-bode-plot.png" title="LTspice Bode plot" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   LTspice AC sweep (1 Hz to 1 MHz) used to extract mid-band gain and cutoff frequencies.
 </div>
@@ -97,6 +101,7 @@ The primary deliverables were the **mid-band gain**, the **low/high cutoff frequ
     {% include figure.liquid loading="lazy" path="assets/img/ee319/lab-03/measured-bode-plot.png" title="Measured Bode plot" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Input amplitude selection (100 mV) and measured Bode magnitude/phase (1 Hz to 1 MHz).
 </div>
@@ -124,6 +129,7 @@ The primary deliverables were the **mid-band gain**, the **low/high cutoff frequ
     {% include figure.liquid loading="lazy" path="assets/img/ee319/lab-03/results-summary.png" title="Calculated, simulated, and measured results (slide table)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Slide summary table (included as an image for parity with the original report).
 </div>
@@ -148,6 +154,7 @@ For comparisons, percent difference was computed using the symmetric “average 
     {% include figure.liquid loading="lazy" path="assets/img/ee319/lab-03/excel-percent-differences.png" title="Excel percent difference calculations" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Excel sheet used to compute differences and percent differences.
 </div>
@@ -165,6 +172,7 @@ A mid-band reference frequency was selected at **f**<sub>x</sub> = **872.8567 Hz
     {% include figure.liquid loading="lazy" path="assets/img/ee319/lab-03/small-signal-gain-table.png" title="Finding small-signal gain" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Gain extracted from measured scope amplitudes across multiples of f\_x, with color-coded regions indicating where the system begins leaving the small-signal regime.
 </div>
@@ -179,6 +187,7 @@ A mid-band reference frequency was selected at **f**<sub>x</sub> = **872.8567 Hz
     {% include figure.liquid loading="lazy" path="assets/img/ee319/lab-03/spectrum-fx-872hz.png" title="Spectrum at f_x" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   f\_x = 872.8567 Hz: sinusoidal waveforms and a spectrum dominated by the fundamental.
 </div>
@@ -191,6 +200,7 @@ A mid-band reference frequency was selected at **f**<sub>x</sub> = **872.8567 Hz
     {% include figure.liquid loading="lazy" path="assets/img/ee319/lab-03/spectrum-1-32fx-27hz.png" title="Spectrum at (1/32) f_x" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   (1/32)f\_x = 27.2768 Hz: gain begins drifting as the circuit approaches the edge of the small-signal region.
 </div>
@@ -203,6 +213,7 @@ A mid-band reference frequency was selected at **f**<sub>x</sub> = **872.8567 Hz
     {% include figure.liquid loading="lazy" path="assets/img/ee319/lab-03/spectrum-64fx-56khz.png" title="Spectrum at 64 f_x" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   64f\_x = 55.8628 kHz: gain drop is consistent with approaching the high-frequency roll-off.
 </div>

@@ -74,6 +74,7 @@ A more efficient approach: **5 Hamming-window band-pass filters** designed with 
     {% include figure.liquid loading="eager" path="assets/img/ee302/design01/design1/Audiogram__FilterBank_Response_Direct_Sum.png" title="Design 1 — Compensation check (audiogram + filter-bank)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   <b>Design 1:</b> The smoothed audiogram drives 8 overlapping FIR bands. The direct-sum plot verifies compensation by adding the filter-bank magnitude (dB) to the inverse audiogram; the target is a curve near <b>0 dB</b>.
 </div>
@@ -89,6 +90,7 @@ A more efficient approach: **5 Hamming-window band-pass filters** designed with 
     {% include figure.liquid loading="eager" path="assets/img/ee302/design2/Audiogram__FilterBank_Response_Design_2.png" title="Design 2 — Compensation check (audiogram + filter-bank)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   <b>Design 2:</b> Fewer filters (5 total) using <code>fir1</code> + Hamming window. The combined response still tracks the compensation target while reducing filter-bank complexity.
 </div>
@@ -110,6 +112,7 @@ To validate practical behavior, the composite FIR filter-bank was applied to rea
     {% include figure.liquid loading="eager" path="assets/img/ee302/design01/Bensound_Spec.jpg" title="Bensound — Welch spectrum (input vs filtered)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Filter-bank equalization shifts spectral energy upward in frequency regions associated with higher hearing-loss compensation targets.
 </div>

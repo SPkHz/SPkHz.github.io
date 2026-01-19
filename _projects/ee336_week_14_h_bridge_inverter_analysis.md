@@ -26,6 +26,7 @@ The H-bridge inverter consists of two series-connected DC voltage sources (each 
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-14/hbridge_circuit.png" title="H-Bridge Inverter Circuit Topology" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   <b>Single-Phase H-Bridge Inverter:</b> Two DC sources (each $$V_{in}/2$$) supply the bridge. Switches SW1 and SW4 form the left leg; SW2 and SW3 form the right leg. The load is connected horizontally between the midpoints of each leg.
 </div>
@@ -52,6 +53,7 @@ The key operating principle:
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-14/switching_logic_table.png" title="H-Bridge Switching Logic Truth Table" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   <b>Switching Logic Summary:</b> Green indicates positive output, red indicates negative output, and yellow indicates zero-voltage states.
 </div>
@@ -97,6 +99,7 @@ end
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-14/switch_signals_and_vload.png" title="Switch Signals and Load Voltage" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   <b>Complete Waveform Analysis:</b> The top four subplots show the individual switch states (ON/OFF), and the bottom subplot shows the resulting load voltage $$V_{\text{load}}(t)$$ oscillating between $$+V_{in}$$, $$0$$, and $$-V_{in}$$.
 </div>
@@ -110,6 +113,7 @@ end
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-14/vload_annotated.png" title="Annotated Load Voltage with Active Switch Pairs" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   <b>Annotated Output:</b> Green regions indicate when SW1 & SW3 are both ON (positive output), red regions indicate when SW2 & SW4 are both ON (negative output), and gray regions indicate zero-voltage states.
 </div>
@@ -128,6 +132,7 @@ The load voltage waveform exhibits a **quasi-square wave** pattern with the foll
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-14/individual_switch_signals.png" title="Individual Switch Signals" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   <b>Individual Switch Patterns:</b> Each switch follows a periodic pattern with phase offsets to achieve the desired output waveform. Note that SW1/SW3 and SW2/SW4 form complementary diagonal pairs.
 </div>
@@ -141,6 +146,7 @@ The load voltage waveform exhibits a **quasi-square wave** pattern with the foll
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-14/vload_output.png" title="Load Voltage Output" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   <b>Final Result:</b> The H-bridge inverter output $$V_{\text{load}}(t)$$ shows the characteristic three-level waveform typical of single-phase inverters with this switching strategy.
 </div>

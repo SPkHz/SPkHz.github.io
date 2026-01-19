@@ -57,6 +57,7 @@ Component values used in the build:
     {% include figure.liquid loading="eager" path="assets/img/ee319/lab-02/schematic_active_bpf.png" title="Active band-pass filter schematic" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Active band-pass filter used for the lab.
 </div>
@@ -78,6 +79,7 @@ A compact transfer-function form (idealized):
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/ee319/lab-02/bode_magnitude_matlab.jpg" title="MATLAB magnitude plot (report figure)" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/ee319/lab-02/bode_phase_matlab.jpg" title="MATLAB phase plot (report figure)" class="img-fluid rounded z-depth-1" %}</swiper-slide>
 </swiper-container>
+
 <div class="caption">
   Bode magnitude/phase across 10 Hz–100 kHz. The clean plots are regenerated directly from the WaveForms CSV export and compared to the ideal transfer function.
 </div>
@@ -115,6 +117,7 @@ Measured v_i(t) and v_o(t) at fL, f0, and fH.
     {% include figure.liquid loading="eager" path="assets/img/ee319/lab-02/scope_fh.png" title="Scope capture at fH" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Output amplitude peaks near the band center and rolls off toward the -3 dB edges.
 </div>
@@ -141,6 +144,7 @@ A 1 V input square wave at 1.5 kHz is strongly band-limited by the filter, produ
     {% include figure.liquid loading="eager" path="assets/img/ee319/lab-02/spectrum_vo.png" title="Measured spectrum of v_o" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   The band-pass response emphasizes the fundamental and nearby odd harmonics while strongly suppressing components outside the passband.
 </div>

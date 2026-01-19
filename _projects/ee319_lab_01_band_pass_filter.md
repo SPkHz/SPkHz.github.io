@@ -53,6 +53,7 @@ The circuit is a **2-pole RC band-pass** formed by a **series coupling capacitor
     {% include figure.liquid loading="eager" path="assets/img/ee319/lab-01/bpf/protoboard_closeup.jpg" title="Hardware build (Analog Discovery Studio protoboard)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   The lab compares theory, LTspice, and hardware measurements of the same passive network.
 </div>
@@ -136,6 +137,7 @@ The filter was built directly on the **Analog Discovery Studio protoboard** and 
     {% include figure.liquid loading="eager" path="assets/img/ee319/lab-01/bpf/bode_mag_calc_sim_meas.jpg" title="Magnitude: calculated vs LTspice vs measured" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Overlay comparison of the band-pass magnitude response. The measured trace tracks the predicted curve closely, with small shifts consistent with component tolerance and instrument loading.
 </div>

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: EE-322 Lab 06 — MOS Differential Pair (Single-Ended vs. Differential Signaling)
-description: Characterize a MOS differential pair (ALD1105) in DC and AC; compare single-ended vs differential output and quantify CMRR.
+title: Analysis of the MOS Differential Pair (Single-Ended vs. Differential Signaling)
+description: Characterization a MOS differential pair (ALD1105) in DC and AC; compare single-ended vs differential output and quantify CMRR.
 img: /assets/img/ee322/lab-06/lab06_cover.png
 importance: 1
 category: coursework
@@ -45,6 +45,7 @@ The main goal is to quantify how differential signaling improves **common-mode r
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-06/mos_diff_pair_schematic.png" title="MOS differential pair used for DC + AC characterization" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   <b>Implementation note:</b> In the ALD1105 array, the NMOS body (<code>V−</code>) is tied to the NMOS source and the PMOS body (<code>V+</code>) is tied to the PMOS source (package substrate pins).
 </div>
@@ -137,6 +138,7 @@ $$
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-06/cmrr_comparison.png" title="CMRR comparison (single-ended vs differential output)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Differential output rejects common-mode content much more effectively than single-ended output. The measured CMRR improvement is about <b>26.6 dB</b> (48.328 dB − 21.724 dB).
 </div>

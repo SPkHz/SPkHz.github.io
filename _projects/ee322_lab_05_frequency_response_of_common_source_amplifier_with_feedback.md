@@ -38,6 +38,7 @@ toc:
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-05/ald1105_pinout.png" title="ALD1105 pinout and internal device mapping" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   The feedback resistor <code>R<sub>F</sub></code> returns a portion of the output voltage to the MOSFET gate node, implementing negative feedback.
 </div>

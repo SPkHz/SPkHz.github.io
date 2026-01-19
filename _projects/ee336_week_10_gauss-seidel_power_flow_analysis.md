@@ -26,6 +26,7 @@ Consider the following 6-bus power system:
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-10/six_bus_topology.png" title="6-Bus Power System Topology" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     The 6-bus system topology showing the slack bus (Bus 4), load buses, and transmission line connections. Each load bus has identical complex power demand.
 </div>
@@ -127,6 +128,7 @@ The slack bus serves two critical functions:
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-10/self_admittance_comparison.png" title="Self-Admittance Comparison by Bus" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Comparison of self-admittance magnitudes across all buses. Bus 3 has the highest value due to having three connected transmission lines.
 </div>
@@ -151,6 +153,7 @@ The Gauss-Seidel method converged smoothly over 10 iterations for this system.
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-10/voltage_angle_convergence.png" title="Voltage Angle Convergence" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     <b>Left:</b> Voltage magnitude convergence showing all load bus voltages increasing from the flat start (1.0 p.u.) toward their steady-state values. <b>Right:</b> Voltage angle convergence showing phase angles spreading from 0° reference.
 </div>
@@ -171,6 +174,7 @@ The Gauss-Seidel method converged smoothly over 10 iterations for this system.
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-10/iteration_table.png" title="Complete Iteration Table" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Complete iteration-by-iteration results showing voltage magnitudes and angles for all six buses. Green cells highlight the answer to part (a): V₃(1). Gold cells highlight the answer to part (b): V₄(10).
 </div>
@@ -184,6 +188,7 @@ The Gauss-Seidel method converged smoothly over 10 iterations for this system.
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-10/phasor_diagram.png" title="Voltage Phasor Diagrams" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Voltage phasor diagrams showing the evolution from iteration 1 to the final solution. Note how the phasors spread out from the reference (slack bus, V₄) as the solution converges.
 </div>

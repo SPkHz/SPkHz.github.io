@@ -31,6 +31,7 @@ Consider a three-phase transformer with the following configuration:
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-03/circuit_diagram.png" title="Delta-Y Transformer Configuration" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Three-phase Delta-Y transformer showing primary (Δ) and secondary (Y) windings with turns $N_1$ and $N_2$ respectively.
 </div>
@@ -46,6 +47,7 @@ The solution requires understanding the voltage relationships in both delta and 
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-03/solution_flowchart.png" title="Solution Methodology" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Step-by-step solution methodology with key three-phase transformer relationships.
 </div>
@@ -108,6 +110,7 @@ $$
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-03/voltage_relationships.png" title="Voltage Transformation Flow" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Visual representation of voltage transformation through the Delta-Y configuration.
 </div>
@@ -123,6 +126,7 @@ The phasor diagrams below illustrate the voltage relationships on both the prima
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-03/phasor_diagram.png" title="Phasor Diagrams" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     <b>Left:</b> Primary (Delta) voltages where phase voltage equals line voltage. <b>Right:</b> Secondary (Wye) voltages showing phase (L-N) and line (L-L) voltage phasors with the √3 magnitude relationship.
 </div>

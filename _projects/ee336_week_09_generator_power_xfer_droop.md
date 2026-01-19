@@ -36,6 +36,7 @@ Consider a generator connected to the transmission system via a transformer:
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-09/problem1_circuit.png" title="Generator-Transformer-Grid System" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Single-line diagram of the generator connected to the infinite bus (grid) via a step-up transformer.
 </div>
@@ -85,6 +86,7 @@ $$
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-09/problem1_pu_circuit.png" title="Per-Unit Equivalent Circuit" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Per-unit equivalent circuit for power transfer analysis. The transformer is represented by its series reactance.
 </div>
@@ -120,6 +122,7 @@ $$
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-09/problem1_power_angle.png" title="Power-Angle Characteristic" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Power-angle (P-δ) curve showing the operating point at δ = 5°. The sinusoidal relationship governs steady-state power transfer between synchronous machines.
 </div>
@@ -137,6 +140,7 @@ Consider the following frequency droop characteristics for two generators with t
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-09/problem2_droop.png" title="Droop Characteristics" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Frequency droop characteristics for generators A and B. Generator A has a shallower slope (2% droop), while Generator B has a steeper slope (4% droop).
 </div>
@@ -190,6 +194,7 @@ $$
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-09/problem2_frequency_change.png" title="Response to Frequency Change" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   When grid frequency drops from f₁ to f₂, Generator A experiences a larger percentage change in power output due to its shallower droop slope.
 </div>

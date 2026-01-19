@@ -50,6 +50,7 @@ Transmission lines are classified by electrical length, which determines the app
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-11/line_classification.png" title="Transmission Line Classification" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Transmission line classification by length. Our 100-mile line falls in the <b>medium-length</b> category, where the nominal π-model provides adequate accuracy.
 </div>
@@ -65,6 +66,7 @@ For our **100-mile line**, we use the **nominal π-model** where the total serie
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-11/pi_model_circuit.png" title="Nominal π-Model Circuit" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   The nominal π-model for a medium-length transmission line. Series elements (R, L) are lumped at the center, while shunt capacitance is split between sending and receiving ends.
 </div>
@@ -74,6 +76,7 @@ For our **100-mile line**, we use the **nominal π-model** where the total serie
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-11/abcd_block_diagram.png" title="ABCD Parameter Block Diagram" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Two-port ABCD parameter representation relating sending-end quantities (V<sub>S</sub>, I<sub>S</sub>) to receiving-end quantities (V<sub>R</sub>, I<sub>R</sub>).
 </div>
@@ -144,6 +147,7 @@ $$
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-11/abcd_parameters_table.png" title="ABCD Parameters Summary" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   <b>Left:</b> Phasor diagram showing the B parameter as the vector sum of resistance (real) and inductive reactance (imaginary). <b>Right:</b> Summary table of all ABCD parameters for the nominal π-model.
 </div>
@@ -184,6 +188,7 @@ Where $Y = j\omega C_{total} = j(376.99)(10^{-3}) = j0.377$ S
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-11/B_parameter_comparison.png" title="B Parameter Model Comparison" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Comparison between short line approximation and exact (distributed parameter) model. For a 100-mile line at 60 Hz, the lumped-parameter approximation is acceptable for most power system studies.
 </div>

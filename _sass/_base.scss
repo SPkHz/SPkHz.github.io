@@ -1497,3 +1497,14 @@ figure.cover {
 mjx-container[jax="CHTML"][display="true"] {
   overflow-x: auto;
 }
+
+.post article .mjx-container[display="true"],
+.post article mjx-container[jax="CHTML"][display="true"] {
+  font-size: 1.28em;
+  margin: 0.85em 0 1.05em;
+}
+
+.post article .mjx-container,
+.post article mjx-container[jax="CHTML"] {
+  font-size: 1.1em;
+}

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-322 Lab 02 - IC Biasing Techniques
+title: Integrated Circuit Biasing Techniques
 description: MOSFET-resistor bias vs. beta-multiplier bias using ALD1106/ALD1105 (LTSpice + breadboard). Focus: operating point accuracy and power-supply sensitivity. (2025-01-28)
 img: /assets/img/ee322/lab-01/lab02_cover.png
 importance: 2
@@ -54,6 +54,7 @@ In this lab, both bias circuits were:
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_ald110x_pinout.png" title="ALD1106/ALD1105 pinout and internal devices" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Pinout + internal device diagrams used throughout the lab setup.
 </div>
@@ -83,6 +84,7 @@ A diode-connected NMOS (gate tied to drain) with a resistor from **$V_{DD}$ → 
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_breadboard_setup_2.jpg" title="Breadboard build (photo)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   The potentiometer was tuned at <b>$V_{DD}=10\,\text{V}$</b> to achieve <b>$I_D \approx 500\,\mu\text{A}$</b>, then $V_{DD}$ was swept to observe sensitivity.
 </div>
@@ -108,6 +110,7 @@ A diode-connected NMOS (gate tied to drain) with a resistor from **$V_{DD}$ → 
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_exp1_measured_vs_sim.png" title="Experiment 1: $I_D$ vs $V_{DD}$ (measured vs simulated)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   MOSFET-resistor bias shows a noticeable dependency of current on $V_{DD}$.
 </div>
@@ -141,6 +144,7 @@ $Q_2$ was implemented as **4×** the width of $Q_1$ by wiring **four NMOS device
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_breadboard_setup_1.jpg" title="Breadboard build (photo)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Beta-multiplier wiring using the ALD1106/ALD1105 array (including parallel NMOS devices to realize the 4× width ratio).
 </div>
@@ -178,6 +182,7 @@ Notes:
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_exp2_measured_vs_sim.png" title="Experiment 2: $I_D$ vs $V_{DD}$ (measured vs simulated)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Beta-multiplier bias current tracks the target region more consistently across $V_{DD}$ compared with the simple MOSFET-resistor bias.
 </div>
@@ -189,6 +194,7 @@ Notes:
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_exp2_supply_sensitivity.png" title="Experiment 2: derivative-based supply sensitivity visualization" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   The derivative curve illustrates how the simulated current's sensitivity to $V_{DD}$ changes across the sweep (qualitative stability indicator).
 </div>

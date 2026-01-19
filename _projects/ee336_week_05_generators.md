@@ -119,6 +119,7 @@ $$
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-05/slip_vs_speed.png" title="Rotor Speed vs Slip" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   The rotor speed decreases linearly with increasing slip. At s = 0 (impossible in practice), the rotor would match synchronous speed. At s = 100% (startup), the rotor is stationary.
 </div>
@@ -130,6 +131,7 @@ $$
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-05/slip_vs_rotor_freq.png" title="Rotor Frequency vs Slip" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   The rotor voltage frequency is directly proportional to slip. At startup (s = 100%), rotor frequency equals stator frequency. During normal operation (s ≈ 2–5%), rotor frequency is just a few Hz.
 </div>
@@ -141,6 +143,7 @@ $$
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-05/torque_speed_curve.png" title="Torque-Speed Characteristic" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   The torque-speed curve shows the stable operating region (green shading). As load increases, the motor moves left along this curve—speed decreases and slip increases to produce more torque.
 </div>

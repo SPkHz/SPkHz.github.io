@@ -80,6 +80,7 @@ Goal: measure NMOS behavior directly and connect the observed curves to threshol
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab01/Lab_01_1_3.png" title="NMOS sweep results (representative plots)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Representative Lab 01 output plots from measurement sweeps. (Copy from your portfolio repo into <code>assets/img/ee322/lab01/</code>.)
 </div>
@@ -94,6 +95,7 @@ Goal: implement an actively-loaded common-source amplifier and evaluate gain beh
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab03/Lab_03_Bode_Plot.png" title="Actively-loaded CS amplifier — Bode plot" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Measured/simulated frequency response for the actively-loaded common-source stage.
 </div>
@@ -126,6 +128,7 @@ A standard outcome shows up clearly:
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab05/Lab_05_Bode_Sim_Vs_Meas_Gain_Phase.png" title="Feedback amplifier — Bode gain/phase (sim vs meas)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Feedback reshapes the frequency response: the “more stable, wider, less peaky” signature shows up in the Bode curves.
 </div>

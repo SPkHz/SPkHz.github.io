@@ -108,6 +108,7 @@ This ensures the microstrip results reflect realistic dispersion/loss compared t
     {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_4_OC_Plots.JPG" title="Shunt-stub solution 4 (open-circuit) plots" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Four shunt-stub matching solutions showing both open-circuit (OC) and short-circuit (SC) stub configurations with their corresponding S-parameter plots.
 </div>
@@ -132,6 +133,7 @@ This ensures the microstrip results reflect realistic dispersion/loss compared t
     {% include figure.liquid loading="eager" path="assets/img/ee314/QWT_Soln_2_Plots.JPG" title="Quarter-wave transformer solution 2 plots" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Two quarter-wave transformer matching solutions with their corresponding S-parameter plots.
 </div>
@@ -162,6 +164,7 @@ This ensures the microstrip results reflect realistic dispersion/loss compared t
     {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_2_Plots.JPG" title="Microstrip implementation 2 plots" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Microstrip lines were dimensioned from the substrate definition, then verified in layout to ensure physical realizability and correct connectivity.
 </div>

@@ -36,6 +36,7 @@ Because intrinsic MOSFET capacitances are often too small to observe with standa
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-04/circuit_schematic.png" title="Common-source amplifier test circuit" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Common-source amplifier used for DC biasing and AC frequency sweep. Small capacitors (C1–C5) emulate device parasitics (including Miller-related effects).
 </div>
@@ -143,6 +144,7 @@ $$
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-04/bode_mag_meas_vs_sim.png" title="Bode magnitude: measured vs simulated" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   **Measured** points are from oscilloscope amplitude data. The **simulated** curve shown is a first-order band-pass fit using the LTspice summary values (mid-band gain, $f_L$, $f_H$) so both can be compared on a single axis with the required 0–30 dB magnitude window.
 </div>

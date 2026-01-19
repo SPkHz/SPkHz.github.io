@@ -1,11 +1,11 @@
 ---
 layout: page
-title: EE-322 Lab 07 — MOS Differential Pair (Current Mirror Load)
+title: Analysis of the MOS Differential Pair (with a Current Mirror Load)
 description: Differential-to-single-ended MOS amplifier using an ALD1105 current-mirror load; DC operating point, differential/common-mode gain, and CMRR (2025-04-08).
 img: /assets/img/ee322/lab-07/thumbnail.png
-importance: 7
+importance: 1
 category: coursework
-related_publications: false
+related_publications: true
 toc:
   beginning: true
 ---
@@ -47,6 +47,7 @@ Primary goals:
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-07/ald1105_pinout.png" title="ALD1105 pinout and internal device mapping" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   The ALD1105 integrates matched NMOS and PMOS devices. Matching is critical for good current mirroring and high CMRR.
 </div>
@@ -122,6 +123,7 @@ Even with a “matched” array, measurable mismatch can appear and will directl
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-07/dc_current_mismatch.png" title="DC drain current mismatch (bench observation) vs model-based ID estimate" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Bench observations showed a clear split between the two sides of the differential pair and mirror. Mismatch and channel-length modulation (finite \(r_o\)) are practical contributors.
 </div>
@@ -176,6 +178,7 @@ The plots below show representative single-ended outputs \(v_O\) for differentia
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-07/vout_common_mode.png" title="Output: common-mode drive" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Differential-mode excitation produces a larger \(v_O\) ripple than common-mode excitation, consistent with a finite but non-zero CMRR.
 </div>

@@ -48,6 +48,7 @@ The design flow is simple: start from device **S-parameters + noise parameters**
     {% include figure.liquid loading="eager" path="assets/img/ee456/design02/Gamma_A_and_Gamma_S.png" title="Selected feasible \u0393S from the intersection region" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Final layout and selection logic: \\(\Gamma_S\\) and \\(\Gamma_L\\) are chosen from the feasible gain–NF–stability intersection, then realized with compact single-stub transmission-line networks (IMN + OMN).
 </div>
@@ -79,6 +80,7 @@ At \\(15~\text{GHz}\\), the selected terminations are:
     {% include figure.liquid loading="eager" path="assets/img/ee456/design02/VSWR_OMN__ADSvsMtLb.jpg" title="Output VSWR overlay (ADS vs MATLAB)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Cross-verification: MATLAB and ADS were run as independent toolchains (Touchstone export + re-plot). Overlays confirm the same operating point and consistent behavior near 15 GHz.
 </div>

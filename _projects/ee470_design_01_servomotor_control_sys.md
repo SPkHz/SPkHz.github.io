@@ -73,6 +73,7 @@ u(k) = -G_1\,y_1(k) - G_2\,y_2(k) + r(k)
     {% include figure.liquid loading="eager" path="assets/img/ee470/Continous_Sys_TF.png" title="Plant block diagram / scaling (continuous model reference)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   The controller was built and validated in Simulink using both continuous and discrete representations to verify that the discrete controller tracks the continuous design closely at the chosen sampling rate.
 </div>
@@ -94,6 +95,7 @@ A key part of the project was showing how sampling rate affects the *practical* 
     {% include figure.liquid loading="eager" path="assets/img/ee470/Sweep_500Hz_Pos.jpg" title="Position step response (500 Hz sampling)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Position response sweep: increasing sampling frequency reduces discretization artifacts and improves how closely the discrete response overlays the continuous reference.
 </div>
@@ -109,6 +111,7 @@ A key part of the project was showing how sampling rate affects the *practical* 
     {% include figure.liquid loading="eager" path="assets/img/ee470/Sweep_500Hz_Vel.jpg" title="Velocity step response (500 Hz sampling)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Velocity response sweep: discrete velocity feedback can amplify measurement noise in real hardware, so filtering and careful timing become part of the control design (not an afterthought).
 </div>

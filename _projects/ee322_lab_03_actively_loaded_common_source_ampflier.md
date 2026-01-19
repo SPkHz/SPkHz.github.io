@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-322 Lab 03 — Actively Loaded Common Source Amplifier
+title: Building, Simulating, and Measuring a Common-Source Amplifier with an Active Load 
 description: DC biasing + small-signal gain sensitivity to Rsig and RL using an ALD1105 MOSFET array (bench + LTspice).
 img: /assets/img/ee322/lab-03/cover.png
 importance: 3
@@ -44,6 +44,7 @@ The work is organized into three experiments:
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-03/wiring_diagram.png" title="Wiring diagram used for the actively loaded common-source amplifier" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   The ALD1105 provides matched MOSFETs. The amplifier biases an NMOS common-source stage using a PMOS active load.
 </div>
@@ -98,6 +99,7 @@ The table below consolidates:
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-03/dc_operating_point_voltages.png" title="DC node voltages: simulated vs measured" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Node voltages match closely between simulation and measurement; the measured drain/output voltage settled slightly above 5 V.
 </div>
@@ -160,6 +162,7 @@ The LTspice values below are slightly higher (≈32.8 dB), consistent with model
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-03/gain_vs_rsig_db.png" title="Voltage gain magnitude vs Rsig (simulated)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   The gain stays near 32.8 dB until Rsig approaches RG (10 MΩ). At Rsig = RG, the gate sees a 0.5 divider, reducing gain by ≈6.02 dB.
 </div>
@@ -191,6 +194,7 @@ Because \(R_{sig}\) only affects the **input attenuation** (not the bias point),
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-03/gain_vs_rl_db.png" title="Voltage gain magnitude vs RL (corrected)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Decreasing RL loads the output node, reducing Rout and therefore reducing gain.
 </div>

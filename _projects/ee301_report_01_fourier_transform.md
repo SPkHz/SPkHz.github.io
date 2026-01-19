@@ -45,6 +45,7 @@ This project explores the Fourier Transform as a practical engineering tool: con
     {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/ecg_spectrum_filtered.png" title="ECG spectrum + filtered reconstruction" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Fourier analysis reveals dominant tones in audio and separates ECG fundamentals from interference/noise, enabling frequency-domain filtering and time-domain reconstruction.
 </div>
@@ -61,6 +62,7 @@ This project explores the Fourier Transform as a practical engineering tool: con
     {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/mri_reconstruction.png" title="MRI reconstruction concept (k-space to image)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Compression leverages frequency-domain energy compaction (DCT as a close relative), while MRI reconstruction relies on Fourier structure to recover spatial-domain anatomy from frequency-domain measurements.
 </div>
@@ -76,6 +78,7 @@ Fourier tools are the backbone of SDR spectrum visibility: FFT-based displays ma
     {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/wifi_spectrum_waterfall.png" title="2.4 GHz band spectrum + waterfall example" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Waterfall + spectrum views show signal activity over time and frequency, where peaks correspond to transmitters sharing the band.
 </div>
@@ -88,6 +91,7 @@ Fourier tools are the backbone of SDR spectrum visibility: FFT-based displays ma
     {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/lte_spectrum.png" title="LTE-style spectrum example (MATLAB)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   LTE-style spectral structure can be modeled and visualized using FFT-based analysis, mirroring what real RF receivers compute internally.
 </div>
@@ -101,6 +105,7 @@ Fourier tools are the backbone of SDR spectrum visibility: FFT-based displays ma
     {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/bridge_fft_code.png" title="Bridge vibration FFT example (MATLAB code excerpt)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Vibration signals can be decomposed into resonant components; peaks in the spectrum map to forcing terms (wind/traffic) and potential fatigue-related content.
 </div>

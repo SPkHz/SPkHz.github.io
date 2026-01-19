@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "EE-322 Lab 08 — VNA Basics & S-Parameter De-Embedding"
+title: "Vector Network Analyzer Basics & S-Parameter De-Embedding"
 description: "Vector Network Analyzer (VNA) measurements of LPF/HPF frequency response with 2x-thru de-embedding (Touchstone • Python • SciPy)."
 img: /assets/img/ee322/lab-08/thumbnail.png
 importance: 1
 category: coursework
-related_publications: false
+related_publications: true
 ---
 
 **Course:** EE-322 — Electrical Engineering Lab II  \
@@ -43,6 +43,7 @@ The main deliverable was a repeatable workflow that:
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-08/setup_overview.png" title="Lab hardware overview (VNA + ECal + RF demo board)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Keysight P9371A VNA with ECal module and RF demo board sections used for the LPF/HPF measurements.
 </div>
@@ -94,6 +95,7 @@ S-parameters do **not** cascade by simple matrix multiplication. To cascade/de-c
     {% include figure.liquid path="assets/img/ee322/lab-08/t_to_s_conversion.png" title="T → S conversion" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   The conversion relationships used in the Python workflow (matching the lab handout). After de-embedding in the T-domain, we convert back to S-parameters for plotting.
 </div>
@@ -138,6 +140,7 @@ Key metrics extracted from the de‑embedded response:
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-08/lpf_s11_raw_vs_deembedded.png" title="LPF S11 (raw vs de-embedded)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   LPF transmission (S21) and input reflection (S11) before and after 2x‑thru de‑embedding.
 </div>
@@ -147,6 +150,7 @@ Key metrics extracted from the de‑embedded response:
     {% include figure.liquid path="assets/img/ee322/lab-08/lpf_s11_complex_plane.png" title="LPF S11 complex plane" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Complex-plane view of S11 (unit circle reference). De‑embedding shifts the apparent reflection trajectory by removing the fixture contribution.
 </div>
@@ -171,6 +175,7 @@ A practical summary from the measured sweep:
     {% include figure.liquid loading="eager" path="assets/img/ee322/lab-08/hpf_s11_raw_vs_deembedded.png" title="HPF S11 (raw vs de-embedded)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   HPF transmission (S21) and input reflection (S11) before and after 2x‑thru de‑embedding.
 </div>
@@ -195,6 +200,7 @@ The same Touchstone files can be imported into ADS and de‑embedded using its b
     {% include figure.liquid path="assets/img/ee322/lab-08/ads_De_Embedded_vs_Embed_1.png" title="ADS: Smith chart comparison" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Example ADS outputs using the same measurement data.
 </div>

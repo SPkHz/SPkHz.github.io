@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "EE-456 Design Project 05 Published: 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT"
-date: 2025-05-08 23:46:00-0500
+date: 2025-05-09 11:46:00-0500
 inline: false
-related_posts: true
+related_posts: false
 show_on_home: false
 tags: RF microwave oscillator GaAs pHEMT
 categories: coursework
@@ -171,7 +171,7 @@ d_{T1} = 0.136\lambda \quad \Rightarrow \quad \theta_{T1} = 48.996°
 d_{T2} = 0.402\lambda \quad \Rightarrow \quad \theta_{T2} = 11.896°
 \]
 
-{% include figure.liquid loading="eager" path="assets/img/ee456/design05/gamma_t_contours.png" class="img-fluid rounded z-depth-1" caption="Phase contours of Γ_T over the (θ_s, θ_p) design space for the termination network." zoomable=true %}
+{% include figure.liquid loading="eager" path="assets/img/ee456/design05/gamma_t_contours.png" title="Phase contours of Γ_T over the (θ_s, θ_p) design space for the termination network." class="img-fluid rounded z-depth-1" caption="Phase contours of Γ_T over the (θ_s, θ_p) design space for the termination network." zoomable=true  %}
 
 ---
 

@@ -56,6 +56,7 @@ $$\tilde{V}(t) \propto \sin\left(\frac{\pi t}{3} - \frac{\pi}{2}\right)$$
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-02/problem1_waveforms.png" title="Problem 1 Waveforms" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Time-domain representation showing B(t) (dashed) and V(t) (solid blue). Note the 90° phase lag of V(t) relative to B(t).
 </div>
@@ -65,6 +66,7 @@ $$\tilde{V}(t) \propto \sin\left(\frac{\pi t}{3} - \frac{\pi}{2}\right)$$
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-02/problem1_phasor.png" title="Problem 1 Phasor" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Phasor diagram showing the 90° phase relationship between \(\vec{B}\) and \(\tilde{V}\). The voltage phasor lags the magnetic field phasor by 90°.
 </div>
@@ -152,6 +154,7 @@ Using phasor $$\tilde{V}_t$$ as reference, draw the remaining phasors $$\tilde{E
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-02/generator_circuit.png" title="Generator Circuit" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Synchronous generator equivalent circuit with internal EMF \(\tilde{E}_g\), synchronous reactance \(jX_s\), and load impedance \(\tilde{Z}_L\).
 </div>
@@ -185,6 +188,7 @@ The internal EMF leads the terminal voltage by the power angle $$\delta$$.
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-02/problem4_phasor.png" title="Problem 4 Phasor Diagram" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Phasor diagram for the synchronous generator with a load impedance of \(\tilde{Z}_L = |\tilde{Z}_L| \angle 45°\, \Omega\). The terminal voltage is the reference, current lags by 45°, and \(jX_s\tilde{I}_a\) leads the current by 90°.
 </div>
@@ -202,6 +206,7 @@ Consider a generator model operating under two different loading conditions repr
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-02/problem5_conditions.png" title="Problem 5 Conditions" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Phasor diagrams for Condition A (underexcited) and Condition B (overexcited) generator operation.
 </div>

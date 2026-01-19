@@ -35,6 +35,7 @@ Given an induction motor with the following **per-phase equivalent circuit param
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-06/equivalent_circuit.png" title="Induction Motor Equivalent Circuit" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Per-phase equivalent circuit of the induction motor with stator impedance ($R_s + jX_s$), magnetizing branch ($jX_m$), and rotor branch ($R_r/s + jX_r$).
 </div>
@@ -57,6 +58,7 @@ The speed-torque curve defines four operating points with different **slip value
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-06/speed_torque_curve.png" title="Speed-Torque Characteristic Curve" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Induction motor speed-torque curve showing operating points A (stall region), B (peak torque), C (normal operation), and D (no-load).
 </div>
@@ -99,6 +101,7 @@ $$
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-06/phasor_op_B.png" title="Operating Point B (s=0.15)" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     <b>Left:</b> Operating Point A (high slip) — large stator current with significant phase lag; $V_L$ is small due to high rotor current. <b>Right:</b> Operating Point B (loaded) — moderate current with balanced voltage distribution.
 </div>
@@ -111,6 +114,7 @@ $$
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-06/phasor_op_D.png" title="Operating Point D (s=0.01)" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     <b>Left:</b> Operating Point C (light load) — smaller current, voltages converging toward $V_s$. <b>Right:</b> Operating Point D (no-load) — minimum current, $V_r \approx V_L \approx V_s$.
 </div>
@@ -122,6 +126,7 @@ $$
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-06/phasor_all_points.png" title="Combined Phasor Diagram" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Overlay of all four operating points showing the progression of phasor magnitudes and angles as slip decreases from stall (A) to no-load (D).
 </div>
@@ -158,6 +163,7 @@ This explains why **inrush current at startup** (when $s = 1$) can be 5-8× the 
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-06/stator_current_comparison.png" title="Stator Current Comparison" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Bar chart comparing stator current magnitudes across operating points. The inverse relationship between slip and rotor impedance causes current to increase dramatically at high slip values.
 </div>

@@ -41,6 +41,7 @@ For a load of **500 MW** at **0.99 power factor lagging** and **330 kV**, calcul
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-12/two_port_model.png" title="Transmission Line Two-Port Model" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Two-port network representation of a transmission line with ABCD parameters relating sending and receiving-end voltage/current phasors.
 </div>
@@ -94,6 +95,7 @@ $$
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-12/phasor_diagram.png" title="Voltage Phasor Diagram" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Phasor diagram showing the relationship between full-load receiving voltage (V<sub>R,FL</sub>), sending voltage (V<sub>S</sub>), and no-load receiving voltage magnitude (|V<sub>R,NL</sub>|). The voltage regulation represents the percentage increase in |V<sub>R</sub>| when load is removed.
 </div>
@@ -137,6 +139,7 @@ $$
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-12/sil_comparison.png" title="SIL Comparison" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Comparison of Surge Impedance Loading (SIL) and actual load for both transmission lines. Line 1 is overloaded (106.1% of SIL) while Line 2 is underloaded (94.7% of SIL).
 </div>
@@ -176,6 +179,7 @@ $$
         {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-12/voltage_profile.png" title="Voltage Profile vs Load" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
     Voltage ratio |V<sub>R</sub>|/|V<sub>S</sub>| as a function of load relative to SIL. Line 1 (red circle) operates in the overloaded region, experiencing voltage drop. Line 2 (green triangle) operates in the underloaded region, experiencing voltage rise.
 </div>

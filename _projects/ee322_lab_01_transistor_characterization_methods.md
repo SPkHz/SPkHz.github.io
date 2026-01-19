@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-322 Lab 01 — Transistor Characterization
+title: Transistor Characterization Techniques
 description: Extracting NMOS SPICE parameters (VTn, KN, VA) from automated SMU sweeps + Python analysis.
 img: /assets/img/ee322/lab-01/plot_exp1_id_vs_vds.png
 importance: 1

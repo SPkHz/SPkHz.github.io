@@ -35,6 +35,7 @@ Graphically, this corresponds to the horizontal line that makes the area above a
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-13/waveform_dc_comparison.png" title="Waveform DC Value Comparison" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Three waveforms with different DC offsets. Waveform A (blue) has the highest DC value at 3.0V, while Waveform C (orange) has the lowest at -1.0V. The dashed red lines indicate the average (DC) value of each waveform.
 </div>
@@ -62,6 +63,7 @@ A boost converter circuit is given with the following specifications:
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-13/boost_converter_circuit.png" title="Boost Converter Circuit Schematic" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Boost converter topology showing the inductor L, main switch SW1, freewheeling diode SW2, output capacitor C, and load resistor R. The input supplies 9V and the output delivers 12V.
 </div>
@@ -95,6 +97,7 @@ $$
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-13/voltage_gain_vs_duty_cycle.png" title="Boost Converter Voltage Gain" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Voltage gain characteristic of a boost converter. The operating point at D = 25% yields a gain of 1.33, stepping up 9V to 12V. Higher duty cycles produce larger voltage boosts but increase component stress.
 </div>
@@ -112,6 +115,7 @@ Since $$D = 25\%$$:
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-13/switching_waveforms.png" title="Switching Waveforms" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Complementary switching waveforms for SW1 and SW2. With D = 25%, SW1 is ON for only 25% of each period while SW2 (the diode path) conducts for the remaining 75%.
 </div>
@@ -137,6 +141,7 @@ $$
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-13/inductor_current_waveform.png" title="Current Waveforms" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Inductor and output current waveforms. The inductor current has a triangular ripple with an average of 12A. Output current only flows during the SW2 conduction interval (75% of each period), resulting in a 9A average.
 </div>
@@ -150,6 +155,7 @@ $$
     {% include figure.liquid loading="eager" path="assets/img/ee336/assignment-13/boost_converter_summary.png" title="Solution Summary" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   Complete summary of the boost converter analysis showing given values, key equations, solution steps, and final answers.
 </div>

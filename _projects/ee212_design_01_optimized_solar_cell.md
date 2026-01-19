@@ -71,6 +71,7 @@ This project models and optimizes a **planar, single-junction silicon solar cell
     {% include figure.liquid loading="eager" path="assets/img/ee212/Power_Density_of_Cubic_Spline_Fit_v9.png" title="Power density vs. voltage (max power point)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Left: the simulated 3D structure. Middle: JV curve under AM1.5 with spline-interpolated points (used to locate the knee cleanly). Right: power density peaks near the knee, defining the max-power operating point.
 </div>

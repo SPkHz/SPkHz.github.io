@@ -64,6 +64,7 @@ Both **MATLAB** and **Keysight ADS** were used as independent toolchains. Final 
     {% include figure.liquid loading="eager" path="assets/img/ee456/design03/ADS_Schematic_of_Design.png" title="ADS schematic of the final design" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Objective, final element values, and the ADS implementation. Both IMN and OMN use <b>7 reactive elements</b> synthesized from Chebyshev insertion-loss constraints.
 </div>
@@ -94,6 +95,7 @@ Both **MATLAB** and **Keysight ADS** were used as independent toolchains. Final 
     {% include figure.liquid loading="eager" path="assets/img/ee456/design03/Matlab_vs_ADS_Overlay.png" title="MATLAB vs ADS overlay (verification)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Wideband response shaping and cross-tool verification. The ADS overlay is used as an independent sanity check on the MATLAB synthesis + ABCD→S implementation.
 </div>
@@ -106,6 +108,7 @@ Both **MATLAB** and **Keysight ADS** were used as independent toolchains. Final 
     {% include figure.liquid loading="eager" path="assets/img/ee456/design03/Simulation_Comparison_Summary.png" title="Final comparison summary" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
+
 <div class="caption">
   Noise figure was also evaluated and compared across tools. Final summary notes that the design met the required specs and that MATLAB/ADS results agree extremely closely.
 </div>

@@ -102,6 +102,7 @@ So the low-frequency gain is \(A_v(\text{LF}) = 0.5\) (\(-6.02\,\text{dB}\)), an
     {% include figure.liquid loading="eager" path="assets/img/ee319/lab-01/lpf/bode-phase.jpg" title="Phase response overlay" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
   MATLAB overlays of the calculated transfer function, LTspice AC simulation, and the measured WaveForms Bode sweep.
 </div>

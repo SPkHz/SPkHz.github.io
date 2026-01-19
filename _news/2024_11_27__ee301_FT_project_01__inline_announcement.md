@@ -6,4 +6,4 @@ related_posts: false
 show_on_home: true
 ---
 
-**[Fourier Transform Applications for Signal Analysis](/blog/2024/report-published-fourier-transform-applications-for-signal-analysis/)** — or [view the project page](/projects/ee301_report_01_fourier_transform/).
+**[Fourier Transform in Practice](/blog/2024/ee301-report-01-fourier-transform-detailed-announcement/)** — or [view the project page](/projects/ee301_report_01_fourier_transform/).

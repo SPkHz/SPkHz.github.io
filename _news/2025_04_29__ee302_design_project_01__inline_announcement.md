@@ -6,4 +6,4 @@ related_posts: false
 show_on_home: true
 ---
 
-**[Design of a FIR Virtual Filter-bank Customized for Individual Patients' Audiograms for use in Hearing Aids](/blog/2025/ee-302-project-published-audiogram-driven-fir-filter-bank-virtual-hearing-aid-equalizer/)** — or [view the project page](/projects/ee302_design_01_fir_filterbank_for_hearing_aid/).
+**[Audiogram-Tuned FIR Filter Bank](/blog/2025/ee302-design-01-fir-filterbank-for-hearing-aid-detailed-announcement/)** — or [view the project page](/projects/ee302_design_01_fir_filterbank_for_hearing_aid/).

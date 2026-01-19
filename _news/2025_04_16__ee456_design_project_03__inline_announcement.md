@@ -6,4 +6,4 @@ related_posts: false
 show_on_home: true
 ---
 
-**[10-20 GHz Chebyshev Insertion-Loss Matching](/blog/2025/ee-456-design-project-03-published-chebyshev-insertion-loss-matching-for-a-10-20-ghz-phemt-amplifier/)** — or [view the project page](/projects/ee456_design_03_10_ghz_to_20_ghz_chebyshev_synthesis/).
+**[10–20 GHz Chebyshev Matching](/blog/2025/ee456-design-03-10-ghz-to-20-ghz-chebyshev-synthesis-detailed-announcement/)** — or [view the project page](/projects/ee456_design_03_10_ghz_to_20_ghz_chebyshev_synthesis/).

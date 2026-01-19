@@ -6,4 +6,4 @@ related_posts: false
 show_on_home: true
 ---
 
-**[Laplace Transform Applications for System Analysis](/blog/2024/report-published-laplace-transform-applications-for-system-analysis/)** — or [view the project page](/projects/ee301_report_02_laplace_transform/).
+**[Laplace Transform Applications](/blog/2024/ee301-report-02-laplace-transform-detailed-announcement/)** — or [view the project page](/projects/ee301_report_02_laplace_transform/).

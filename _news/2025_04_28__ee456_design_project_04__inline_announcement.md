@@ -6,4 +6,4 @@ related_posts: false
 show_on_home: true
 ---
 
-**[EE-456 Design Project 04](/blog/2025/ee-456-design-project-04/)** — or [view the project page](/projects/ee456_design_04/).
+**[8 GHz MAG Amplifier + IP3](/blog/2025/ee456-design-04-detailed-announcement/)** — or [view the project page](/projects/ee456_design_04/).

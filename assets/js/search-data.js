@@ -448,10 +448,10 @@ ninja.data = [{
           title: 'EE-302 Hearing Aid FIR Filter-Bank Equalizer',
           description: "Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/ee302_hearing_aid/";
-            },},{id: "projects-15-ghz-ingaas-hemt-amplifier-design",
-          title: '15 GHz InGaAs HEMT Amplifier Design',
-          description: "15 GHz InGaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.",
+              window.location.href = "/projects/ee302_DSP_final_design_project_fir_filterbank_for_hearing_aid/";
+            },},{id: "projects-15-ghz-gaas-hemt-amplifier-design",
+          title: '15 GHz GaAs HEMT Amplifier Design',
+          description: "15 GHz GaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_01_15GHz_GaAs_HEMT_amp/";
             },},{id: "projects-15-ghz-low-noise-amplifier-input-output-matching-network-design",
@@ -464,11 +464,11 @@ ninja.data = [{
           description: "Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_03_10_ghz_to_20_ghz_chebyshev_synthesis/";
-            },},{id: "projects-ee-470-satellite-tracking-servo-control",
-          title: 'EE-470 Satellite Tracking Servo Control',
+            },},{id: "projects-discrete-computer-control-system-receiver-positioning-and-accurate-satellite-tracking",
+          title: 'Discrete Computer Control System Receiver Positioning and Accurate Satellite Tracking',
           description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/ee470_discrete_control_system_design/";
+              window.location.href = "/projects/ee470_discrete_computer_control_systems_final_design_project/";
             },},{
         id: 'social-cv',
         title: 'CV',

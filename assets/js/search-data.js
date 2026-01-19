@@ -237,6 +237,11 @@ ninja.data = [{
           description: "MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_final_lab_portfolio/";
+            },},{id: "projects-ee-336-assignment-01-three-phase-apparent-power",
+          title: 'EE-336 Assignment 01 — Three-Phase Apparent Power',
+          description: "Calculating total 3-phase apparent power for a Δ-connected balanced load (MATLAB • phasor analysis • power systems).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee336_week_01_three_phase_power/";
             },},{id: "projects-15-ghz-gaas-hemt-amplifier-design",
           title: '15 GHz GaAs HEMT Amplifier Design',
           description: "15 GHz GaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.",

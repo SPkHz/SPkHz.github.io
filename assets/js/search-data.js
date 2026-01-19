@@ -222,8 +222,8 @@ ninja.data = [{
           description: "First-order RC low-pass filter build + Bode measurement (10 Hz–100 kHz) with MATLAB/LTspice validation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319_lab_01_low_pass_filter/";
-            },},{id: "projects-ee-319-lab-04-common-source-mosfet-amplifier",
-          title: 'EE-319 Lab 04 Common Source MOSFET Amplifier',
+            },},{id: "projects-common-source-mosfet-amplifier-characterization",
+          title: 'Common-Source MOSFET Amplifier Characterization',
           description: "MOSFET amplification with the ALD1105 dual complementary pair NMOS/PMOS transistors (MATLAB • LTspice • Analog Discovery Studio).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319_lab_04/";

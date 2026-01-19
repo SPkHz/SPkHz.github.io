@@ -242,6 +242,11 @@ ninja.data = [{
           description: "Calculating total 3-phase apparent power for a Δ-connected balanced load (MATLAB • phasor analysis • power systems).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_01_three_phase_power/";
+            },},{id: "projects-assignment-02",
+          title: 'Assignment 02',
+          description: "Faraday&#39;s Law, Synchronous Generator Speed, and Phasor Analysis",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee336_week_02_faradays_law/";
             },},{id: "projects-ee-336-assignment-3-delta-y-transformer-analysis",
           title: 'EE-336 Assignment 3 – Delta-Y Transformer Analysis',
           description: "Three-phase transformer voltage analysis for Δ-Y configuration (Electrical Energy Systems • 480V line-to-line • Turns ratio derivation).",

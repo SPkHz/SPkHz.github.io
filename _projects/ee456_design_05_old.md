@@ -1,22 +1,13 @@
 ---
-layout: page
-title: Design of an 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT
-description: EE-456 Design Project 05 -- 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT.
-importance: 3
-date: 2025-05-08 03:46:00-0500
+layout: post
+title: "EE-456 Design Project 05 Published: 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT"
+date: 2025-05-08 23:46:00-0500
 inline: false
 related_posts: true
 show_on_home: false
 tags: RF microwave oscillator GaAs pHEMT
-category: coursework
+categories: coursework
 ---
-
-## Overview
-
-**Course:** EE-456 Microwave Active Circuits
-**Project:** Design Project 05
-**Author:** Steven Placzek
-**Date:** 2025-05-08 03:46:00-0500
 
 I've published **EE-456 (RF & mm-Wave Active Circuits) — Design Project 05**: an **8 GHz negative-resistance oscillator** built around the **Avago ATF-33143 GaAs pHEMT** (biased at **V<sub>DS</sub> = 4 V**, **I<sub>DS</sub> = 80 mA**) using **common-gate topology with inductive gate feedback**.
 
@@ -24,7 +15,7 @@ The focus here is **oscillator synthesis via S-parameter manipulation**: convert
 
 ---
 
-## Design targets
+## Design Targets
 
 - **Oscillation frequency:** 8 GHz
 - **Device:** ATF-33143 GaAs pHEMT in common-gate configuration
@@ -35,97 +26,196 @@ The focus here is **oscillator synthesis via S-parameter manipulation**: convert
 
 ---
 
-## What was implemented
+## Task 1: Common-Source to Common-Gate Conversion
 
-### Task 1: Common-Source to Common-Gate Conversion
+Starting from the manufacturer's S-parameters (common-source), the indefinite admittance matrix approach converts to common-gate configuration. First, compute the 2-port Y-parameters from S-parameters, then expand to a 3×3 indefinite admittance matrix:
 
-Starting from the manufacturer's S-parameters (common-source), the indefinite admittance matrix approach was used to convert to common-gate configuration:
+$$
+\mathbf{Y}^{(I)} = \begin{bmatrix} Y_{11} & Y_{12} & -Y_{11}-Y_{12} \\ Y_{21} & Y_{22} & -Y_{21}-Y_{22} \\ -Y_{11}-Y_{21} & -Y_{12}-Y_{22} & Y_{11}+Y_{12}+Y_{21}+Y_{22} \end{bmatrix}
+$$
+
+The common-gate parameters are extracted by selecting the gate (node 1) as the new common terminal:
 
 $$
 \mathbf{Y}_\text{CG} = \begin{bmatrix} Y_{33}^{(I)} & Y_{32}^{(I)} \\ Y_{23}^{(I)} & Y_{22}^{(I)} \end{bmatrix}
 $$
 
-The resulting common-gate S-parameters at 8 GHz:
-
-| Parameter | Magnitude | Phase |
-|:---------:|:---------:|:-----:|
-| S<sub>11</sub> | 1.0823 | −17.95° |
-| S<sub>12</sub> | 0.9455 | −26.68° |
-| S<sub>21</sub> | 1.9676 | +96.82° |
-| S<sub>22</sub> | 1.3885 | +81.73° |
-
-### Task 2: Optimum Feedback Reactance
-
-A parametric sweep over X<sub>B</sub> ∈ [−300, +300] Ω determined the value that maximizes \|S<sub>11</sub>\|:
+Converting back to S-parameters yields the **common-gate S-matrix at 8 GHz**:
 
 $$
-X_{B,\text{opt}} = +130\ \Omega \quad \Rightarrow \quad L_B = \frac{X_B}{2\pi f_0} = 2.586\ \text{nH}
+\mathbf{S}_\text{CG} = \begin{bmatrix} 1.0823 \angle -17.95° & 0.9455 \angle -26.68° \\ 1.9676 \angle +96.82° & 1.3885 \angle +81.73° \end{bmatrix}
 $$
 
-With optimum feedback applied:
+---
 
-| Parameter | Magnitude | Phase |
-|:---------:|:---------:|:-----:|
-| S<sub>11</sub> | 1.2295 | +17.05° |
-| S<sub>12</sub> | 1.2486 | −12.55° |
-| S<sub>21</sub> | 1.4692 | +123.23° |
-| S<sub>22</sub> | 1.4487 | +102.96° |
+## Task 2: Optimum Feedback Reactance
 
-{% include figure.liquid loading="eager" path="assets/img/ee456/design05/calculations_page1.png" class="img-fluid rounded z-depth-1" caption="Hand calculations: S-parameter conversion, feedback optimization, and termination network design." %}
+A parametric sweep over X<sub>B</sub> ∈ [−300, +300] Ω determines the value maximizing \|S<sub>11</sub>\|. The feedback admittance is added to the common-gate Y-matrix:
 
-### Task 3: Transmission-Line Feedback Implementation
+$$
+\mathbf{Y}_\text{FB} = \begin{bmatrix} Y_{fb} & -Y_{fb} \\ -Y_{fb} & Y_{fb} \end{bmatrix}, \quad Y_{fb} = \frac{1}{jX_B}
+$$
 
-The lumped inductor L<sub>B</sub> was replaced with a short-circuited transmission line stub:
+**Result:**
+
+$$
+X_{B,\text{opt}} = +130\ \Omega
+$$
+
+The equivalent inductance:
+
+$$
+L_B = \frac{X_B}{2\pi f_0} = \frac{130}{2\pi \cdot 8 \times 10^9} = 2.5863\ \text{nH}
+$$
+
+**S-parameters with optimum feedback:**
+
+$$
+\mathbf{S}_\text{FB} = \begin{bmatrix} 1.2295 \angle +17.05° & 1.2486 \angle -12.55° \\ 1.4692 \angle +123.23° & 1.4487 \angle +102.96° \end{bmatrix}
+$$
+
+---
+
+## Task 3: Transmission-Line Feedback Implementation
+
+Replace the lumped inductor with a short-circuited transmission line stub. The stub susceptance must equal the inductor susceptance:
+
+$$
+B_\text{stub} = Y_0 \tan(\theta_x) = \frac{1}{X_B}
+$$
+
+Solving for the electrical length:
 
 $$
 \theta_x = \arctan\left(\frac{Z_0}{X_B}\right) = \arctan\left(\frac{50}{130}\right) = 21.04°
 $$
 
-Physical dimensions at 8 GHz:
-- Electrical length: θ<sub>x</sub> = 21.04°
-- Physical length: ℓ = 2.190 mm
-- Normalized length: d/λ = 0.0584
-
-### Task 4: Termination Network Design
-
-The drain termination network consists of a series transmission line followed by a shunt short-circuited stub. The target reflection coefficient:
+**Physical dimensions at 8 GHz** (with λ = c/f₀ = 37.47 mm):
 
 $$
-\Gamma_T = 0.7500 \angle{-126°}
+\ell = \frac{\theta_x}{360°} \cdot \lambda = 2.190\ \text{mm}, \quad \frac{d}{\lambda} = 0.0584
 $$
 
-Using a 2D parameter sweep over (θ<sub>s</sub>, θ<sub>p</sub>), the optimal electrical lengths were found:
-
-| Element | Electrical Length |
-|:--------|:-----------------:|
-| Series line (θ<sub>T1</sub>) | 48.996° |
-| Shunt stub (θ<sub>T2</sub>) | 11.896° |
-
-{% include figure.liquid loading="eager" path="assets/img/ee456/design05/gamma_t_contours.png" class="img-fluid rounded z-depth-1" caption="Phase contours of Γ<sub>T</sub> over the (θ<sub>s</sub>, θ<sub>p</sub>) design space for the termination network." %}
-
-### Task 5: Resonator Network Design
-
-The source resonator network uses a series line and shunt open-circuited stub to present the required reflection coefficient:
+**Verification of stub parameters:**
 
 $$
-\Gamma_R = 0.7500 \angle{+162.73°}
+B_\text{stub} = Y_0 \tan\left(\frac{\beta \ell}{1}\right) \quad \Rightarrow \quad X_B = -\frac{1}{B_\text{stub}} = 130\ \Omega \ \ \checkmark
 $$
 
-Optimized electrical lengths:
-
-| Element | Electrical Length |
-|:--------|:-----------------:|
-| Series line (θ<sub>R1</sub>) | 22.28° |
-| Shunt stub (θ<sub>R2</sub>) | 0.58° |
-
-{% include figure.liquid loading="eager" path="assets/img/ee456/design05/calculations_page2.png" class="img-fluid rounded z-depth-1" caption="Hand calculations: Resonator network design and final Γ<sub>in</sub> verification." %}
-
-### Task 6: Input Reflection Coefficient Verification
-
-With the termination network connected to the feedback-enhanced common-gate device:
+**S-parameters with SC stub:**
 
 $$
-\Gamma_\text{in} = S_{11} + \frac{S_{12} S_{21} \Gamma_T}{1 - S_{22} \Gamma_T} = 0.1057 \angle{-96.1°}
+\mathbf{S}_\text{stub} = \begin{bmatrix} 0.7530 \angle -51.04° & 0.5996 \angle -23.89° \\ 2.0053 \angle +73.77° & 1.084 \angle +66.04° \end{bmatrix}
+$$
+
+Normalized impedance/admittance at device input with stub:
+
+$$
+z_X = 0.5344 - j0.636, \quad y_X = 0.7742 + j0.9216, \quad Y_\text{stub} = 0.1316 - j0.8008
+$$
+
+---
+
+## Task 4: Design Termination Network
+
+The drain termination network uses a series transmission line followed by a shunt short-circuited stub:
+
+```
+         θ_T2
+          ┃
+    ──────┨──────○
+    θ_T1  ┃  Z_0
+          ┃
+         ═╧═ (SC)
+```
+
+**Target reflection coefficient:**
+
+$$
+\Gamma_T = 0.7500 \angle -126.00°
+$$
+
+**Convert to impedance:**
+
+$$
+Z_T = Z_0 \cdot \frac{1 + \Gamma_T}{1 - \Gamma_T} = (8.9498 - j24.8248)\ \Omega
+$$
+
+**Normalize:**
+
+$$
+z_T = \frac{Z_T}{Z_0} = 0.1790 - j0.4965
+$$
+
+$$
+y_T = \frac{1}{z_T} = 0.6436 + j1.7824
+$$
+
+**Smith chart / analytical solution for stub matching:**
+
+Using standard single-stub matching:
+
+$$
+d_{T1} = 0.136\lambda \quad \Rightarrow \quad \theta_{T1} = 48.996°
+$$
+
+$$
+d_{T2} = 0.402\lambda \quad \Rightarrow \quad \theta_{T2} = 11.896°
+$$
+
+{% include figure.liquid loading="eager" path="assets/img/ee456/design05/gamma_t_contours.png" class="img-fluid rounded z-depth-1" caption="Phase contours of Γ_T over the (θ_s, θ_p) design space for the termination network." %}
+
+---
+
+## Task 5: Resonator Network Design
+
+The source resonator network uses a series line and shunt **open-circuited** stub:
+
+```
+         θ_R2
+          ┃
+    ──────┨──────○
+    θ_R1  ┃  Z_0
+          ┃
+          ○ (OC)
+```
+
+**Target reflection coefficient** (conjugate match to Γ<sub>in</sub>):
+
+$$
+\Gamma_R = 0.7500 \angle +162.7335°
+$$
+
+**Computed electrical lengths:**
+
+$$
+d_{R2} = 0.0024\lambda \quad \Rightarrow \quad \theta_{R2} = 0.5825°
+$$
+
+$$
+d_{R1} = 0.0619\lambda \quad \Rightarrow \quad \theta_{R1} = 22.2823°
+$$
+
+The open-stub susceptance:
+
+$$
+B_\text{OC} = -Y_0 \cot(\theta_{R2})
+$$
+
+---
+
+## Task 6: Input Reflection Coefficient Verification
+
+With the termination network connected to the feedback-enhanced common-gate device, the input reflection coefficient is:
+
+$$
+\Gamma_\text{in} = S_{11} + \frac{S_{12} S_{21} \Gamma_T}{1 - S_{22} \Gamma_T}
+$$
+
+**Final result:**
+
+$$
+\boxed{\Gamma_\text{in} = 0.1057 \angle -96.1°}
 $$
 
 ---
@@ -135,49 +225,50 @@ $$
 | Parameter | Calculated | Unit |
 |:----------|:----------:|:----:|
 | X<sub>B</sub> | 130 | Ω |
-| θ<sub>x</sub> | 21.04 | ° |
+| L<sub>B</sub> | 2.5863 | nH |
+| θ<sub>x</sub> (feedback stub) | 21.04 | ° |
 | Γ<sub>T</sub> | 0.7500 ∠ −126° | — |
-| θ<sub>T1</sub> (series) | 48.996 | ° |
-| θ<sub>T2</sub> (shunt) | 11.896 | ° |
+| θ<sub>T1</sub> (series line) | 48.996 | ° |
+| θ<sub>T2</sub> (shunt SC stub) | 11.896 | ° |
 | Γ<sub>R</sub> | 0.7500 ∠ +162.73° | — |
-| θ<sub>R1</sub> (series) | 22.28 | ° |
-| θ<sub>R2</sub> (shunt) | 0.58 | ° |
+| θ<sub>R1</sub> (series line) | 22.28 | ° |
+| θ<sub>R2</sub> (shunt OC stub) | 0.58 | ° |
 | Γ<sub>in</sub> | 0.1057 ∠ −96.1° | — |
+| Z<sub>in</sub> | — | Ω |
 
 ---
 
-## Design Approach
+## Design Methodology
 
-The oscillator design follows the **negative-resistance** methodology:
+The oscillator design follows the **negative-resistance** approach:
 
-1. **Device configuration:** Common-gate topology naturally provides higher \|S<sub>11</sub>\| than common-source, making it easier to achieve the required instability condition.
+1. **Device configuration:** Common-gate topology naturally provides higher \|S<sub>11</sub>\| than common-source, facilitating the required instability.
 
-2. **Feedback optimization:** Inductive feedback at the gate further increases \|S<sub>11</sub>\| beyond unity, creating the potential for negative resistance at the input port.
+2. **Feedback optimization:** Inductive feedback at the gate increases \|S<sub>11</sub>\| beyond unity, creating negative resistance at the input port.
 
-3. **Termination network:** The drain termination is designed to present Γ<sub>T</sub> such that when combined with the device S-parameters, the resulting Γ<sub>in</sub> has magnitude sufficient for oscillation.
+3. **Termination network:** The drain termination presents Γ<sub>T</sub> such that when combined with device S-parameters, Γ<sub>in</sub> has sufficient magnitude for oscillation.
 
-4. **Resonator network:** The source resonator must satisfy both magnitude and phase conditions:
-   - \|Γ<sub>in</sub> · Γ<sub>R</sub>\| > 1 (start-up condition)
-   - ∠(Γ<sub>in</sub> · Γ<sub>R</sub>) = 0° (resonance condition)
+4. **Resonator network:** Must satisfy both conditions:
+   - **Start-up:** \|Γ<sub>in</sub> · Γ<sub>R</sub>\| > 1
+   - **Resonance:** ∠(Γ<sub>in</sub> · Γ<sub>R</sub>) = 0°
 
 ---
 
-## What's included in the repo
+## What's Included in the Repo
 
-- **MATLAB synthesis code:** Complete implementation including S-parameter conversion, feedback optimization sweeps, stability factor analysis, and network parameter extraction
-- **Touchstone files:** ATF-33143 S-parameters at the specified bias point
-- **Contour plots:** 2D parameter sweeps showing Γ<sub>T</sub> and Γ<sub>R</sub> magnitude/phase over the design space
-- **Hand calculations:** Detailed derivations for all six design tasks
+- **MATLAB synthesis code:** S-parameter conversion, feedback optimization sweeps, stability factor analysis, and network parameter extraction
+- **Touchstone files:** ATF-33143 S-parameters at the specified bias point (V<sub>DS</sub> = 4 V, I<sub>DS</sub> = 80 mA)
+- **Contour plots:** 2D parameter sweeps showing Γ<sub>T</sub> magnitude/phase over the design space
 
 ---
 
 ## Key Takeaways
 
-This project demonstrates the systematic approach to negative-resistance oscillator design:
+This project demonstrates systematic negative-resistance oscillator design:
 
-- The indefinite admittance matrix technique provides a clean method for converting between device configurations without re-measurement
-- Parametric sweeps over feedback reactance reveal the optimal operating point for maximum instability
-- Transmission-line implementations of reactive elements offer practical realizability at microwave frequencies
-- The interplay between termination and resonator networks requires careful phase management to satisfy oscillation conditions
+- The **indefinite admittance matrix** technique cleanly converts between device configurations without re-measurement
+- **Parametric sweeps** over feedback reactance reveal optimal operating points for maximum instability
+- **Transmission-line implementations** of reactive elements provide practical realizability at microwave frequencies
+- The interplay between termination and resonator networks requires careful **phase management** to satisfy oscillation conditions
 
-The final design achieves \|Γ<sub>in</sub>\| ≈ 0.106, which when combined with the resonator reflection coefficient magnitude of 0.75, would require additional gain margin for reliable oscillation startup. In practice, the device would be operated slightly deeper into the potentially unstable region.
+The final design achieves \|Γ<sub>in</sub>\| ≈ 0.106, which combined with the resonator \|Γ<sub>R</sub>\| = 0.75 yields \|Γ<sub>in</sub> · Γ<sub>R</sub>\| ≈ 0.08—below the start-up threshold. In practice, the device would be biased deeper into the potentially unstable region or the feedback adjusted for additional gain margin.

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-456 Design Project 05 — 8 GHz Oscillator (ATF-33143) via Negative Resistance
+title: 8 GHz Negative Resistance Oscillator Design (ATF-33143)
 description: Negative-resistance oscillator synthesis at 8 GHz using common-gate conversion, feedback-reactance optimization, and transmission-line termination/resonator networks (MATLAB • Touchstone).
 img: /assets/img/ee456/design05/thumbnail.png
 importance: 1

@@ -4,9 +4,9 @@
 
 
 layout: post
-title: "EE-456 Design Project 04 Published: MAG Amplifier Design \& Non-Linear Simulation (8 GHz)"
+title: 'EE-456 Design Project 04 Published: MAG Amplifier Design & Non-Linear Simulation (8 GHz)'
 date: 2025-04-28 08:00:00-0400
-tags: [rf, mm-wave, amplifier, matching, mag, ads, matlab, harmonic balance, ip3]
+tags: [rf, mm-wave, amplifier, matching, mag, ads, matlab, harmonic-balance, ip3]
 categories: coursework
 inline: false
 related_posts: true

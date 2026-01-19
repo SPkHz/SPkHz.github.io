@@ -2,7 +2,7 @@
 
 layout: page
 title: Integrated Circuit Biasing Techniques
-description: MOSFET-resistor bias vs. beta-multiplier bias using ALD1106/ALD1105 (LTSpice + breadboard). Focus: operating point accuracy and power-supply sensitivity. (2025-01-28)
+description: "MOSFET-resistor bias vs. beta-multiplier bias using ALD1106/ALD1105 (LTSpice + breadboard). Focus: operating point accuracy and power-supply sensitivity. (2025-01-28)"
 img: /assets/img/ee322/lab-01/lab02_cover.png
 category: coursework
 toc:

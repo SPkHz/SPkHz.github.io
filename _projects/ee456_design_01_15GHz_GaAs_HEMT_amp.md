@@ -2,7 +2,7 @@
 layout: page
 title: 15 GHz GaAs HEMT Amplifier Design
 description: 15 GHz GaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.
-img:
+img: assets/img/ee456/design01/All_Params_vs_Frequency_ADS_ALL_TRLs.png
 importance: 4
 category: coursework
 related_publications: false

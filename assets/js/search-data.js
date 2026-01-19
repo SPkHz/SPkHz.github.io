@@ -212,6 +212,16 @@ ninja.data = [{
           description: "BJT common-emitter amplifier (2N3904): DC bias, midband gain, frequency response, and distortion limits.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319-lab-05/";
+            },},{id: "projects-ee-319-lab-06-measurements-lm741-op-amp",
+          title: 'EE 319 Lab 06 — Measurements (LM741 Op-Amp)',
+          description: "Non-ideal op-amp characteristics measured in LTspice—offset voltage, input bias currents, slew rate, and gain-bandwidth product.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319-lab-06/";
+            },},{id: "projects-ee-319-lab-07-measurements",
+          title: 'EE 319 Lab 07 — Measurements',
+          description: "Differential-mode gain, common-mode gain, and CMRR for a single-op-amp difference amplifier and a 3-op-amp instrumentation amplifier (LM741).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319/lab-07/";
             },},{id: "projects-",
           title: '',
           description: "",
@@ -272,6 +282,41 @@ ninja.data = [{
           description: "Induction motor fundamentals — slip, synchronous speed, and rotor frequency calculations for 2-pole motors.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_05_generators/";
+            },},{id: "projects-ee-336-induction-motor-phasor-analysis",
+          title: 'EE-336 Induction Motor Phasor Analysis',
+          description: "Phasor diagram analysis of induction motor equivalent circuit at multiple operating points (MATLAB • Python • Complex Impedance Analysis).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee336_week_06_induction_motor_phasor_analysis/";
+            },},{id: "projects-ee-336-power-transfer-amp-frequency-droop-analysis",
+          title: 'EE-336 Power Transfer &amp;amp; Frequency Droop Analysis',
+          description: "Generator power transfer calculation via transformer and frequency droop characteristic analysis for parallel generators (Per-unit analysis • Power-angle relationship • Droop control).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee336_week_09_generator_power_xfer_droop/";
+            },},{id: "projects-ee-336-gauss-seidel-power-flow-analysis",
+          title: 'EE-336 Gauss-Seidel Power Flow Analysis',
+          description: "Iterative power flow solution for a 6-bus system using the Gauss-Seidel method (MATLAB • Y-bus • per-unit system).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee336_week_10_gauss-seidel_power_flow_analysis/";
+            },},{id: "projects-ee-336-transmission-line-abcd-parameters",
+          title: 'EE-336 Transmission Line ABCD Parameters',
+          description: "100-mile transmission line analysis using two-port ABCD parameters and the nominal π-model (60 Hz power system).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee336_week_11_transmission_line_abcd_parameters/";
+            },},{id: "projects-ee-336-transmission-line-analysis",
+          title: 'EE-336 Transmission Line Analysis',
+          description: "Voltage regulation and surge impedance loading analysis for power transmission lines (MATLAB/Python • Two-port networks • SIL concepts).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee336_week_12_trl_voltage_regulation_and_surge_impedance_loading/";
+            },},{id: "projects-ee-336-boost-converter-analysis",
+          title: 'EE-336 Boost Converter Analysis',
+          description: "DC waveform analysis and boost converter duty cycle calculations (Week 13 Assignment • DC-DC Converters • Switching Power Supplies).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee336_week_13_boost_converter_analysis/";
+            },},{id: "projects-ee-336-single-phase-h-bridge-inverter-analysis",
+          title: 'EE-336 Single-Phase H-Bridge Inverter Analysis',
+          description: "H-bridge inverter switching analysis and load voltage waveform generation (MATLAB • Power Electronics • DC-AC Conversion).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee336_week_14_h_bridge_inverter_analysis/";
             },},{id: "projects-15-ghz-gaas-hemt-amplifier-design",
           title: '15 GHz GaAs HEMT Amplifier Design',
           description: "15 GHz GaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.",

@@ -670,7 +670,7 @@ ninja.data = [{
               window.location.href = "/projects/ee319_lab_01_high_pass_filter/";
             },},{id: "projects-ee-lab-ii-final-lab-portfolio-spring-2025",
           title: 'EE Lab II Final Lab Portfolio Spring 2025',
-          description: "MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).",
+          description: "A complete compendium of labs from the spring &#39;25 semester, lab 01 through lab 08 (Please use ToC to navigate, everything is hyperlinked!) --&gt; MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_final_lab_portfolio/";
             },},{id: "projects-transistor-characterization-techniques",

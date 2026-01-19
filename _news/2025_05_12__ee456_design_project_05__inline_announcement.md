@@ -6,6 +6,4 @@ related_posts: false
 show_on_home: true
 ---
 
-**EE-456 Design Project 05**
-
-See the [detailed announcement](/news/2025_05_12__ee456_design_project_05__detailed_announcement/) for more details.
+**[EE-456 Design Project 05](/blog/2025/ee-456-design-project-05/)** — or [view the project page](/projects/ee456_design_05/).

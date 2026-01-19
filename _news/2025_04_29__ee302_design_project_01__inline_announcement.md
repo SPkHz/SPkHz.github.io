@@ -6,6 +6,4 @@ related_posts: false
 show_on_home: true
 ---
 
-**Digital Signal Processing Design Project**
-
-See the [detailed announcement](/news/2025_04_29__ee302_design_project_01__detailed_announcement/) for more details.
+**[Digital Signal Processing Design Project](/blog/2025/ee-302-project-published-audiogram-driven-fir-filter-bank-virtual-hearing-aid-equalizer/)** — or [view the project page](/projects/ee302_design_01_fir_filterbank_for_hearing_aid/).

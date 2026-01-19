@@ -6,6 +6,4 @@ related_posts: false
 show_on_home: true
 ---
 
-**Laplace Transform Applications for System Analysis**
-
-See the [detailed announcement](/news/2024_12_06__ee301_LT_project_02__detailed_announcement/) for more details.
+**[Laplace Transform Applications for System Analysis](/blog/2024/report-published-laplace-transform-applications-for-system-analysis/)** — or [view the project page](/projects/ee301_report_02_laplace_transform/).

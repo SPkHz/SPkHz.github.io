@@ -6,6 +6,4 @@ related_posts: false
 show_on_home: true
 ---
 
-**GHz Transmission-Line Matching Networks**
-
-See the [detailed announcement](/news/2024_11_18__ee314_design_project_01__detailed_announcement/) for more details.
+**[GHz Transmission-Line Matching Networks](/blog/2024/ee-314-final-project-published-ghz-transmission-line-matching-networks-ads-microstrip-layout/)** — or [view the project page](/projects/ee314_design_01/).

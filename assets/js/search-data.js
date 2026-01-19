@@ -398,6 +398,21 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/2024_12_06__ee301_LT_project_02__announcement/";
+            },},{id: "news-",
+          title: '',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/2025_02_25__ee456_design_project_01__announcement/";
+            },},{id: "news-",
+          title: '',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/2025_03_28__ee456_design_project_02__announcement/";
+            },},{id: "news-",
+          title: '',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/2025_04_16__ee456_design_project_03__announcement/";
             },},{id: "news-a-long-announcement-with-details",
           title: 'A long announcement with details',
           description: "",
@@ -469,8 +484,8 @@ ninja.data = [{
           description: "15 GHz LNA IMN/OMN for the MGF4941AL (VDS = 2 V, IDS = 10 mA). Joint gain/NF/VSWR optimization with MATLAB + Keysight ADS cross-verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_02_lna_matching_network_for_mgf4941al/";
-            },},{id: "projects-chebyshev-impedance-matching-network-synthesis",
-          title: 'Chebyshev Impedance Matching Network Synthesis',
+            },},{id: "projects-using-chebyshev-polynomials-for-the-synthesis-of-impedance-matching-networks",
+          title: 'Using Chebyshev Polynomials for the Synthesis of Impedance-Matching Networks',
           description: "Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_03_10_ghz_to_20_ghz_chebyshev_synthesis/";

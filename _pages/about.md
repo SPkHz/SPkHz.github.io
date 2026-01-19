@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: "RF / DSP / EE — analog circuits, SDR signal processing, and measurement-driven design."
+subtitle: "RF / Analog / DSP — Millimeter-wave circuit design, digital signal processing, and simulation-validated engineering."
 
 profile:
   align: right
@@ -18,7 +18,7 @@ social: false # includes social icons at the bottom of the page
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: true
@@ -26,7 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I build and document engineering projects end-to-end: design intent, simulation, measurements, and the writeup (usually LaTeX + a compiled PDF).
+I design RF/microwave circuits, DSP systems, and digital controllers—from Smith chart synthesis and MATLAB analysis through dual-tool simulation (Keysight ADS, LTspice, Simulink) to comprehensive LaTeX reports with reproducible code and schematics.
 
 <div class="d-flex flex-wrap" style="gap: .5rem; margin: 1rem 0 1.25rem 0;">
   <a class="btn btn-primary btn-sm" href="{{ '/projects/' | relative_url }}">Projects</a>

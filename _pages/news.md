@@ -4,4 +4,4 @@ title: news
 permalink: /news/
 ---
 
-{% include news.liquid %}
+{% assign news = site.news | where: "inline", true | sort: "date" | reverse %}

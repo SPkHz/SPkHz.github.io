@@ -10,18 +10,18 @@ giscus_comments: true
 
 <!--
 Suggested assets:
-assets/img/ee456_dp3/Design_Objective.png
-assets/img/ee456_dp3/Design_and_Simulation_Results_Table.png
-assets/img/ee456_dp3/ADS_Schematic_of_Design.png
-assets/img/ee456_dp3/Matlab_S21_Matching_Network.png
-assets/img/ee456_dp3/Matlab_S22_Matching_Network.png
-assets/img/ee456_dp3/Matlab_S11_IMN.png
-assets/img/ee456_dp3/Matlab_IL_IMN.png
-assets/img/ee456_dp3/Matlab_S11_OMN.png
-assets/img/ee456_dp3/Matlab_IL_OMN.png
-assets/img/ee456_dp3/Matlab_vs_ADS_Overlay.png
-assets/img/ee456_dp3/Noise_Figure_ADS_vs_MATLAB.png
-assets/img/ee456_dp3/Simulation_Comparison_Summary.png
+assets/img/ee456/design03/Design_Objective.png
+assets/img/ee456/design03/Design_and_Simulation_Results_Table.png
+assets/img/ee456/design03/ADS_Schematic_of_Design.png
+assets/img/ee456/design03/Matlab_S21_Matching_Network.png
+assets/img/ee456/design03/Matlab_S22_Matching_Network.png
+assets/img/ee456/design03/Matlab_S11_IMN.png
+assets/img/ee456/design03/Matlab_IL_IMN.png
+assets/img/ee456/design03/Matlab_S11_OMN.png
+assets/img/ee456/design03/Matlab_IL_OMN.png
+assets/img/ee456/design03/Matlab_vs_ADS_Overlay.png
+assets/img/ee456/design03/Noise_Figure_ADS_vs_MATLAB.png
+assets/img/ee456/design03/Simulation_Comparison_Summary.png
 -->
 
 This project (EE-456: RF & mm-Wave Active Circuits) implements **wideband matching-network synthesis** using **Chebyshev-polynomial (insertion-loss) methods** to design a **10–20 GHz amplifier** around the **NEC NE321000 ultra-low-noise pseudomorphic pHEMT**, biased at **VDS = 2 V** and **IDS = 10 mA**.
@@ -38,13 +38,13 @@ Both **MATLAB** and **Keysight ADS** were used as independent toolchains. Final 
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Design_Objective.png" title="Design objective (specs, device, and band)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design03/Design_Objective.png" title="Design objective (specs, device, and band)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Design_and_Simulation_Results_Table.png" title="Final element values (IMN + OMN)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design03/Design_and_Simulation_Results_Table.png" title="Final element values (IMN + OMN)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/ADS_Schematic_of_Design.png" title="ADS schematic of the final design" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design03/ADS_Schematic_of_Design.png" title="ADS schematic of the final design" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
@@ -68,13 +68,13 @@ Both **MATLAB** and **Keysight ADS** were used as independent toolchains. Final 
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Matlab_S21_Matching_Network.png" title="MATLAB: |S21| response (wideband target)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design03/Matlab_S21_Matching_Network.png" title="MATLAB: |S21| response (wideband target)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Matlab_S22_Matching_Network.png" title="MATLAB: output-side behavior (|S22| trend)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design03/Matlab_S22_Matching_Network.png" title="MATLAB: output-side behavior (|S22| trend)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Matlab_vs_ADS_Overlay.png" title="MATLAB vs ADS overlay (verification)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design03/Matlab_vs_ADS_Overlay.png" title="MATLAB vs ADS overlay (verification)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
@@ -83,10 +83,10 @@ Both **MATLAB** and **Keysight ADS** were used as independent toolchains. Final 
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Noise_Figure_ADS_vs_MATLAB.png" title="Noise figure comparison (ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design03/Noise_Figure_ADS_vs_MATLAB.png" title="Noise figure comparison (ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456_dp3/Simulation_Comparison_Summary.png" title="Final comparison summary" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design03/Simulation_Comparison_Summary.png" title="Final comparison summary" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

@@ -207,6 +207,11 @@ ninja.data = [{
           description: "Transmission-line impedance matching in Keysight ADS — shunt-stub + quarter-wave transformer designs (ideal + microstrip), with Smith-chart synthesis and layout verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee314_design_01/";
+            },},{id: "projects-eelab-ii-final-lab-portfolio",
+          title: 'eeLab II — Final Lab Portfolio',
+          description: "MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee322_final_lab_portfolio/";
             },},{id: "projects-15-ghz-gaas-hemt-amplifier-design",
           title: '15 GHz GaAs HEMT Amplifier Design',
           description: "15 GHz GaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.",

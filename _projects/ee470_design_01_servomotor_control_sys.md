@@ -1,11 +1,19 @@
 ---
 layout: page
-title: Discrete Computer Control System Receiver Positioning and Accurate Satellite Tracking
+title: Discrete Control System Design for Receiver Positioning and Accurate Satellite Tracking
 description: Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.
 img: /assets/img/ee470/Position_Full_Plot.jpg
 importance: 3
 category: work
 related_publications: false
+_styles: |
+  .post article .mjx-container[display="true"] {
+    font-size: 1.3em;
+    margin: 0.9em 0 1.1em;
+  }
+  .post article .mjx-container {
+    font-size: 1.12em;
+  }
 ---
 
 <!--
@@ -24,7 +32,8 @@ assets/img/ee470/Sweep_250Hz_Vel.jpg
 -->
 
 This project (EE-470: Discrete Digital Computer Control Systems) designs a **discrete-time controller** for a **servo-driven receiver positioning system** (satellite tracking use-case). The design target was a tight transient response—**~1% overshoot** and **~0.05 s peak time**—so the actuator can reposition quickly without hunting or ringing that would break alignment.
-
+**Course:** EE-470 Digital Computer Control Systems
+**Project:** Final Design Project 01
 **Team:** Steven Placzek, Bryam Yanza  
 **Tools:** MATLAB + Simulink (state-space modeling, ZOH discretization, pole placement via `acker`)  
 **Deliverable:** Digital controller design + simulation validation + rapid-prototyping readiness notes
@@ -35,11 +44,11 @@ This project (EE-470: Discrete Digital Computer Control Systems) designs a **dis
 
 The servo actuator was modeled from the open-loop transfer function:
 
-\[
-G_p(s)=\frac{6776.29}{s(s+48.27)}
-\]
+$$
+G_p(s) = \frac{6776.29}{s(s+48.27)}
+$$
 
-A state-space model was constructed with states \(x_1=\theta\) and \(x_2=\dot{\theta}\), then discretized using **zero-order hold (ZOH)** for digital implementation.
+A state-space model was constructed with states $x_1=\theta$ and $x_2=\dot{\theta}$, then discretized using **zero-order hold (ZOH)** for digital implementation.
 
 ---
 
@@ -47,20 +56,20 @@ A state-space model was constructed with states \(x_1=\theta\) and \(x_2=\dot{\t
 
 **Performance specs:**
 - **Percent overshoot:** PO = 1%
-- **Peak time:** \(T_p = 0.05\) s
-- **Nominal controller sample time:** \(T_s = 0.01\) s (**100 Hz**)
+- **Peak time:** $T_p = 0.05$ s
+- **Nominal controller sample time:** $T_s = 0.01$ s (**100 Hz**)
 
-From PO and \(T_p\), the damping ratio \(\zeta\) and natural frequency \(\omega_n\) were computed, producing desired continuous poles, then mapped into the z-plane via:
+From PO and $T_p$, the damping ratio $\zeta$ and natural frequency $\omega_n$ were computed, producing desired continuous poles, then mapped into the z-plane via:
 
-\[
-z=e^{sT_s}
-\]
+$$
+z = e^{sT_s}
+$$
 
 State-feedback gains were computed via **discrete-time pole placement**, then converted into an **output-feedback form** suitable for implementation:
 
-\[
+$$
 u(k) = -G_1\,y_1(k) - G_2\,y_2(k) + r(k)
-\]
+$$
 
 ---
 

@@ -222,6 +222,11 @@ ninja.data = [{
           description: "First-order RC low-pass filter build + Bode measurement (10 Hz–100 kHz) with MATLAB/LTspice validation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319_lab_01_low_pass_filter/";
+            },},{id: "projects-ee-319-lab-02-active-band-pass-filter-measurements",
+          title: 'EE-319 Lab 02 — Active Band-Pass Filter Measurements',
+          description: "Measurement + modeling of a 2nd-order active band-pass filter (LM741). Bode sweep (10 Hz–100 kHz), time-domain validation, and harmonic/spectrum analysis (MATLAB + LTspice + Digilent WaveForms).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319_lab_02_active_band_pass_filter/";
             },},{id: "projects-common-source-mosfet-amplifier-characterization",
           title: 'Common-Source MOSFET Amplifier Characterization',
           description: "MOSFET amplification with the ALD1105 dual complementary pair NMOS/PMOS transistors (MATLAB • LTspice • Analog Discovery Studio).",

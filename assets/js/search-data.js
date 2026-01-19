@@ -37,7 +37,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-designing-an-8-ghz-negative-resistance-oscillator-with-an-atf-33143-gaas-phemt",
+        },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2025-04-28-ee456-design-04-detailed-announcement/";
+          
+        },
+      },{id: "post-design-of-an-8-ghz-oscillator-using-negative-resistance-atf-33143",
+        
+          title: "Design of an 8 GHz Oscillator using Negative-Resistance (ATF-33143)",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee456-design-05-detailed-announcement/";
+          
+        },
+      },{id: "post-designing-an-8-ghz-negative-resistance-oscillator-with-an-atf-33143-gaas-phemt",
         
           title: "Designing an 8 GHz Negative-Resistance Oscillator with an ATF-33143 GaAs pHEMT",
         
@@ -46,6 +68,50 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/ee456-design-project-05/";
+          
+        },
+      },{id: "post-ee-456-design-project-05-published-8-ghz-negative-resistance-oscillator-using-atf-33143-gaas-phemt",
+        
+          title: "EE-456 Design Project 05 Published: 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee456-design-05-old-detailed-announcement/";
+          
+        },
+      },{id: "post-optimized-silicon-solar-cell-design",
+        
+          title: "Optimized Silicon Solar Cell Design",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee212-design-01-optimized-solar-cell-detailed-announcement/";
+          
+        },
+      },{id: "post-eelab-ii-final-lab-portfolio",
+        
+          title: "eeLab II — Final Lab Portfolio",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee322-final-lab-portfolio-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-336-single-phase-h-bridge-inverter-analysis",
+        
+          title: "EE-336 Single-Phase H-Bridge Inverter Analysis",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee336-week-14-h-bridge-inverter-analysis-detailed-announcement/";
           
         },
       },{id: "post-designing-a-personalized-audiogram-driven-fir-filter-bank-for-a-virtual-hearing-aid",
@@ -59,6 +125,17 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee302-design-project-01/";
           
         },
+      },{id: "post-fir-filter-bank-for-hearing-aid-audio-response",
+        
+          title: "FIR Filter-Bank for Hearing Aid Audio Response",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee302-design-01-fir-filterbank-for-hearing-aid-detailed-announcement/";
+          
+        },
       },{id: "post-discrete-time-control-for-receiver-positioning-and-satellite-tracking",
         
           title: "Discrete-Time Control for Receiver Positioning and Satellite Tracking",
@@ -68,6 +145,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/ee470-design-project-01/";
+          
+        },
+      },{id: "post-discrete-time-control-system-design-for-a-satellite-receiver-servo-motor-actuator-achieving-accurate-satellite-sky-tracking",
+        
+          title: "Discrete-Time Control System Design for a Satellite Receiver Servo-motor Actuator achieving Accurate Satellite-Sky...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee470-design-01-servomotor-control-sys-detailed-announcement/";
           
         },
       },{id: "post-design-of-an-8-ghz-maximum-absolute-gain-or-mag-amplifier-with-non-linear-simulations-and-ip3-analysis",
@@ -81,6 +169,17 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee-456-design-project-04/";
           
         },
+      },{id: "post-ee-336-boost-converter-analysis",
+        
+          title: "EE-336 Boost Converter Analysis",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee336-week-13-boost-converter-analysis-detailed-announcement/";
+          
+        },
       },{id: "post-chebyshev-insertion-loss-matching-for-a-10-20-ghz-phemt-amplifier",
         
           title: "Chebyshev Insertion-Loss Matching for a 10–20 GHz pHEMT Amplifier",
@@ -90,6 +189,83 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/ee456-design-project-03/";
+          
+        },
+      },{id: "post-using-chebyshev-polynomials-for-the-synthesis-of-impedance-matching-networks",
+        
+          title: "Using Chebyshev Polynomials for the Synthesis of Impedance-Matching Networks",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee456-design-03-10-ghz-to-20-ghz-chebyshev-synthesis-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-336-transmission-line-analysis",
+        
+          title: "EE-336 Transmission Line Analysis",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee336-week-12-trl-voltage-regulation-and-surge-impedance-loading-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-336-transmission-line-abcd-parameters",
+        
+          title: "EE-336 Transmission Line ABCD Parameters",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee336-week-11-transmission-line-abcd-parameters-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-336-gauss-seidel-power-flow-analysis",
+        
+          title: "EE-336 Gauss-Seidel Power Flow Analysis",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee336-week-10-gauss-seidel-power-flow-analysis-detailed-announcement/";
+          
+        },
+      },{id: "post-15-ghz-low-noise-amplifier-input-output-matching-network-design",
+        
+          title: "15 GHz Low-Noise Amplifier Input/Output Matching Network Design",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee456-design-02-lna-matching-network-for-mgf4941al-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-336-power-transfer-amp-frequency-droop-analysis",
+        
+          title: "EE-336 Power Transfer &amp; Frequency Droop Analysis",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee336-week-09-generator-power-xfer-droop-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-336-induction-motor-phasor-analysis",
+        
+          title: "EE-336 Induction Motor Phasor Analysis",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee336-week-06-induction-motor-phasor-analysis-detailed-announcement/";
           
         },
       },{id: "post-15-ghz-hemt-amplifier-with-imn-omn-synthesis-and-ads-matlab-verification",
@@ -103,6 +279,72 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee456-design-project-01/";
           
         },
+      },{id: "post-15-ghz-gaas-hemt-amplifier-design",
+        
+          title: "15 GHz GaAs HEMT Amplifier Design",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee456-design-01-15ghz-gaas-hemt-amp-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-336-induction-motor-slip-analysis",
+        
+          title: "EE-336 Induction Motor Slip Analysis",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee336-week-05-generators-detailed-announcement/";
+          
+        },
+      },{id: "post-assignment-02",
+        
+          title: "Assignment 02",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee336-week-02-faradays-law-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-336-assignment-04-autotransformer-power-rating",
+        
+          title: "EE-336 Assignment 04 — Autotransformer Power Rating",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee336-week-04-autotransformer-ratings-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-336-assignment-3-delta-y-transformer-analysis",
+        
+          title: "EE-336 Assignment 3 – Delta-Y Transformer Analysis",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee336-week-03-transformers-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-336-assignment-01-three-phase-apparent-power",
+        
+          title: "EE-336 Assignment 01 — Three-Phase Apparent Power",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee336-week-01-three-phase-power-detailed-announcement/";
+          
+        },
       },{id: "post-laplace-transform-applications-for-system-analysis-and-modeling",
         
           title: "Laplace Transform Applications for System Analysis and Modeling",
@@ -112,6 +354,39 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2024/ee301-laplace-transform/";
+          
+        },
+      },{id: "post-ee-319-lab-07-measurements",
+        
+          title: "EE 319 Lab 07 — Measurements",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee319-lab-07-detailed-announcement/";
+          
+        },
+      },{id: "post-laplace-transform-applications-for-system-analysis-in-electrical-engineering",
+        
+          title: "Laplace Transform Applications for System Analysis in Electrical Engineering",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee301-report-02-laplace-transform-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-319-lab-06-measurements-lm741-op-amp",
+        
+          title: "EE 319 Lab 06 — Measurements (LM741 Op-Amp)",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee319-lab-06-detailed-announcement/";
           
         },
       },{id: "post-fourier-transform-applications-for-signal-analysis-in-engineering",
@@ -125,6 +400,39 @@ ninja.data = [{
             window.location.href = "/blog/2024/ee301-fourier-transform/";
           
         },
+      },{id: "post-fourier-transform-applications-for-signal-analysis-in-electrical-engineering",
+        
+          title: "Fourier Transform Applications for Signal Analysis in Electrical Engineering",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee301-report-01-fourier-transform-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-319-lab-05-measurements",
+        
+          title: "EE 319 Lab 05 — Measurements",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee319-lab-05-detailed-announcement/";
+          
+        },
+      },{id: "post-common-source-mosfet-amplifier-characterization",
+        
+          title: "Common-Source MOSFET Amplifier Characterization",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee319-lab-04-detailed-announcement/";
+          
+        },
       },{id: "post-ghz-transmission-line-matching-networks-with-ads-and-microstrip-layout",
         
           title: "GHz Transmission-Line Matching Networks with ADS and Microstrip Layout",
@@ -134,6 +442,72 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2024/ee314-design-project-01/";
+          
+        },
+      },{id: "post-millimeter-wave-impedance-matching-network-designs",
+        
+          title: "Millimeter-Wave Impedance Matching Network Designs",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee314-design-01-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-319-lab-03-bode-plot-amp-small-signal-gain",
+        
+          title: "EE 319 Lab 03 — Bode Plot &amp; Small-Signal Gain",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee319-lab-03-small-signal-gain-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-319-lab-02-active-band-pass-filter-measurements",
+        
+          title: "EE-319 Lab 02 — Active Band-Pass Filter Measurements",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee319-lab-02-active-band-pass-filter-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-319-lab-01-low-pass-filter-measurements",
+        
+          title: "EE 319 Lab 01 — Low-Pass Filter Measurements",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee319-lab-01-low-pass-filter-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-319-lab-01-passive-rc-band-pass-filter",
+        
+          title: "EE-319 Lab 01 — Passive RC Band-Pass Filter",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee319-lab-01-band-pass-filter-detailed-announcement/";
+          
+        },
+      },{id: "post-ee-319-lab-01-high-pass-filter-measurements",
+        
+          title: "EE-319 Lab 01 — High-Pass Filter Measurements",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee319-lab-01-high-pass-filter-detailed-announcement/";
           
         },
       },{id: "post-15-ghz-lna-matching-with-joint-gain-noise-and-vswr-optimization",
@@ -152,107 +526,107 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-ee-319-lab-01-high-pass-filter-measurements-project-page-published",
-          title: 'EE-319 Lab 01 — High-Pass Filter Measurements — project page published.',
+            },},{id: "news-rc-high-pass-in-practice-or-view-the-project-page",
+          title: 'RC High-Pass in Practice — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-319-lab-01-passive-rc-band-pass-filter-project-page-published",
-          title: 'EE-319 Lab 01 — Passive RC Band-Pass Filter — project page published.',
+          section: "News",},{id: "news-passive-rc-band-pass-or-view-the-project-page",
+          title: 'Passive RC Band-Pass — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-319-lab-01-low-pass-filter-measurements-project-page-published",
-          title: 'EE 319 Lab 01 — Low-Pass Filter Measurements — project page published.',
+          section: "News",},{id: "news-rc-low-pass-in-practice-or-view-the-project-page",
+          title: 'RC Low-Pass in Practice — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-319-lab-02-active-band-pass-filter-measurements-project-page-published",
-          title: 'EE-319 Lab 02 — Active Band-Pass Filter Measurements — project page published.',
+          section: "News",},{id: "news-active-band-pass-lm741-or-view-the-project-page",
+          title: 'Active Band-Pass (LM741) — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-319-lab-03-bode-plot-amp-amp-small-signal-gain-project-page-published",
-          title: 'EE 319 Lab 03 — Bode Plot &amp;amp;amp; Small-Signal Gain — project page...',
+          section: "News",},{id: "news-bode-plot-small-signal-limits-or-view-the-project-page",
+          title: 'Bode Plot + Small-Signal Limits — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ghz-transmission-line-matching-networks-or-view-the-project-page",
-          title: 'GHz Transmission-Line Matching Networks — or view the project page.',
+          section: "News",},{id: "news-ghz-matching-networks-or-view-the-project-page",
+          title: 'GHz Matching Networks — or view the project page.',
           description: "",
-          section: "News",},{id: "news-common-source-mosfet-amplifier-characterization-project-page-published",
-          title: 'Common-Source MOSFET Amplifier Characterization — project page published.',
+          section: "News",},{id: "news-common-source-mosfet-gain-or-view-the-project-page",
+          title: 'Common-Source MOSFET Gain — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-319-lab-05-measurements-project-page-published",
-          title: 'EE 319 Lab 05 — Measurements — project page published.',
+          section: "News",},{id: "news-bjt-common-emitter-amplifier-or-view-the-project-page",
+          title: 'BJT Common-Emitter Amplifier — or view the project page.',
           description: "",
-          section: "News",},{id: "news-fourier-transform-applications-for-signal-analysis-or-view-the-project-page",
-          title: 'Fourier Transform Applications for Signal Analysis — or view the project page.',
+          section: "News",},{id: "news-fourier-transform-in-practice-or-view-the-project-page",
+          title: 'Fourier Transform in Practice — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-319-lab-06-measurements-lm741-op-amp-project-page-published",
-          title: 'EE 319 Lab 06 — Measurements (LM741 Op-Amp) — project page published.',
+          section: "News",},{id: "news-lm741-non-ideality-measurements-or-view-the-project-page",
+          title: 'LM741 Non-Ideality Measurements — or view the project page.',
           description: "",
-          section: "News",},{id: "news-laplace-transform-applications-for-system-analysis-or-view-the-project-page",
-          title: 'Laplace Transform Applications for System Analysis — or view the project page.',
+          section: "News",},{id: "news-laplace-transform-applications-or-view-the-project-page",
+          title: 'Laplace Transform Applications — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-319-lab-07-measurements-project-page-published",
-          title: 'EE 319 Lab 07 — Measurements — project page published.',
+          section: "News",},{id: "news-difference-vs-instrumentation-amplifiers-or-view-the-project-page",
+          title: 'Difference vs Instrumentation Amplifiers — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-336-assignment-01-three-phase-apparent-power-project-page-published",
-          title: 'EE-336 Assignment 01 — Three-Phase Apparent Power — project page published.',
+          section: "News",},{id: "news-three-phase-power-in-delta-loads-or-view-the-project-page",
+          title: 'Three-Phase Power in Delta Loads — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-336-assignment-3-delta-y-transformer-analysis-project-page-published",
-          title: 'EE-336 Assignment 3 – Delta-Y Transformer Analysis — project page published.',
+          section: "News",},{id: "news-delta-y-transformer-voltages-or-view-the-project-page",
+          title: 'Delta-Y Transformer Voltages — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-336-assignment-04-autotransformer-power-rating-project-page-published",
-          title: 'EE-336 Assignment 04 — Autotransformer Power Rating — project page published.',
+          section: "News",},{id: "news-autotransformer-power-ratings-or-view-the-project-page",
+          title: 'Autotransformer Power Ratings — or view the project page.',
           description: "",
-          section: "News",},{id: "news-assignment-02-project-page-published",
-          title: 'Assignment 02 — project page published.',
+          section: "News",},{id: "news-faraday-s-law-amp-amp-phasor-analysis-or-view-the-project-page",
+          title: 'Faraday’s Law &amp;amp;amp; Phasor Analysis — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-336-induction-motor-slip-analysis-project-page-published",
-          title: 'EE-336 Induction Motor Slip Analysis — project page published.',
+          section: "News",},{id: "news-induction-motor-slip-basics-or-view-the-project-page",
+          title: 'Induction Motor Slip Basics — or view the project page.',
           description: "",
-          section: "News",},{id: "news-15-ghz-gaas-hemt-amplifier-design-or-view-the-project-page",
-          title: '15 GHz GaAs HEMT Amplifier Design — or view the project page.',
+          section: "News",},{id: "news-15-ghz-gaas-hemt-amplifier-or-view-the-project-page",
+          title: '15 GHz GaAs HEMT Amplifier — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-336-induction-motor-phasor-analysis-project-page-published",
-          title: 'EE-336 Induction Motor Phasor Analysis — project page published.',
+          section: "News",},{id: "news-induction-motor-phasors-or-view-the-project-page",
+          title: 'Induction Motor Phasors — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-336-power-transfer-amp-amp-frequency-droop-analysis-project-page-published",
-          title: 'EE-336 Power Transfer &amp;amp;amp; Frequency Droop Analysis — project page published.',
+          section: "News",},{id: "news-generator-power-transfer-droop-or-view-the-project-page",
+          title: 'Generator Power Transfer + Droop — or view the project page.',
           description: "",
-          section: "News",},{id: "news-15-ghz-lna-matching-network-design-or-view-the-project-page",
-          title: '15 GHz LNA Matching Network Design — or view the project page.',
+          section: "News",},{id: "news-15-ghz-lna-matching-or-view-the-project-page",
+          title: '15 GHz LNA Matching — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-336-gauss-seidel-power-flow-analysis-project-page-published",
-          title: 'EE-336 Gauss-Seidel Power Flow Analysis — project page published.',
+          section: "News",},{id: "news-gauss-seidel-power-flow-or-view-the-project-page",
+          title: 'Gauss-Seidel Power Flow — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-336-transmission-line-abcd-parameters-project-page-published",
-          title: 'EE-336 Transmission Line ABCD Parameters — project page published.',
+          section: "News",},{id: "news-transmission-line-abcd-or-view-the-project-page",
+          title: 'Transmission Line ABCD — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-336-transmission-line-analysis-project-page-published",
-          title: 'EE-336 Transmission Line Analysis — project page published.',
+          section: "News",},{id: "news-voltage-regulation-sil-or-view-the-project-page",
+          title: 'Voltage Regulation + SIL — or view the project page.',
           description: "",
-          section: "News",},{id: "news-10-20-ghz-chebyshev-insertion-loss-matching-or-view-the-project-page",
-          title: '10-20 GHz Chebyshev Insertion-Loss Matching — or view the project page.',
+          section: "News",},{id: "news-10-20-ghz-chebyshev-matching-or-view-the-project-page",
+          title: '10–20 GHz Chebyshev Matching — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-336-boost-converter-analysis-project-page-published",
-          title: 'EE-336 Boost Converter Analysis — project page published.',
+          section: "News",},{id: "news-boost-converter-waveforms-or-view-the-project-page",
+          title: 'Boost Converter Waveforms — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-456-design-project-04-or-view-the-project-page",
-          title: 'EE-456 Design Project 04 — or view the project page.',
+          section: "News",},{id: "news-8-ghz-mag-amplifier-ip3-or-view-the-project-page",
+          title: '8 GHz MAG Amplifier + IP3 — or view the project page.',
           description: "",
-          section: "News",},{id: "news-discrete-control-for-receiver-positioning-and-satellite-tracking-or-view-the-project-page",
-          title: 'Discrete Control for Receiver Positioning and Satellite Tracking — or view the project...',
+          section: "News",},{id: "news-satellite-tracking-control-or-view-the-project-page",
+          title: 'Satellite Tracking Control — or view the project page.',
           description: "",
-          section: "News",},{id: "news-design-of-a-fir-virtual-filter-bank-customized-for-individual-patients-audiograms-for-use-in-hearing-aids-or-view-the-project-page",
-          title: 'Design of a FIR Virtual Filter-bank Customized for Individual Patients’ Audiograms for use...',
+          section: "News",},{id: "news-audiogram-tuned-fir-filter-bank-or-view-the-project-page",
+          title: 'Audiogram-Tuned FIR Filter Bank — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-336-single-phase-h-bridge-inverter-analysis-project-page-published",
-          title: 'EE-336 Single-Phase H-Bridge Inverter Analysis — project page published.',
+          section: "News",},{id: "news-h-bridge-inverter-switching-or-view-the-project-page",
+          title: 'H-Bridge Inverter Switching — or view the project page.',
           description: "",
-          section: "News",},{id: "news-eelab-ii-final-lab-portfolio-project-page-published",
-          title: 'eeLab II — Final Lab Portfolio — project page published.',
+          section: "News",},{id: "news-ee-lab-ii-portfolio-or-view-the-project-page",
+          title: 'EE Lab II Portfolio — or view the project page.',
           description: "",
-          section: "News",},{id: "news-optimized-silicon-solar-cell-design-project-page-published",
-          title: 'Optimized Silicon Solar Cell Design — project page published.',
+          section: "News",},{id: "news-optimized-silicon-solar-cell-or-view-the-project-page",
+          title: 'Optimized Silicon Solar Cell — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-456-design-project-05-published-8-ghz-negative-resistance-oscillator-using-atf-33143-gaas-phemt-project-page-published",
-          title: 'EE-456 Design Project 05 Published: 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT...',
+          section: "News",},{id: "news-8-ghz-negative-resistance-oscillator-or-view-the-project-page",
+          title: '8 GHz Negative-Resistance Oscillator — or view the project page.',
           description: "",
-          section: "News",},{id: "news-negative-feedback-oscillator-design-or-view-the-project-page",
-          title: 'Negative-Feedback Oscillator Design — or view the project page.',
+          section: "News",},{id: "news-8-ghz-negative-resistance-oscillator-or-view-the-project-page",
+          title: '8 GHz Negative-Resistance Oscillator — or view the project page.',
           description: "",
           section: "News",},{id: "projects-optimized-silicon-solar-cell-design",
           title: 'Optimized Silicon Solar Cell Design',

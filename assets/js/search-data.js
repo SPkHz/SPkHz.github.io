@@ -383,6 +383,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
+            },},{id: "news-",
+          title: '',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/2024_11_27__ee301_FT_project_01__announcement/";
             },},{id: "news-a-long-announcement-with-details",
           title: 'A long announcement with details',
           description: "",
@@ -424,13 +429,13 @@ ninja.data = [{
           description: "Single-junction silicon PV cell optimized in ANSYS Lumerical DEVICE (AM1.5). 16.08% efficiency with Si3N4 ARC + Al contacts, plus cost and sustainability analysis.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee212_design_01_optimized_solar_cell/";
-            },},{id: "projects-fourier-transform-applications-within-electrical-engineering",
-          title: 'Fourier Transform Applications within Electrical Engineering',
+            },},{id: "projects-fourier-transform-applications-for-signal-analysis-in-electrical-engineering",
+          title: 'Fourier Transform Applications for Signal Analysis in Electrical Engineering',
           description: "Fourier Transform applications across audio, ECG, imaging, SDR spectrum analysis, and vibration diagnostics (MATLAB-based examples).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee301_report_01_fourier_transform/";
-            },},{id: "projects-laplace-transform-applications-within-electrical-engineering",
-          title: 'Laplace Transform Applications within Electrical Engineering',
+            },},{id: "projects-laplace-transform-applications-for-system-analysis-in-electrical-engineering",
+          title: 'Laplace Transform Applications for System Analysis in Electrical Engineering',
           description: "Applications of the Laplace Transform across neural decoding (BCIs), DC-DC converter stability, electromagnetic partial inductance modeling, and memristor simulation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee301_report_02_laplace_transform/";

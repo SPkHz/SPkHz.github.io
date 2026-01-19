@@ -34,11 +34,11 @@ This project designs a **discrete-time controller** for a **servo-driven receive
 
 The servo actuator was modeled from the open-loop transfer function:
 
-$$
+\[
 G_p(s) = \frac{6776.29}{s(s+48.27)}
-$$
+\]
 
-A state-space model was constructed with states $x_1=\theta$ and $x_2=\dot{\theta}$, then discretized using **zero-order hold (ZOH)** for digital implementation.
+A state-space model was constructed with states \\(x_1=\theta\\) and \\(x_2=\dot{\theta}\\), then discretized using **zero-order hold (ZOH)** for digital implementation.
 
 ---
 
@@ -46,20 +46,20 @@ A state-space model was constructed with states $x_1=\theta$ and $x_2=\dot{\thet
 
 **Performance specs:**
 - **Percent overshoot:** PO = 1%
-- **Peak time:** $T_p = 0.05$ s
-- **Nominal controller sample time:** $T_s = 0.01$ s (**100 Hz**)
+- **Peak time:** \\(T_p = 0.05\\) s
+- **Nominal controller sample time:** \\(T_s = 0.01\\) s (**100 Hz**)
 
-From PO and $T_p$, the damping ratio $\zeta$ and natural frequency $\omega_n$ were computed, producing desired continuous poles, then mapped into the z-plane via:
+From PO and \\(T_p\\), the damping ratio \\(\zeta\\) and natural frequency \\(\omega_n\\) were computed, producing desired continuous poles, then mapped into the z-plane via:
 
-$$
+\[
 z = e^{sT_s}
-$$
+\]
 
 State-feedback gains were computed via **discrete-time pole placement**, then converted into an **output-feedback form** suitable for implementation:
 
-$$
+\[
 u(k) = -G_1\,y_1(k) - G_2\,y_2(k) + r(k)
-$$
+\]
 
 ---
 
@@ -67,10 +67,10 @@ $$
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee470/EE470_Final_Design_Simulink_Screenshot1.png" title="Simulink implementation (discrete controller + plant)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee470/EE470_Final_Design_Simulink_Screenshot1.png" title="Simulink implementation (discrete controller + plant)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee470/Continous_Sys_TF.png" title="Plant block diagram / scaling (continuous model reference)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee470/Continous_Sys_TF.png" title="Plant block diagram / scaling (continuous model reference)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -85,13 +85,13 @@ A key part of the project was showing how sampling rate affects the *practical* 
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee470/Figure_1_Step_response_Pos_50Hz.png" title="Position step response (50 Hz sampling)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee470/Figure_1_Step_response_Pos_50Hz.png" title="Position step response (50 Hz sampling)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee470/Position_Full_Plot.jpg" title="Position step response (100 Hz sampling)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee470/Position_Full_Plot.jpg" title="Position step response (100 Hz sampling)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee470/Sweep_500Hz_Pos.jpg" title="Position step response (500 Hz sampling)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee470/Sweep_500Hz_Pos.jpg" title="Position step response (500 Hz sampling)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -100,13 +100,13 @@ A key part of the project was showing how sampling rate affects the *practical* 
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee470/Figure_2_Step_Response_Vel_50Hz.png" title="Velocity step response (50 Hz sampling)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee470/Figure_2_Step_Response_Vel_50Hz.png" title="Velocity step response (50 Hz sampling)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee470/Velocity_Full_Plot.jpg" title="Velocity step response (100 Hz sampling)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee470/Velocity_Full_Plot.jpg" title="Velocity step response (100 Hz sampling)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee470/Sweep_500Hz_Vel.jpg" title="Velocity step response (500 Hz sampling)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee470/Sweep_500Hz_Vel.jpg" title="Velocity step response (500 Hz sampling)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">

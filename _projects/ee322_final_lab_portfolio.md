@@ -8,6 +8,14 @@ category: coursework
 related_publications: false
 giscus_comments: false
 toc: true
+_styles: |
+  .post article .mjx-container[display="true"] {
+    font-size: 1.3em;
+    margin: 0.9em 0 1.1em;
+  }
+  .post article .mjx-container {
+    font-size: 1.12em;
+  }
 ---
 
 This project is my **EE-322 (Electrical Engineering Lab II)** final portfolio: a full arc from **device-level MOSFET characterization** to **analog amplifier design**, **differential signaling + CMRR**, and **RF measurement workflows** using **S-parameters** and **de-embedding**.
@@ -69,7 +77,7 @@ Goal: measure NMOS behavior directly and connect the observed curves to threshol
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab01/Lab_01_1_3.png" title="NMOS sweep results (representative plots)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab01/Lab_01_1_3.png" title="NMOS sweep results (representative plots)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -83,7 +91,7 @@ Goal: implement an actively-loaded common-source amplifier and evaluate gain beh
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab03/Lab_03_Bode_Plot.png" title="Actively-loaded CS amplifier — Bode plot" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab03/Lab_03_Bode_Plot.png" title="Actively-loaded CS amplifier — Bode plot" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -98,7 +106,7 @@ Because intrinsic device capacitances can be too small to observe cleanly with l
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab04/Lab_04_Sim_vs_Meas.png" title="Common-source amplifier — simulation vs measurement" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab04/Lab_04_Sim_vs_Meas.png" title="Common-source amplifier — simulation vs measurement" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 
@@ -115,7 +123,7 @@ A standard outcome shows up clearly:
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab05/Lab_05_Bode_Sim_Vs_Meas_Gain_Phase.png" title="Feedback amplifier — Bode gain/phase (sim vs meas)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab05/Lab_05_Bode_Sim_Vs_Meas_Gain_Phase.png" title="Feedback amplifier — Bode gain/phase (sim vs meas)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -129,13 +137,13 @@ Goal: quantify differential operation and noise rejection using **CMRR**.
 
 Key metric:
 
-$$
+\[
 \mathrm{CMRR} = \left|\frac{A_d}{A_{cm}}\right|, \qquad \mathrm{CMRR_{dB}} = 20\log_{10}(\mathrm{CMRR})
-$$
+\]
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab06/Lab-06-LTSpice-Plot.png" title="Differential pair — simulation support plot" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab06/Lab-06-LTSpice-Plot.png" title="Differential pair — simulation support plot" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 
@@ -146,7 +154,7 @@ Goal: build a differential pair with an **active (current mirror) load** to conv
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab07/Lab_07_CM_vs_Diff_Plot.png" title="Common-mode vs differential behavior (representative plot)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab07/Lab_07_CM_vs_Diff_Plot.png" title="Common-mode vs differential behavior (representative plot)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 
@@ -162,10 +170,10 @@ What changes after de-embedding:
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab08/Lab_08_lpf_deembedded_comparison.png" title="LPF S21 — before vs after de-embedding" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab08/Lab_08_lpf_deembedded_comparison.png" title="LPF S21 — before vs after de-embedding" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab08/Lab_08_hpf_deembedded_comparison.png" title="HPF S21 — before vs after de-embedding" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab08/Lab_08_hpf_deembedded_comparison.png" title="HPF S21 — before vs after de-embedding" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 

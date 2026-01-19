@@ -1,6 +1,6 @@
 ---
 layout: post
-title: EE-456 Design Project 01 Published: 15 GHz HEMT Amplifier (IMN/OMN TL Synthesis + ADS/MATLAB Verification)
+title: "EE-456 Design Project 01 Published: 15 GHz HEMT Amplifier (IMN/OMN TL Synthesis + ADS/MATLAB Verification)"
 date: 2025-02-25 09:24:33-0500
 inline: false
 related_posts: true

@@ -6,6 +6,14 @@ img: /assets/img/ee302/design01/design1/Audiogram__FilterBank_Response_Direct_Su
 importance: 2
 category: coursework
 related_publications: true
+_styles: |
+  .post article .mjx-container[display="true"] {
+    font-size: 1.3em;
+    margin: 0.9em 0 1.1em;
+  }
+  .post article .mjx-container {
+    font-size: 1.12em;
+  }
 ---
 
 ## Overview
@@ -25,9 +33,9 @@ This project designs a **personalized "virtual hearing aid" audio equalizer** us
 
 The audiogram is represented by key loss points (dB) and then smoothed using **PCHIP interpolation** with a small ±200 Hz padding around each point to avoid sharp transitions. Gains are mapped from loss in dB to linear amplitude via:
 
-$$
+\[
 G_{\text{linear}} = 10^{(\text{Loss}_{dB}/20)}
-$$
+\]
 
 | Frequency (Hz) | Loss (dB) |
 |---:|---:|
@@ -57,13 +65,13 @@ A more efficient approach: **5 Hamming-window band-pass filters** designed with 
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/design1/Audiogram_with_Bandwidth-Expanded_Key_Points.png" title="Audiogram (PCHIP smoothed)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/design1/Audiogram_with_Bandwidth-Expanded_Key_Points.png" title="Audiogram (PCHIP smoothed)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/design1/Individual_Filter_Responses_v2.png" title="Design 01 — Individual filter responses" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/design1/Individual_Filter_Responses_v2.png" title="Design 01 — Individual filter responses" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/design1/Audiogram__FilterBank_Response_Direct_Sum.png" title="Design 1 — Compensation check (audiogram + filter-bank)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/design1/Audiogram__FilterBank_Response_Direct_Sum.png" title="Design 1 — Compensation check (audiogram + filter-bank)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -72,13 +80,13 @@ A more efficient approach: **5 Hamming-window band-pass filters** designed with 
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/design2/Individual_Band-Pass_Filters_Centered_at_Specific_Frequencies.png" title="Design 2 — Individual band-pass filters" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design2/Individual_Band-Pass_Filters_Centered_at_Specific_Frequencies.png" title="Design 2 — Individual band-pass filters" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/design2/Combined_FilterBank_Response.png" title="Design 2 — Combined filter-bank response" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design2/Combined_FilterBank_Response.png" title="Design 2 — Combined filter-bank response" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/design2/Audiogram__FilterBank_Response_Design_2.png" title="Design 2 — Compensation check (audiogram + filter-bank)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design2/Audiogram__FilterBank_Response_Design_2.png" title="Design 2 — Compensation check (audiogram + filter-bank)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -93,13 +101,13 @@ To validate practical behavior, the composite FIR filter-bank was applied to rea
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/Fur_Spec.jpg" title="Fur Elise — Welch spectrum (input vs filtered)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/Fur_Spec.jpg" title="Fur Elise — Welch spectrum (input vs filtered)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/Beethoven_Spec.jpg" title="Beethoven — Welch spectrum (input vs filtered)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/Beethoven_Spec.jpg" title="Beethoven — Welch spectrum (input vs filtered)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/Bensound_Spec.jpg" title="Bensound — Welch spectrum (input vs filtered)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee302/design01/Bensound_Spec.jpg" title="Bensound — Welch spectrum (input vs filtered)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">

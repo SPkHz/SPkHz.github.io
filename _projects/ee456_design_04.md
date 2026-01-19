@@ -24,7 +24,7 @@ _styles: |
   }
 ---
 
-{% include figure.liquid loading="eager" path="assets/img/ee456/design04/00_cover.png" title="EE-456 Design Project 04 — MAG Amplifier Design / Non-Linear Simulation" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/ee456/design04/00_cover.png" title="EE-456 Design Project 04 — MAG Amplifier Design / Non-Linear Simulation" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 ## Overview
 
@@ -49,7 +49,7 @@ This project designs a **Maximum-Available-Gain (MAG)** amplifier at **\(f_0 = 8
 | \(\Gamma_L\) | \(0.4978\ \angle\ -179.4924^\circ\) | chosen as \(\Gamma_{ML}\) |
 | \(G_T\) | \(8.3146\ \text{W/W}\) (**9.1984 dB**) | MAG operating point |
 
-{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/01_mag_design_specs.png" title="MAG design specifications (\(\Gamma_S\), \(\Gamma_L\), \(G_T\))" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/01_mag_design_specs.png" title="MAG design specifications (\(\Gamma_S\), \(\Gamma_L\), \(G_T\))" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 ## Matching networks (TL + stub topology)
 
@@ -64,7 +64,7 @@ The input and output matches were realized with **50 Ω transmission-line sectio
 | OMN | \(\theta_{O1} = 48.9375^\circ\) | TRL | — |
 | OMN | \(\theta_{O2} = 29.8200^\circ\) | shunt stub | open |
 
-{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/14_transmission_lines.png" title="Transmission-line electrical lengths used in the IMN and OMN" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/14_transmission_lines.png" title="Transmission-line electrical lengths used in the IMN and OMN" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 ### Smith-chart and ADS implementations
 
@@ -77,9 +77,9 @@ The input and output matches were realized with **50 Ω transmission-line sectio
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/ee456/design04/13_omn_ads_schematic.png" title="OMN schematic in ADS" class="img-fluid rounded z-depth-1" %}</swiper-slide>
 </swiper-container>
 
-{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/07_matching_network_layout.png" title="Matching-network layout and reflection-coefficient relations (image credit: Dr. Burke)" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/07_matching_network_layout.png" title="Matching-network layout and reflection-coefficient relations (image credit: Dr. Burke)" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/15_ads_device_schematic.png" title="Full ADS device-level schematic (IMN → pHEMT → OMN, with biasing and S-parameter simulation)" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/15_ads_device_schematic.png" title="Full ADS device-level schematic (IMN → pHEMT → OMN, with biasing and S-parameter simulation)" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 ## Small-signal validation (MATLAB vs ADS)
 
@@ -92,7 +92,7 @@ The MATLAB cascade model (ABCD/T conversions + S-parameter interpolation) and AD
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/ee456/design04/19_compare_sij.png" title="All \(S_{ij}\) overlay (MATLAB vs ADS)" class="img-fluid rounded z-depth-1" %}</swiper-slide>
 </swiper-container>
 
-{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/20_ads_small_signal_results.png" title="ADS small-signal summary (\(G_T\) and S-parameter response)" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/20_ads_small_signal_results.png" title="ADS small-signal summary (\(G_T\) and S-parameter response)" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 ## Non-linear simulations (ADS)
 
@@ -105,13 +105,13 @@ The MATLAB cascade model (ABCD/T conversions + S-parameter interpolation) and AD
 | \(P_{in,1\text{dB}}\) | **5.9500 dBm** |
 | \(P_{out,1\text{dB}}\) | **14.1358 dBm** |
 
-{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/03_1db_compression_table2.png" title="1 dB compression point summary" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/03_1db_compression_table2.png" title="1 dB compression point summary" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/22_gt_1db_compression.png" title="Gain compression plot used to extract \(P_{in,1\text{dB}}\) and \(G_T(1\text{dB})\)" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/22_gt_1db_compression.png" title="Gain compression plot used to extract \(P_{in,1\text{dB}}\) and \(G_T(1\text{dB})\)" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 ### Harmonic balance (single-tone)
 
-{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/23_harmonic_balance_pin_1db.png" title="Harmonic balance example at \(P_{in} = P_{in,1\text{dB}}\): output spectrum and \(v_o(t)\)" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/23_harmonic_balance_pin_1db.png" title="Harmonic balance example at \(P_{in} = P_{in,1\text{dB}}\): output spectrum and \(v_o(t)\)" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 ### Two-tone intermodulation + IP3
 
@@ -120,14 +120,14 @@ The MATLAB cascade model (ABCD/T conversions + S-parameter interpolation) and AD
 | \(P_{out}(\mathrm{IP3})\) | 25.6176 dBm (LSB), 25.8347 dBm (USB) |
 | \(P_{in}(\mathrm{IP3})\) | 16.5620 dBm (LSB), 16.8225 dBm (USB) |
 
-{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/06_ip3_table5.png" title="Two-tone IP3 point summary" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/06_ip3_table5.png" title="Two-tone IP3 point summary" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/24_two_tone_ip3_task11.png" title="Two-tone spectrum and mixing products (Task 11)" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/24_two_tone_ip3_task11.png" title="Two-tone spectrum and mixing products (Task 11)" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 #### Single-tone power output (harmonics)
 
-{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/04_single_tone_table3.png" title="Single-tone output power at $f_0$, $2f_0$, and $3f_0$ for multiple input levels" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/04_single_tone_table3.png" title="Single-tone output power at \\(f_0\\), \\(2f_0\\), and \\(3f_0\\) for multiple input levels" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 #### Two-tone power output (low-level IMD)
 
-{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/05_two_tone_table4.png" title="Two-tone output power and third-order intermodulation products at low input level" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="lazy" path="assets/img/ee456/design04/05_two_tone_table4.png" title="Two-tone output power and third-order intermodulation products at low input level" class="img-fluid rounded z-depth-1" zoomable=true %}

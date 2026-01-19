@@ -6,6 +6,14 @@ img: assets/img/ee301/ee301-lt-banner.jpg
 importance: 6
 category: coursework
 giscus_comments: false
+_styles: |
+  .post article .mjx-container[display="true"] {
+    font-size: 1.3em;
+    margin: 0.9em 0 1.1em;
+  }
+  .post article .mjx-container {
+    font-size: 1.12em;
+  }
 ---
 
 ## Overview
@@ -19,7 +27,7 @@ This project surveys how the Laplace Transform turns time-domain differential eq
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301-lt-thumb.jpg" title="Laplace Transform Project 02 overview" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301-lt-thumb.jpg" title="Laplace Transform Project 02 overview" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 
@@ -31,13 +39,13 @@ Laplace-domain techniques help unify mixed neural data (discrete spikes + contin
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/bci_intro.png" title="BCI decoding: Laplace-domain framing" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/bci_intro.png" title="BCI decoding: Laplace-domain framing" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/bci_methods.png" title="BCI decoding: practical Laplace-based methods" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/bci_methods.png" title="BCI decoding: practical Laplace-based methods" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 
@@ -49,13 +57,13 @@ In power electronics, Laplace transforms enable stability analysis and controlle
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/dcdc_overview.png" title="DC-DC converter stability: s-domain modeling" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/dcdc_overview.png" title="DC-DC converter stability: s-domain modeling" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/dcdc_tools.png" title="DC-DC converter stability: Nyquist and Bode contexts" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/dcdc_tools.png" title="DC-DC converter stability: Nyquist and Bode contexts" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 
@@ -67,13 +75,13 @@ For high-frequency electromagnetic structures (where conductors may not form clo
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/partial_inductance_intro.png" title="Partial inductance modeling: Laplace-domain motivation" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/partial_inductance_intro.png" title="Partial inductance modeling: Laplace-domain motivation" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/partial_inductance_methods.png" title="Partial inductance modeling: NILT + interpolation methods" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/partial_inductance_methods.png" title="Partial inductance modeling: NILT + interpolation methods" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 
@@ -85,13 +93,13 @@ Memristors exhibit nonlinear dynamics that benefit from Laplace-domain analysis,
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/memristor_intro.png" title="Memristor modeling: Laplace-domain framing" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/memristor_intro.png" title="Memristor modeling: Laplace-domain framing" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/memristor_apps.png" title="Memristor modeling: practical applications" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/memristor_apps.png" title="Memristor modeling: practical applications" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 
@@ -103,7 +111,7 @@ The through-line across all four domains is the same: Laplace methods expose sys
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/conclusion.png" title="Report conclusion" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/laplace_transform_project_02/conclusion.png" title="Report conclusion" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 

@@ -47,13 +47,13 @@ Both the **Input Matching Network (IMN)** and **Output Matching Network (OMN)** 
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/ALL_TRLs_Schematic_ADS.png" title="Complete amplifier schematic (ADS, ideal TLs)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/ALL_TRLs_Schematic_ADS.png" title="Complete amplifier schematic (ADS, ideal TLs)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/ADS_IMN_SCHEMATIC.png" title="Input Matching Network (IMN) schematic" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/ADS_IMN_SCHEMATIC.png" title="Input Matching Network (IMN) schematic" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/ADS_OMN_Schematic.png" title="Output Matching Network (OMN) schematic" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/ADS_OMN_Schematic.png" title="Output Matching Network (OMN) schematic" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -74,10 +74,10 @@ At 15 GHz, the design hits a strong conjugate-match condition and produces near-
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/ADS_all_TRL_Simulation.png" title="ADS results: Smith charts + S-parameters vs frequency (full design)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/ADS_all_TRL_Simulation.png" title="ADS results: Smith charts + S-parameters vs frequency (full design)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/S21.png" title="MATLAB vs ADS comparison: |S21| (gain) overlay" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/S21.png" title="MATLAB vs ADS comparison: |S21| (gain) overlay" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -86,13 +86,13 @@ At 15 GHz, the design hits a strong conjugate-match condition and produces near-
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/S11.png" title="MATLAB vs ADS comparison: |S11| overlay" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/S11.png" title="MATLAB vs ADS comparison: |S11| overlay" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/S21.png" title="MATLAB vs ADS comparison: |S21| overlay" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/S21.png" title="MATLAB vs ADS comparison: |S21| overlay" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/S22.png" title="MATLAB vs ADS comparison: |S22| overlay" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design01/S22.png" title="MATLAB vs ADS comparison: |S22| overlay" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">

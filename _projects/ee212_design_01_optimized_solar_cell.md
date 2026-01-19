@@ -62,13 +62,13 @@ This project models and optimizes a **planar, single-junction silicon solar cell
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee212/Design_Model.png" title="3D solar cell structure in ANSYS Lumerical DEVICE" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee212/Design_Model.png" title="3D solar cell structure in ANSYS Lumerical DEVICE" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee212/Cubic_Spline_Fit_vs_Sim_Data_FINAL.png" title="JV curve (simulated) + cubic spline fit" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee212/Cubic_Spline_Fit_vs_Sim_Data_FINAL.png" title="JV curve (simulated) + cubic spline fit" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee212/Power_Density_of_Cubic_Spline_Fit_v9.png" title="Power density vs. voltage (max power point)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee212/Power_Density_of_Cubic_Spline_Fit_v9.png" title="Power density vs. voltage (max power point)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -86,10 +86,10 @@ This project models and optimizes a **planar, single-junction silicon solar cell
 | Efficiency, η | 16.08% |
 
 Efficiency is computed in the standard way:
-$$
+\[
 \eta = \frac{J_{sc} V_{oc} FF}{P_{in}}
-$$
-with $P_{in}$ set by the AM1.5 illumination condition used in the simulation.
+\]
+with \\(P_{in}\\) set by the AM1.5 illumination condition used in the simulation.
 
 ---
 
@@ -102,7 +102,7 @@ A simple sizing exercise estimates how many modules would be required to offset 
 - With **~5 sun-hours/day**, energy per module: **~1.17 kWh/day**
 - Modules required: **~29** to offset ~33.3 kWh/day
 
-A more realistic installed-cost estimate (including hardware + labor) is then derived using a Massachusetts $/W reference and the 30% federal ITC (see report for the full walk-through).
+A more realistic installed-cost estimate (including hardware + labor) is then derived using a Massachusetts \($/W\) reference and the 30% federal ITC (see report for the full walk-through).
 
 ---
 

@@ -6,6 +6,14 @@ img: assets/img/ee314/Microstrip_1_Layout.JPG
 importance: 6
 category: coursework
 giscus_comments: false
+_styles: |
+  .post article .mjx-container[display="true"] {
+    font-size: 1.3em;
+    margin: 0.9em 0 1.1em;
+  }
+  .post article .mjx-container {
+    font-size: 1.12em;
+  }
 ---
 
 ## Overview
@@ -70,34 +78,34 @@ This ensures the microstrip results reflect realistic dispersion/loss compared t
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_1_OC_Schematic.JPG" title="Shunt-stub solution 1 (open-circuit) schematic" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_1_OC_Schematic.JPG" title="Shunt-stub solution 1 (open-circuit) schematic" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_1_OC_Plots.JPG" title="Shunt-stub solution 1 (open-circuit) plots" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_2_SC_Schematic.JPG" title="Shunt-stub solution 2 (short-circuit) schematic" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_2_SC_Plots.JPG" title="Shunt-stub solution 2 (short-circuit) plots" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_1_OC_Plots.JPG" title="Shunt-stub solution 1 (open-circuit) plots" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_3_SC_Schematic.JPG" title="Shunt-stub solution 3 (short-circuit) schematic" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_2_SC_Schematic.JPG" title="Shunt-stub solution 2 (short-circuit) schematic" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_3_SC_Plots.JPG" title="Shunt-stub solution 3 (short-circuit) plots" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_2_SC_Plots.JPG" title="Shunt-stub solution 2 (short-circuit) plots" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_4_OC_Schematic.JPG" title="Shunt-stub solution 4 (open-circuit) schematic" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_3_SC_Schematic.JPG" title="Shunt-stub solution 3 (short-circuit) schematic" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_4_OC_Plots.JPG" title="Shunt-stub solution 4 (open-circuit) plots" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_3_SC_Plots.JPG" title="Shunt-stub solution 3 (short-circuit) plots" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_4_OC_Schematic.JPG" title="Shunt-stub solution 4 (open-circuit) schematic" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_4_OC_Plots.JPG" title="Shunt-stub solution 4 (open-circuit) plots" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -110,18 +118,18 @@ This ensures the microstrip results reflect realistic dispersion/loss compared t
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/QWT_Soln_1_Schematic.JPG" title="Quarter-wave transformer solution 1 schematic" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/QWT_Soln_1_Schematic.JPG" title="Quarter-wave transformer solution 1 schematic" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/QWT_Soln_1_Plots.JPG" title="Quarter-wave transformer solution 1 plots" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/QWT_Soln_1_Plots.JPG" title="Quarter-wave transformer solution 1 plots" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/QWT_Soln_2_Schematic.JPG" title="Quarter-wave transformer solution 2 schematic" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/QWT_Soln_2_Schematic.JPG" title="Quarter-wave transformer solution 2 schematic" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/QWT_Soln_2_Plots.JPG" title="Quarter-wave transformer solution 2 plots" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/QWT_Soln_2_Plots.JPG" title="Quarter-wave transformer solution 2 plots" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -134,24 +142,24 @@ This ensures the microstrip results reflect realistic dispersion/loss compared t
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_1_Schematic.JPG" title="Microstrip implementation 1 schematic" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_1_Schematic.JPG" title="Microstrip implementation 1 schematic" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_1_Layout.JPG" title="Microstrip implementation 1 layout" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_1_Layout.JPG" title="Microstrip implementation 1 layout" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_1_Plots.JPG" title="Microstrip implementation 1 plots" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_1_Plots.JPG" title="Microstrip implementation 1 plots" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_2_Schematic.JPG" title="Microstrip implementation 2 schematic" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_2_Schematic.JPG" title="Microstrip implementation 2 schematic" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_2_Layout.JPG" title="Microstrip implementation 2 layout" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_2_Layout.JPG" title="Microstrip implementation 2 layout" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_2_Plots.JPG" title="Microstrip implementation 2 plots" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_2_Plots.JPG" title="Microstrip implementation 2 plots" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">

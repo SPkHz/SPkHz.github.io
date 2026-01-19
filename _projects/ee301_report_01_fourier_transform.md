@@ -6,6 +6,14 @@ img: assets/img/ee301/ee301-ft-banner.jpg
 importance: 6
 category: coursework
 giscus_comments: false
+_styles: |
+  .post article .mjx-container[display="true"] {
+    font-size: 1.3em;
+    margin: 0.9em 0 1.1em;
+  }
+  .post article .mjx-container {
+    font-size: 1.12em;
+  }
 ---
 
 ## Overview
@@ -28,13 +36,13 @@ This project explores the Fourier Transform as a practical engineering tool: con
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/audio_spectrum.png" title="Audio signal: time vs frequency domain" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/audio_spectrum.png" title="Audio signal: time vs frequency domain" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/ecg_time.png" title="ECG signal in time domain" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/ecg_time.png" title="ECG signal in time domain" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/ecg_spectrum_filtered.png" title="ECG spectrum + filtered reconstruction" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/ecg_spectrum_filtered.png" title="ECG spectrum + filtered reconstruction" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -47,10 +55,10 @@ This project explores the Fourier Transform as a practical engineering tool: con
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-6 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/image_processing_dct.png" title="Image processing: frequency-domain viewpoint (DCT vs FT context)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/image_processing_dct.png" title="Image processing: frequency-domain viewpoint (DCT vs FT context)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm-6 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/mri_reconstruction.png" title="MRI reconstruction concept (k-space to image)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/mri_reconstruction.png" title="MRI reconstruction concept (k-space to image)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -65,7 +73,7 @@ Fourier tools are the backbone of SDR spectrum visibility: FFT-based displays ma
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/wifi_spectrum_waterfall.png" title="2.4 GHz band spectrum + waterfall example" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/wifi_spectrum_waterfall.png" title="2.4 GHz band spectrum + waterfall example" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -74,10 +82,10 @@ Fourier tools are the backbone of SDR spectrum visibility: FFT-based displays ma
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/lte_downlink_waterfall.png" title="LTE downlink waterfall example" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/lte_downlink_waterfall.png" title="LTE downlink waterfall example" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/lte_spectrum.png" title="LTE-style spectrum example (MATLAB)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/lte_spectrum.png" title="LTE-style spectrum example (MATLAB)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">
@@ -90,7 +98,7 @@ Fourier tools are the backbone of SDR spectrum visibility: FFT-based displays ma
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/bridge_fft_code.png" title="Bridge vibration FFT example (MATLAB code excerpt)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/fourier_transform_project_01/bridge_fft_code.png" title="Bridge vibration FFT example (MATLAB code excerpt)" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 <div class="caption">

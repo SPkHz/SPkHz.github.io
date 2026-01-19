@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Report Published: Fourier Transform Applications for Signal Analysis
+title: "Report Published: Fourier Transform Applications for Signal Analysis"
 date: 2024-11-27 10:11:00-0500
 inline: false
 related_posts: true

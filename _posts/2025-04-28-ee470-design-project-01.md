@@ -1,6 +1,6 @@
 ---
 layout: post
-title: EE-470 Final Design Project 01 Published: Discrete Control for Receiver Positioning and Satellite Tracking
+title: "EE-470 Final Design Project 01 Published: Discrete Control for Receiver Positioning and Satellite Tracking"
 date: 2025-04-28 10:01:48-05:00
 description: Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.
 tags: [control-systems, discrete-control, digital-control, matlab, simulink, state-space, pole-placement, zoh, satellite-tracking]

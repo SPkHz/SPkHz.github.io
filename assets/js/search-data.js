@@ -424,8 +424,8 @@ ninja.data = [{
           description: "Single-junction silicon PV cell optimized in ANSYS Lumerical DEVICE (AM1.5). 16.08% efficiency with Si3N4 ARC + Al contacts, plus cost and sustainability analysis.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee212_design_01_optimized_solar_cell/";
-            },},{id: "projects-ee-302-hearing-aid-fir-filter-bank-equalizer",
-          title: 'EE-302 Hearing Aid FIR Filter-Bank Equalizer',
+            },},{id: "projects-fir-filter-bank-for-hearing-aid-audio-response",
+          title: 'FIR Filter-Bank for Hearing Aid Audio Response',
           description: "Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee302_design_01_fir_filterbank_for_hearing_aid/";

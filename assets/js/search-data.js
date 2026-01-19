@@ -218,9 +218,9 @@ ninja.data = [{
           description: "Negative-resistance oscillator synthesis at 8 GHz using common-gate conversion, feedback-reactance optimization, and transmission-line termination/resonator networks (MATLAB • Touchstone).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_05/";
-            },},{id: "projects-design-of-an-8-ghz-negative-resistance-oscillator-using-atf-33143-gaas-phemt",
-          title: 'Design of an 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT',
-          description: "EE-456 Design Project 05 -- 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT.",
+            },},{id: "projects-ee-456-design-project-05-published-8-ghz-negative-resistance-oscillator-using-atf-33143-gaas-phemt",
+          title: 'EE-456 Design Project 05 Published: 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT...',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_05_old/";
             },},{id: "projects-discrete-control-system-design-for-receiver-positioning-and-accurate-satellite-tracking",

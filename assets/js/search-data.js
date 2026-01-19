@@ -464,11 +464,11 @@ ninja.data = [{
           description: "Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_03_10_ghz_to_20_ghz_chebyshev_synthesis/";
-            },},{id: "projects-discrete-computer-control-system-receiver-positioning-and-accurate-satellite-tracking",
-          title: 'Discrete Computer Control System Receiver Positioning and Accurate Satellite Tracking',
+            },},{id: "projects-discrete-control-system-design-for-receiver-positioning-and-accurate-satellite-tracking",
+          title: 'Discrete Control System Design for Receiver Positioning and Accurate Satellite Tracking',
           description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/ee470_discrete_computer_control_systems_final_design_project/";
+              window.location.href = "/projects/ee470_design_01_servomotor_control_sys/";
             },},{
         id: 'social-cv',
         title: 'CV',

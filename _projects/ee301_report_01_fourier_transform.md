@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Fourier Transform Project 01
+title: Engineering Applications of the Fourier Transform
 description: Fourier Transform applications across audio, ECG, imaging, SDR spectrum analysis, and vibration diagnostics (MATLAB-based examples).
-img: assets/img/ee301-ft-banner.jpg
+img: assets/img/ee301/ee301-ft-banner.jpg
 importance: 6
 category: coursework
-giscus_comments: true
+giscus_comments: false
 ---
 
 ## Overview

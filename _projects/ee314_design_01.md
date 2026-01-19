@@ -2,7 +2,7 @@
 layout: page
 title: Quarter-Wave Transformer Impedance Matching Network Design
 description: Transmission-line impedance matching in Keysight ADS — shunt-stub + quarter-wave transformer designs (ideal + microstrip), with Smith-chart synthesis and layout verification.
-img: assets/img/ee314/hero.jpg
+img: assets/img/ee314/Microstrip_1_Layout.JPG
 importance: 6
 category: coursework
 giscus_comments: false
@@ -61,49 +61,92 @@ This ensures the microstrip results reflect realistic dispersion/loss compared t
 
 ## Design Artifacts (Gallery)
 
-### 1. Smith Charts + Hand Synthesis
+### 1. Shunt-Stub Solutions
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/smith_shunt_stub_solution1.jpg" title="Shunt-stub Smith chart synthesis (solution example)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_1_OC_Schematic.JPG" title="Shunt-stub solution 1 (open-circuit) schematic" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/smith_shunt_stub_solution2.jpg" title="Shunt-stub Smith chart synthesis (alternate solution)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_1_OC_Plots.JPG" title="Shunt-stub solution 1 (open-circuit) plots" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_2_SC_Schematic.JPG" title="Shunt-stub solution 2 (short-circuit) schematic" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/smith_quarter_wave.jpg" title="Quarter-wave transformer Smith chart synthesis" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_2_SC_Plots.JPG" title="Shunt-stub solution 2 (short-circuit) plots" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_3_SC_Schematic.JPG" title="Shunt-stub solution 3 (short-circuit) schematic" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_3_SC_Plots.JPG" title="Shunt-stub solution 3 (short-circuit) plots" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_4_OC_Schematic.JPG" title="Shunt-stub solution 4 (open-circuit) schematic" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Shunt_Stub_Soln_4_OC_Plots.JPG" title="Shunt-stub solution 4 (open-circuit) plots" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
-  Smith-chart synthesis used to determine normalized impedance/admittance moves, stub termination choice (OC/SC), and electrical lengths at the design frequency.
+  Four shunt-stub matching solutions showing both open-circuit (OC) and short-circuit (SC) stub configurations with their corresponding S-parameter plots.
 </div>
 
 ---
 
-### 2. ADS Ideal TL Schematics (S-Parameter Verification)
+### 2. Quarter-Wave Transformer Solutions
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/ads_shunt_stub_ideal.png" title="ADS ideal TL shunt-stub schematic" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/QWT_Soln_1_Schematic.JPG" title="Quarter-wave transformer solution 1 schematic" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/ads_quarter_wave_ideal.png" title="ADS ideal TL quarter-wave schematic's" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee314/QWT_Soln_1_Plots.JPG" title="Quarter-wave transformer solution 1 plots" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/QWT_Soln_2_Schematic.JPG" title="Quarter-wave transformer solution 2 schematic" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/QWT_Soln_2_Plots.JPG" title="Quarter-wave transformer solution 2 plots" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
-  Ideal transmission-line implementations were simulated first to confirm matching behavior before committing to microstrip geometry.
+  Two quarter-wave transformer matching solutions with their corresponding S-parameter plots.
 </div>
 
 ---
 
 ### 3. Microstrip (MStrip) Implementation + Layout
 
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/ads_mstrip_schematic.png" title="ADS microstrip schematic (substrate + line geometry)" class="img-fluid rounded z-depth-1" %}
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_1_Schematic.JPG" title="Microstrip implementation 1 schematic" class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/layout_view.png" title="Microstrip layout view" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_1_Layout.JPG" title="Microstrip implementation 1 layout" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_1_Plots.JPG" title="Microstrip implementation 1 plots" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_2_Schematic.JPG" title="Microstrip implementation 2 schematic" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_2_Layout.JPG" title="Microstrip implementation 2 layout" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/ee314/Microstrip_2_Plots.JPG" title="Microstrip implementation 2 plots" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">
@@ -111,17 +154,6 @@ This ensures the microstrip results reflect realistic dispersion/loss compared t
 </div>
 
 ---
-
-### 4. Plots + Tables (Performance Snapshot)
-
-<div class="row">
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee314/sparam_plots.png" title="S-parameter plots around the design frequency" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Representative S-parameter performance across the GHz sweep, showing matching behavior near the design point and the impact of microstrip implementation vs ideal TL.
-</div>
 
 ---
 
@@ -138,5 +170,4 @@ This repo is organized so someone can reproduce the work end-to-end:
 
 ## Download
 
-- **Full report PDF:** `assets/img/ee314/EE_314_Design_Project_Placzek.pdf`
-- **ADS workspace:** `assets/img/ee314/EE314_Final_Design_Project/`
+- **Full report PDF:** [EE_314_Design_Project_Placzek.pdf](assets/img/ee314/EE_314_Design_Project_Placzek.pdf)

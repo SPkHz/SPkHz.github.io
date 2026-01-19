@@ -668,28 +668,28 @@ ninja.data = [{
           description: "Differential-mode gain, common-mode gain, and CMRR for a single-op-amp difference amplifier and a 3-op-amp instrumentation amplifier (LM741).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319/lab-07/";
-            },},{id: "projects-",
-          title: '',
-          description: "",
+            },},{id: "projects-passive-rc-band-pass-filter-measurement-and-analysis",
+          title: 'Passive RC Band-Pass Filter Measurement and Analysis',
+          description: "Two-pole passive RC band-pass filter: analytic frequency response + LTspice AC sweep + Analog Discovery Studio measurements (MATLAB post-processing).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319_lab_01_band_pass_filter/";
-            },},{id: "projects-ee-319-lab-01-high-pass-filter-measurements",
-          title: 'EE-319 Lab 01 — High-Pass Filter Measurements',
+            },},{id: "projects-high-pass-filter-measurement-techniques",
+          title: 'High-Pass Filter Measurement Techniques',
           description: "First-order RC high-pass filter characterization (theory vs. LTspice vs. WaveForms measurements) with MATLAB Bode magnitude/phase plots.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319_lab_01_high_pass_filter/";
-            },},{id: "projects-ee-319-lab-01-low-pass-filter-measurements",
-          title: 'EE 319 Lab 01 — Low-Pass Filter Measurements',
+            },},{id: "projects-low-pass-filter-measurement-and-analysis",
+          title: 'Low-Pass Filter Measurement and Analysis',
           description: "First-order RC low-pass filter build + Bode measurement (10 Hz–100 kHz) with MATLAB/LTspice validation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319_lab_01_low_pass_filter/";
-            },},{id: "projects-ee-319-lab-02-active-band-pass-filter-measurements",
-          title: 'EE-319 Lab 02 — Active Band-Pass Filter Measurements',
+            },},{id: "projects-active-band-pass-filter-measurement-and-analysis",
+          title: 'Active Band-Pass Filter Measurement and Analysis',
           description: "Measurement + modeling of a 2nd-order active band-pass filter (LM741). Bode sweep (10 Hz–100 kHz), time-domain validation, and harmonic/spectrum analysis (MATLAB + LTspice + Digilent WaveForms).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319_lab_02_active_band_pass_filter/";
-            },},{id: "projects-ee-319-lab-03-bode-plot-amp-small-signal-gain",
-          title: 'EE 319 Lab 03 — Bode Plot &amp;amp; Small-Signal Gain',
+            },},{id: "projects-utilizing-bode-plots-to-determine-small-signal-gain",
+          title: 'Utilizing Bode Plots to Determine Small-Signal Gain',
           description: "Calculated vs LTspice vs Analog Discovery measurements for a diode-biased LM741 amplifier (mid-band gain, cutoff frequencies, and small-signal limits).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319_lab_03_small_signal_gain/";
@@ -718,13 +718,13 @@ ninja.data = [{
           description: "DC biasing + small-signal gain sensitivity to Rsig and RL using an ALD1105 MOSFET array (bench + LTspice).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_03_actively_loaded_common_source_ampflier/";
-            },},{id: "projects-ee-322-lab-04-frequency-response-of-the-common-source-amplifier",
-          title: 'EE-322 Lab 04 — Frequency Response of the Common-Source Amplifier',
+            },},{id: "projects-common-source-amplifier-frequency-response-measurement-and-analysis",
+          title: 'Common-Source Amplifier: Frequency Response Measurement and Analysis',
           description: "DC bias + Bode magnitude response (Measured vs LTspice), using discrete capacitors to emulate MOSFET parasitics.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_04_frequency_response_of_common_source_amplifier/";
-            },},{id: "projects-ee-322-lab-05-frequency-response-of-a-common-source-amplifier-with-feedback",
-          title: 'EE-322 Lab 05 — Frequency Response of a Common-Source Amplifier with Feedback',
+            },},{id: "projects-frequency-response-analysis-of-a-common-source-amplifier-with-feedback",
+          title: 'Frequency Response Analysis of a Common-Source Amplifier with Feedback',
           description: "Measured Bode magnitude/phase, −3 dB bandwidth, and gain-bandwidth product for a drain-to-gate feedback common-source MOSFET amplifier (ALD1105).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_05_frequency_response_of_common_source_amplifier_with_feedback/";
@@ -748,8 +748,8 @@ ninja.data = [{
           description: "Calculating total 3-phase apparent power for a Δ-connected balanced load (MATLAB • phasor analysis • power systems).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_01_three_phase_power/";
-            },},{id: "projects-assignment-02",
-          title: 'Assignment 02',
+            },},{id: "projects-faraday-39-s-law-synchronous-generator-speed-and-phasor-analysis",
+          title: 'Faraday&amp;#39;s Law, Synchronous Generator Speed, and Phasor Analysis',
           description: "Faraday&#39;s Law, Synchronous Generator Speed, and Phasor Analysis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_02_faradays_law/";
@@ -778,13 +778,13 @@ ninja.data = [{
           description: "Generator power transfer calculation via transformer and frequency droop characteristic analysis for parallel generators (Per-unit analysis • Power-angle relationship • Droop control).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_09_generator_power_xfer_droop/";
-            },},{id: "projects-ee-336-gauss-seidel-power-flow-analysis",
-          title: 'EE-336 Gauss-Seidel Power Flow Analysis',
+            },},{id: "projects-gauss-seidel-power-flow-analysis-for-electrical-energy-systems",
+          title: 'Gauss-Seidel Power Flow Analysis for Electrical Energy Systems',
           description: "Iterative power flow solution for a 6-bus system using the Gauss-Seidel method (MATLAB • Y-bus • per-unit system).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_10_gauss-seidel_power_flow_analysis/";
-            },},{id: "projects-ee-336-transmission-line-abcd-parameters",
-          title: 'EE-336 Transmission Line ABCD Parameters',
+            },},{id: "projects-transmission-line-abcd-parameters",
+          title: 'Transmission Line ABCD Parameters',
           description: "100-mile transmission line analysis using two-port ABCD parameters and the nominal π-model (60 Hz power system).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_11_transmission_line_abcd_parameters/";

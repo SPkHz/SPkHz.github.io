@@ -257,6 +257,46 @@ ninja.data = [{
           description: "MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_final_lab_portfolio/";
+            },},{id: "projects-ee-322-lab-01-transistor-characterization",
+          title: 'EE-322 Lab 01 — Transistor Characterization',
+          description: "Extracting NMOS SPICE parameters (VTn, KN, VA) from automated SMU sweeps + Python analysis.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee322_lab_01_transistor_characterization_methods/";
+            },},{id: "projects-",
+          title: '',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee322_lab_02_ic_biasing_techniques/";
+            },},{id: "projects-ee-322-lab-03-actively-loaded-common-source-amplifier",
+          title: 'EE-322 Lab 03 — Actively Loaded Common Source Amplifier',
+          description: "DC biasing + small-signal gain sensitivity to Rsig and RL using an ALD1105 MOSFET array (bench + LTspice).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee322_lab_03_actively_loaded_common_source_ampflier/";
+            },},{id: "projects-ee-322-lab-04-frequency-response-of-the-common-source-amplifier",
+          title: 'EE-322 Lab 04 — Frequency Response of the Common-Source Amplifier',
+          description: "DC bias + Bode magnitude response (Measured vs LTspice), using discrete capacitors to emulate MOSFET parasitics.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee322_lab_04_frequency_response_of_common_source_amplifier/";
+            },},{id: "projects-ee-322-lab-05-frequency-response-of-a-common-source-amplifier-with-feedback",
+          title: 'EE-322 Lab 05 — Frequency Response of a Common-Source Amplifier with Feedback',
+          description: "Measured Bode magnitude/phase, −3 dB bandwidth, and gain-bandwidth product for a drain-to-gate feedback common-source MOSFET amplifier (ALD1105).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee322_lab_05_frequency_response_of_common_source_amplifier_with_feedback/";
+            },},{id: "projects-ee-322-lab-06-mos-differential-pair-single-ended-vs-differential-signaling",
+          title: 'EE-322 Lab 06 — MOS Differential Pair (Single-Ended vs. Differential Signaling)',
+          description: "Characterize a MOS differential pair (ALD1105) in DC and AC; compare single-ended vs differential output and quantify CMRR.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee322_lab_06_MOS_differential_pair/";
+            },},{id: "projects-ee-322-lab-07-mos-differential-pair-current-mirror-load",
+          title: 'EE-322 Lab 07 — MOS Differential Pair (Current Mirror Load)',
+          description: "Differential-to-single-ended MOS amplifier using an ALD1105 current-mirror load; DC operating point, differential/common-mode gain, and CMRR (2025-04-08).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee322_lab_07_MOS_differential_pair_with_current_mirror_load/";
+            },},{id: "projects-ee-322-lab-08-vna-basics-amp-s-parameter-de-embedding",
+          title: 'EE-322 Lab 08 — VNA Basics &amp;amp; S-Parameter De-Embedding',
+          description: "Vector Network Analyzer (VNA) measurements of LPF/HPF frequency response with 2x-thru de-embedding (Touchstone • Python • SciPy).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee322_lab_08_de-embedding_s-parameters/";
             },},{id: "projects-ee-336-assignment-01-three-phase-apparent-power",
           title: 'EE-336 Assignment 01 — Three-Phase Apparent Power',
           description: "Calculating total 3-phase apparent power for a Δ-connected balanced load (MATLAB • phasor analysis • power systems).",

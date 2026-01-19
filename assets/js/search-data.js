@@ -48,17 +48,6 @@ ninja.data = [{
             window.location.href = "/blog/2026/2025-04-28-ee456-design-04-detailed-announcement/";
           
         },
-      },{id: "post-design-of-an-8-ghz-oscillator-using-negative-resistance-atf-33143",
-        
-          title: "Design of an 8 GHz Oscillator using Negative-Resistance (ATF-33143)",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/ee456-design-05-detailed-announcement/";
-          
-        },
       },{id: "post-designing-an-8-ghz-negative-resistance-oscillator-with-an-atf-33143-gaas-phemt",
         
           title: "Designing an 8 GHz Negative-Resistance Oscillator with an ATF-33143 GaAs pHEMT",
@@ -611,8 +600,8 @@ ninja.data = [{
           section: "News",},{id: "news-optimized-silicon-solar-cell-or-view-the-project-page",
           title: 'Optimized Silicon Solar Cell — or view the project page.',
           description: "",
-          section: "News",},{id: "news-8-ghz-negative-resistance-oscillator-or-view-the-project-page",
-          title: '8 GHz Negative-Resistance Oscillator — or view the project page.',
+          section: "News",},{id: "news-designing-an-8-ghz-oscillator-using-negative-resistance-feedback-and-passive-components-or-view-the-project-page",
+          title: 'Designing an 8 GHz Oscillator using Negative-Resistance Feedback and Passive Components — or...',
           description: "",
           section: "News",},{id: "projects-optimized-silicon-solar-cell-design",
           title: 'Optimized Silicon Solar Cell Design',
@@ -814,11 +803,6 @@ ninja.data = [{
           description: "Negative-resistance oscillator synthesis at 8 GHz using common-gate conversion, feedback-reactance optimization, and transmission-line termination/resonator networks (MATLAB • Touchstone).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_05/";
-            },},{id: "projects-design-project-05-published-8-ghz-negative-resistance-oscillator-using-atf-33143-gaas-phemt",
-          title: 'Design Project 05 Published: 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ee456_design_05_old/";
             },},{id: "projects-discrete-control-system-design-for-receiver-positioning-and-accurate-satellite-tracking",
           title: 'Discrete Control System Design for Receiver Positioning and Accurate Satellite Tracking',
           description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",

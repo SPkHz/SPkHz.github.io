@@ -207,6 +207,11 @@ ninja.data = [{
           description: "Transmission-line impedance matching in Keysight ADS — shunt-stub + quarter-wave transformer designs (ideal + microstrip), with Smith-chart synthesis and layout verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee314_design_01/";
+            },},{id: "projects-",
+          title: '',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319_lab_01_band_pass_filter/";
             },},{id: "projects-ee-319-lab-01-high-pass-filter-measurements",
           title: 'EE-319 Lab 01 — High-Pass Filter Measurements',
           description: "First-order RC high-pass filter characterization (theory vs. LTspice vs. WaveForms measurements) with MATLAB Bode magnitude/phase plots.",
@@ -217,6 +222,11 @@ ninja.data = [{
           description: "First-order RC low-pass filter build + Bode measurement (10 Hz–100 kHz) with MATLAB/LTspice validation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319_lab_01_low_pass_filter/";
+            },},{id: "projects-ee-319-lab-04-common-source-mosfet-amplifier",
+          title: 'EE-319 Lab 04 Common Source MOSFET Amplifier',
+          description: "MOSFET amplification with the ALD1105 dual complementary pair NMOS/PMOS transistors (MATLAB • LTspice • Analog Discovery Studio).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319_lab_04/";
             },},{id: "projects-eelab-ii-final-lab-portfolio",
           title: 'eeLab II — Final Lab Portfolio',
           description: "MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).",

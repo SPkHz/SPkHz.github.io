@@ -703,8 +703,8 @@ ninja.data = [{
           description: "MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_final_lab_portfolio/";
-            },},{id: "projects-ee-322-lab-01-transistor-characterization",
-          title: 'EE-322 Lab 01 — Transistor Characterization',
+            },},{id: "projects-transistor-characterization-techniques",
+          title: 'Transistor Characterization Techniques',
           description: "Extracting NMOS SPICE parameters (VTn, KN, VA) from automated SMU sweeps + Python analysis.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_01_transistor_characterization_methods/";
@@ -713,8 +713,8 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_02_ic_biasing_techniques/";
-            },},{id: "projects-ee-322-lab-03-actively-loaded-common-source-amplifier",
-          title: 'EE-322 Lab 03 — Actively Loaded Common Source Amplifier',
+            },},{id: "projects-building-simulating-and-measuring-a-common-source-amplifier-with-an-active-load",
+          title: 'Building, Simulating, and Measuring a Common-Source Amplifier with an Active Load',
           description: "DC biasing + small-signal gain sensitivity to Rsig and RL using an ALD1105 MOSFET array (bench + LTspice).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_03_actively_loaded_common_source_ampflier/";
@@ -728,18 +728,18 @@ ninja.data = [{
           description: "Measured Bode magnitude/phase, −3 dB bandwidth, and gain-bandwidth product for a drain-to-gate feedback common-source MOSFET amplifier (ALD1105).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_05_frequency_response_of_common_source_amplifier_with_feedback/";
-            },},{id: "projects-ee-322-lab-06-mos-differential-pair-single-ended-vs-differential-signaling",
-          title: 'EE-322 Lab 06 — MOS Differential Pair (Single-Ended vs. Differential Signaling)',
-          description: "Characterize a MOS differential pair (ALD1105) in DC and AC; compare single-ended vs differential output and quantify CMRR.",
+            },},{id: "projects-analysis-of-the-mos-differential-pair-single-ended-vs-differential-signaling",
+          title: 'Analysis of the MOS Differential Pair (Single-Ended vs. Differential Signaling)',
+          description: "Characterization a MOS differential pair (ALD1105) in DC and AC; compare single-ended vs differential output and quantify CMRR.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_06_MOS_differential_pair/";
-            },},{id: "projects-ee-322-lab-07-mos-differential-pair-current-mirror-load",
-          title: 'EE-322 Lab 07 — MOS Differential Pair (Current Mirror Load)',
+            },},{id: "projects-analysis-of-the-mos-differential-pair-with-a-current-mirror-load",
+          title: 'Analysis of the MOS Differential Pair (with a Current Mirror Load)',
           description: "Differential-to-single-ended MOS amplifier using an ALD1105 current-mirror load; DC operating point, differential/common-mode gain, and CMRR (2025-04-08).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_07_MOS_differential_pair_with_current_mirror_load/";
-            },},{id: "projects-ee-322-lab-08-vna-basics-amp-s-parameter-de-embedding",
-          title: 'EE-322 Lab 08 — VNA Basics &amp;amp; S-Parameter De-Embedding',
+            },},{id: "projects-vector-network-analyzer-basics-amp-s-parameter-de-embedding",
+          title: 'Vector Network Analyzer Basics &amp;amp; S-Parameter De-Embedding',
           description: "Vector Network Analyzer (VNA) measurements of LPF/HPF frequency response with 2x-thru de-embedding (Touchstone • Python • SciPy).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_08_de-embedding_s-parameters/";

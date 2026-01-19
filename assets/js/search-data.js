@@ -133,7 +133,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/ee456-design-project-05/";
+            window.location.href = "/blog/2025/ee-456-design-project-05/";
           
         },
       },{id: "post-ee-456-design-project-04",
@@ -144,7 +144,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/ee456-design-project-04/";
+            window.location.href = "/blog/2025/ee-456-design-project-04/";
           
         },
       },{id: "books-the-godfather",

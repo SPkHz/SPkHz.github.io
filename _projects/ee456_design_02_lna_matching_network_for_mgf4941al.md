@@ -7,6 +7,14 @@ importance: 4
 category: work
 giscus_comments: true
 related_publications: false
+_styles: |
+  .post article .mjx-container[display="true"] {
+    font-size: 1.3em;
+    margin: 0.9em 0 1.1em;
+  }
+  .post article .mjx-container {
+    font-size: 1.12em;
+  }
 ---
 
 <!--
@@ -22,19 +30,19 @@ assets/img/ee456/design02/S11_ADSvsMtLb.jpg
 assets/img/ee456/design02/S22_ADSvsMtLb.jpg
 -->
 
-Design Project 02 for EE-456 (RF & mm-Wave Active Circuits): a **15 GHz LNA matching design** for the **MGF4941AL InGaAs HEMT** at **\(V_{DS}=2~\text{V}\)** and **\(I_{DS}=10~\text{mA}\)**.
+Design Project 02 for EE-456 (RF & mm-Wave Active Circuits): a **15 GHz LNA matching design** for the **MGF4941AL InGaAs HEMT** at **$V_{DS}=2~\text{V}$** and **$I_{DS}=10~\text{mA}$**.
 
 Unlike a pure max-gain match, this design targets the *intersection* of constraints: **transducer gain**, **noise figure**, and **input/output VSWR**, then validates the final solution independently in **MATLAB** and **Keysight ADS**.
 
 **Toolchain:** MATLAB (synthesis + Touchstone re-plot) · ADS (circuit verification)  
-**Frequency:** \(f_0 = 15~\text{GHz}\) (sweep ~14–16 GHz)
+**Frequency:** $f_0 = 15~\text{GHz}$ (sweep ~14–16 GHz)
 
-**Course targets @ \(f_0\):**
-- \(G_T \ge 12~\text{dB}\)
-- \(NF \le 0.6~\text{dB}\)
-- \(\text{VSWR} \le 1.5\) (input + output)
+**Course targets @ $f_0$:**
+- $G_T \ge 12~\text{dB}$
+- $NF \le 0.6~\text{dB}$
+- $\text{VSWR} \le 1.5$ (input + output)
 
-The design flow is simple: start from device **S-parameters + noise parameters** at 15 GHz, map the design space with Smith-chart geometry, and choose \(\Gamma_S\) and \(\Gamma_L\) from the feasible region defined by **available gain circles**, **noise-figure circles**, and **stability constraints**.
+The design flow is simple: start from device **S-parameters + noise parameters** at 15 GHz, map the design space with Smith-chart geometry, and choose $\Gamma_S$ and $\Gamma_L$ from the feasible region defined by **available gain circles**, **noise-figure circles**, and **stability constraints**.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -48,24 +56,24 @@ The design flow is simple: start from device **S-parameters + noise parameters**
   </div>
 </div>
 <div class="caption">
-  Final layout and selection logic: \(\Gamma_S\) and \(\Gamma_L\) are chosen from the feasible gain–NF–stability intersection, then realized with compact single-stub transmission-line networks (IMN + OMN).
+  Final layout and selection logic: $\Gamma_S$ and $\Gamma_L$ are chosen from the feasible gain–NF–stability intersection, then realized with compact single-stub transmission-line networks (IMN + OMN).
 </div>
 
-At \(15~\text{GHz}\), the selected terminations are:
+At $15~\text{GHz}$, the selected terminations are:
 
-- \(\Gamma_S = 0.4256 \angle -136.02^\circ\)
-- \(\Gamma_L = 0.2904 \angle +146.09^\circ\)
+- $\Gamma_S = 0.4256 \angle -136.02^\circ$
+- $\Gamma_L = 0.2904 \angle +146.09^\circ$
 
 …and the verified performance is:
 
-- \(G_T = \mathbf{12.26~dB}\)
-- \(NF = \mathbf{0.580~dB}\)
-- VSWR (IMN) \(= \mathbf{1.50}\)
-- VSWR (OMN) \(= \mathbf{1.39}\)
+- $G_T = \mathbf{12.26~dB}$
+- $NF = \mathbf{0.580~dB}$
+- VSWR (IMN) $= \mathbf{1.50}$
+- VSWR (OMN) $= \mathbf{1.39}$
 
 **Electrical lengths (open-stub TL networks):**
-- **IMN:** \(\theta_{I1}=43.25^\circ\) (series TL), \(\theta_{I2}=10.42^\circ\) (open shunt stub)
-- **OMN:** \(\theta_{O1}=31.26^\circ\) (series TL), \(\theta_{O2}=53.52^\circ\) (open shunt stub)
+- **IMN:** $\theta_{I1}=43.25^\circ$ (series TL), $\theta_{I2}=10.42^\circ$ (open shunt stub)
+- **OMN:** $\theta_{O1}=31.26^\circ$ (series TL), $\theta_{O2}=53.52^\circ$ (open shunt stub)
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">

@@ -6,6 +6,14 @@ img: /assets/img/ee212/Design_Model.png
 importance: 2
 category: work
 related_publications: false
+_styles: |
+  .post article .mjx-container[display="true"] {
+    font-size: 1.3em;
+    margin: 0.9em 0 1.1em;
+  }
+  .post article .mjx-container {
+    font-size: 1.12em;
+  }
 ---
 
 <!--
@@ -72,10 +80,10 @@ This project (EE-212: Fundamentals of Electro-optics) models and optimizes a **p
 | Efficiency, η | 16.08% |
 
 Efficiency is computed in the standard way:
-\[
+$$
 \eta = \frac{J_{sc} V_{oc} FF}{P_{in}}
-\]
-with \(P_{in}\) set by the AM1.5 illumination condition used in the simulation.
+$$
+with $P_{in}$ set by the AM1.5 illumination condition used in the simulation.
 
 ---
 

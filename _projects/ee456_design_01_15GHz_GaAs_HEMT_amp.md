@@ -6,6 +6,14 @@ img:
 importance: 4
 category: work
 related_publications: false
+_styles: |
+  .post article .mjx-container[display="true"] {
+    font-size: 1.3em;
+    margin: 0.9em 0 1.1em;
+  }
+  .post article .mjx-container {
+    font-size: 1.12em;
+  }
 ---
 
 <!--

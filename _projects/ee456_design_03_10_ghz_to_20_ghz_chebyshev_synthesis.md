@@ -6,6 +6,14 @@ img: assets/img/ee456/design03/ADS_Schematic_of_Design.png
 importance: 2
 category: work
 giscus_comments: true
+_styles: |
+  .post article .mjx-container[display="true"] {
+    font-size: 1.3em;
+    margin: 0.9em 0 1.1em;
+  }
+  .post article .mjx-container {
+    font-size: 1.12em;
+  }
 ---
 
 <!--
@@ -56,7 +64,7 @@ Both **MATLAB** and **Keysight ADS** were used as independent toolchains. Final 
 ## Method: Chebyshev Insertion-Loss Synthesis (What I actually did)
 
 1. **Set band edges and ripple constraints** (9–20 GHz networks supporting 10–20 GHz amplifier target band).
-2. Build the **Chebyshev insertion-loss polynomial** \( IL(s) \) (order determined by element count; 7 elements → 3rd-order Chebyshev form).
+2. Build the **Chebyshev insertion-loss polynomial** $IL(s)$ (order determined by element count; 7 elements → 3rd-order Chebyshev form).
 3. Solve for the **reflection / impedance functions** and extract elements sequentially (series/shunt L and C ladder synthesis).
 4. Apply **impedance scaling + transformer-equivalent steps** to land in a practical **50 Ω environment** while keeping the target response intact.
 5. Cascade: **IMN → NE321000 (Touchstone) → OMN**, then compute full **S-parameter response vs frequency**.
@@ -107,4 +115,3 @@ Both **MATLAB** and **Keysight ADS** were used as independent toolchains. Final 
   - exported network / full-chain `.s2p` used for ADS↔MATLAB overlays
 - **ADS project artifacts**
   - Schematic implementation + simulation plots (exported for comparison)
-

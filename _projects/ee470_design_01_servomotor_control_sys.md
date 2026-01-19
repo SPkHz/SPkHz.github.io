@@ -16,23 +16,9 @@ _styles: |
   }
 ---
 
-<!--
-Suggested asset placement (copy from your source zip -> /graphics):
-assets/img/ee470/EE470_Final_Design_Simulink_Screenshot1.png
-assets/img/ee470/Continous_Sys_TF.png
-assets/img/ee470/Figure_1_Step_response_Pos_50Hz.png
-assets/img/ee470/Position_Full_Plot.jpg
-assets/img/ee470/Sweep_500Hz_Pos.jpg
-assets/img/ee470/Figure_2_Step_Response_Vel_50Hz.png
-assets/img/ee470/Velocity_Full_Plot.jpg
-assets/img/ee470/Sweep_500Hz_Vel.jpg
-(optional)
-assets/img/ee470/Sweep_250Hz_Pos.jpg
-assets/img/ee470/Sweep_250Hz_Vel.jpg
--->
-
 This project (EE-470: Discrete Digital Computer Control Systems) designs a **discrete-time controller** for a **servo-driven receiver positioning system** (satellite tracking use-case). The design target was a tight transient response—**~1% overshoot** and **~0.05 s peak time**—so the actuator can reposition quickly without hunting or ringing that would break alignment.
-**Course:** EE-470 Digital Computer Control Systems
+
+**Course:** EE-470 Digital Computer Control Systems.
 **Project:** Final Design Project 01
 **Team:** Steven Placzek, Bryam Yanza  
 **Tools:** MATLAB + Simulink (state-space modeling, ZOH discretization, pole placement via `acker`)  

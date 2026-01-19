@@ -29,15 +29,20 @@ assets/img/ee456/design02/VSWR_IMN_ADSvsMtLb.jpg
 assets/img/ee456/design02/S11_ADSvsMtLb.jpg
 assets/img/ee456/design02/S22_ADSvsMtLb.jpg
 -->
+## Overview
+
+**Course:** EE-456 Microwave Active Circuits
+**Project:** Design Project 01
+**Author:** Steven Placzek
+**Date:** 2024-11-18 9:00 AM
+**Tools:** Keysight ADS (circuit verification) + MATLAB (Touchstone workflows, Smith chart synthesis, S-parameter comparison)  
+**Frequency:** $f_0 = 15~\text{GHz}$ (sweep ~14–16 GHz)
 
 Design Project 02 for EE-456 (RF & mm-Wave Active Circuits): a **15 GHz LNA matching design** for the **MGF4941AL InGaAs HEMT** at **$V_{DS}=2~\text{V}$** and **$I_{DS}=10~\text{mA}$**.
 
 Unlike a pure max-gain match, this design targets the *intersection* of constraints: **transducer gain**, **noise figure**, and **input/output VSWR**, then validates the final solution independently in **MATLAB** and **Keysight ADS**.
 
-**Toolchain:** MATLAB (synthesis + Touchstone re-plot) · ADS (circuit verification)  
-**Frequency:** $f_0 = 15~\text{GHz}$ (sweep ~14–16 GHz)
-
-**Course targets @ $f_0$:**
+**Project Targets @ $f_0$:**
 - $G_T \ge 12~\text{dB}$
 - $NF \le 0.6~\text{dB}$
 - $\text{VSWR} \le 1.5$ (input + output)

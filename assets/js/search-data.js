@@ -227,6 +227,11 @@ ninja.data = [{
           description: "Measurement + modeling of a 2nd-order active band-pass filter (LM741). Bode sweep (10 Hz–100 kHz), time-domain validation, and harmonic/spectrum analysis (MATLAB + LTspice + Digilent WaveForms).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319_lab_02_active_band_pass_filter/";
+            },},{id: "projects-ee-319-lab-03-bode-plot-amp-small-signal-gain",
+          title: 'EE 319 Lab 03 — Bode Plot &amp;amp; Small-Signal Gain',
+          description: "Calculated vs LTspice vs Analog Discovery measurements for a diode-biased LM741 amplifier (mid-band gain, cutoff frequencies, and small-signal limits).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319_lab_03_small_signal_gain/";
             },},{id: "projects-common-source-mosfet-amplifier-characterization",
           title: 'Common-Source MOSFET Amplifier Characterization',
           description: "MOSFET amplification with the ALD1105 dual complementary pair NMOS/PMOS transistors (MATLAB • LTspice • Analog Discovery Studio).",

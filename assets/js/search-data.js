@@ -247,6 +247,11 @@ ninja.data = [{
           description: "Three-phase transformer voltage analysis for Δ-Y configuration (Electrical Energy Systems • 480V line-to-line • Turns ratio derivation).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_03_transformers/";
+            },},{id: "projects-ee-336-assignment-04-autotransformer-power-rating",
+          title: 'EE-336 Assignment 04 — Autotransformer Power Rating',
+          description: "Isolation transformer to autotransformer conversion analysis (3:1 turns ratio • power rating comparison • step-up vs step-down configurations).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee336_week_04_autotransformer_ratings/";
             },},{id: "projects-15-ghz-gaas-hemt-amplifier-design",
           title: '15 GHz GaAs HEMT Amplifier Design',
           description: "15 GHz GaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.",

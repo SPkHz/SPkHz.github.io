@@ -70,17 +70,6 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee456-design-project-05/";
           
         },
-      },{id: "post-ee-456-design-project-05-published-8-ghz-negative-resistance-oscillator-using-atf-33143-gaas-phemt",
-        
-          title: "EE-456 Design Project 05 Published: 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT...",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/ee456-design-05-old-detailed-announcement/";
-          
-        },
       },{id: "post-optimized-silicon-solar-cell-design",
         
           title: "Optimized Silicon Solar Cell Design",
@@ -592,8 +581,8 @@ ninja.data = [{
           section: "News",},{id: "news-gauss-seidel-power-flow-or-view-the-project-page",
           title: 'Gauss-Seidel Power Flow — or view the project page.',
           description: "",
-          section: "News",},{id: "news-transmission-line-abcd-or-view-the-project-page",
-          title: 'Transmission Line ABCD — or view the project page.',
+          section: "News",},{id: "news-transmission-line-abcd-parameters-or-view-the-project-page",
+          title: 'Transmission Line ABCD Parameters — or view the project page.',
           description: "",
           section: "News",},{id: "news-voltage-regulation-sil-or-view-the-project-page",
           title: 'Voltage Regulation + SIL — or view the project page.',
@@ -621,9 +610,6 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-optimized-silicon-solar-cell-or-view-the-project-page",
           title: 'Optimized Silicon Solar Cell — or view the project page.',
-          description: "",
-          section: "News",},{id: "news-8-ghz-negative-resistance-oscillator-or-view-the-project-page",
-          title: '8 GHz Negative-Resistance Oscillator — or view the project page.',
           description: "",
           section: "News",},{id: "news-8-ghz-negative-resistance-oscillator-or-view-the-project-page",
           title: '8 GHz Negative-Resistance Oscillator — or view the project page.',
@@ -698,8 +684,8 @@ ninja.data = [{
           description: "First-order RC high-pass filter characterization (theory vs. LTspice vs. WaveForms measurements) with MATLAB Bode magnitude/phase plots.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319_lab_01_high_pass_filter/";
-            },},{id: "projects-eelab-ii-final-lab-portfolio",
-          title: 'eeLab II — Final Lab Portfolio',
+            },},{id: "projects-final-lab-portfolio-eelab-ii-spring-39-25",
+          title: 'Final Lab Portfolio (eeLab II | Spring &amp;#39;25)',
           description: "MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_final_lab_portfolio/";
@@ -738,8 +724,8 @@ ninja.data = [{
           description: "Differential-to-single-ended MOS amplifier using an ALD1105 current-mirror load; DC operating point, differential/common-mode gain, and CMRR (2025-04-08).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_07_MOS_differential_pair_with_current_mirror_load/";
-            },},{id: "projects-vector-network-analyzer-basics-amp-s-parameter-de-embedding",
-          title: 'Vector Network Analyzer Basics &amp;amp; S-Parameter De-Embedding',
+            },},{id: "projects-de-embedding-device-s-parameters-from-vector-network-analyzer-measurments",
+          title: 'De-Embedding Device S-Parameters from Vector Network Analyzer Measurments',
           description: "Vector Network Analyzer (VNA) measurements of LPF/HPF frequency response with 2x-thru de-embedding (Touchstone • Python • SciPy).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_08_de-embedding_s-parameters/";

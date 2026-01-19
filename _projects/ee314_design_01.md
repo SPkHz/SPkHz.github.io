@@ -10,6 +10,11 @@ giscus_comments: false
 
 ## Overview
 
+**Course:** EE-314 Electromagnetic Fields and Waves
+**Project:** Final Design Project - Design of mmWave Impedance Matching Networks
+**Author:** Steven Placzek
+**Date:** 2024-11-18 2:00 PM
+
 This project is my **EE-314 (Electromagnetic Fields and Waves)** final design project. The goal was to design and verify **two transmission-line matching networks** in the GHz range:
 
 1. **Shunt-stub matching network** (multiple valid solutions)

@@ -37,95 +37,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/2025-04-29-ee302-design-project-01/";
-          
-        },
-      },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/2025-04-28-ee470-design-project-01/";
-          
-        },
-      },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/2025-04-16-ee456-design-project-03/";
-          
-        },
-      },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/2025-03-28-ee456-design-project-02/";
-          
-        },
-      },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/2025-02-25-ee456-design-project-01/";
-          
-        },
-      },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/2024-12-06-ee301-laplace-transform/";
-          
-        },
-      },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/2024-11-27-ee301-fourier-transform/";
-          
-        },
-      },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/2024-11-18-ee314-design-project-01/";
-          
-        },
-      },{id: "post-ee-456-design-project-05-published-8-ghz-negative-resistance-oscillator-using-atf-33143-gaas-phemt",
+        },{id: "post-ee-456-design-project-05-published-8-ghz-negative-resistance-oscillator-using-atf-33143-gaas-phemt",
         
           title: "EE-456 Design Project 05 Published: 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT...",
         
@@ -134,6 +46,28 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/ee456-design-project-05/";
+          
+        },
+      },{id: "post-ee-302-project-published-audiogram-driven-fir-filter-bank-virtual-hearing-aid-equalizer",
+        
+          title: "EE-302 Project Published: Audiogram-Driven FIR Filter-Bank “Virtual Hearing Aid” Equalizer",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee302-design-project-01/";
+          
+        },
+      },{id: "post-ee-470-final-design-project-01-published-discrete-control-for-receiver-positioning-and-satellite-tracking",
+        
+          title: "EE-470 Final Design Project 01 Published: Discrete Control for Receiver Positioning and Satellite...",
+        
+        description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee470-design-project-01/";
           
         },
       },{id: "post-ee-456-design-project-04",
@@ -145,6 +79,72 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/ee-456-design-project-04/";
+          
+        },
+      },{id: "post-ee-456-design-project-03-published-chebyshev-insertion-loss-matching-for-a-10-20-ghz-phemt-amplifier",
+        
+          title: "EE-456 Design Project 03 Published: Chebyshev Insertion-Loss Matching for a 10–20 GHz pHEMT...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee456-design-project-03/";
+          
+        },
+      },{id: "post-ee-456-design-project-01-published-15-ghz-hemt-amplifier-imn-omn-tl-synthesis-ads-matlab-verification",
+        
+          title: "EE-456 Design Project 01 Published: 15 GHz HEMT Amplifier (IMN/OMN TL Synthesis +...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee456-design-project-01/";
+          
+        },
+      },{id: "post-report-published-laplace-transform-applications-for-system-analysis",
+        
+          title: "Report Published: Laplace Transform Applications for System Analysis",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee301-laplace-transform/";
+          
+        },
+      },{id: "post-report-published-fourier-transform-applications-for-signal-analysis",
+        
+          title: "Report Published: Fourier Transform Applications for Signal Analysis",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee301-fourier-transform/";
+          
+        },
+      },{id: "post-ee-314-final-project-published-ghz-transmission-line-matching-networks-ads-microstrip-layout",
+        
+          title: "EE-314 Final Project Published: GHz Transmission-Line Matching Networks (ADS + Microstrip Layout)",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee314-design-project-01/";
+          
+        },
+      },{id: "post-ee-456-design-project-02-published-15-ghz-lna-matching-joint-gain-nf-vswr-optimization-ads-matlab-cross-verification",
+        
+          title: "EE-456 Design Project 02 Published: 15 GHz LNA Matching (Joint Gain/NF/VSWR Optimization +...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/ee456-design-project-02/";
           
         },
       },{id: "books-the-godfather",
@@ -232,8 +232,8 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_04/";
-            },},{id: "projects-8-ghz-negative-resistance-oscillator-design-atf-33143",
-          title: '8 GHz Negative Resistance Oscillator Design (ATF-33143)',
+            },},{id: "projects-design-of-an-8-ghz-oscillator-using-negative-resistance-atf-33143",
+          title: 'Design of an 8 GHz Oscillator using Negative-Resistance (ATF-33143)',
           description: "Negative-resistance oscillator synthesis at 8 GHz using common-gate conversion, feedback-reactance optimization, and transmission-line termination/resonator networks (MATLAB • Touchstone).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_05/";

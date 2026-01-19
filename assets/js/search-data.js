@@ -653,18 +653,18 @@ ninja.data = [{
           description: "Transmission-line impedance matching in Keysight ADS — shunt-stub + quarter-wave transformer designs (ideal + microstrip), with Smith-chart synthesis and layout verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee314_design_01/";
-            },},{id: "projects-ee-319-lab-05-measurements",
-          title: 'EE 319 Lab 05 — Measurements',
+            },},{id: "projects-measurements",
+          title: 'Measurements',
           description: "BJT common-emitter amplifier (2N3904): DC bias, midband gain, frequency response, and distortion limits.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319-lab-05/";
-            },},{id: "projects-ee-319-lab-06-measurements-lm741-op-amp",
-          title: 'EE 319 Lab 06 — Measurements (LM741 Op-Amp)',
+            },},{id: "projects-measurements-lm741-op-amp",
+          title: 'Measurements (LM741 Op-Amp)',
           description: "Non-ideal op-amp characteristics measured in LTspice—offset voltage, input bias currents, slew rate, and gain-bandwidth product.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319-lab-06/";
-            },},{id: "projects-ee-319-lab-07-measurements",
-          title: 'EE 319 Lab 07 — Measurements',
+            },},{id: "projects-measurements",
+          title: 'Measurements',
           description: "Differential-mode gain, common-mode gain, and CMRR for a single-op-amp difference amplifier and a 3-op-amp instrumentation amplifier (LM741).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319/lab-07/";
@@ -743,8 +743,8 @@ ninja.data = [{
           description: "Vector Network Analyzer (VNA) measurements of LPF/HPF frequency response with 2x-thru de-embedding (Touchstone • Python • SciPy).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_08_de-embedding_s-parameters/";
-            },},{id: "projects-ee-336-assignment-01-three-phase-apparent-power",
-          title: 'EE-336 Assignment 01 — Three-Phase Apparent Power',
+            },},{id: "projects-three-phase-apparent-power",
+          title: 'Three-Phase Apparent Power',
           description: "Calculating total 3-phase apparent power for a Δ-connected balanced load (MATLAB • phasor analysis • power systems).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_01_three_phase_power/";
@@ -753,28 +753,28 @@ ninja.data = [{
           description: "Faraday&#39;s Law, Synchronous Generator Speed, and Phasor Analysis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_02_faradays_law/";
-            },},{id: "projects-ee-336-assignment-3-delta-y-transformer-analysis",
-          title: 'EE-336 Assignment 3 – Delta-Y Transformer Analysis',
+            },},{id: "projects-delta-y-transformer-analysis",
+          title: 'Delta-Y Transformer Analysis',
           description: "Three-phase transformer voltage analysis for Δ-Y configuration (Electrical Energy Systems • 480V line-to-line • Turns ratio derivation).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_03_transformers/";
-            },},{id: "projects-ee-336-assignment-04-autotransformer-power-rating",
-          title: 'EE-336 Assignment 04 — Autotransformer Power Rating',
+            },},{id: "projects-autotransformer-power-rating",
+          title: 'Autotransformer Power Rating',
           description: "Isolation transformer to autotransformer conversion analysis (3:1 turns ratio • power rating comparison • step-up vs step-down configurations).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_04_autotransformer_ratings/";
-            },},{id: "projects-ee-336-induction-motor-slip-analysis",
-          title: 'EE-336 Induction Motor Slip Analysis',
+            },},{id: "projects-induction-motor-slip-analysis",
+          title: 'Induction Motor Slip Analysis',
           description: "Induction motor fundamentals — slip, synchronous speed, and rotor frequency calculations for 2-pole motors.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_05_generators/";
-            },},{id: "projects-ee-336-induction-motor-phasor-analysis",
-          title: 'EE-336 Induction Motor Phasor Analysis',
+            },},{id: "projects-induction-motor-phasor-analysis",
+          title: 'Induction Motor Phasor Analysis',
           description: "Phasor diagram analysis of induction motor equivalent circuit at multiple operating points (MATLAB • Python • Complex Impedance Analysis).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_06_induction_motor_phasor_analysis/";
-            },},{id: "projects-ee-336-power-transfer-amp-frequency-droop-analysis",
-          title: 'EE-336 Power Transfer &amp;amp; Frequency Droop Analysis',
+            },},{id: "projects-power-transfer-amp-frequency-droop-analysis",
+          title: 'Power Transfer &amp;amp; Frequency Droop Analysis',
           description: "Generator power transfer calculation via transformer and frequency droop characteristic analysis for parallel generators (Per-unit analysis • Power-angle relationship • Droop control).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_09_generator_power_xfer_droop/";
@@ -788,18 +788,18 @@ ninja.data = [{
           description: "100-mile transmission line analysis using two-port ABCD parameters and the nominal π-model (60 Hz power system).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_11_transmission_line_abcd_parameters/";
-            },},{id: "projects-ee-336-transmission-line-analysis",
-          title: 'EE-336 Transmission Line Analysis',
+            },},{id: "projects-transmission-line-analysis",
+          title: 'Transmission Line Analysis',
           description: "Voltage regulation and surge impedance loading analysis for power transmission lines (MATLAB/Python • Two-port networks • SIL concepts).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_12_trl_voltage_regulation_and_surge_impedance_loading/";
-            },},{id: "projects-ee-336-boost-converter-analysis",
-          title: 'EE-336 Boost Converter Analysis',
+            },},{id: "projects-boost-converter-analysis",
+          title: 'Boost Converter Analysis',
           description: "DC waveform analysis and boost converter duty cycle calculations (Week 13 Assignment • DC-DC Converters • Switching Power Supplies).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_13_boost_converter_analysis/";
-            },},{id: "projects-ee-336-single-phase-h-bridge-inverter-analysis",
-          title: 'EE-336 Single-Phase H-Bridge Inverter Analysis',
+            },},{id: "projects-single-phase-h-bridge-inverter-analysis",
+          title: 'Single-Phase H-Bridge Inverter Analysis',
           description: "H-bridge inverter switching analysis and load voltage waveform generation (MATLAB • Power Electronics • DC-AC Conversion).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_14_h_bridge_inverter_analysis/";
@@ -828,8 +828,8 @@ ninja.data = [{
           description: "Negative-resistance oscillator synthesis at 8 GHz using common-gate conversion, feedback-reactance optimization, and transmission-line termination/resonator networks (MATLAB • Touchstone).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_05/";
-            },},{id: "projects-ee-456-design-project-05-published-8-ghz-negative-resistance-oscillator-using-atf-33143-gaas-phemt",
-          title: 'EE-456 Design Project 05 Published: 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT...',
+            },},{id: "projects-design-project-05-published-8-ghz-negative-resistance-oscillator-using-atf-33143-gaas-phemt",
+          title: 'Design Project 05 Published: 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_05_old/";

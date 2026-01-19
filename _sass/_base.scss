@@ -411,6 +411,17 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+#light-toggle {
+  .ti-sun-moon {
+    font-family: "tabler-icons" !important;
+  }
+
+  .ti-moon-filled,
+  .ti-sun-filled {
+    font-family: "tabler-icons-filled" !important;
+  }
+}
+
 // Social (bottom)
 
 .social {

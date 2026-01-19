@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Chebyshev Network Synthesis
+title: Chebyshev Impedance Matching Network Synthesis
 description: Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.
-img: assets/img/ee456_dp3/ADS_Schematic_of_Design.png
+img: assets/img/ee456/design03/ADS_Schematic_of_Design.png
 importance: 2
 category: work
 giscus_comments: true

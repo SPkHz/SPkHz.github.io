@@ -429,6 +429,11 @@ ninja.data = [{
           description: "Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee302_design_01_fir_filterbank_for_hearing_aid/";
+            },},{id: "projects-quarter-wave-transformer-impedance-matching-network-design",
+          title: 'Quarter-Wave Transformer Impedance Matching Network Design',
+          description: "Transmission-line impedance matching in Keysight ADS — shunt-stub + quarter-wave transformer designs (ideal + microstrip), with Smith-chart synthesis and layout verification.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee314_design_01/";
             },},{id: "projects-15-ghz-gaas-hemt-amplifier-design",
           title: '15 GHz GaAs HEMT Amplifier Design',
           description: "15 GHz GaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.",

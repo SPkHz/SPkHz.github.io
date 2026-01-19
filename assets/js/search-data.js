@@ -456,11 +456,11 @@ ninja.data = [{
               window.location.href = "/projects/ee456_design_01_15GHz_GaAs_HEMT_amp/";
             },},{id: "projects-15-ghz-low-noise-amplifier-input-output-matching-network-design",
           title: '15 GHz Low-Noise Amplifier Input/Output Matching Network Design',
-          description: "15 GHz low-noise amplifier input matching network and output matching network design (MGF4941AL). Gain/noise/VSWR trade-space + ADS/MATLAB cross-verification.",
+          description: "15 GHz LNA IMN/OMN for the MGF4941AL (VDS = 2 V, IDS = 10 mA). Joint gain/NF/VSWR optimization with MATLAB + Keysight ADS cross-verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_02_lna_matching_network_for_mgf4941al/";
-            },},{id: "projects-chebyshev-network-synthesis",
-          title: 'Chebyshev Network Synthesis',
+            },},{id: "projects-chebyshev-impedance-matching-network-synthesis",
+          title: 'Chebyshev Impedance Matching Network Synthesis',
           description: "Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_03_10_ghz_to_20_ghz_chebyshev_synthesis/";

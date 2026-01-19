@@ -56,6 +56,17 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
+            window.location.href = "/blog/2026/2025-04-28-ee470-design-project-01/";
+          
+        },
+      },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
             window.location.href = "/blog/2026/2025-04-16-ee456-design-project-03/";
           
         },
@@ -162,11 +173,14 @@ ninja.data = [{
           section: "News",},{id: "news-ee-456-design-project-04-or-view-the-project-page",
           title: 'EE-456 Design Project 04 — or view the project page.',
           description: "",
+          section: "News",},{id: "news-discrete-control-for-receiver-positioning-and-satellite-tracking-or-view-the-project-page",
+          title: 'Discrete Control for Receiver Positioning and Satellite Tracking — or view the project...',
+          description: "",
           section: "News",},{id: "news-digital-signal-processing-design-project-or-view-the-project-page",
           title: 'Digital Signal Processing Design Project — or view the project page.',
           description: "",
-          section: "News",},{id: "news-ee-456-design-project-05-or-view-the-project-page",
-          title: 'EE-456 Design Project 05 — or view the project page.',
+          section: "News",},{id: "news-8-ghz-negative-feedback-oscillator-design-or-view-the-project-page",
+          title: '8 GHz Negative-Feedback Oscillator Design — or view the project page.',
           description: "",
           section: "News",},{id: "projects-optimized-silicon-solar-cell-design",
           title: 'Optimized Silicon Solar Cell Design',

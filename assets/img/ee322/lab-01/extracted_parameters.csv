@@ -1,0 +1,9 @@
+Parameter,Value,Units,Notes
+VTn_mean,0.588195,V,"From sqrt(ID) vs VGS fits, VGS >= 1.0 V"
+VTn_std,0.001064,V,"Sample standard deviation across VDS = 4,5,6 V"
+KN_mean,0.000528230,A/V^2,Using ID = (KN/2)(VGS-VT)^2
+KN_std,0.000005846,A/V^2,"Sample standard deviation across VDS = 4,5,6 V"
+VA_VGS=1.00V,65.268,V,"Linear fit of ID vs VDS in saturation (VDS >= 4.0 V), R2=0.996593, n=40"
+VA_VGS=2.00V,74.133,V,"Linear fit of ID vs VDS in saturation (VDS >= 4.0 V), R2=0.998648, n=40"
+VA_VGS=3.00V,96.017,V,"Linear fit of ID vs VDS in saturation (VDS >= 4.0 V), R2=0.997891, n=40"
+VA_VGS=4.00V,133.057,V,"Linear fit of ID vs VDS in saturation (VDS >= 4.0 V), R2=0.992481, n=40"

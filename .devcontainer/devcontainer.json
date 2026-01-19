@@ -14,7 +14,8 @@
   "postAttachCommand": "./bin/entry_point.sh",
   "postCreateCommand": [
     "cp .devcontainer/.gitconfig ~/.gitconfig",
-    "mkdir -p /home/vscode/.codex && cp .devcontainer/.codex/config.toml /home/vscode/.codex/config.toml"
+    "mkdir -p /home/vscode/.codex && cp .devcontainer/.codex/config.toml /home/vscode/.codex/config.toml",
+    "mkdir -p /home/vscode/.claude && cp .devcontainer/.claude/settings.local.json /home/vscode/.claude/settings.local.json"
   ],
   "customizations": {
     "vscode": {

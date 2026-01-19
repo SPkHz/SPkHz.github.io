@@ -454,9 +454,9 @@ ninja.data = [{
           description: "15 GHz InGaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_01_15GHz_GaAs_HEMT_amp/";
-            },},{id: "projects-ee-456-microwave-active-circuits-design-project-02",
-          title: 'EE-456 Microwave Active Circuits — Design Project 02',
-          description: "15 GHz low-noise amplifier matching network design (MGF4941AL). Gain/noise/VSWR trade-space + ADS/MATLAB cross-verification.",
+            },},{id: "projects-15-ghz-low-noise-amplifier-input-output-matching-network-design",
+          title: '15 GHz Low-Noise Amplifier Input/Output Matching Network Design',
+          description: "15 GHz low-noise amplifier input matching network and output matching network design (MGF4941AL). Gain/noise/VSWR trade-space + ADS/MATLAB cross-verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_02_lna_matching_network_for_mgf4941al/";
             },},{id: "projects-chebyshev-network-synthesis",

@@ -387,6 +387,11 @@ ninja.data = [{
           title: '',
           description: "",
           section: "News",handler: () => {
+              window.location.href = "/news/2024_11_18__ee314_design_project_01__announcement/";
+            },},{id: "news-",
+          title: '',
+          description: "",
+          section: "News",handler: () => {
               window.location.href = "/news/2024_11_27__ee301_FT_project_01__announcement/";
             },},{id: "news-",
           title: '',

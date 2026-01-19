@@ -12,7 +12,10 @@
     "ghcr.io/devcontainers-extra/features/prettier:1.0.2": {}
   },
   "postAttachCommand": "./bin/entry_point.sh",
-  "postCreateCommand": "cp .devcontainer/.gitconfig ~/.gitconfig",
+  "postCreateCommand": [
+    "cp .devcontainer/.gitconfig ~/.gitconfig",
+    "mkdir -p /home/vscode/.codex && cp .devcontainer/.codex/config.toml /home/vscode/.codex/config.toml"
+  ],
   "customizations": {
     "vscode": {
       "extensions": [

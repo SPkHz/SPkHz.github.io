@@ -20,8 +20,8 @@ The focus is **oscillator synthesis via S-parameter manipulation**: converting t
 **Key design targets:**
 - Oscillation frequency: 8 GHz
 - Optimize gate reactance $$X_B$$ to maximize $$\lvert S_{11}\rvert$$
-- Synthesize termination network for target $$\Gamma_T$$
-- Synthesize resonator network for target $$\Gamma_R$$
+- Synthesize termination network for target $$\Gamma_T = 0.5000 \angle 162.019°$$
+- Synthesize resonator network for target $$\Gamma_R = 0.7500 \angle -127.733°$$
 - Verify $$\lvert\Gamma_{\text{in}} \cdot \Gamma_R\rvert > 1$$ with proper phase alignment
 
 ---
@@ -37,10 +37,10 @@ $$
 **Verification with termination attached:**
 
 $$
-\Gamma_{\text{in}} = 0.8403 \angle -17.17°, \quad Z_{\text{in}} = 146.305\ \Omega
+\Gamma_{\text{in}} = 0.8403 \angle -17.172°, \quad Z_{\text{in}} = 146.305\ \Omega
 $$
 
-The indefinite admittance matrix technique cleanly converts between device configurations, while parametric sweeps over feedback reactance reveal optimal operating points for maximum instability. Transmission-line implementations provide practical realizability at microwave frequencies.
+The indefinite admittance matrix technique cleanly converts between device configurations, while parametric sweeps over feedback reactance reveal optimal operating points for maximum instability.
 
 ---
 
@@ -49,8 +49,7 @@ The indefinite admittance matrix technique cleanly converts between device confi
 - MATLAB synthesis/verification scripts
 - Touchstone files for ATF-33143
 - Contour plots showing $$\Gamma_T$$ over the design space
-- Hand calculations for each task
 
-{% include figure.liquid loading="eager" path="assets/img/ee456/design05/gammaT_contours.png" class="img-fluid rounded z-depth-1" caption="Phase contours of Γ_T over the (θ_s, θ_p) design space for the termination network." %}
+{% include figure.liquid loading="eager" path="assets/img/ee456/design05/gammaT_contours.png" class="img-fluid rounded z-depth-1" caption="Phase contours of ΓT over the (θs, θp) design space for the termination network." %}
 
 See the [full project page](/projects/ee456_design05/) for detailed derivations, S-parameter tables, and network synthesis steps.

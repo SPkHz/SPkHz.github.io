@@ -207,6 +207,11 @@ ninja.data = [{
           description: "Transmission-line impedance matching in Keysight ADS — shunt-stub + quarter-wave transformer designs (ideal + microstrip), with Smith-chart synthesis and layout verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee314_design_01/";
+            },},{id: "projects-ee-319-lab-05-measurements",
+          title: 'EE 319 Lab 05 — Measurements',
+          description: "BJT common-emitter amplifier (2N3904): DC bias, midband gain, frequency response, and distortion limits.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319-lab-05/";
             },},{id: "projects-",
           title: '',
           description: "",

@@ -1,8 +1,7 @@
 ---
 layout: page
 title: 15 GHz Low-Noise Amplifier Input/Output Matching Network Design
-description: 15 GHz low-noise amplifier input matching network and output matching network design (MGF4941AL). Gain/noise/VSWR trade-space + ADS/MATLAB cross-verification.
-img:
+description: 15 GHz low-noise amplifier input and output matching network design (MGF4941AL). Gain/noise/VSWR trade-space with ADS/MATLAB cross-verification.
 importance: 4
 category: work
 related_publications: false
@@ -12,7 +11,7 @@ related_publications: false
 asset placement:
 assets/img/ee456/design02/ADS_Complete_Schematic.png
 assets/img/ee456/design02/Stab_Cirs.png
-assets/img/ee456/design02/Gamma_A and Gamma_S.png
+assets/img/ee456/design02/Gamma_A_and_Gamma_S.png
 assets/img/ee456/design02/S21_dB---ADSvsMtLb.jpg
 assets/img/ee456/design02/NF_ADSvsMtLB.jpg
 assets/img/ee456/design02/VSWR_OMN__ADSvsMtLb.jpg
@@ -21,30 +20,33 @@ assets/img/ee456/design02/S11_ADSvsMtLb.jpg
 assets/img/ee456/design02/S22_ADSvsMtLb.jpg
 -->
 
-This project (EE-456: RF & mm-Wave Active Circuits) designs a **15 GHz low-noise amplifier (LNA) matching network** for the **MGF4941AL InGaAs HEMT** at **VDS = 2 V** and **IDS = 10 mA**. Unlike Project 1 (pure max-gain), the goal here is a **practical compromise** that meets **gain + noise + matching** specifications simultaneously, while validating results in **both MATLAB and Keysight ADS**.
+This project (EE-456: RF & mm-Wave Active Circuits) designs a **15 GHz low-noise amplifier (LNA) matching network** for the **MGF4941AL InGaAs HEMT** at **VDS = 2 V** and **IDS = 10 mA**.  
 
-**Course:** EE-456 Microwave Active Circuits
-**Assignment:** Design Project 02
+Unlike Project 1 (pure maximum gain), the objective here is a **practical compromise** that satisfies **gain, noise, and matching** requirements simultaneously, with results validated independently in **MATLAB** and **Keysight ADS**.
+
+**Course:** EE-456 Microwave Active Circuits  
+**Assignment:** Design Project 02  
 **Toolchain:** MATLAB + Keysight ADS (ideal transmission-line matching + Touchstone verification)  
-**Center frequency:** f0 = 15 GHz (swept ~14–16 GHz)
+**Center frequency:** \( f_0 = 15~\text{GHz} \) (sweep: ~14–16 GHz)
 
 ---
 
-## Design Specs (Course Targets @ f0)
+## Design Specs (Course Targets @ \( f_0 \))
 
-- **Transducer gain:** \(G_T \ge 12\ \text{dB}\)
-- **Noise figure:** \(NF \le 0.6\ \text{dB}\)
-- **Matching constraint:** \(VSWR \le 1.5\) (input and output networks)
+- **Transducer gain:** \( G_T \ge 12~\text{dB} \)
+- **Noise figure:** \( NF \le 0.6~\text{dB} \)
+- **Matching constraint:** \( \text{VSWR} \le 1.5 \) (input and output)
 
 ---
 
-## Strategy: MAG vs Fmin vs “Meets Everything” (Design 2)
+## Strategy: MAG vs \( F_{\min} \) vs “Meets Everything” (Design 2)
 
-The design begins with device S-parameters and noise parameters at **15 GHz**, then uses Smith-chart geometry to pick a termination that satisfies the constraints.
+The design begins with device S-parameters and noise parameters at **15 GHz**, then uses Smith-chart geometry to select source and load terminations that satisfy all constraints.
 
 - **MAG design:** maximizes gain, but noise figure is too high (fails NF spec).
-- **Fmin design:** hits minimum noise figure, but gain falls short (fails gain spec).
-- **Design 2 (final):** selects \(\Gamma_S\) and \(\Gamma_L\) from the feasible region defined by **noise figure circles**, **available gain circles**, and **stability constraints**, then realizes the terminations with **single-stub transmission-line networks**.
+- **\( F_{\min} \) design:** minimizes noise figure, but gain is insufficient (fails gain spec).
+- **Design 2 (final):** selects \( \Gamma_S \) and \( \Gamma_L \) from the feasible region defined by  
+  **noise-figure circles**, **available-gain circles**, and **stability constraints**, then realizes them using **single-stub transmission-line networks**.
 
 ---
 
@@ -55,14 +57,16 @@ The design begins with device S-parameters and noise parameters at **15 GHz**, t
     {% include figure.liquid loading="eager" path="assets/img/ee456/design02/ADS_Complete_Schematic.png" title="Final ADS schematic (IMN + device + OMN)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/Stab_Cirs.png" title="Stability / gain / noise circles (design space)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/Stab_Cirs.png" title="Stability, gain, and noise circles (design space)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/Gamma_A_and_Gamma_S.png" title="Selected intersection point for source matching" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/Gamma_A_and_Gamma_S.png" title="Selected feasible intersection for source matching" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
-  The final solution is a compact single-stub IMN + single-stub OMN. The chosen \(\Gamma_S\) comes from the feasible intersection of the gain/noise/stability constraints.
+The final solution is a compact single-stub IMN plus single-stub OMN. The selected
+\( \Gamma_S \) lies at the feasible intersection of gain, noise, and stability constraints.
 </div>
 
 ---
@@ -71,16 +75,22 @@ The design begins with device S-parameters and noise parameters at **15 GHz**, t
 
 | Parameter | Value |
 |---|---:|
-| \(\Gamma_S\) | \(0.4256 \angle -136.0227^\circ\) |
-| \(\Gamma_L\) | \(0.2904 \angle +146.0865^\circ\) |
-| \(G_T\) | **12.26 dB** |
-| \(NF\) | **0.580 dB** |
+| \( \Gamma_S \) | \( 0.4256 \angle -136.02^\circ \) |
+| \( \Gamma_L \) | \( 0.2904 \angle +146.09^\circ \) |
+| \( G_T \) | **12.26 dB** |
+| \( NF \) | **0.580 dB** |
 | VSWR (IMN) | **1.50** |
 | VSWR (OMN) | **1.39** |
 
-**Electrical lengths (open-stub networks):**
-- **IMN:** \(\theta_{I1}=43.2481^\circ\) (series TL), \(\theta_{I2}=10.4170^\circ\) (open shunt stub)  
-- **OMN:** \(\theta_{O1}=31.2559^\circ\) (series TL), \(\theta_{O2}=53.5158^\circ\) (open shunt stub)
+**Electrical lengths (open-stub TL networks):**
+
+- **IMN:**  
+  \( \theta_{I1} = 43.25^\circ \) (series TL)  
+  \( \theta_{I2} = 10.42^\circ \) (open shunt stub)
+
+- **OMN:**  
+  \( \theta_{O1} = 31.26^\circ \) (series TL)  
+  \( \theta_{O2} = 53.52^\circ \) (open shunt stub)
 
 ---
 
@@ -88,31 +98,41 @@ The design begins with device S-parameters and noise parameters at **15 GHz**, t
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/S21_dB---ADSvsMtLb.jpg" title="Gain overlay (ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/S21_dB---ADSvsMtLb.jpg" title="Gain comparison (ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/NF_ADSvsMtLB.jpg" title="Noise figure overlay (ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/NF_ADSvsMtLB.jpg" title="Noise figure comparison (ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/VSWR_OMN__ADSvsMtLb.jpg" title="VSWR overlay (OMN, ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee456/design02/VSWR_OMN__ADSvsMtLb.jpg" title="VSWR comparison (OMN, ADS vs MATLAB)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+
 <div class="caption">
-  ADS and MATLAB were run as independent toolchains (Touchstone export + re-plot). The overlays validate the same operating point and confirm the network behavior around 15 GHz.
+ADS and MATLAB were executed as independent toolchains (Touchstone export and re-plot).
+The overlays confirm the same operating point and consistent network behavior near 15 GHz.
 </div>
 
 ---
 
-## What’s in the repo
+## What’s in the Repo
 
-- **Presentation (PDF/PPTX)** + plot/screenshots used in the slides
-- **MATLAB code** (design + verification scripts)
-- **ADS project files** (schematics + simulations)
-- **Excel tables** (design summary / comparison)
-- **Touchstone outputs** (`.s2p`) for IMN/OMN/whole network + exported noise data (`.csv`)
+- **Presentation** (PDF / PPTX)
+- **MATLAB code** (design and verification scripts)
+- **ADS project files** (schematics and simulations)
+- **Excel tables** (design summary and comparison)
+- **Touchstone outputs** (`.s2p`) for IMN, OMN, and full network  
+- **Exported noise data** (`.csv`)
 
 ---
 
 ## Notes / Limitations
 
-This is an **ideal transmission-line** matching design used to study the gain/noise/match trade-space cleanly. A layout-ready version would add substrate-backed physical lines (microstrip/CPW), losses, discontinuities, stability across a wider band, and a full bias network + EM-aware validation.
+This is an **ideal transmission-line** matching design intended to study the gain–noise–match trade-space cleanly.  
+
+A layout-ready implementation would include:
+- Substrate-backed physical lines (microstrip or CPW)
+- Losses and discontinuities
+- Wideband stability analysis
+- A complete bias network
+- EM-aware validation

@@ -252,6 +252,11 @@ ninja.data = [{
           description: "Isolation transformer to autotransformer conversion analysis (3:1 turns ratio • power rating comparison • step-up vs step-down configurations).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_04_autotransformer_ratings/";
+            },},{id: "projects-ee-336-induction-motor-slip-analysis",
+          title: 'EE-336 Induction Motor Slip Analysis',
+          description: "Induction motor fundamentals — slip, synchronous speed, and rotor frequency calculations for 2-pole motors.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee336_week_05_generators/";
             },},{id: "projects-15-ghz-gaas-hemt-amplifier-design",
           title: '15 GHz GaAs HEMT Amplifier Design',
           description: "15 GHz GaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.",

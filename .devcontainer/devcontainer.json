@@ -20,10 +20,9 @@
         "sissel.shopify-liquid",
         "yzhang.markdown-all-in-one",
         "openai.chatgpt",
-        "anthropic.claude-code"
+        "Anthropic.claude-code"
       ],
       "settings": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "prettier.configPath": ".prettierrc",
         "editor.formatOnSave": true
       }

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Report Published: Laplace Transform Applications for System Analysis"
+title: "Laplace Transform Applications for System Analysis and Modeling"
 date: 2024-12-06 09:24:00-0500
 tags: [systems, laplace-transform, control, stability, modeling, transfer-functions]
 categories: coursework

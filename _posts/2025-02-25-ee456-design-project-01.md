@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-456 Design Project 01 Published: 15 GHz HEMT Amplifier (IMN/OMN TL Synthesis + ADS/MATLAB Verification)"
+title: "15 GHz HEMT Amplifier with IMN/OMN Synthesis and ADS/MATLAB Verification"
 date: 2025-02-25 09:24:33-0500
 tags: [rf, microwave, amplifier, hemts, matching-networks, s-parameters, ads, matlab]
 categories: coursework

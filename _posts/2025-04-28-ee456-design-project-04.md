@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-456 Design Project 04"
+title: "Designing an 8 GHz MAG Amplifier with Nonlinear Verification and IP3 Analysis"
 slug: ee-456-design-project-04
 date: 2025-04-28 09:00:00-0400
 tags: [rf, microwave, amplifier, matching-networks, mag, ads, matlab, harmonic-balance, ip3]

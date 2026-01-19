@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-456 Design Project 02 Published: 15 GHz LNA Matching (Joint Gain/NF/VSWR Optimization + ADS/MATLAB Cross-Verification)"
+title: "15 GHz LNA Matching with Joint Gain, Noise, and VSWR Optimization"
 date: 2024-03-28 09:24:48-0500
 tags: [rf, microwave, lna, noise-figure, matching-networks, smith-chart, ads, matlab]
 categories: coursework

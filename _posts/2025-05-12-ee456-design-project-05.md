@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-456 Design Project 05 Published: 8 GHz Negative-Resistance Oscillator Using ATF-33143 GaAs pHEMT"
+title: "Designing an 8 GHz Negative-Resistance Oscillator with an ATF-33143 GaAs pHEMT"
 date: 2025-05-08 23:46:00-0500
 inline: false
 related_posts: true

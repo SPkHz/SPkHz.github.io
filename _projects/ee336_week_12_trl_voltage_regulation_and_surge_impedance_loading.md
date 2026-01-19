@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-336 Transmission Line Analysis
+title: Transmission Line Analysis
 description: Voltage regulation and surge impedance loading analysis for power transmission lines (MATLAB/Python • Two-port networks • SIL concepts).
 img: /assets/img/ee336/assignment-12/two_port_model.png
 importance: 2

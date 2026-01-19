@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-336 Single-Phase H-Bridge Inverter Analysis
+title: Single-Phase H-Bridge Inverter Analysis
 description: H-bridge inverter switching analysis and load voltage waveform generation (MATLAB • Power Electronics • DC-AC Conversion).
 img: /assets/img/ee336/assignment-14/switch_signals_and_vload.png
 importance: 2

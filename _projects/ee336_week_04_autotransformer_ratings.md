@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-336 Assignment 04 — Autotransformer Power Rating
+title: Autotransformer Power Rating
 description: Isolation transformer to autotransformer conversion analysis (3:1 turns ratio • power rating comparison • step-up vs step-down configurations).
 img: /assets/img/ee336/assignment-04/04_power_comparison.png
 importance: 2

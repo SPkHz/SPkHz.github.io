@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-456 Design Project 04 Published: MAG Amplifier Design \& Non-Linear Simulation (8 GHz)
+title: Design Project 04 Published: MAG Amplifier Design \& Non-Linear Simulation (8 GHz)
 description: Maximum-Available-Gain (MAG) amplifier design at 8 GHz using transmission-line + stub matching (ATF34143 pHEMT). Verified in MATLAB vs Keysight ADS; evaluated with 1 dB compression, harmonic balance, and two-tone IP3.
 tags: [RF, mm-wave, amplifier, matching, MAG, ADS, MATLAB, harmonic balance, IP3]
 importance: 1

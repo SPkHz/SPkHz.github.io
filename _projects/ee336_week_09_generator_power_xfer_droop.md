@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-336 Power Transfer & Frequency Droop Analysis
+title: Power Transfer & Frequency Droop Analysis
 description: Generator power transfer calculation via transformer and frequency droop characteristic analysis for parallel generators (Per-unit analysis • Power-angle relationship • Droop control).
 img: /assets/img/ee336/assignment-09/problem1_power_angle.png
 importance: 2

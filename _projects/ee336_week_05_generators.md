@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-336 Induction Motor Slip Analysis
+title: Induction Motor Slip Analysis
 description: Induction motor fundamentals — slip, synchronous speed, and rotor frequency calculations for 2-pole motors.
 img: /assets/img/ee336/assignment-05/slip_vs_speed.png
 importance: 2

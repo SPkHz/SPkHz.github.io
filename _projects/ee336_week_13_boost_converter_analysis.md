@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-336 Boost Converter Analysis
+title: Boost Converter Analysis
 description: DC waveform analysis and boost converter duty cycle calculations (Week 13 Assignment • DC-DC Converters • Switching Power Supplies).
 img: /assets/img/ee336/assignment-13/boost_converter_circuit.png
 importance: 2

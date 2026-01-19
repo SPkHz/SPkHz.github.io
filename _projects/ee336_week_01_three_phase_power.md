@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-336 Assignment 01 — Three-Phase Apparent Power
+title: Three-Phase Apparent Power
 description: Calculating total 3-phase apparent power for a Δ-connected balanced load (MATLAB • phasor analysis • power systems).
 img: /assets/img/ee336/assignment-01/delta_connected_circuit.png
 importance: 2

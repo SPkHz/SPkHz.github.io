@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-336 Induction Motor Phasor Analysis
+title: Induction Motor Phasor Analysis
 description: Phasor diagram analysis of induction motor equivalent circuit at multiple operating points (MATLAB • Python • Complex Impedance Analysis).
 img: /assets/img/ee336/assignment-06/phasor_all_points.png
 importance: 2

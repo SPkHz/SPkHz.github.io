@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-336 Assignment 3 – Delta-Y Transformer Analysis
+title: Delta-Y Transformer Analysis
 description: Three-phase transformer voltage analysis for Δ-Y configuration (Electrical Energy Systems • 480V line-to-line • Turns ratio derivation).
 img: /assets/img/ee336/assignment-03/circuit_diagram.png
 importance: 2

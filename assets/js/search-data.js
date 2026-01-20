@@ -798,6 +798,26 @@ ninja.data = [{
           description: "Negative-resistance oscillator synthesis at 8 GHz using common-gate conversion, feedback-reactance optimization, and transmission-line termination/resonator networks (MATLAB • Touchstone).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_05/";
+            },},{id: "projects-ee-457-design-project-01-wr-62-waveguide-aperture-antenna-matching-14-ghz",
+          title: 'EE-457 Design Project 01 — WR-62 Waveguide Aperture Antenna Matching (14 GHz)',
+          description: "HFSS + MATLAB design of a two-section quarter-wave transformer to match a WR-62 waveguide aperture to free space.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee457_design_01_slotted_wave_guide_antenna/";
+            },},{id: "projects-ee-457-design-project-02-pyramidal-horn-antenna-14-ghz",
+          title: 'EE-457 Design Project 02 — Pyramidal Horn Antenna (14 GHz)',
+          description: "Ku-band pyramidal horn fed by WR-62 waveguide; analytical sizing (MATLAB) + full-wave validation (Ansys HFSS).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee457_design_02_horn_antenna/";
+            },},{id: "projects-ee-457-design-project-03-3-ghz-coaxial-fed-microstrip-patch-antenna",
+          title: 'EE-457 Design Project 03 — 3 GHz Coaxial-Fed Microstrip Patch Antenna',
+          description: "MATLAB transmission-line sizing + HFSS optimization for a 3 GHz coax-fed rectangular patch on FR4 (|S11|(3 GHz) ≈ −31 dB, ~3% BW, ~3.8 dB gain).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee457_design_03_microstrip_patch_antenna/";
+            },},{id: "projects-ee-457-design-project-04-slotted-waveguide-array-antenna-14-ghz",
+          title: 'EE-457 Design Project 04 — Slotted Waveguide Array Antenna (14 GHz)',
+          description: "WR-62 resonant longitudinal-slot array (1×8 and 8×8) synthesized with a -26 dB Chebyshev taper and validated in Ansys HFSS.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee457_design_04_slotted_wave_guide_array_antenna/";
             },},{id: "projects-discrete-control-system-design-for-receiver-positioning-and-accurate-satellite-tracking",
           title: 'Discrete Control System Design for Receiver Positioning and Accurate Satellite Tracking',
           description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",

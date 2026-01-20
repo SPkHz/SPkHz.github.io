@@ -7,13 +7,13 @@ Suggestions for improving this portfolio site for hiring managers.
 ## Critical Issues (Fix First)
 
 - [ ] **Placeholder LinkedIn URLs** - `_pages/about.md` lines 13-14 and 34 have placeholder LinkedIn links (`YOUR-LINKEDIN-HERE`, `PLACE-LINKEDIN-HERE`)
-- [ ] **Default socials.yml data** - `_data/socials.yml` still has:
+- [x] **Default socials.yml data** - `_data/socials.yml` still has:
   - Placeholder email: `you@example.com`
   - Einstein's Google Scholar ID and InspireHEP ID
   - A "custom_social" link to alberteinstein.com
   - Missing GitHub username
-- [ ] **CV data is Einstein's** - `_data/cv.yml` contains Albert Einstein's biography. Either update this file or ensure `resume.json` is properly configured
-- [ ] **Syntax error in \_config.yml** - Line 281 has `first_name: Steven, M.]` (mismatched bracket)
+- [x] **CV data is Einstein's** - `_data/cv.yml` contains Albert Einstein's biography. Either update this file or ensure `resume.json` is properly configured
+- [x] **Syntax error in \_config.yml** - Line 281 has `first_name: Steven, M.]` (mismatched bracket)
 
 ---
 
@@ -47,16 +47,15 @@ Suggestions for improving this portfolio site for hiring managers.
 ## Technical Features to Enable
 
 - [ ] **Enable Giscus comments** - Uncomment and configure giscus in `_config.yml` (lines 107-120) for feedback on projects
-- [ ] **Set up resume.json properly** - Review `assets/json/resume.json` to ensure it has YOUR education, work experience, and skills
-- [ ] **Configure GitHub repositories display** - Update `_data/repositories.yml` to showcase your best repos
+- [x] **Set up resume.json properly** - Review `assets/json/resume.json` to ensure it has YOUR education, work experience, and skills
+- [x] **Configure GitHub repositories display** - Update `_data/repositories.yml` to showcase your best repos
 
 ---
 
 ## Quick Wins
 
-- [ ] **Remove unused template pages** - dropdown, teaching, profiles pages may be cluttering navigation
+- [ ] **Move unused template pages to archive** - dropdown, teaching, profiles pages may be cluttering navigation
 - [ ] **Add "Download Resume" button** - Ensure PDF exists at `assets/pdf/Steven_Placzek_Resume.pdf`
-- [ ] **Consider a custom domain** - `stevenplaczek.com` or similar looks more professional than `spkhz.github.io`
 
 ---
 

@@ -2701,6 +2701,9 @@ d-citation-list .references .title {
               if (token === "__proto__" || token === "constructor" || token === "prototype") {
                 continue;
               }
+              if (Object.prototype.hasOwnProperty.call(grammar, token)) {
+                continue;
+              }
               grammar[token] = rest[token];
             }
 
@@ -3340,8 +3343,16 @@ d-citation-list .references .title {
 
     Prism.languages.insertBefore("javascript", "keyword", {
       regex: {
-        pattern:
-          /((?:^|[^$\w\xA0-\uFFFF."'\])\s])\s*)\/(?:\\.|[^/\\\r\n])+\/[gimyus]{0,6}(?=(?:\s|\/\*[\s\S]*?\*\/)*(?:$|[\r\n,.;:})\]]|\/\/))/,
+        pattern: RegExp(
+          /((?:^|[^$\w\xA0-\uFFFF."'\])\s])\s*)/.source +
+            /\//.source +
+            "(?:" +
+            /(?:\[(?:[^\]\\\r\n]|\\.)*\]|\\.|[^/\\\[\r\n])+\/[dgimyus]{0,7}/.source +
+            "|" +
+            /(?:\[(?:[^[\]\\\r\n]|\\.|\[(?:[^[\]\\\r\n]|\\.|\[(?:[^[\]\\\r\n]|\\.)*\])*\])*\]|\\.|[^/\\\[\r\n])+\/[dgimyus]{0,7}v[dgimyus]{0,7}/.source +
+            ")" +
+            /(?=(?:\s|\/\*(?:[^*]|\*(?!\/))*\*\/)*(?:$|[\r\n,.;:})\]]|\/\/))/.source
+        ),
         lookbehind: true,
         greedy: true,
       },

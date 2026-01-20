@@ -278,7 +278,7 @@ display_categories: ["coursework"] # these categories will be displayed on the f
 
 scholar:
   last_name: [Placzek]
-  first_name: Steven, M.]
+  first_name: [Steven, M.]
 
   style: apa
   locale: en

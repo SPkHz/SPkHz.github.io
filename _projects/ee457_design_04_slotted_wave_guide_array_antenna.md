@@ -1,22 +1,24 @@
 ---
 layout: page
-title: EE-457 Design Project 04 — Slotted Waveguide Array Antenna (14 GHz)
+title: Slotted Waveguide Array Antenna (14 GHz)
 description: WR-62 resonant longitudinal-slot array (1×8 and 8×8) synthesized with a -26 dB Chebyshev taper and validated in Ansys HFSS.
 img: /assets/img/ee457/design-04/hero_8x8_model.png
 importance: 1
 category: coursework
-related_publications: false
+tags: [EE-457, waveguide, antenna, impedance-matching, quarter-wave-transformer, HFSS, MATLAB]
+related_publications: true
 ---
+
+## Overview
+
+**Course:** EE-457 — Wave Transmission and Reception  
+**Project:** Design Project 04  
+**Author:** Steven Placzek
+**Date:** 2025-12-04
+**Tools:** MATLAB (array synthesis), Ansys HFSS (full-wave simulation)
 
 This project designs and simulates a **resonant longitudinal slotted waveguide array** operating at **14 GHz** using **WR-62** waveguide.  
 A **1×8** linear slot array is synthesized using a **Chebyshev amplitude taper** targeting **-26 dB sidelobes**, and then replicated into an **8×8 planar array** (8 parallel waveguides × 8 slots each) to form a narrow **broadside pencil beam**.
-
-**Course:** EE-457 — Wave Transmission and Reception  
-**Design Project:** 04  
-**Date:** 2025-12-04  
-
-**Team:** Steven Placzek, Ryan Leonard, Aidan Butler, Max Brown, Bryam Yanza  
-**Tools:** MATLAB (array synthesis), Ansys HFSS (full-wave simulation)
 
 ---
 
@@ -24,7 +26,7 @@ A **1×8** linear slot array is synthesized using a **Chebyshev amplitude taper*
 
 A resonant slotted waveguide array uses the **TE$_{10}$** mode in a rectangular waveguide. Each **longitudinal slot** cut into the broad wall behaves like a radiating element whose coupling is primarily set by its **offset from the centerline**. By:
 
-- spacing slots by approximately **$\lambda_g/2$** along the guide, and  
+- spacing slots by approximately **$\lambda_g/2$** along the guide, and
 - alternating the slot offsets from one side of the centerline to the other,
 
 the slots can radiate **in-phase** at broadside while supporting an amplitude taper for sidelobe control.
@@ -44,11 +46,11 @@ the slots can radiate **in-phase** at broadside while supporting an amplitude ta
 
 ### Given / specified
 
-- **Operating frequency:** $f_0 = 14\ \text{GHz}$  
-- **Waveguide:** WR-62 (inner dimensions $a\times b$)  
-- **Slots per waveguide:** $N_y = 8$  
-- **Number of waveguides (planar array):** $N_x = 8$  
-- **Target sidelobe level (Chebyshev):** $\mathrm{SLL} = -26\ \text{dB}$  
+- **Operating frequency:** $f_0 = 14\ \text{GHz}$
+- **Waveguide:** WR-62 (inner dimensions $a\times b$)
+- **Slots per waveguide:** $N_y = 8$
+- **Number of waveguides (planar array):** $N_x = 8$
+- **Target sidelobe level (Chebyshev):** $\mathrm{SLL} = -26\ \text{dB}$
 - **Slot dimensions (spec):**
   - $L = 0.464\,\lambda_0$
   - $W = \lambda_g/20$
@@ -66,19 +68,19 @@ $$
 
 The final synthesized dimensions used in HFSS are summarized below.
 
-| Parameter | Value | Notes |
-| :-- | --: | :-- |
-| $f_0$ | 14.0 GHz | design frequency |
-| $a$ | 15.7988 mm | WR-62 broad wall |
-| $b$ | 7.8994 mm | WR-62 narrow wall |
-| $f_c$ | 9.4878 GHz | TE$_{10}$ cutoff |
-| $\lambda_0$ | 21.4137 mm | free-space wavelength |
-| $\lambda_g$ | 29.1210 mm | guided wavelength |
-| Slot spacing $d_y$ | 14.5605 mm | $\lambda_g/2$ |
-| Slot length $L$ | 9.9360 mm | $0.464\lambda_0$ |
-| Slot width $W$ | 1.4560 mm | $\lambda_g/20$ |
-| Waveguide length $L_{WG}$ | 123.7642 mm | resonant guide length |
-| Waveguide spacing $d_x$ | 16.8148 mm | for $N_x=8$ planar array |
+| Parameter                 |       Value | Notes                    |
+| :------------------------ | ----------: | :----------------------- |
+| $f_0$                     |    14.0 GHz | design frequency         |
+| $a$                       |  15.7988 mm | WR-62 broad wall         |
+| $b$                       |   7.8994 mm | WR-62 narrow wall        |
+| $f_c$                     |  9.4878 GHz | TE$_{10}$ cutoff         |
+| $\lambda_0$               |  21.4137 mm | free-space wavelength    |
+| $\lambda_g$               |  29.1210 mm | guided wavelength        |
+| Slot spacing $d_y$        |  14.5605 mm | $\lambda_g/2$            |
+| Slot length $L$           |   9.9360 mm | $0.464\lambda_0$         |
+| Slot width $W$            |   1.4560 mm | $\lambda_g/20$           |
+| Waveguide length $L_{WG}$ | 123.7642 mm | resonant guide length    |
+| Waveguide spacing $d_x$   |  16.8148 mm | for $N_x=8$ planar array |
 
 ---
 
@@ -88,8 +90,8 @@ The final synthesized dimensions used in HFSS are summarized below.
 
 A Chebyshev distribution provides a controlled sidelobe level while maximizing directivity for that constraint. The **normalized amplitudes** $A_n$ (symmetric for $N_y=8$) are:
 
-| n | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| :--: | --: | --: | --: | --: | --: | --: | --: | --: |
+|   n   |      1 |      2 |      3 |      4 |      5 |      6 |      7 |      8 |
+| :---: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 | $A_n$ | 1.0000 | 1.6313 | 2.3916 | 2.8603 | 2.8603 | 2.3916 | 1.6313 | 1.0000 |
 
 <div class="row">
@@ -126,16 +128,16 @@ The slot admittance model is used to compute the required **offset** $\Delta_n$ 
 
 ### Final per-slot geometry
 
-| Slot n | $A_n$ | $g_n$ (mS/S) | $L_n$ (mm) | $W_n$ (mm) | $\Delta_n$ (mm) |
-| :--: | --: | --: | --: | --: | --: |
-| 1 | 1.0000 | 28.4700 | 9.9360 | 1.4560 | -0.9726 |
-| 2 | 1.6313 | 75.7611 | 9.9360 | 1.4560 | 1.6038 |
-| 3 | 2.3916 | 162.8404 | 9.9360 | 1.4560 | -2.4019 |
-| 4 | 2.8603 | 232.9286 | 9.9360 | 1.4560 | 2.9272 |
-| 5 | 2.8603 | 232.9286 | 9.9360 | 1.4560 | -2.9272 |
-| 6 | 2.3916 | 162.8404 | 9.9360 | 1.4560 | 2.4019 |
-| 7 | 1.6313 | 75.7611 | 9.9360 | 1.4560 | -1.6038 |
-| 8 | 1.0000 | 28.4700 | 9.9360 | 1.4560 | 0.9726 |
+| Slot n |  $A_n$ | $g_n$ (mS/S) | $L_n$ (mm) | $W_n$ (mm) | $\Delta_n$ (mm) |
+| :----: | -----: | -----------: | ---------: | ---------: | --------------: |
+|   1    | 1.0000 |      28.4700 |     9.9360 |     1.4560 |         -0.9726 |
+|   2    | 1.6313 |      75.7611 |     9.9360 |     1.4560 |          1.6038 |
+|   3    | 2.3916 |     162.8404 |     9.9360 |     1.4560 |         -2.4019 |
+|   4    | 2.8603 |     232.9286 |     9.9360 |     1.4560 |          2.9272 |
+|   5    | 2.8603 |     232.9286 |     9.9360 |     1.4560 |         -2.9272 |
+|   6    | 2.3916 |     162.8404 |     9.9360 |     1.4560 |          2.4019 |
+|   7    | 1.6313 |      75.7611 |     9.9360 |     1.4560 |         -1.6038 |
+|   8    | 1.0000 |      28.4700 |     9.9360 |     1.4560 |          0.9726 |
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -161,7 +163,7 @@ The slot admittance model is used to compute the required **offset** $\Delta_n$ 
 
 Two HFSS models were created:
 
-1. **1×8 array** — a single WR-62 waveguide section with 8 longitudinal slots on the broad wall and a wave port feed.  
+1. **1×8 array** — a single WR-62 waveguide section with 8 longitudinal slots on the broad wall and a wave port feed.
 2. **8×8 array** — eight parallel waveguides (8 ports total), each with the same 8-slot pattern.
 
 <div class="row">
@@ -180,14 +182,14 @@ Two HFSS models were created:
 
 ## Results summary (HFSS)
 
-| Metric | 1×8 array | 8×8 array | Units |
-| :-- | --: | --: | :-- |
-| Peak gain (linear) | 34.70 | 272.42 | W/W |
-| Peak gain | 15.40 | 24.35 | dB |
-| 10-dB beamwidth (E-plane) | 11.24 | 11.26 | degrees |
-| 10-dB beamwidth (H-plane) | 77.69 | 9.72 | degrees |
-| Match (near resonance) | $|S_{11}| < -40$ | $|S_{nn}| < -25$ (all ports) | dB |
-| Resonant frequency | $\approx 13.75$ | $\approx 13.75$ | GHz |
+| Metric                    |       1×8 array |       8×8 array | Units   |
+| :------------------------ | --------------: | --------------: | :------ | --- | ------- | ------------------ | --- |
+| Peak gain (linear)        |           34.70 |          272.42 | W/W     |
+| Peak gain                 |           15.40 |           24.35 | dB      |
+| 10-dB beamwidth (E-plane) |           11.24 |           11.26 | degrees |
+| 10-dB beamwidth (H-plane) |           77.69 |            9.72 | degrees |
+| Match (near resonance)    |               $ |         S\_{11} | < -40$  | $   | S\_{nn} | < -25$ (all ports) | dB  |
+| Resonant frequency        | $\approx 13.75$ | $\approx 13.75$ | GHz     |
 
 ---
 
@@ -254,7 +256,6 @@ Two HFSS models were created:
   8×8 array gain (linear scale) highlighting the narrow broadside beam.
 </div>
 
-
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/ee457/design-04/gain_8x8_3d_db.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -291,13 +292,8 @@ Two HFSS models were created:
 
 ## Discussion
 
-- **Beam shaping:** The Chebyshev taper provides a controlled sidelobe design target for the 1×8 array, and duplicating the guide in the x-dimension produces a **pencil beam** with significantly reduced H-plane beamwidth.  
-- **Frequency shift:** Both arrays resonate near **13.75 GHz** rather than exactly 14 GHz. In practice this can be tuned by small adjustments to **slot length**, **end-short distance**, or including fabrication tolerances and conductor losses in the model.  
+- **Beam shaping:** The Chebyshev taper provides a controlled sidelobe design target for the 1×8 array, and duplicating the guide in the x-dimension produces a **pencil beam** with significantly reduced H-plane beamwidth.
+- **Frequency shift:** Both arrays resonate near **13.75 GHz** rather than exactly 14 GHz. In practice this can be tuned by small adjustments to **slot length**, **end-short distance**, or including fabrication tolerances and conductor losses in the model.
 - **Scalability:** Because the 8×8 array is formed by **replicating** the synthesized 1×8 waveguide, the planar design approach scales naturally to larger apertures when feed/manifold constraints allow.
 
 ---
-
-## Files and assets
-
-- Place the images from the provided ZIP into: `assets/img/ee457/design-04/`
-- Place this page into your al-folio repository (commonly): `_projects/ee457_design_04_slotted_wave_guide_array_antenna.md`

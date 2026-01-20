@@ -1,18 +1,22 @@
 ---
 layout: page
-title: "EE-457 Design Project 01 — WR-62 Waveguide Aperture Antenna Matching (14 GHz)"
+title: "WR-62 Waveguide Aperture Antenna Design (14 GHz)"
 description: "HFSS + MATLAB design of a two-section quarter-wave transformer to match a WR-62 waveguide aperture to free space."
 img: /assets/img/ee457/design-01/thumbnail.png
 importance: 1
 category: coursework
 date: 2025-10-03
 tags: [EE-457, waveguide, antenna, impedance-matching, quarter-wave-transformer, HFSS, MATLAB]
-related_publications: false
+related_publications: true
 ---
 
-**Course:** EE-457 — Wave Transmissions and Receptions  
-**Deliverable date:** 2025-10-03  
-**Tools:** Ansys HFSS, MATLAB
+## Overview
+
+**Course:** EE-457 — Wave Transmission and Reception  
+**Project:** Design Project 01
+**Author:** Steven Placzek
+**Date:** 2025-10-03
+**Tools:** MATLAB (closed-form sizing + efficiency iteration), Ansys HFSS (3D full-wave EM)
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -27,20 +31,18 @@ related_publications: false
 
 ## Project summary
 
-This design project models a **WR-62 open-ended rectangular waveguide** radiating into free space (an *aperture antenna*) and then designs a **two-section matching network** to reduce the input reflection at **14&nbsp;GHz**.
+This design project models a **WR-62 open-ended rectangular waveguide** radiating into free space (an _aperture antenna_) and then designs a **two-section matching network** to reduce the input reflection at **14&nbsp;GHz**.
 
 Key outcomes (HFSS results):
 
-| Metric | Result | Notes |
-|---|---:|---|
-| Aperture reflection (unmatched) @ 14&nbsp;GHz | \(|\Gamma_L| = 0.256\angle -88.17^\circ\) | Return loss \(\approx 11.8\,\text{dB}\) |
-| Matched return loss @ 14&nbsp;GHz | \(S_{11} \approx -35.06\,\text{dB}\) | \(|\Gamma|\approx 0.0177\) |
-| \(-20\,\text{dB}\) return-loss bandwidth | 13.3–14.8&nbsp;GHz | BW = 1.5&nbsp;GHz (≈10.7% FBW) |
-| Peak realized gain @ 14&nbsp;GHz | 6.87&nbsp;dB | Broadside |
-| 3&nbsp;dB beamwidth (E-plane) | 123.93° | Principal-plane cut |
-| 3&nbsp;dB beamwidth (H-plane) | 61.70° | Principal-plane cut |
-
-> Note on naming: the page filename uses “slotted waveguide,” but **this project’s radiator is a waveguide aperture antenna** (no slots). Aperture antennas are commonly used as the building block for waveguide-fed arrays (including slotted-waveguide arrays).
+| Metric                                        |                                Result | Notes                          |
+| --------------------------------------------- | ------------------------------------: | ------------------------------ | ---------------------------- | --------------------------------------- |
+| Aperture reflection (unmatched) @ 14&nbsp;GHz |                                    \( | \Gamma_L                       | = 0.256\angle -88.17^\circ\) | Return loss \(\approx 11.8\,\text{dB}\) |
+| Matched return loss @ 14&nbsp;GHz             | \(S\_{11} \approx -35.06\,\text{dB}\) | \(                             | \Gamma                       | \approx 0.0177\)                        |
+| \(-20\,\text{dB}\) return-loss bandwidth      |                    13.3–14.8&nbsp;GHz | BW = 1.5&nbsp;GHz (≈10.7% FBW) |
+| Peak realized gain @ 14&nbsp;GHz              |                          6.87&nbsp;dB | Broadside                      |
+| 3&nbsp;dB beamwidth (E-plane)                 |                               123.93° | Principal-plane cut            |
+| 3&nbsp;dB beamwidth (H-plane)                 |                                61.70° | Principal-plane cut            |
 
 ---
 
@@ -65,11 +67,11 @@ The starting point is a **WR-62 waveguide section** with an open aperture radiat
 At the design frequency (14&nbsp;GHz), HFSS reports the aperture reflection coefficient:
 
 \[
-\Gamma_L = 0.256\angle (-88.17^\circ)
+\Gamma*L = 0.256\angle (-88.17^\circ)
 \]
 so the unmatched return loss is:
 \[
-\text{RL} = -20\log_{10}(|\Gamma_L|) \approx 11.8\,\text{dB}.
+\text{RL} = -20\log*{10}(|\Gamma_L|) \approx 11.8\,\text{dB}.
 \]
 
 <div class="row">
@@ -97,7 +99,7 @@ so the unmatched return loss is:
 A **two-section transformer** is used:
 
 1. A short line section of length \(d_1\) to rotate the normalized impedance to the real axis.
-2. A quarter-wave transformer section of length \(d_2=\lambda_g/4\) with characteristic impedance \(Z_{02}\).
+2. A quarter-wave transformer section of length \(d*2=\lambda_g/4\) with characteristic impedance \(Z*{02}\).
 
 ### Converting HFSS \(\Gamma_L\) to impedance
 
@@ -117,7 +119,7 @@ z_L \approx 0.8907 - j0.4878
 
 ### Guided wavelength and section lengths
 
-For WR-62, the broadwall dimension is \(a\approx 15.7988\,\text{mm}\), so the TE\(_{10}\) cutoff is:
+For WR-62, the broadwall dimension is \(a\approx 15.7988\,\text{mm}\), so the TE\(\_{10}\) cutoff is:
 
 \[
 f_c = \frac{c}{2a}.
@@ -131,15 +133,15 @@ At \(f_0 = 14\,\text{GHz}\), the guided wavelength is:
 
 Using the project’s final synthesis values:
 
-| Parameter | Electrical length | Physical length |
-|---|---:|---:|
-| \(d_1\) | \(0.1275\,\lambda_g\) | 3.7142&nbsp;mm |
-| \(d_2\) | \(0.2500\,\lambda_g\) | 7.2802&nbsp;mm |
+| Parameter |     Electrical length | Physical length |
+| --------- | --------------------: | --------------: |
+| \(d_1\)   | \(0.1275\,\lambda_g\) |  3.7142&nbsp;mm |
+| \(d_2\)   | \(0.2500\,\lambda_g\) |  7.2802&nbsp;mm |
 
 The resulting transformer impedance (from the real impedance at \(d_1\)) is:
 
 \[
-Z_{02} \approx 394.31\,\Omega.
+Z\_{02} \approx 394.31\,\Omega.
 \]
 
 <div class="row">
@@ -225,13 +227,7 @@ The matching network is designed to improve input match while preserving the rad
 
 If you are recreating the project locally:
 
-- **HFSS**: start from the baseline open-ended WR-62 model, then add the two matching sections using \(d_1\), \(d_2\), and the geometry needed to realize \(Z_{02}\).
-- **MATLAB**: compute \(z_L\) from \(\Gamma_L\), solve for \(d_1\) such that \(\Im\{z(d_1)\}=0\), then set \(d_2=\lambda_g/4\) and \(Z_{02}=Z_0\sqrt{\Re\{z(d_1)\}}\).
+- **HFSS**: start from the baseline open-ended WR-62 model, then add the two matching sections using \(d*1\), \(d_2\), and the geometry needed to realize \(Z*{02}\).
+- **MATLAB**: compute \(z*L\) from \(\Gamma_L\), solve for \(d_1\) such that \(\Im\{z(d_1)\}=0\), then set \(d_2=\lambda_g/4\) and \(Z*{02}=Z_0\sqrt{\Re\{z(d_1)\}}\).
 
 ---
-
-## Assets
-
-All figures used above are stored under:
-
-`assets/img/ee457/design-01/`

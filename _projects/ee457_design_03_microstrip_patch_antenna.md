@@ -1,30 +1,35 @@
 ---
 layout: page
-title: EE-457 Design Project 03 — 3 GHz Coaxial-Fed Microstrip Patch Antenna
+title: Coaxial-Fed Microstrip Patch Antenna Design (3 GHz)
 description: MATLAB transmission-line sizing + HFSS optimization for a 3 GHz coax-fed rectangular patch on FR4 (|S11|(3 GHz) ≈ −31 dB, ~3% BW, ~3.8 dB gain).
 img: /assets/img/ee457/design-03/hero.png
 importance: 1
 category: coursework
-related_publications: false
+tags: [rf, waveguide, antenna, impedance-matching, quarter-wave-transformer, HFSS, MATLAB]
+related_publications: true
 ---
 
-This project designs and simulates a **3 GHz coaxial-fed rectangular microstrip patch antenna** on **62 mil FR4** using a **transmission-line (TL) starting point in MATLAB** and **parametric optimization in Ansys HFSS**.
+## Overview
 
-- **Course:** EE-457 — Wave Transmission and Reception  
-- **Date:** 2025-11-17  
-- **Tools:** MATLAB (TL sizing + bandwidth extraction), Ansys HFSS (3D EM simulation)
+**Course:** EE-457 — Wave Transmission and Reception  
+**Project:** Design Project 03  
+**Author:** Steven Placzek
+**Date:** 2025-11-17
+**Tools:** MATLAB (TL sizing + bandwidth extraction), Ansys HFSS (3D EM simulation)
+
+This project designs and simulates a **3 GHz coaxial-fed rectangular microstrip patch antenna** on **62 mil FR4** using a **transmission-line (TL) starting point in MATLAB** and **parametric optimization in Ansys HFSS**.
 
 ---
 
 ## Requirements (assignment targets)
 
-| Item | Target |
-|---|---|
-| Center frequency | 3.0 GHz |
-| Substrate | FR4, $h = 1.5748\,\text{mm}$, $\varepsilon_r = 4.4$, $\tan\delta = 0.02$ |
-| Patch width guideline | $W \approx 1.5\,L_e$ |
-| Match at 3 GHz | $|S_{11}| \le -30\,\text{dB}$ |
-| Characterize | gain, directivity, E/H beamwidths, radiation efficiency |
+| Item                  | Target                                                                   |
+| --------------------- | ------------------------------------------------------------------------ | ------- | ------------------- |
+| Center frequency      | 3.0 GHz                                                                  |
+| Substrate             | FR4, $h = 1.5748\,\text{mm}$, $\varepsilon_r = 4.4$, $\tan\delta = 0.02$ |
+| Patch width guideline | $W \approx 1.5\,L_e$                                                     |
+| Match at 3 GHz        | $                                                                        | S\_{11} | \le -30\,\text{dB}$ |
+| Characterize          | gain, directivity, E/H beamwidths, radiation efficiency                  |
 
 ---
 
@@ -44,13 +49,13 @@ This project designs and simulates a **3 GHz coaxial-fed rectangular microstrip 
 
 ### Final dimensions (V4)
 
-| Parameter | Value | Unit |
-|---|---:|---|
-| $L$ (patch length) | 22.5652 | mm |
-| $W$ (patch width) | 36.0279 | mm |
-| $x_0$ (feed offset from patch centerline) | 6.1910 | mm |
-| $L_s$ (substrate length) | 33.8478 | mm |
-| $W_s$ (substrate width) | 54.0418 | mm |
+| Parameter                                 |   Value | Unit |
+| ----------------------------------------- | ------: | ---- |
+| $L$ (patch length)                        | 22.5652 | mm   |
+| $W$ (patch width)                         | 36.0279 | mm   |
+| $x_0$ (feed offset from patch centerline) |  6.1910 | mm   |
+| $L_s$ (substrate length)                  | 33.8478 | mm   |
+| $W_s$ (substrate width)                   | 54.0418 | mm   |
 
 ---
 
@@ -81,19 +86,19 @@ A TL model provides an initial patch size before full-wave simulation. The basic
 
 ### Table 1 (MATLAB-calculated initial design)
 
-| Parameter | Calculated | Unit |
-|---|---:|---|
-| $f_0$ | 3.0000 | GHz |
-| $h$ | 1.5748 | mm |
-| $\varepsilon_r$ | 4.4 | – |
-| $\lambda_g$ | 47.6401 | mm |
-| $L_e$ | 23.8201 | mm |
-| $W$ | 35.7301 | mm |
-| $\varepsilon_{\text{eff}}$ | 4.4000 | – |
-| $\Delta L$ | 726.7002 | µm |
-| $L$ | 22.3667 | mm |
-| $R_{\text{edge}}$ | 239.4675 | Ω |
-| $x_f$ | 8.3119 | mm |
+| Parameter                  | Calculated | Unit |
+| -------------------------- | ---------: | ---- |
+| $f_0$                      |     3.0000 | GHz  |
+| $h$                        |     1.5748 | mm   |
+| $\varepsilon_r$            |        4.4 | –    |
+| $\lambda_g$                |    47.6401 | mm   |
+| $L_e$                      |    23.8201 | mm   |
+| $W$                        |    35.7301 | mm   |
+| $\varepsilon_{\text{eff}}$ |     4.4000 | –    |
+| $\Delta L$                 |   726.7002 | µm   |
+| $L$                        |    22.3667 | mm   |
+| $R_{\text{edge}}$          |   239.4675 | Ω    |
+| $x_f$                      |     8.3119 | mm   |
 
 ---
 
@@ -103,16 +108,16 @@ The MATLAB design is imported into HFSS and refined with an **optimetrics sweep*
 
 ### Table 2 (geometry updates across sweeps)
 
-| Parameter | V1 | V2 | V3 | V4 (final) | Unit |
-|---|---:|---:|---:|---:|---|
-| $L_e$ | 23.8201 | 23.8201 | 23.8201 | 24.0187 | mm |
-| $\Delta L$ | 726.7001 | 726.7001 | 726.7001 | 726.7001 | µm |
-| $L$ | 22.3667 | 22.3667 | 22.3667 | 22.5652 | mm |
-| $W$ | 35.7302 | 35.7302 | 35.7302 | 36.0279 | mm |
-| $x_f$ | 8.3119 | 8.3119 | 8.3119 | 5.8183 | mm |
-| $x_0$ | 3.5982 | 3.5982 | 3.5982 | 6.1910 | mm |
-| $L_s$ | 33.5501 | 33.5501 | 33.5501 | 33.8478 | mm |
-| $W_s$ | 53.5952 | 53.5952 | 53.5952 | 54.0418 | mm |
+| Parameter  |       V1 |       V2 |       V3 | V4 (final) | Unit |
+| ---------- | -------: | -------: | -------: | ---------: | ---- |
+| $L_e$      |  23.8201 |  23.8201 |  23.8201 |    24.0187 | mm   |
+| $\Delta L$ | 726.7001 | 726.7001 | 726.7001 |   726.7001 | µm   |
+| $L$        |  22.3667 |  22.3667 |  22.3667 |    22.5652 | mm   |
+| $W$        |  35.7302 |  35.7302 |  35.7302 |    36.0279 | mm   |
+| $x_f$      |   8.3119 |   8.3119 |   8.3119 |     5.8183 | mm   |
+| $x_0$      |   3.5982 |   3.5982 |   3.5982 |     6.1910 | mm   |
+| $L_s$      |  33.5501 |  33.5501 |  33.5501 |    33.8478 | mm   |
+| $W_s$      |  53.5952 |  53.5952 |  53.5952 |    54.0418 | mm   |
 
 ---
 
@@ -146,10 +151,10 @@ The MATLAB design is imported into HFSS and refined with an **optimetrics sweep*
 
 ## Bandwidth ($-10$ dB)
 
-| Metric | MATLAB estimate | HFSS (final) | Unit |
-|---|---:|---:|---|
-| $BW_f$ (−10 dB) | 21.6673 | 89.7000 | MHz |
-| Fractional BW (−10 dB) | 0.7222 | 2.9898 | % |
+| Metric                 | MATLAB estimate | HFSS (final) | Unit |
+| ---------------------- | --------------: | -----------: | ---- |
+| $BW_f$ (−10 dB)        |         21.6673 |      89.7000 | MHz  |
+| Fractional BW (−10 dB) |          0.7222 |       2.9898 | %    |
 
 **Sweep summary (−10 dB BW):** V2–V4 all achieve approximately **3%** fractional bandwidth.
 
@@ -171,13 +176,13 @@ The MATLAB design is imported into HFSS and refined with an **optimetrics sweep*
 
 ### HFSS performance snapshot at 3.0 GHz
 
-| Quantity | Value | Notes |
-|---|---:|---|
-| Peak gain | 2.4211 (≈ 3.84 dB) | broadside maximum |
-| Peak realized gain | 2.4192 (≈ 3.83 dB) | includes mismatch |
-| Peak directivity | 4.3989 (≈ 6.43 dB) | from HFSS report |
-| Radiation efficiency | 0.5504 (≈ 55.0%) | FR4 losses dominate |
-| Front-to-back ratio | 6.1402 dB | finite ground/substrate |
+| Quantity             |              Value | Notes                   |
+| -------------------- | -----------------: | ----------------------- |
+| Peak gain            | 2.4211 (≈ 3.84 dB) | broadside maximum       |
+| Peak realized gain   | 2.4192 (≈ 3.83 dB) | includes mismatch       |
+| Peak directivity     | 4.3989 (≈ 6.43 dB) | from HFSS report        |
+| Radiation efficiency |   0.5504 (≈ 55.0%) | FR4 losses dominate     |
+| Front-to-back ratio  |          6.1402 dB | finite ground/substrate |
 
 ---
 
@@ -190,8 +195,6 @@ The MATLAB design is imported into HFSS and refined with an **optimetrics sweep*
 
 ## Reproducibility (what I used)
 
-- **MATLAB sizing + tables:** `EE_457_Design_Project_03_Placzek_Matlab.m`
-- **MATLAB bandwidth extraction (−10 dB markers):** `EE_457_Design_Project_03_Placzek_Matlab_read_csv_10dB.m`
-- **HFSS project:** `EE_457_Design_Project_03_Placzek_HFSS.aedt`
-
-(These filenames come from the submission package; adjust paths as needed if you reorganize your repo.)
+- **MATLAB sizing + tables:** `assets/matlab/ee457/EE_457_Design_Project_03_Placzek_Matlab.m`
+- **MATLAB bandwidth extraction (−10 dB markers):** `assets/matlab/ee457/EE_457_Design_Project_03_Placzek_Matlab_read_csv_10dB.m`
+- **HFSS project:** `assets/hfss/ee457/EE_457_Design_Project_03_Placzek_HFSS.aedt`

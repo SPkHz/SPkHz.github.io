@@ -1,30 +1,34 @@
 ---
 layout: page
-title: EE-457 Design Project 02 — Pyramidal Horn Antenna (14 GHz)
+title: Pyramidal Horn Antenna Design (14 GHz)
 description: Ku-band pyramidal horn fed by WR-62 waveguide; analytical sizing (MATLAB) + full-wave validation (Ansys HFSS).
 img: /assets/img/ee457/design-02/cover.png
 importance: 2
 category: coursework
-related_publications: false
+tags: [waveguide, antenna, impedance-matching, quarter-wave-transformer, HFSS, MATLAB]
+related_publications: true
 ---
 
-This project designs and simulates a **Ku-band pyramidal horn antenna** for **14 GHz**, using a **WR-62 rectangular waveguide feed** and a pyramidal flare sized from classic aperture/directivity relationships, then validated in **Ansys HFSS**.
+## Overview
 
 **Course:** EE-457 — Wave Transmission and Reception  
-**Design Project:** 02 (**2025-10-24**)  
-**Author:** Steven Placzek  
+**Project:** Design Project 02
+**Author:** Steven Placzek
+**Date:** 2025-10-24
 **Tools:** MATLAB (closed-form sizing + efficiency iteration), Ansys HFSS (3D full-wave EM)
+
+This project designs and simulates a **Ku-band pyramidal horn antenna** for **14 GHz**, using a **WR-62 rectangular waveguide feed** and a pyramidal flare sized from classic aperture/directivity relationships, then validated in **Ansys HFSS**.
 
 ---
 
 ## Design goals / requirements
 
-- **Center frequency:** 14 GHz  
-- **Feed waveguide:** WR-62 (inner dimensions)  
+- **Center frequency:** 14 GHz
+- **Feed waveguide:** WR-62 (inner dimensions)
   - \(a = 15.7988~\text{mm}\), \(b = 7.8994~\text{mm}\)
-- **Target gain (design goal):** ~25 dBi (analytical sizing target)  
+- **Target gain (design goal):** ~25 dBi (analytical sizing target)
 - **Key checks (simulation):**
-  - good input match (\(S_{11}\))
+  - good input match (\(S\_{11}\))
   - stable main beam and reasonable sidelobes
   - expected beamwidth vs. aperture size
 
@@ -32,54 +36,54 @@ This project designs and simulates a **Ku-band pyramidal horn antenna** for **14
 
 ## Analytical sizing (MATLAB)
 
-### 1) Aperture area from gain/directivity
+### 1. Aperture area from gain/directivity
 
 A pyramidal horn can be estimated as an “efficient aperture”:
 
 \[
-D \approx \frac{4\pi}{\lambda^2}\,\varepsilon_{ap}\,A\,B
+D \approx \frac{4\pi}{\lambda^2}\,\varepsilon\_{ap}\,A\,B
 \]
 
 where:
 
-- \(A\) = aperture width (H-plane), \(B\) = aperture height (E-plane)  
-- \(\varepsilon_{ap}\) = aperture efficiency (includes taper + phase error terms)  
+- \(A\) = aperture width (H-plane), \(B\) = aperture height (E-plane)
+- \(\varepsilon\_{ap}\) = aperture efficiency (includes taper + phase error terms)
 - \(\lambda = c/f\) is the free-space wavelength
 
 At \(f = 14~\text{GHz}\), \(\lambda \approx 21.43~\text{mm}\).
 
-### 2) “Optimum” pyramidal horn curvature parameters
+### 2. “Optimum” pyramidal horn curvature parameters
 
 The horn sizing follows the standard “optimum” phase-error choices:
 
 \[
-R_{0H}=\frac{A^2}{3\lambda},\qquad R_{0E}=\frac{B^2}{2\lambda}
+R*{0H}=\frac{A^2}{3\lambda},\qquad R*{0E}=\frac{B^2}{2\lambda}
 \]
 
 and the flare angles (degrees) are:
 
 \[
-\alpha_H=\tan^{-1}\!\left(\frac{A}{2R_{0H}}\right),\qquad
-\alpha_E=\tan^{-1}\!\left(\frac{B}{2R_{0E}}\right)
+\alpha*H=\tan^{-1}\!\left(\frac{A}{2R*{0H}}\right),\qquad
+\alpha*E=\tan^{-1}\!\left(\frac{B}{2R*{0E}}\right)
 \]
 
-### 3) Iterating aperture efficiency (Fresnel-integral model)
+### 3. Iterating aperture efficiency (Fresnel-integral model)
 
-The MATLAB workflow iterates \(\varepsilon_{ap}\) to convergence:
+The MATLAB workflow iterates \(\varepsilon\_{ap}\) to convergence:
 
-1. assume \(\varepsilon_{ap}\) (start at ~0.50)  
-2. solve for \(A\) and \(B\) that meet the desired directivity  
-3. compute \(\varepsilon_{ap}\) from E-plane + H-plane phase-error integrals  
-4. repeat until \(\varepsilon_{ap}\) stabilizes
+1. assume \(\varepsilon\_{ap}\) (start at ~0.50)
+2. solve for \(A\) and \(B\) that meet the desired directivity
+3. compute \(\varepsilon\_{ap}\) from E-plane + H-plane phase-error integrals
+4. repeat until \(\varepsilon\_{ap}\) stabilizes
 
 For the final geometry, the analytical breakdown is approximately:
 
-| Term | Meaning | Value |
-|---|---|---:|
-| \(e_t\) | taper factor | 0.811 |
-| \(e_E\) | E-plane phase term | 0.803 |
-| \(e_H\) | H-plane phase term | 0.796 |
-| \(\varepsilon_{ap}=e_t e_E e_H\) | aperture efficiency | 0.518 |
+| Term                              | Meaning             | Value |
+| --------------------------------- | ------------------- | ----: |
+| \(e_t\)                           | taper factor        | 0.811 |
+| \(e_E\)                           | E-plane phase term  | 0.803 |
+| \(e_H\)                           | H-plane phase term  | 0.796 |
+| \(\varepsilon\_{ap}=e_t e_E e_H\) | aperture efficiency | 0.518 |
 
 ---
 
@@ -87,14 +91,14 @@ For the final geometry, the analytical breakdown is approximately:
 
 **Free-space wavelength:** \(\lambda \approx 21.43~\text{mm}\)
 
-| Parameter | Value | Notes |
-|---|---:|---|
-| Throat \(a \times b\) | 15.7988 mm × 7.8994 mm | WR-62 |
-| Aperture \(A \times B\) | **161.97 mm × 127.74 mm** | pyramidal opening |
-| Horn length \(R_p\) | **275.37 mm** | axial length (approx.) |
-| Flare angle \(\alpha_H\) | **14.18°** | H-plane |
-| Flare angle \(\alpha_E\) | **12.05°** | E-plane |
-| Estimated \(\varepsilon_{ap}\) | **≈ 52%** | from the design iteration |
+| Parameter                       |                     Value | Notes                     |
+| ------------------------------- | ------------------------: | ------------------------- |
+| Throat \(a \times b\)           |    15.7988 mm × 7.8994 mm | WR-62                     |
+| Aperture \(A \times B\)         | **161.97 mm × 127.74 mm** | pyramidal opening         |
+| Horn length \(R_p\)             |             **275.37 mm** | axial length (approx.)    |
+| Flare angle \(\alpha_H\)        |                **14.18°** | H-plane                   |
+| Flare angle \(\alpha_E\)        |                **12.05°** | E-plane                   |
+| Estimated \(\varepsilon\_{ap}\) |                 **≈ 52%** | from the design iteration |
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -118,9 +122,9 @@ For the final geometry, the analytical breakdown is approximately:
 
 ## HFSS simulation results
 
-### Input match (\(S_{11}\))
+### Input match (\(S\_{11}\))
 
-The original HFSS export is included below, along with a *digitized* curve for easier reading.
+The original HFSS export is included below, along with a _digitized_ curve for easier reading.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -130,8 +134,8 @@ The original HFSS export is included below, along with a *digitized* curve for e
 
 Key observations (from digitizing the HFSS plot):
 
-- \(S_{11}(14~\text{GHz}) \approx -29.2~\text{dB}\)  
-- Over 12.5–15.5 GHz, \(S_{11}\) stays roughly between **-35 dB** (best) and **-27.7 dB** (worst)
+- \(S\_{11}(14~\text{GHz}) \approx -29.2~\text{dB}\)
+- Over 12.5–15.5 GHz, \(S\_{11}\) stays roughly between **-35 dB** (best) and **-27.7 dB** (worst)
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -172,10 +176,10 @@ For a qualitative “3D view” of the main beam shape, MATLAB-generated pattern
 
 ## Quick theory ↔ simulation comparison
 
-Using the aperture estimate \(D \approx \frac{4\pi}{\lambda^2}\varepsilon_{ap}AB\) with:
+Using the aperture estimate \(D \approx \frac{4\pi}{\lambda^2}\varepsilon\_{ap}AB\) with:
 
 - \(A \times B = 161.97~\text{mm} \times 127.74~\text{mm}\)
-- \(\varepsilon_{ap} \approx 0.52\)
+- \(\varepsilon\_{ap} \approx 0.52\)
 - \(\lambda \approx 21.43~\text{mm}\)
 
 gives an estimated directivity:
@@ -193,8 +197,8 @@ HFSS peak gain is about **23.64 dB**, implying an overall efficiency (relative t
 Beamwidth sanity-check (common horn approximations):
 
 \[
-\text{HPBW}_H \approx 68.8\,\frac{\lambda}{A},\qquad
-\text{HPBW}_E \approx 50.6\,\frac{\lambda}{B}
+\text{HPBW}\_H \approx 68.8\,\frac{\lambda}{A},\qquad
+\text{HPBW}\_E \approx 50.6\,\frac{\lambda}{B}
 \]
 
 which predicts ~9–9.5° class beamwidths, consistent with the simulated 9.44–11.23° values.
@@ -203,6 +207,5 @@ which predicts ~9–9.5° class beamwidths, consistent with the simulated 9.44�
 
 ## Reproducibility notes
 
-- **MATLAB sizing / efficiency iteration:** `ee457_Horn_Antenna_Design_Placzek_v2.m` + `EE457_Horn_Analysis.m`  
+- **MATLAB sizing / efficiency iteration:** `ee457_Horn_Antenna_Design_Placzek_v2.m` + `EE457_Horn_Analysis.m`
 - **HFSS model + sweep:** `ee457_Design_Project_02_Placzek.aedt` (Ansys HFSS project)
-

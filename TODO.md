@@ -1,6 +1,61 @@
 # Portfolio Site TODO
 
-Suggestions for improving this portfolio site for hiring managers.
+## Branding / Page Titles / Information Hierarchy
+- [ ] Make the H1/page hero title page-specific (Blog page should not show "Electrical Engineering Portfolio").
+- [ ] Update the Home page H1 to a hiring-manager-oriented title (e.g., "Electrical Engineer — Projects & Case Studies").
+- [ ] Shorten and rewrite the hero description to be scannable (focus on selected work + skills, not "all my coursework").
+- [ ] Add 1-line role/skill tagline under the name (e.g., "RF • DSP • Embedded • Test & Measurement").
+- [ ] Add primary CTA buttons under the hero: "View Resume (PDF)", "Projects", "GitHub/Code", "Contact".
+- [ ] Rename nav labels for clarity: BLOG → "Technical Blog/Engineering Notes"; REPOSITORIES → "Code/GitHub".
+- [ ] Add a "Contact" destination (page or header buttons with email + LinkedIn).
+
+## Color System (Light/Dark Mode)
+- [ ] Define theme tokens with CSS variables (e.g., --accent, --accent-hover, --text, --bg, --muted, --border).
+- [ ] Replace light-mode magenta with a more professional accent (Deep Navy / Deep Teal / Steel Blue).
+- [ ] Replace dark-mode bright cyan with a less-neon accent (Muted Aqua OR Soft Amber OR Sage).
+- [ ] Use the same accent hue across both themes (different luminance, same brand color).
+- [ ] Standardize link colors + hover/visited states for both themes.
+- [ ] Ensure color contrast meets WCAG AA for normal text (especially nav links + tag links).
+- [ ] Add a visible keyboard focus style (focus ring) that works in both themes.
+
+## Typography & Layout
+- [ ] Reduce the hero H1 size on desktop and add responsive scaling for mobile (avoid oversized 3-line headline).
+- [ ] Set an intentional type scale (H1/H2/H3/body) and consistent line-height across the site.
+- [ ] Constrain paragraph width (e.g., max-width: 65–75ch) for the hero description and post excerpts.
+- [ ] Improve vertical rhythm: consistent spacing between hero, tag row, and content lists.
+- [ ] Make section separators (rules) lighter/subtler and consistent in both modes.
+
+## Header / Navigation Polish
+- [ ] Increase nav item hit-area (padding) for easier clicking.
+- [ ] Use an active-state style beyond just color (underline/border/weight) for accessibility.
+- [ ] Add tooltips and aria-labels for the header icons (theme toggle/search/etc.).
+- [ ] Ensure header icons use consistent size, stroke weight, and alignment baseline.
+- [ ] Make the site title (top-left) link to Home and shorten it (e.g., "Steven M. Placzek | EE").
+
+## Blog / Project Listing Presentation
+- [ ] Convert post listings into consistent "cards" (title, meta, tags, thumbnail) with a clear hover state.
+- [ ] Standardize thumbnail aspect ratio + size so rows align cleanly.
+- [ ] Improve mobile layout: stack thumbnail below/above text with consistent spacing.
+- [ ] Make post meta (date/read time) smaller and visually secondary.
+- [ ] Reduce tag clutter: show top tags + "More…" expand, or move tags into a filter panel.
+- [ ] Restyle hashtag links as “chips” with consistent padding/border (instead of inline text + separators).
+- [ ] Add a "Featured/Selected" section at top (3–6 best projects) before the full list.
+- [ ] Add quick filters for content types: Projects vs Coursework vs Notes (if applicable).
+
+## Accessibility
+- [ ] Verify only one H1 per page and correct heading order (H1 → H2 → H3).
+- [ ] Ensure all interactive elements are keyboard reachable and have visible focus.
+- [ ] Ensure icon-only buttons have accessible names (aria-label).
+- [ ] Add a "Skip to content" link for keyboard users.
+- [ ] Ensure link styling is not color-only (underline on hover/focus, or always-underlined in body content).
+
+## Performance / Fit-and-Finish
+- [ ] Enable responsive images (srcset/sizes) and lazy-load thumbnails.
+- [ ] Compress thumbnails and enforce modern formats where possible (WebP/AVIF).
+- [ ] Prevent layout shift by reserving image dimensions (width/height or aspect-ratio).
+- [ ] Add consistent favicon + social preview (Open Graph) styling that matches the chosen accent color.
+- [ ] Audit spacing/alignment across themes to ensure dark/light mode feel equally “finished”.
+
 
 ---
 

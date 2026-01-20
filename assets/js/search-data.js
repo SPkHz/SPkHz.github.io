@@ -37,18 +37,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/2025-04-28-ee456-design-04-detailed-announcement/";
-          
-        },
-      },{id: "post-designing-an-8-ghz-negative-resistance-oscillator-with-an-atf-33143-gaas-phemt",
+        },{id: "post-designing-an-8-ghz-negative-resistance-oscillator-with-an-atf-33143-gaas-phemt",
         
           title: "Designing an 8 GHz Negative-Resistance Oscillator with an ATF-33143 GaAs pHEMT",
         
@@ -145,6 +134,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/ee-456-design-project-04/";
+          
+        },
+      },{id: "post-ee-456-design-project-04-published-mag-amplifier-design-amp-non-linear-simulation-8-ghz",
+        
+          title: "EE-456 Design Project 04 Published: MAG Amplifier Design &amp; Non-Linear Simulation (8 GHz)...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ee456-design-04-detailed-announcement/";
           
         },
       },{id: "post-ee-336-boost-converter-analysis",
@@ -678,9 +678,9 @@ ninja.data = [{
           description: "Extracting NMOS SPICE parameters (VTn, KN, VA) from automated SMU sweeps + Python analysis.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_01_transistor_characterization_methods/";
-            },},{id: "projects-",
-          title: '',
-          description: "",
+            },},{id: "projects-integrated-circuit-biasing-techniques",
+          title: 'Integrated Circuit Biasing Techniques',
+          description: "MOSFET-resistor bias vs. beta-multiplier bias using ALD1106/ALD1105 (LTSpice + breadboard). Focus: operating point accuracy and power-supply sensitivity.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_lab_02_ic_biasing_techniques/";
             },},{id: "projects-building-simulating-and-measuring-a-common-source-amplifier-with-an-active-load",
@@ -788,9 +788,9 @@ ninja.data = [{
           description: "Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_03_10_ghz_to_20_ghz_chebyshev_synthesis/";
-            },},{id: "projects-",
-          title: '',
-          description: "",
+            },},{id: "projects-design-project-04-published-mag-amplifier-design-amp-non-linear-simulation-8-ghz",
+          title: 'Design Project 04 Published: MAG Amplifier Design &amp;amp; Non-Linear Simulation (8 GHz)',
+          description: "Maximum-Available-Gain (MAG) amplifier design at 8 GHz using transmission-line + stub matching (ATF34143 pHEMT). Verified in MATLAB vs Keysight ADS; evaluated with 1 dB compression, harmonic balance, and two-tone IP3.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_04/";
             },},{id: "projects-design-of-an-8-ghz-oscillator-using-negative-resistance-atf-33143",

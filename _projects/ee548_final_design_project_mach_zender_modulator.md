@@ -23,12 +23,12 @@ Design a silicon photonic MZM using a **reverse-biased lateral pn junction** to 
 
 ### Target specifications
 
-| Metric | Requirement | Notes |
-|---|---:|---|
-| $V_\pi$ | $\le 5$ V | evaluated at **IL = 0.5 dB threshold** |
-| Peak insertion loss (IL) | $\le 0.5$ dB | ON-state optical loss budget |
-| Extinction ratio (ER) | $\ge 20$ dB | $\mathrm{ER}=P_\mathrm{max}-P_\mathrm{min}$ in dB |
-| $f_{\mathrm{3dB}}$ | $\ge 1$ GHz | **RC-limited** estimate with $R_{\mathrm{sig}}=50\,\Omega$ |
+| Metric                   |  Requirement | Notes                                                      |
+| ------------------------ | -----------: | ---------------------------------------------------------- |
+| $V_\pi$                  |    $\le 5$ V | evaluated at **IL = 0.5 dB threshold**                     |
+| Peak insertion loss (IL) | $\le 0.5$ dB | ON-state optical loss budget                               |
+| Extinction ratio (ER)    |  $\ge 20$ dB | $\mathrm{ER}=P_\mathrm{max}-P_\mathrm{min}$ in dB          |
+| $f_{\mathrm{3dB}}$       |  $\ge 1$ GHz | **RC-limited** estimate with $R_{\mathrm{sig}}=50\,\Omega$ |
 
 ---
 
@@ -59,13 +59,13 @@ where $\beta = k_0\,\Re\{n_{\mathrm{eff}}\}$ and $\alpha$ is derived from $\Im\{
 **Assigned waveguide width:** 540 nm  
 **Metal contact placement:** ≥ 1.0 µm from the optical mode center (used: **1.15 µm**) to suppress metal absorption.
 
-| Parameter | Value |
-|---|---:|
-| Waveguide width | 540 nm |
-| Rib height | 220 nm |
-| Slab thickness | 100 nm |
+| Parameter               |   Value |
+| ----------------------- | ------: |
+| Waveguide width         |  540 nm |
+| Rib height              |  220 nm |
+| Slab thickness          |  100 nm |
 | Contact-to-core spacing | 1.15 µm |
-| Operating wavelength | 1.55 µm |
+| Operating wavelength    | 1.55 µm |
 
 ---
 
@@ -93,12 +93,12 @@ The fundamental **TE mode** is solved using the MODE eigenmode solver.
 
 A **symmetric lateral pn junction** is formed across the waveguide core.
 
-| Region | Concentration |
-|---|---:|
-| p (Na) | $1\times10^{17}\ \mathrm{cm^{-3}}$ |
-| n (Nd) | $1\times10^{17}\ \mathrm{cm^{-3}}$ |
+| Region             |                      Concentration |
+| ------------------ | ---------------------------------: |
+| p (Na)             | $1\times10^{17}\ \mathrm{cm^{-3}}$ |
+| n (Nd)             | $1\times10^{17}\ \mathrm{cm^{-3}}$ |
 | p++ / n++ contacts | $1\times10^{19}\ \mathrm{cm^{-3}}$ |
-| Junction offset | 0 nm (centered) |
+| Junction offset    |                    0 nm (centered) |
 
 Design intent:
 
@@ -220,12 +220,12 @@ $$
 
 ### Summary table
 
-| Parameter | Achieved | Spec | Pass? |
-|---|---:|---:|:---:|
-| $V_\pi$ (at IL threshold) | **3.952 V** | ≤ 5.0 V | ✅ |
-| Peak IL | **0.302 dB** | ≤ 0.5 dB | ✅ |
-| ER | **22.69 dB** | ≥ 20 dB | ✅ |
-| $f_{\mathrm{3dB}}$ (RC-limited) | **2.245 GHz** | ≥ 1 GHz | ✅ |
+| Parameter                       |      Achieved |     Spec | Pass? |
+| ------------------------------- | ------------: | -------: | :---: |
+| $V_\pi$ (at IL threshold)       |   **3.952 V** |  ≤ 5.0 V |  ✅   |
+| Peak IL                         |  **0.302 dB** | ≤ 0.5 dB |  ✅   |
+| ER                              |  **22.69 dB** |  ≥ 20 dB |  ✅   |
+| $f_{\mathrm{3dB}}$ (RC-limited) | **2.245 GHz** |  ≥ 1 GHz |  ✅   |
 
 **Derived figure-of-merit:**
 

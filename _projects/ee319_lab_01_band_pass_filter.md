@@ -81,7 +81,7 @@ $$
 A_v(\text{mid}) \approx \frac{R_2}{R_1 + R_2}
 $$
 
-With \(R_1 = R_2\), the _first-order intuition_ is \(A_v(\text{mid})\approx 0.5\) (≈ −6.02 dB). The full network (exact nodal analysis) predicts a slightly smaller midband gain due to loading interaction between \(C_1\) and \(C_2\).
+With \(R*1 = R_2\), the \_first-order intuition* is \(A_v(\text{mid})\approx 0.5\) (≈ −6.02 dB). The full network (exact nodal analysis) predicts a slightly smaller midband gain due to loading interaction between \(C_1\) and \(C_2\).
 
 ### Corner-frequency estimates
 

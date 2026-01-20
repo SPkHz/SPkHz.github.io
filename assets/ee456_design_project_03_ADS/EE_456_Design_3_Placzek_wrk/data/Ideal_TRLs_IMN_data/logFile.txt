@@ -1,0 +1,22 @@
+
+hpeesofsim (*) 600.shp Apr  3 2024, MINT version 5
+    (64-bit windows built: Wed Apr 03, 2024 19:25:42 +0000)
+
+
+***** Simulation started at Sat Mar 22 11:21:18 2025
+      Running on host: "S217-J8KKZ24"
+      In Directory: "T:\!1A Aidan's Folder plz no delet\EE 456 Design 2_wrk\data"
+      Process ID: 11840
+
+Loading Post-Processing Module SPOutput (['IMN', 'touchstone', 'MA'] )
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with only one device attached (topology corrected): 1
+
+
+SP SP1[1] <EE 456 Design 1_lib:Ideal TRLs IMN:schematic>   freq=15 GHz
+
+Post-Processing Module 'PostProcessingModule'.process
+
+Resource usage:
+  Total stopwatch time     =    10.19 seconds.
+

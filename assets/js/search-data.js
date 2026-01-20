@@ -14,7 +14,7 @@ ninja.data = [{
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/blog/";
+            window.location.href = "/articles/index.html";
           },
         },{id: "nav-projects",
           title: "Projects",
@@ -25,10 +25,10 @@ ninja.data = [{
           },
         },{id: "nav-code",
           title: "Code",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
+          description: "Selected repositories showcasing electrical engineering projects, design work, and technical documentation.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/repositories/";
+            window.location.href = "/code/";
           },
         },{id: "nav-contact",
           title: "Contact",

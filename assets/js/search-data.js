@@ -623,6 +623,16 @@ ninja.data = [{
           description: "Transmission-line impedance matching in Keysight ADS — shunt-stub + quarter-wave transformer designs (ideal + microstrip), with Smith-chart synthesis and layout verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee314_design_01/";
+            },},{id: "projects-passive-rc-band-pass-filter-measurement-and-analysis",
+          title: 'Passive RC Band-Pass Filter Measurement and Analysis',
+          description: "Two-pole passive RC band-pass filter: analytic frequency response + LTspice AC sweep + Analog Discovery Studio measurements (MATLAB post-processing).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319_lab_01_band_pass_filter/";
+            },},{id: "projects-high-pass-filter-measurement-techniques",
+          title: 'High-Pass Filter Measurement Techniques',
+          description: "First-order RC high-pass filter characterization (theory vs. LTspice vs. WaveForms measurements) with MATLAB Bode magnitude/phase plots.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319_lab_01_high_pass_filter/";
             },},{id: "projects-low-pass-filter-measurement-and-analysis",
           title: 'Low-Pass Filter Measurement and Analysis',
           description: "First-order RC low-pass filter build + Bode measurement (10 Hz–100 kHz) with MATLAB/LTspice validation.",
@@ -658,16 +668,6 @@ ninja.data = [{
           description: "Differential-mode gain, common-mode gain, and CMRR for a single-op-amp difference amplifier and a 3-op-amp instrumentation amplifier (LM741).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319/lab-07/";
-            },},{id: "projects-passive-rc-band-pass-filter-measurement-and-analysis",
-          title: 'Passive RC Band-Pass Filter Measurement and Analysis',
-          description: "Two-pole passive RC band-pass filter: analytic frequency response + LTspice AC sweep + Analog Discovery Studio measurements (MATLAB post-processing).",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ee319_lab_01_band_pass_filter/";
-            },},{id: "projects-high-pass-filter-measurement-techniques",
-          title: 'High-Pass Filter Measurement Techniques',
-          description: "First-order RC high-pass filter characterization (theory vs. LTspice vs. WaveForms measurements) with MATLAB Bode magnitude/phase plots.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ee319_lab_01_high_pass_filter/";
             },},{id: "projects-ee-lab-ii-final-portfolio-spring-2025",
           title: 'EE Lab II Final Portfolio Spring 2025',
           description: "A complete compendium of labs from the spring &#39;25 semester, lab 01 through lab 08 (Please use ToC to navigate, everything is hyperlinked!) --&gt; MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).",
@@ -803,6 +803,21 @@ ninja.data = [{
           description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee470_design_01_servomotor_control_sys/";
+            },},{id: "projects-ee-548-lab-01-laser-beam-quality-m-measurements",
+          title: 'EE-548 Lab 01: Laser Beam Quality (M²) Measurements',
+          description: "ISO 11146 beam-quality comparison of single-mode (1550 nm) vs. multimode (850 nm) propagation through optical fiber.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee548_lab_01/";
+            },},{id: "projects-ee-548-lab-02-measuring-polarization-dependent-loss-pdl",
+          title: 'EE-548 Lab 02 — Measuring Polarization Dependent Loss (PDL)',
+          description: "All-States polarization sweep on a silicon photonic waveguide chip (1550 nm), with and without a fiber amplifier.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee548_lab_02/";
+            },},{id: "projects-ee-548-lab-03-polarization-dependent-loss-pdl-measurement",
+          title: 'EE-548 Lab 03 — Polarization-Dependent Loss (PDL) Measurement',
+          description: "4-state Mueller–Stokes PDL characterization (1520–1530 nm) and fringe/FSR interpretation for a silicon-photonic DUT.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee548_lab_03/";
             },},{
         id: 'social-cv',
         title: 'CV',

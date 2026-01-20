@@ -158,52 +158,25 @@
       "name": "RF & Microwave",
       "level": "",
       "icon": "fa-solid fa-wave-square",
-      "keywords": [
-        "Spectrum Analyzers",
-        "Waveguides",
-        "RF Detectors",
-        "RF Switches",
-        "RF Mixers",
-        "Millimeter-wave Systems"
-      ]
+      "keywords": ["Spectrum Analyzers", "Waveguides", "RF Detectors", "RF Switches", "RF Mixers", "Millimeter-wave Systems"]
     },
     {
       "name": "Software",
       "level": "",
       "icon": "fa-solid fa-code",
-      "keywords": [
-        "MATLAB",
-        "Python",
-        "TensorFlow",
-        "SciPy",
-        "NumPy",
-        "Matplotlib",
-        "Java"
-      ]
+      "keywords": ["MATLAB", "Python", "TensorFlow", "SciPy", "NumPy", "Matplotlib", "Java"]
     },
     {
       "name": "EDA Tools",
       "level": "",
       "icon": "fa-solid fa-microchip",
-      "keywords": [
-        "Keysight ADS",
-        "HFSS",
-        "LTspice",
-        "OrCAD",
-        "PSpice",
-        "Simulink"
-      ]
+      "keywords": ["Keysight ADS", "HFSS", "LTspice", "OrCAD", "PSpice", "Simulink"]
     },
     {
       "name": "Other",
       "level": "",
       "icon": "fa-solid fa-toolbox",
-      "keywords": [
-        "Wolfram Mathematica",
-        "OpenSCAD",
-        "3D Printing",
-        "MS Office"
-      ]
+      "keywords": ["Wolfram Mathematica", "OpenSCAD", "3D Printing", "MS Office"]
     }
   ],
   "languages": [
@@ -217,18 +190,12 @@
     {
       "name": "Amateur Radio",
       "icon": "fa-solid fa-tower-broadcast",
-      "keywords": [
-        "HF/VHF/UHF Operation",
-        "Callsign: KC1QNW"
-      ]
+      "keywords": ["HF/VHF/UHF Operation", "Callsign: KC1QNW"]
     },
     {
       "name": "Robotics",
       "icon": "fa-solid fa-robot",
-      "keywords": [
-        "Autonomous Systems",
-        "Maze-solving Robots"
-      ]
+      "keywords": ["Autonomous Systems", "Maze-solving Robots"]
     }
   ],
   "projects": [

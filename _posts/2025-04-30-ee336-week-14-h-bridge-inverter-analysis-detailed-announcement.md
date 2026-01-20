@@ -1,7 +1,4 @@
 ---
-
-
-
 layout: post
 title: "EE-336 Single-Phase H-Bridge Inverter Analysis"
 date: 2025-04-30 08:00:00-0400

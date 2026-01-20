@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Optimized Silicon Solar Cell Design
 description: Single-junction silicon PV cell optimized in ANSYS Lumerical DEVICE (AM1.5). 16.08% efficiency with Si3N4 ARC + Al contacts, plus cost and sustainability analysis.
@@ -50,19 +49,20 @@ This project models and optimizes a **planar, single-junction silicon solar cell
 
 ### Layer stack (modeled structure)
 
-| Layer | Material | Thickness |
-|---|---|---:|
-| Substrate | p-type Si | 100 µm |
-| N-emitter region | (doped region) | 1.5 µm |
-| Front contacts (n + p) | Al | 0.3 µm |
-| Anti-reflective coating (ARC) | Si₃N₄ | 2.5 µm |
-| Back contact | Al | 5 µm |
+| Layer                         | Material       | Thickness |
+| ----------------------------- | -------------- | --------: |
+| Substrate                     | p-type Si      |    100 µm |
+| N-emitter region              | (doped region) |    1.5 µm |
+| Front contacts (n + p)        | Al             |    0.3 µm |
+| Anti-reflective coating (ARC) | Si₃N₄          |    2.5 µm |
+| Back contact                  | Al             |      5 µm |
 
 ### Doping + resistive assumptions (performance-driven)
+
 - **p-type substrate:** ~1.0 Ω·cm class resistivity (selected as a tradeoff between field strength and recombination).
-- **Substrate doping:** ~2 × 10¹⁶ cm⁻³  
-- **n-emitter doping:** ~1 × 10¹⁷ cm⁻³ (collection vs. surface recombination balance)  
-- **contact doping:** ~1 × 10¹⁸ cm⁻³ (reduced contact resistance / ohmic behavior)  
+- **Substrate doping:** ~2 × 10¹⁶ cm⁻³
+- **n-emitter doping:** ~1 × 10¹⁷ cm⁻³ (collection vs. surface recombination balance)
+- **contact doping:** ~1 × 10¹⁸ cm⁻³ (reduced contact resistance / ohmic behavior)
 - **series resistance:** 1 Ω (keeps fill factor realistic without artificially inflating performance)
 
 ---
@@ -87,25 +87,26 @@ This project models and optimizes a **planar, single-junction silicon solar cell
 
 ### Electrical performance summary (AM1.5)
 
-| Metric | Value |
-|---|---:|
-| Short-circuit current density, Jsc | 34.5 mA/cm² |
-| Open-circuit voltage, Voc | 0.56 V |
-| Max power density, Pmax/A | 16.08 mW/cm² |
-| Fill factor, FF | 83.3% |
-| Efficiency, η | 16.08% |
+| Metric                             |        Value |
+| ---------------------------------- | -----------: |
+| Short-circuit current density, Jsc |  34.5 mA/cm² |
+| Open-circuit voltage, Voc          |       0.56 V |
+| Max power density, Pmax/A          | 16.08 mW/cm² |
+| Fill factor, FF                    |        83.3% |
+| Efficiency, η                      |       16.08% |
 
 Efficiency is computed in the standard way:
 \[
-\eta = \frac{J_{sc} V_{oc} FF}{P_{in}}
+\eta = \frac{J*{sc} V*{oc} FF}{P*{in}}
 \]
-with \\(P_{in}\\) set by the AM1.5 illumination condition used in the simulation.
+with \\(P*{in}\\) set by the AM1.5 illumination condition used in the simulation.
 
 ---
 
 ## Economic Sizing (Residential Back-of-the-Envelope)
 
 A simple sizing exercise estimates how many modules would be required to offset a typical **2000 sq.ft. home** using **~1000 kWh/month**:
+
 - Power density: **16.08 mW/cm² ≈ 160.8 W/m²**
 - 60-cell module area estimate: **~1.458 m²**
 - Module power: **~234.6 W**
@@ -119,6 +120,7 @@ A more realistic installed-cost estimate (including hardware + labor) is then de
 ## Sustainability + Impact Notes
 
 This design stays intentionally **boring (in a good way)**:
+
 - **c-Si + Al**: abundant materials, mature supply chain, and established recycling pathways.
 - Avoids rare/supply-constrained contact metals (e.g., silver-heavy approaches).
 - Long operational lifetime (**20–30+ years** typical for crystalline silicon PV) supports favorable lifetime energy return.

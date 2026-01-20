@@ -18,9 +18,9 @@ This report treats the Fourier Transform as an engineering instrument rather tha
 
 ## Topics Covered
 
-- **Signal analysis (Audio + ECG):** spectral content, interference separation, and frequency-domain filtering with time-domain reconstruction  
-- **Image processing:** frequency-domain representations, DCT context, and MRI reconstruction framing  
-- **Software-defined radio:** spectrum + waterfall interpretation and LTE-style spectral structure  
+- **Signal analysis (Audio + ECG):** spectral content, interference separation, and frequency-domain filtering with time-domain reconstruction
+- **Image processing:** frequency-domain representations, DCT context, and MRI reconstruction framing
+- **Software-defined radio:** spectrum + waterfall interpretation and LTE-style spectral structure
 - **Mechanical diagnostics:** FFT-based vibration analysis for resonance/forcing identification
 
 ---

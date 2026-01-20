@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Single-Phase H-Bridge Inverter Analysis
 description: H-bridge inverter switching analysis and load voltage waveform generation (MATLAB • Power Electronics • DC-AC Conversion).
@@ -44,13 +43,14 @@ The H-bridge inverter consists of two series-connected DC voltage sources (each 
 
 The H-bridge can produce three distinct output voltage levels based on which switch pairs are activated:
 
-| SW1 | SW2 | SW3 | SW4 | $$V_{\text{load}}$$ | Current Path |
-|:---:|:---:|:---:|:---:|:---:|:---|
-| ON | OFF | ON | OFF | $$+V_{in}$$ | Top-Left → Load → Bottom-Right |
-| OFF | ON | OFF | ON | $$-V_{in}$$ | Top-Right → Load → Bottom-Left |
-| Other combinations | | | | $$0$$ | No current or short-circuit protection |
+|        SW1         | SW2 | SW3 | SW4 | $$V_{\text{load}}$$ | Current Path                           |
+| :----------------: | :-: | :-: | :-: | :-----------------: | :------------------------------------- |
+|         ON         | OFF | ON  | OFF |     $$+V_{in}$$     | Top-Left → Load → Bottom-Right         |
+|        OFF         | ON  | OFF | ON  |     $$-V_{in}$$     | Top-Right → Load → Bottom-Left         |
+| Other combinations |     |     |     |        $$0$$        | No current or short-circuit protection |
 
 The key operating principle:
+
 - **SW1 & SW3 ON** (diagonal pair): Current flows left-to-right through load → $$V_{\text{load}} = +V_{in}$$
 - **SW2 & SW4 ON** (opposite diagonal): Current flows right-to-left through load → $$V_{\text{load}} = -V_{in}$$
 - **All other states**: Load voltage is zero (either both top/bottom switches ON, or no complete path)
@@ -126,6 +126,7 @@ end
 </div>
 
 The load voltage waveform exhibits a **quasi-square wave** pattern with the following characteristics:
+
 - **Period:** Approximately 8 time steps per full cycle
 - **Duty cycle:** Varies due to intermediate zero-voltage states
 - **Peak-to-peak voltage:** $$2V_{in}$$

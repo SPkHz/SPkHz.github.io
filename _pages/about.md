@@ -58,7 +58,7 @@ html[data-theme="dark"] .tag {
 
 {% assign featured = site.data.projects | where: "featured", true %}
 {% if featured.size == 0 %}
-  {% assign featured = site.data.projects | slice: 0, 3 %}
+{% assign featured = site.data.projects | slice: 0, 3 %}
 {% endif %}
 
 <div class="row">
@@ -86,6 +86,7 @@ html[data-theme="dark"] .tag {
         </div>
       </div>
     </div>
+
   </div>
 {% endfor %}
 </div>

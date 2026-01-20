@@ -1,7 +1,4 @@
 ---
-
-
-
 layout: post
 title: "Common-Source MOSFET Amplifier Characterization"
 date: 2024-11-19 10:33:00-0400

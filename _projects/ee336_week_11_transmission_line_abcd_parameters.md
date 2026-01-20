@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Transmission Line ABCD Parameters
 description: 100-mile transmission line analysis using two-port ABCD parameters and the nominal π-model (60 Hz power system).
@@ -29,11 +28,11 @@ This assignment analyzes a **100-mile transmission line** using **two-port ABCD 
 
 Consider a 100-mile transmission line operating at 60 Hz with the following per-unit-length parameters:
 
-| Parameter | Symbol | Value |
-|:----------|:------:|------:|
-| Series Inductance | $L$ | $10 \times 10^{-3}$ H/mi |
-| Series Resistance | $R$ | $10 \times 10^{-3}$ Ω/mi |
-| Shunt Capacitance | $C$ | $10 \times 10^{-6}$ F/mi |
+| Parameter         | Symbol |                    Value |
+| :---------------- | :----: | -----------------------: |
+| Series Inductance |  $L$   | $10 \times 10^{-3}$ H/mi |
+| Series Resistance |  $R$   | $10 \times 10^{-3}$ Ω/mi |
+| Shunt Capacitance |  $C$   | $10 \times 10^{-6}$ F/mi |
 
 Given the two-port ABCD parameter relationships between sending-end and receiving-end quantities:
 
@@ -178,12 +177,12 @@ The large imaginary component ($j377$ Ω) versus the small real component ($1$ �
 
 For completeness, the full set of ABCD parameters for the nominal π-model are:
 
-| Parameter | Formula | Expression |
-|:---------:|:-------:|:-----------|
-| $A$ | $1 + \frac{ZY}{2}$ | $A = 1 + \frac{(1+j377)(j0.377)}{2}$ |
-| $B$ | $Z$ | $B = 1 + j377$ Ω |
-| $C$ | $Y\left(1 + \frac{ZY}{4}\right)$ | $C = (j0.377)\left(1 + \frac{(1+j377)(j0.377)}{4}\right)$ S |
-| $D$ | $1 + \frac{ZY}{2}$ | $D = A$ (symmetric line) |
+| Parameter |             Formula              | Expression                                                  |
+| :-------: | :------------------------------: | :---------------------------------------------------------- |
+|    $A$    |        $1 + \frac{ZY}{2}$        | $A = 1 + \frac{(1+j377)(j0.377)}{2}$                        |
+|    $B$    |               $Z$                | $B = 1 + j377$ Ω                                            |
+|    $C$    | $Y\left(1 + \frac{ZY}{4}\right)$ | $C = (j0.377)\left(1 + \frac{(1+j377)(j0.377)}{4}\right)$ S |
+|    $D$    |        $1 + \frac{ZY}{2}$        | $D = A$ (symmetric line)                                    |
 
 Where $Y = j\omega C_{total} = j(376.99)(10^{-3}) = j0.377$ S
 
@@ -218,7 +217,8 @@ Where $Y = j\omega C_{total} = j(376.99)(10^{-3}) = j0.377$ S
 ## Notes
 
 This analysis assumes a balanced three-phase system represented by per-phase equivalent circuit. Real transmission lines may require more detailed modeling including:
+
 - Corona losses at high voltages
-- Skin effect at higher frequencies  
+- Skin effect at higher frequencies
 - Temperature-dependent resistance
 - Transposition for balanced inductance

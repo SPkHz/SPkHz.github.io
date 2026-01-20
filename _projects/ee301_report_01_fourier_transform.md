@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Fourier Transform Applications for Signal Analysis in Electrical Engineering
 description: Fourier Transform applications across audio, ECG, imaging, SDR spectrum analysis, and vibration diagnostics (MATLAB-based examples).

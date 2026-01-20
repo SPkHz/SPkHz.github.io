@@ -1,7 +1,4 @@
 ---
-
-
-
 layout: post
 title: "EE-336 Transmission Line ABCD Parameters"
 date: 2025-04-14 08:00:00-0400

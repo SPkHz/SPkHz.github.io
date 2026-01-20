@@ -1,7 +1,6 @@
 ---
-
 layout: page
-title: Laplace Transform Applications for System Analysis in Electrical Engineering 
+title: Laplace Transform Applications for System Analysis in Electrical Engineering
 description: Applications of the Laplace Transform across neural decoding (BCIs), DC-DC converter stability, electromagnetic partial inductance modeling, and memristor simulation.
 img: assets/img/ee301/ee301-lt-banner.jpg
 category: coursework

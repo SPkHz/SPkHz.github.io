@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Analysis of the MOS Differential Pair (Single-Ended vs. Differential Signaling)
 description: Characterization a MOS differential pair (ALD1105) in DC and AC; compare single-ended vs differential output and quantify CMRR.
@@ -19,12 +18,12 @@ tags:
 
 ## Overview
 
-  - **Course:** EE-322 — Electronics Lab II
-  - **Project:** Laboratory Portfolio Notebook Entry
-  - **Title:** Lab 06 -- MOS Differential Pair: Single-Ended vs. Differential Signaling
-  - **Author:** Steven Placzek
-  - **Date:** 2025-03-31
-  - **Tools:** Analog Discovery Studio • LTspice
+- **Course:** EE-322 — Electronics Lab II
+- **Project:** Laboratory Portfolio Notebook Entry
+- **Title:** Lab 06 -- MOS Differential Pair: Single-Ended vs. Differential Signaling
+- **Author:** Steven Placzek
+- **Date:** 2025-03-31
+- **Tools:** Analog Discovery Studio • LTspice
 
 ---
 
@@ -62,20 +61,20 @@ The main goal is to quantify how differential signaling improves **common-mode r
 
 **Nominal circuit parameters** (per lab handout):
 
-- \(V_{DD} = +12\,\text{V}\), \(V_{SS} = -12\,\text{V}\)
+- \(V*{DD} = +12\,\text{V}\), \(V*{SS} = -12\,\text{V}\)
 - \(R_D = 18\,\text{k}\Omega\) (two resistors)
-- \(R_{CS} = 10\,\text{k}\Omega\)
-- \(V_{I1} = V_{I2} = 0\,\text{V}\) for the DC operating point
+- \(R\_{CS} = 10\,\text{k}\Omega\)
+- \(V*{I1} = V*{I2} = 0\,\text{V}\) for the DC operating point
 
 ---
 
 ## Measured resistor values
 
-| Quantity | Measured | Units |
-|---|---:|:---:|
-| \(R_D\) (left) | 18.025 | kΩ |
-| \(R_D\) (right) | 17.975 | kΩ |
-| \(R_{CS}\) | 9.839 | kΩ |
+| Quantity        | Measured | Units |
+| --------------- | -------: | :---: |
+| \(R_D\) (left)  |   18.025 |  kΩ   |
+| \(R_D\) (right) |   17.975 |  kΩ   |
+| \(R\_{CS}\)     |    9.839 |  kΩ   |
 
 ---
 
@@ -84,17 +83,17 @@ The main goal is to quantify how differential signaling improves **common-mode r
 The DC operating point was measured at the drain and source nodes and compared against LTspice.
 
 | Device | Quantity | Simulated | Measured | Units |
-|---|---|---:|---:|:---:|
-| Q1 | \(I_D\) | 562.943 | 483.141 | µA |
-| Q1 | \(|V_{OV}|\) | 1.407 | 1.141 | V |
-| Q1 | \(V_G\) | 0.000 | 0.000 | V |
-| Q1 | \(V_D\) | 3.063 | 2.896 | V |
-| Q1 | \(V_S\) | -1.891 | -1.820 | V |
-| Q2 | \(I_D\) | 558.043 | 524.011 | µA |
-| Q2 | \(|V_{OV}|\) | 1.407 | 1.140 | V |
-| Q2 | \(V_G\) | 0.000 | 0.000 | V |
-| Q2 | \(V_D\) | 2.060 | 2.011 | V |
-| Q2 | \(V_S\) | -1.700 | -1.819 | V |
+| ------ | -------- | --------: | -------: | :---: | ----- | --- |
+| Q1     | \(I_D\)  |   562.943 |  483.141 |  µA   |
+| Q1     | \(       |   V\_{OV} |       \) | 1.407 | 1.141 | V   |
+| Q1     | \(V_G\)  |     0.000 |    0.000 |   V   |
+| Q1     | \(V_D\)  |     3.063 |    2.896 |   V   |
+| Q1     | \(V_S\)  |    -1.891 |   -1.820 |   V   |
+| Q2     | \(I_D\)  |   558.043 |  524.011 |  µA   |
+| Q2     | \(       |   V\_{OV} |       \) | 1.407 | 1.140 | V   |
+| Q2     | \(V_G\)  |     0.000 |    0.000 |   V   |
+| Q2     | \(V_D\)  |     2.060 |    2.011 |   V   |
+| Q2     | \(V_S\)  |    -1.700 |   -1.819 |   V   |
 
 ---
 
@@ -105,7 +104,7 @@ The DC operating point was measured at the drain and source nodes and compared a
 For a differential pair, the small-signal metrics of interest are:
 
 - **Differential gain** \(A_d\)
-- **Common-mode gain** \(A_{cm}\)
+- **Common-mode gain** \(A\_{cm}\)
 - **Common-mode rejection ratio** (CMRR)
 
 The CMRR is defined as:
@@ -116,8 +115,8 @@ $$
 
 ### Measurement modes
 
-- **Differential input:** equal-amplitude sinusoids applied to \(v_{I1}\) and \(v_{I2}\), **180° out of phase**, with both generators synchronized and properly biased.
-- **Common-mode input:** identical sinusoids applied to \(v_{I1}\) and \(v_{I2}\), **in phase**, synchronized and biased.
+- **Differential input:** equal-amplitude sinusoids applied to \(v*{I1}\) and \(v*{I2}\), **180° out of phase**, with both generators synchronized and properly biased.
+- **Common-mode input:** identical sinusoids applied to \(v*{I1}\) and \(v*{I2}\), **in phase**, synchronized and biased.
 
 ---
 
@@ -125,23 +124,23 @@ $$
 
 ### Single-ended output (node \(V_Y\) w.r.t. ground)
 
-| Quantity | Simulated | Measured | Units |
-|---|---:|---:|:---:|
-| \(A_d\) | 6.018 | 6.205 | V/V |
-| \(A_d\) | 15.580 | 15.801 | dB |
-| \(A_{cm}\) | 0.840 | 0.499 | V/V |
-| \(A_{cm}\) | -1.515 | -5.924 | dB |
-| CMRR | 17.104 | 21.724 | dB |
+| Quantity    | Simulated | Measured | Units |
+| ----------- | --------: | -------: | :---: |
+| \(A_d\)     |     6.018 |    6.205 |  V/V  |
+| \(A_d\)     |    15.580 |   15.801 |  dB   |
+| \(A\_{cm}\) |     0.840 |    0.499 |  V/V  |
+| \(A\_{cm}\) |    -1.515 |   -5.924 |  dB   |
+| CMRR        |    17.104 |   21.724 |  dB   |
 
 ### Differential output (\(V_Y - V_X\))
 
-| Quantity | Simulated | Measured | Units |
-|---|---:|---:|:---:|
-| \(A_d\) | 12.020 | 12.024 | V/V |
-| \(A_d\) | 21.598 | 21.578 | dB |
-| \(A_{cm}\) | 0.001 | 0.053 | V/V |
-| \(A_{cm}\) | -61.379 | -26.760 | dB |
-| CMRR | 59.872 | 48.328 | dB |
+| Quantity    | Simulated | Measured | Units |
+| ----------- | --------: | -------: | :---: |
+| \(A_d\)     |    12.020 |   12.024 |  V/V  |
+| \(A_d\)     |    21.598 |   21.578 |  dB   |
+| \(A\_{cm}\) |     0.001 |    0.053 |  V/V  |
+| \(A\_{cm}\) |   -61.379 |  -26.760 |  dB   |
+| CMRR        |    59.872 |   48.328 |  dB   |
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -163,7 +162,7 @@ $$
 \text{If } v_x = v_s + v_n \text{ and } v_y = -v_s + v_n, \quad (v_y - v_x) = -2v_s.
 $$
 
-Any **common-mode disturbance** \(v_n\) that couples similarly onto both nodes cancels in the subtraction. Practical limitations (finite device mismatch, finite tail resistance, measurement resolution, generator alignment, etc.) keep \(A_{cm}\) from reaching zero in the lab.
+Any **common-mode disturbance** \(v*n\) that couples similarly onto both nodes cancels in the subtraction. Practical limitations (finite device mismatch, finite tail resistance, measurement resolution, generator alignment, etc.) keep \(A*{cm}\) from reaching zero in the lab.
 
 ---
 
@@ -177,8 +176,8 @@ $$
 
 The normalized plots below illustrate:
 
-- **Current steering:** \(I_{D1}\) increases while \(I_{D2}\) decreases as \(\Delta v_{in}\) becomes positive.
-- **Transconductance:** \(g_m\) peaks near \(\Delta v_{in}=0\) and falls toward 0 as one device approaches cutoff.
+- **Current steering:** \(I*{D1}\) increases while \(I*{D2}\) decreases as \(\Delta v\_{in}\) becomes positive.
+- **Transconductance:** \(g*m\) peaks near \(\Delta v*{in}=0\) and falls toward 0 as one device approaches cutoff.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">

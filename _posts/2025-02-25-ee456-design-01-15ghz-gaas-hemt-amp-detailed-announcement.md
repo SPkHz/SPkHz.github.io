@@ -1,7 +1,4 @@
 ---
-
-
-
 layout: post
 title: "15 GHz GaAs HEMT Amplifier Design"
 date: 2025-02-25 08:24:00-0500

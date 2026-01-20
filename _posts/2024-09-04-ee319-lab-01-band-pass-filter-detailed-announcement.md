@@ -1,8 +1,4 @@
 ---
-
-
-
-
 layout: post
 title: "EE-319 Lab 01 — Passive RC Band-Pass Filter"
 date: 2024-09-04 08:04:00-0400

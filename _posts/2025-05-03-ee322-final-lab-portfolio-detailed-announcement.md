@@ -1,7 +1,4 @@
 ---
-
-
-
 layout: post
 title: "eeLab II — Final Lab Portfolio"
 date: 2025-05-03 07:03:00-0400

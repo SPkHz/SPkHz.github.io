@@ -1,7 +1,4 @@
 ---
-
-
-
 layout: post
 title: "Fourier Transform Applications for Signal Analysis in Electrical Engineering"
 date: 2024-11-27 09:11:00-0500

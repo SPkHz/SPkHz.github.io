@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: 15 GHz Low-Noise Amplifier Input/Output Matching Network Design
 description: 15 GHz LNA IMN/OMN for the MGF4941AL (VDS = 2 V, IDS = 10 mA). Joint gain/NF/VSWR optimization with MATLAB + Keysight ADS cross-verification.
@@ -36,11 +35,12 @@ _styles: |
 **Tools:** Keysight ADS (circuit verification) + MATLAB (Touchstone workflows, Smith chart synthesis, S-parameter comparison)  
 **Frequency:** \\(f_0 = 15~\text{GHz}\\) (sweep ~14–16 GHz)
 
-Design Project 02 for EE-456 (RF & mm-Wave Active Circuits): a **15 GHz LNA matching design** for the **MGF4941AL InGaAs HEMT** at **\\(V_{DS}=2~\text{V}\\)** and **\\(I_{DS}=10~\text{mA}\\)**.
+Design Project 02 for EE-456 (RF & mm-Wave Active Circuits): a **15 GHz LNA matching design** for the **MGF4941AL InGaAs HEMT** at **\\(V\_{DS}=2~\text{V}\\)** and **\\(I\_{DS}=10~\text{mA}\\)**.
 
-Unlike a pure max-gain match, this design targets the *intersection* of constraints: **transducer gain**, **noise figure**, and **input/output VSWR**, then validates the final solution independently in **MATLAB** and **Keysight ADS**.
+Unlike a pure max-gain match, this design targets the _intersection_ of constraints: **transducer gain**, **noise figure**, and **input/output VSWR**, then validates the final solution independently in **MATLAB** and **Keysight ADS**.
 
 **Project Targets @ \\(f_0\\):**
+
 - \\(G_T \ge 12~\text{dB}\\)
 - \\(NF \le 0.6~\text{dB}\\)
 - \\(\text{VSWR} \le 1.5\\) (input + output)
@@ -76,8 +76,9 @@ At \\(15~\text{GHz}\\), the selected terminations are:
 - VSWR (OMN) \\(= \mathbf{1.39}\\)
 
 **Electrical lengths (open-stub TL networks):**
-- **IMN:** \\(\theta_{I1}=43.25^\circ\\) (series TL), \\(\theta_{I2}=10.42^\circ\\) (open shunt stub)
-- **OMN:** \\(\theta_{O1}=31.26^\circ\\) (series TL), \\(\theta_{O2}=53.52^\circ\\) (open shunt stub)
+
+- **IMN:** \\(\theta*{I1}=43.25^\circ\\) (series TL), \\(\theta*{I2}=10.42^\circ\\) (open shunt stub)
+- **OMN:** \\(\theta*{O1}=31.26^\circ\\) (series TL), \\(\theta*{O2}=53.52^\circ\\) (open shunt stub)
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -96,6 +97,7 @@ At \\(15~\text{GHz}\\), the selected terminations are:
 </div>
 
 **Repository Contents:**
+
 - Slides (**PDF/PPTX**) + plots/screenshots used in slide deck
 - **MATLAB** (design + verification scripts)
 - **ADS** project (schematics + simulations)

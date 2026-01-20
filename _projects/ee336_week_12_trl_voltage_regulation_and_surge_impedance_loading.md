@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Transmission Line Analysis
 description: Voltage regulation and surge impedance loading analysis for power transmission lines (MATLAB/Python • Two-port networks • SIL concepts).
@@ -31,12 +30,13 @@ This assignment analyzes **transmission line voltage regulation** and **surge im
 A transmission line's sending-end and receiving-end quantities are related by ABCD parameters:
 
 $$
-\begin{bmatrix} \tilde{V}_S \\ \tilde{I}_S \end{bmatrix} = 
+\begin{bmatrix} \tilde{V}_S \\ \tilde{I}_S \end{bmatrix} =
 \begin{bmatrix} A & B \\ C & D \end{bmatrix}
 \begin{bmatrix} \tilde{V}_R \\ \tilde{I}_R \end{bmatrix}
 $$
 
 Given parameters:
+
 - $$A = D = 0.97\angle 0.2°$$
 - $$B = 68\angle 88° \, \Omega$$
 - $$C = 1 \times 10^{-3}\angle 90° \, S$$
@@ -114,6 +114,7 @@ $$
 ### Problem Statement
 
 Consider two 115 kV transmission lines:
+
 - **Line 1:** $$Z_c = 400 \, \Omega$$, carrying 35 MW
 - **Line 2:** $$Z_c = 350 \, \Omega$$, carrying 36 MW
 
@@ -155,13 +156,14 @@ $$
 
 The voltage profile along a transmission line depends on the load relative to SIL:
 
-| Condition | Voltage Profile |
-|:----------|:----------------|
+| Condition  | Voltage Profile                      |
+| :--------- | :----------------------------------- |
 | Load < SIL | $$\|V_R\| > \|V_S\|$$ (voltage rise) |
 | Load = SIL | $$\|V_R\| = \|V_S\|$$ (flat profile) |
 | Load > SIL | $$\|V_R\| < \|V_S\|$$ (voltage drop) |
 
 Comparing loads to SIL:
+
 - **Line 1:** Load (35 MW) > SIL₁ (33 MW) → **Overloaded** → $$|V_R| < |V_S|$$
 - **Line 2:** Load (36 MW) < SIL₂ (38 MW) → **Underloaded** → $$|V_R| > |V_S|$$
 
@@ -208,6 +210,7 @@ A lower voltage regulation indicates better voltage stability under varying load
 ### Surge Impedance Loading (SIL)
 
 SIL represents the "natural" loading of a transmission line where reactive power generation by line capacitance equals reactive power absorption by line inductance. At SIL:
+
 - No net reactive power flow
 - Flat voltage profile ($$|V_R| = |V_S|$$)
 - Maximum power transfer efficiency
@@ -218,20 +221,20 @@ Operating **below SIL** causes the line to act as a capacitive reactive source (
 
 ## Summary of Results
 
-| Problem | Quantity | Value |
-|:--------|:---------|:------|
-| 1 | Receiving-end current $$I_{R,FL}$$ | $$884\angle -8.11°$$ A |
-| 1 | Sending-end voltage $$V_S$$ | $$336.1\angle 10.3°$$ kV |
-| 1 | No-load receiving voltage $$\|V_{R,NL}\|$$ | 346.5 kV |
-| 1 | **Voltage Regulation** | **5%** |
-| 2 | SIL₁ (Line 1) | 33 MW |
-| 2 | SIL₂ (Line 2) | 38 MW |
-| 2(a) | **Higher $$\|V_R\|$$** | **Line 2** |
-| 2(b) | **More heavily loaded** | **Line 1** |
+| Problem | Quantity                                   | Value                    |
+| :------ | :----------------------------------------- | :----------------------- |
+| 1       | Receiving-end current $$I_{R,FL}$$         | $$884\angle -8.11°$$ A   |
+| 1       | Sending-end voltage $$V_S$$                | $$336.1\angle 10.3°$$ kV |
+| 1       | No-load receiving voltage $$\|V_{R,NL}\|$$ | 346.5 kV                 |
+| 1       | **Voltage Regulation**                     | **5%**                   |
+| 2       | SIL₁ (Line 1)                              | 33 MW                    |
+| 2       | SIL₂ (Line 2)                              | 38 MW                    |
+| 2(a)    | **Higher $$\|V_R\|$$**                     | **Line 2**               |
+| 2(b)    | **More heavily loaded**                    | **Line 1**               |
 
 ---
 
 ## References
 
-1. Glover, J.D., Overbye, T.J., & Sarma, M.S. (2017). *Power System Analysis and Design* (6th ed.). Cengage Learning.
-2. Bergen, A.R., & Vittal, V. (2000). *Power Systems Analysis* (2nd ed.). Prentice Hall.
+1. Glover, J.D., Overbye, T.J., & Sarma, M.S. (2017). _Power System Analysis and Design_ (6th ed.). Cengage Learning.
+2. Bergen, A.R., & Vittal, V. (2000). _Power Systems Analysis_ (2nd ed.). Prentice Hall.

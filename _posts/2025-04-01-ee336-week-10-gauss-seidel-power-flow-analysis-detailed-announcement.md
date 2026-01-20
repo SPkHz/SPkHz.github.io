@@ -1,7 +1,4 @@
 ---
-
-
-
 layout: post
 title: "EE-336 Gauss-Seidel Power Flow Analysis"
 date: 2025-04-01 08:00:00-0400

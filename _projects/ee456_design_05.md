@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Design of an 8 GHz Oscillator using Negative-Resistance (ATF-33143)
 description: Negative-resistance oscillator synthesis at 8 GHz using common-gate conversion, feedback-reactance optimization, and transmission-line termination/resonator networks (MATLAB • Touchstone).
@@ -37,10 +36,10 @@ _styles: |
 **Author:** Steven Placzek  
 **Date:** 2025-05-08  
 **Frequency:** 8 GHz  
-**Device / Bias:** ATF-33143 GaAs pHEMT @ \(V_{DS} = 4\ \text{V}\), \(I_{DS} = 80\ \text{mA}\)  
+**Device / Bias:** ATF-33143 GaAs pHEMT @ \(V*{DS} = 4\ \text{V}\), \(I*{DS} = 80\ \text{mA}\)  
 **Tooling:** MATLAB (Touchstone I/O, indefinite-admittance conversion, parameter sweeps)
 
-This project follows the **negative-resistance oscillator workflow**: convert the device to **common-gate**, add **gate feedback reactance** to drive the input toward instability, then synthesize **termination** and **resonator** networks (ideal transmission lines) to realize target reflection coefficients and verify the resulting \(\Gamma_{\text{in}}\) and \(Z_{\text{in}}\) at 8 GHz.
+This project follows the **negative-resistance oscillator workflow**: convert the device to **common-gate**, add **gate feedback reactance** to drive the input toward instability, then synthesize **termination** and **resonator** networks (ideal transmission lines) to realize target reflection coefficients and verify the resulting \(\Gamma*{\text{in}}\) and \(Z*{\text{in}}\) at 8 GHz.
 
 ---
 
@@ -48,12 +47,12 @@ This project follows the **negative-resistance oscillator workflow**: convert th
 
 - \(f_0 = 8\ \text{GHz}\), \(Z_0 = 50\ \Omega\)
 - **Convert** common-source S-parameters → **common-gate**
-- **Optimize** gate feedback reactance \(X_B\) to maximize \(\lvert S_{11}\rvert\) (common-gate)
+- **Optimize** gate feedback reactance \(X*B\) to maximize \(\lvert S*{11}\rvert\) (common-gate)
 - **Replace** \(X_B\) with an **ideal short-circuited transmission-line stub**
 - **Synthesize:**
   - **Drain termination network** to realize \(\Gamma_T\)
   - **Source resonator network** to realize \(\Gamma_R\)
-- **Verify** \(\Gamma_{\text{in}}\) and \(Z_{\text{in}}\) with the termination attached
+- **Verify** \(\Gamma*{\text{in}}\) and \(Z*{\text{in}}\) with the termination attached
 
 Core relationship used for verification:
 
@@ -97,27 +96,27 @@ $$
 
 **Common-source S-parameters @ 8 GHz (from Touchstone):**
 
-| Parameter | Magnitude | Phase |
-|:--:|:--:|:--:|
-| \(S_{11}\) | 0.7373 | +84.18° |
-| \(S_{12}\) | 0.1486 | −33.05° |
-| \(S_{21}\) | 1.7979 | −22.87° |
-| \(S_{22}\) | 0.2815 | +83.13° |
+|  Parameter  | Magnitude |  Phase  |
+| :---------: | :-------: | :-----: |
+| \(S\_{11}\) |  0.7373   | +84.18° |
+| \(S\_{12}\) |  0.1486   | −33.05° |
+| \(S\_{21}\) |  1.7979   | −22.87° |
+| \(S\_{22}\) |  0.2815   | +83.13° |
 
 **Common-gate S-parameters @ 8 GHz:**
 
-| Parameter | Magnitude | Phase |
-|:--:|:--:|:--:|
-| \(S_{11}\) | 1.0823 | −17.95° |
-| \(S_{12}\) | 0.9455 | −26.68° |
-| \(S_{21}\) | 1.9676 | +96.82° |
-| \(S_{22}\) | 1.3885 | +81.73° |
+|  Parameter  | Magnitude |  Phase  |
+| :---------: | :-------: | :-----: |
+| \(S\_{11}\) |  1.0823   | −17.95° |
+| \(S\_{12}\) |  0.9455   | −26.68° |
+| \(S\_{21}\) |  1.9676   | +96.82° |
+| \(S\_{22}\) |  1.3885   | +81.73° |
 
 ---
 
 ## Task 2 — Optimum Gate Feedback Reactance
 
-A parametric sweep of \(X_B \in [-300, +300]\ \Omega\) was used to maximize \(\lvert S_{11}\rvert\) in common-gate configuration.
+A parametric sweep of \(X*B \in [-300, +300]\ \Omega\) was used to maximize \(\lvert S*{11}\rvert\) in common-gate configuration.
 
 ### Feedback Analysis
 
@@ -147,12 +146,12 @@ $$
 
 **Common-gate S-parameters with optimum \(X_B\) @ 8 GHz:**
 
-| Parameter | Magnitude | Phase |
-|:--:|:--:|:--:|
-| \(S_{11}\) | 1.2295 | +17.05° |
-| \(S_{12}\) | 1.2486 | −12.55° |
-| \(S_{21}\) | 1.4692 | +123.23° |
-| \(S_{22}\) | 1.4487 | +102.96° |
+|  Parameter  | Magnitude |  Phase   |
+| :---------: | :-------: | :------: |
+| \(S\_{11}\) |  1.2295   | +17.05°  |
+| \(S\_{12}\) |  1.2486   | −12.55°  |
+| \(S\_{21}\) |  1.4692   | +123.23° |
+| \(S\_{22}\) |  1.4487   | +102.96° |
 
 ---
 
@@ -168,7 +167,7 @@ $$
 Z_{\text{SC}} = jZ_0 \tan(\theta_x)
 $$
 
-Setting \(Z_{\text{SC}} = jX_B\):
+Setting \(Z\_{\text{SC}} = jX_B\):
 
 $$
 \theta_x = \arctan\left(\frac{X_B}{Z_0}\right) = \arctan\left(\frac{130}{50}\right)
@@ -190,7 +189,7 @@ $$
 \ell = \frac{\theta_x}{2\pi} \cdot \lambda_0 = 2.190\ \text{mm}
 $$
 
-*(Physical length depends on actual propagation velocity if implemented on a substrate.)*
+_(Physical length depends on actual propagation velocity if implemented on a substrate.)_
 
 ---
 
@@ -227,7 +226,7 @@ $$
 y_T = \frac{1}{z_T}
 $$
 
-Using single-stub matching, the series line rotates the load admittance on the Smith chart, and the shunt stub cancels the susceptance. The network parameters were determined via contour sweeps over \((θ_{T1}, θ_{T2})\) design space (see plots below).
+Using single-stub matching, the series line rotates the load admittance on the Smith chart, and the shunt stub cancels the susceptance. The network parameters were determined via contour sweeps over \((θ*{T1}, θ*{T2})\) design space (see plots below).
 
 ---
 
@@ -300,16 +299,16 @@ $$
 
 ## Results Summary
 
-| Parameter | Value | Notes |
-|:--|--:|:--|
-| \(X_B\) | 130 Ω | Maximizes \(\lvert S_{11}\rvert\) (common-gate) |
-| \(L_B\) | 2.586 nH | Equivalent lumped inductance |
-| \(\theta_x\) | 0.3672 rad (21.04°) | Feedback stub electrical length |
-| \(\Gamma_T\) | \(0.5000 \angle 162.019°\) | Drain termination reflection coefficient |
-| \(Z_{\text{in}}\) | 146.305 Ω | With termination attached |
-| \(\Gamma_{\text{in}}\) | \(0.8403 \angle -17.172°\) | With termination attached |
-| \(\tilde{Z}_R\) | 8.8188 Ω | Extracted term (course method) |
-| \(\Gamma_R\) | \(0.7500 \angle -127.733°\) | Source resonator reflection coefficient |
+| Parameter               |                       Value | Notes                                            |
+| :---------------------- | --------------------------: | :----------------------------------------------- |
+| \(X_B\)                 |                       130 Ω | Maximizes \(\lvert S\_{11}\rvert\) (common-gate) |
+| \(L_B\)                 |                    2.586 nH | Equivalent lumped inductance                     |
+| \(\theta_x\)            |         0.3672 rad (21.04°) | Feedback stub electrical length                  |
+| \(\Gamma_T\)            |  \(0.5000 \angle 162.019°\) | Drain termination reflection coefficient         |
+| \(Z\_{\text{in}}\)      |                   146.305 Ω | With termination attached                        |
+| \(\Gamma\_{\text{in}}\) |  \(0.8403 \angle -17.172°\) | With termination attached                        |
+| \(\tilde{Z}\_R\)        |                    8.8188 Ω | Extracted term (course method)                   |
+| \(\Gamma_R\)            | \(0.7500 \angle -127.733°\) | Source resonator reflection coefficient          |
 
 ---
 
@@ -336,15 +335,15 @@ $$
 
 The oscillator design follows the **negative-resistance** approach:
 
-1. **Device configuration:** Common-gate topology naturally provides higher \(\lvert S_{11}\rvert\) than common-source, facilitating the required instability.
+1. **Device configuration:** Common-gate topology naturally provides higher \(\lvert S\_{11}\rvert\) than common-source, facilitating the required instability.
 
-2. **Feedback optimization:** Inductive feedback at the gate increases \(\lvert S_{11}\rvert\) beyond unity, creating negative resistance at the input port.
+2. **Feedback optimization:** Inductive feedback at the gate increases \(\lvert S\_{11}\rvert\) beyond unity, creating negative resistance at the input port.
 
-3. **Termination network:** The drain termination presents \(\Gamma_T\) such that when combined with device S-parameters, \(\Gamma_{\text{in}}\) has sufficient magnitude for oscillation.
+3. **Termination network:** The drain termination presents \(\Gamma*T\) such that when combined with device S-parameters, \(\Gamma*{\text{in}}\) has sufficient magnitude for oscillation.
 
 4. **Resonator network:** Must satisfy both conditions:
-   - **Start-up:** \(\lvert\Gamma_{\text{in}} \cdot \Gamma_R\rvert > 1\)
-   - **Resonance:** \(\angle(\Gamma_{\text{in}} \cdot \Gamma_R) = 0°\)
+   - **Start-up:** \(\lvert\Gamma\_{\text{in}} \cdot \Gamma_R\rvert > 1\)
+   - **Resonance:** \(\angle(\Gamma\_{\text{in}} \cdot \Gamma_R) = 0°\)
 
 ---
 
@@ -352,7 +351,7 @@ The oscillator design follows the **negative-resistance** approach:
 
 - **MATLAB synthesis scripts:** indefinite-Y conversion, feedback sweep, stability metrics, \(\Gamma\) sweeps
 - **Touchstone file(s):** ATF-33143 S-parameters at the specified bias
-- **Exported figures:** \(\lvert S_{11}\rvert\) sweep, stability factors, \(\Gamma\) sweeps/contours
+- **Exported figures:** \(\lvert S\_{11}\rvert\) sweep, stability factors, \(\Gamma\) sweeps/contours
 
 ---
 

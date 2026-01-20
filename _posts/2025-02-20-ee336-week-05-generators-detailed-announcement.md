@@ -1,7 +1,4 @@
 ---
-
-
-
 layout: post
 title: "EE-336 Induction Motor Slip Analysis"
 date: 2025-02-20 08:00:00-0400

@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Delta-Y Transformer Analysis
 description: Three-phase transformer voltage analysis for Δ-Y configuration (Electrical Energy Systems • 480V line-to-line • Turns ratio derivation).
@@ -62,10 +61,10 @@ The solution requires understanding the voltage relationships in both delta and 
 
 ### Step 1: Identify the Configuration
 
-| Side | Connection | Voltage Relationship | Current Relationship |
-|:----:|:----------:|:-------------------:|:--------------------:|
-| Primary | Delta (Δ) | $$V_{LL} = V_{phase}$$ | $$I_{line} = \sqrt{3} I_{phase}$$ |
-| Secondary | Wye (Y) | $$V_{LL} = \sqrt{3} V_{phase}$$ | $$I_{line} = I_{phase}$$ |
+|   Side    | Connection |      Voltage Relationship       |       Current Relationship        |
+| :-------: | :--------: | :-----------------------------: | :-------------------------------: |
+|  Primary  | Delta (Δ)  |     $$V_{LL} = V_{phase}$$      | $$I_{line} = \sqrt{3} I_{phase}$$ |
+| Secondary |  Wye (Y)   | $$V_{LL} = \sqrt{3} V_{phase}$$ |     $$I_{line} = I_{phase}$$      |
 
 ### Step 2: Primary Side Analysis (Delta)
 
@@ -142,11 +141,13 @@ The phasor diagrams below illustrate the voltage relationships on both the prima
 ### Key Observations from Phasor Analysis
 
 **Primary (Delta):**
+
 - All three phase voltages ($$V_{ab}$$, $$V_{bc}$$, $$V_{ca}$$) have magnitude 480V
 - Phase voltages are displaced by 120° from each other
 - In delta: $$|V_{LL}| = |V_{phase}| = 480V$$
 
 **Secondary (Wye):**
+
 - Phase voltages ($$V_{a'n}$$, $$V_{b'n}$$, $$V_{c'n}$$) are measured line-to-neutral
 - Line voltages ($$V_{a'b'}$$, $$V_{b'c'}$$, $$V_{c'a'}$$) are $$\sqrt{3}$$ times larger
 - Line voltages lead their corresponding phase voltages by 30°
@@ -155,10 +156,10 @@ The phasor diagrams below illustrate the voltage relationships on both the prima
 
 ## Summary of Three-Phase Relationships
 
-| Configuration | Line Voltage | Phase Voltage | Line Current | Phase Current |
-|:-------------:|:------------:|:-------------:|:------------:|:-------------:|
-| **Delta (Δ)** | $$V_L$$ | $$V_L$$ | $$\sqrt{3} I_{ph}$$ | $$I_{ph}$$ |
-| **Wye (Y)** | $$\sqrt{3} V_{ph}$$ | $$V_{ph}$$ | $$I_L$$ | $$I_L$$ |
+| Configuration |    Line Voltage     | Phase Voltage |    Line Current     | Phase Current |
+| :-----------: | :-----------------: | :-----------: | :-----------------: | :-----------: |
+| **Delta (Δ)** |       $$V_L$$       |    $$V_L$$    | $$\sqrt{3} I_{ph}$$ |  $$I_{ph}$$   |
+|  **Wye (Y)**  | $$\sqrt{3} V_{ph}$$ |  $$V_{ph}$$   |       $$I_L$$       |    $$I_L$$    |
 
 For a **Δ-Y transformer** with turns ratio $$a = N_1/N_2$$:
 

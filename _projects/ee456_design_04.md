@@ -1,7 +1,6 @@
 ---
-
 layout: page
-title: 'Design Project 04 Published: MAG Amplifier Design & Non-Linear Simulation (8 GHz)'
+title: "Design Project 04 Published: MAG Amplifier Design & Non-Linear Simulation (8 GHz)"
 description: Maximum-Available-Gain (MAG) amplifier design at 8 GHz using transmission-line + stub matching (ATF34143 pHEMT). Verified in MATLAB vs Keysight ADS; evaluated with 1 dB compression, harmonic balance, and two-tone IP3.
 category: coursework
 date: 2025-05-02 09:08:12-0500
@@ -44,7 +43,7 @@ _styles: |
 **Author:** Steven Placzek
 **Date:** 2025-05-02 09:08:12-0500
 
-This project designs a **Maximum-Available-Gain (MAG)** amplifier at **\(f_0 = 8\ \text{GHz}\)** by choosing **\(\Gamma_S = \Gamma_{MS}\)** and **\(\Gamma_L = \Gamma_{ML}\)** (simultaneous conjugate match) for a pHEMT device, then implementing **transmission-line + shunt-stub matching networks** in **Keysight ADS** and validating the small-signal behavior with an independent **MATLAB** cascade model.
+This project designs a **Maximum-Available-Gain (MAG)** amplifier at **\(f_0 = 8\ \text{GHz}\)** by choosing **\(\Gamma*S = \Gamma*{MS}\)** and **\(\Gamma*L = \Gamma*{ML}\)** (simultaneous conjugate match) for a pHEMT device, then implementing **transmission-line + shunt-stub matching networks** in **Keysight ADS** and validating the small-signal behavior with an independent **MATLAB** cascade model.
 
 ## Design setup
 
@@ -54,11 +53,11 @@ This project designs a **Maximum-Available-Gain (MAG)** amplifier at **\(f_0 = 8
 
 ## MAG solution (target reflection coefficients)
 
-| Quantity | Value (polar) | Notes |
-|---|---:|---|
-| \(\Gamma_S\) | \(0.8495\ \angle\ -88.9039^\circ\) | chosen as \(\Gamma_{MS}\) |
-| \(\Gamma_L\) | \(0.4978\ \angle\ -179.4924^\circ\) | chosen as \(\Gamma_{ML}\) |
-| \(G_T\) | \(8.3146\ \text{W/W}\) (**9.1984 dB**) | MAG operating point |
+| Quantity     |                          Value (polar) | Notes                      |
+| ------------ | -------------------------------------: | -------------------------- |
+| \(\Gamma_S\) |     \(0.8495\ \angle\ -88.9039^\circ\) | chosen as \(\Gamma\_{MS}\) |
+| \(\Gamma_L\) |    \(0.4978\ \angle\ -179.4924^\circ\) | chosen as \(\Gamma\_{ML}\) |
+| \(G_T\)      | \(8.3146\ \text{W/W}\) (**9.1984 dB**) | MAG operating point        |
 
 {% include figure.liquid loading="lazy" path="assets/img/ee456/design04/01_mag_design_specs.png" title="MAG design specifications (\(\Gamma_S\), \(\Gamma_L\), \(G_T\))" class="img-fluid rounded z-depth-1" zoomable=true %}
 
@@ -68,12 +67,12 @@ The input and output matches were realized with **50 Ω transmission-line sectio
 
 ### Electrical lengths at \(f_0\)
 
-| Network | Electrical length (deg) | Element type | Stub termination |
-|---|---:|---|---|
-| IMN | \(\theta_{I1} = 17.2506^\circ\) | TRL | — |
-| IMN | \(\theta_{I2} = 118.5310^\circ\) | shunt stub | short |
-| OMN | \(\theta_{O1} = 48.9375^\circ\) | TRL | — |
-| OMN | \(\theta_{O2} = 29.8200^\circ\) | shunt stub | open |
+| Network |           Electrical length (deg) | Element type | Stub termination |
+| ------- | --------------------------------: | ------------ | ---------------- |
+| IMN     |  \(\theta\_{I1} = 17.2506^\circ\) | TRL          | —                |
+| IMN     | \(\theta\_{I2} = 118.5310^\circ\) | shunt stub   | short            |
+| OMN     |  \(\theta\_{O1} = 48.9375^\circ\) | TRL          | —                |
+| OMN     |  \(\theta\_{O2} = 29.8200^\circ\) | shunt stub   | open             |
 
 {% include figure.liquid loading="lazy" path="assets/img/ee456/design04/14_transmission_lines.png" title="Transmission-line electrical lengths used in the IMN and OMN" class="img-fluid rounded z-depth-1" zoomable=true %}
 
@@ -109,12 +108,12 @@ The MATLAB cascade model (ABCD/T conversions + S-parameter interpolation) and AD
 
 ### 1 dB compression
 
-| Metric | Value |
-|---|---:|
-| \(G_T\) (small-signal) | **9.1984 dB** |
-| \(G_T\) at 1 dB comp | **8.1858 dB** |
-| \(P_{in,1\text{dB}}\) | **5.9500 dBm** |
-| \(P_{out,1\text{dB}}\) | **14.1358 dBm** |
+| Metric                  |           Value |
+| ----------------------- | --------------: |
+| \(G_T\) (small-signal)  |   **9.1984 dB** |
+| \(G_T\) at 1 dB comp    |   **8.1858 dB** |
+| \(P\_{in,1\text{dB}}\)  |  **5.9500 dBm** |
+| \(P\_{out,1\text{dB}}\) | **14.1358 dBm** |
 
 {% include figure.liquid loading="lazy" path="assets/img/ee456/design04/03_1db_compression_table2.png" title="1 dB compression point summary" class="img-fluid rounded z-depth-1" zoomable=true %}
 
@@ -126,10 +125,10 @@ The MATLAB cascade model (ABCD/T conversions + S-parameter interpolation) and AD
 
 ### Two-tone intermodulation + IP3
 
-| Metric | Value |
-|---|---:|
-| \(P_{out}(\mathrm{IP3})\) | 25.6176 dBm (LSB), 25.8347 dBm (USB) |
-| \(P_{in}(\mathrm{IP3})\) | 16.5620 dBm (LSB), 16.8225 dBm (USB) |
+| Metric                     |                                Value |
+| -------------------------- | -----------------------------------: |
+| \(P\_{out}(\mathrm{IP3})\) | 25.6176 dBm (LSB), 25.8347 dBm (USB) |
+| \(P\_{in}(\mathrm{IP3})\)  | 16.5620 dBm (LSB), 16.8225 dBm (USB) |
 
 {% include figure.liquid loading="lazy" path="assets/img/ee456/design04/06_ip3_table5.png" title="Two-tone IP3 point summary" class="img-fluid rounded z-depth-1" zoomable=true %}
 

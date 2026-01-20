@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Induction Motor Slip Analysis
 description: Induction motor fundamentals — slip, synchronous speed, and rotor frequency calculations for 2-pole motors.
@@ -169,12 +168,12 @@ $$
 
 ## Results Summary
 
-| Parameter | Problem 1 (Startup) | Problem 2 (5% Slip) |
-|:----------|:-------------------:|:-------------------:|
-| Rotor Speed $n_{rot}$ | 0 RPM | 3420 RPM |
-| Slip $s$ | 100% | 5% |
-| Rotor Frequency $f_{rotor}$ | 60 Hz | 3 Hz |
-| Synchronous Speed $n_{sync}$ | 3600 RPM | 3600 RPM |
+| Parameter                    | Problem 1 (Startup) | Problem 2 (5% Slip) |
+| :--------------------------- | :-----------------: | :-----------------: |
+| Rotor Speed $n_{rot}$        |        0 RPM        |      3420 RPM       |
+| Slip $s$                     |        100%         |         5%          |
+| Rotor Frequency $f_{rotor}$  |        60 Hz        |        3 Hz         |
+| Synchronous Speed $n_{sync}$ |      3600 RPM       |      3600 RPM       |
 
 ---
 

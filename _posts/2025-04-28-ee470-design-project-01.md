@@ -23,7 +23,7 @@ _styles: |
 
 I've published **EE-470 (Discrete Digital Computer Control Systems) - Final Design Project 01**: a **discrete-time controller** for a **servo-driven receiver positioning system** (satellite-tracking use case). The design target was a tight transient response - **~1% overshoot** and **~0.05 s peak time** - so the actuator can reposition quickly without hunting or ringing that would break alignment.
 
-If you maintain alignment to a moving satellite, the control loop is the difference between *tracking* and *chasing*. This project is about making the digital controller behave like the continuous design **on purpose**, not by luck.
+If you maintain alignment to a moving satellite, the control loop is the difference between _tracking_ and _chasing_. This project is about making the digital controller behave like the continuous design **on purpose**, not by luck.
 
 ---
 
@@ -147,11 +147,11 @@ Sampling rate is not a cosmetic setting - it changes the closed-loop behavior be
 
 At the nominal design rate (**100 Hz**), the discrete controller closely matches the continuous transient performance.
 
-| Metric | Continuous | Discrete |
-| --- | ---: | ---: |
-| Peak time | 0.049 s | 0.050 s |
-| Settling time (2%) | 0.061 s | 0.060 s |
-| Percent overshoot | 0.98% | 1.02% |
+| Metric             | Continuous | Discrete |
+| ------------------ | ---------: | -------: |
+| Peak time          |    0.049 s |  0.050 s |
+| Settling time (2%) |    0.061 s |  0.060 s |
+| Percent overshoot  |      0.98% |    1.02% |
 
 ---
 

@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Discrete Control System Design for Receiver Positioning and Accurate Satellite Tracking
 description: Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.
@@ -54,6 +53,7 @@ A state-space model was constructed with states \\(x_1=\theta\\) and \\(x_2=\dot
 ## Digital Control Design (Pole Placement)
 
 **Performance specs:**
+
 - **Percent overshoot:** PO = 1%
 - **Peak time:** \\(T_p = 0.05\\) s
 - **Nominal controller sample time:** \\(T_s = 0.01\\) s (**100 Hz**)
@@ -91,7 +91,7 @@ u(k) = -G_1\,y_1(k) - G_2\,y_2(k) + r(k)
 
 ## Sampling-Rate Sensitivity (50 Hz → 500 Hz)
 
-A key part of the project was showing how sampling rate affects the *practical* discrete response. Below are representative **position** and **velocity** step response comparisons at different sampling frequencies.
+A key part of the project was showing how sampling rate affects the _practical_ discrete response. Below are representative **position** and **velocity** step response comparisons at different sampling frequencies.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -131,17 +131,18 @@ A key part of the project was showing how sampling rate affects the *practical* 
 
 Simulation results show that the discrete controller closely matches the continuous design at **100 Hz**, meeting the intended transient response targets:
 
-| Metric | Continuous | Discrete |
-|---|---:|---:|
-| Peak time | 0.049 s | 0.050 s |
-| Settling time (2%) | 0.061 s | 0.060 s |
-| Percent overshoot | 0.98% | 1.02% |
+| Metric             | Continuous | Discrete |
+| ------------------ | ---------: | -------: |
+| Peak time          |    0.049 s |  0.050 s |
+| Settling time (2%) |    0.061 s |  0.060 s |
+| Percent overshoot  |      0.98% |    1.02% |
 
 ---
 
 ## Hardware Feasibility Notes
 
 The report also documents practical constraints that matter when you leave MATLAB:
+
 - **Sampling/timing:** interrupt-driven timing to maintain a stable 100 Hz loop
 - **Noise:** velocity measurement filtering to prevent noise-driven control effort
 - **Limits:** saturation + anti-windup recommended for ±6 V actuator constraints

@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Integrated Circuit Biasing Techniques
 description: "MOSFET-resistor bias vs. beta-multiplier bias using ALD1106/ALD1105 (LTSpice + breadboard). Focus: operating point accuracy and power-supply sensitivity."
@@ -23,18 +22,19 @@ tags:
 
 ## Overview
 
-  - **Course:** EE-322 — Electronics Lab II
-  - **Project:** Laboratory Portfolio Notebook Entry
-  - **Title:** Lab 02 -- Integrated Circuit Biasing Techniques
-  - **Author:** Steven Placzek
-  - **Date:** 2025-01-28 11:15:37-05:00
-  - **Tools:** LTspice • MATLAB • LaTeX
+- **Course:** EE-322 — Electronics Lab II
+- **Project:** Laboratory Portfolio Notebook Entry
+- **Title:** Lab 02 -- Integrated Circuit Biasing Techniques
+- **Author:** Steven Placzek
+- **Date:** 2025-01-28 11:15:37-05:00
+- **Tools:** LTspice • MATLAB • LaTeX
 
 ---
 
 This page summarizes **Lab 02 (2025-01-28)** for **EE-322 - Electrical Engineering Lab II**.
 
 **Topic:** Compare two IC biasing approaches:
+
 1. **MOSFET-resistor bias** (simple, but typically supply-sensitive)
 2. **Beta-multiplier bias** (feedback-based, typically more supply/process robust)
 
@@ -47,10 +47,10 @@ This page summarizes **Lab 02 (2025-01-28)** for **EE-322 - Electrical Engineeri
 All comparisons below are for a target bias of **~500 µA** at **$V_{DD}=10\,\text{V}$**.
 
 | Metric @ $V_{DD}=10\,\text{V}$ | Experiment 1 (MOSFET-R) | Experiment 2 (Beta multiplier) |
-|---|---:|---:|
-| Tuned resistor (measured) | 16.003 kΩ | 1.0361 kΩ |
-| Bias current (measured) | 504.477 µA | 506.814 µA |
-| Bias current error vs sim | +0.90% | +1.36% |
+| ------------------------------ | ----------------------: | -----------------------------: |
+| Tuned resistor (measured)      |               16.003 kΩ |                      1.0361 kΩ |
+| Bias current (measured)        |              504.477 µA |                     506.814 µA |
+| Bias current error vs sim      |                  +0.90% |                         +1.36% |
 
 **Takeaway:** The **beta-multiplier** configuration exhibited stronger resistance to dynamic changes in **$V_{DD}$** in the sweep/derivative analysis.
 
@@ -85,6 +85,7 @@ In this lab, both bias circuits were:
 ## Experiment 1 — MOSFET-resistor bias characterization
 
 ### Circuit concept
+
 A diode-connected NMOS (gate tied to drain) with a resistor from **$V_{DD}$ → drain/gate node** sets a bias current.
 
 **Procedure summary**
@@ -112,15 +113,16 @@ A diode-connected NMOS (gate tied to drain) with a resistor from **$V_{DD}$ → 
 
 ### Operating point summary (Simulated vs. Measured)
 
-| Quantity | Simulated | Measured | Units |
-|---|---:|---:|---|
-| $R$ | 16.200 | 16.003 | kΩ |
-| $V_{GS1}$ | 1.910 | 1.940 | V |
-| $V_{DS1}$ | 1.910 | 1.940 | V |
-| $V_{OV1}$ | 1.337 | 1.341 | V |
-| $I_{D1}$ | 499.999 | 504.477 | µA |
+| Quantity  | Simulated | Measured | Units |
+| --------- | --------: | -------: | ----- |
+| $R$       |    16.200 |   16.003 | kΩ    |
+| $V_{GS1}$ |     1.910 |    1.940 | V     |
+| $V_{DS1}$ |     1.910 |    1.940 | V     |
+| $V_{OV1}$ |     1.337 |    1.341 | V     |
+| $I_{D1}$  |   499.999 |  504.477 | µA    |
 
 **Notes**
+
 - **Current target accuracy:** simulated vs. measured differs by ~**0.90%** ($\approx 4.48\,\mu\text{A}$).
 - **Tuned resistor:** measured $R$ is ~**1.22%** lower than simulated.
 
@@ -141,6 +143,7 @@ A diode-connected NMOS (gate tied to drain) with a resistor from **$V_{DD}$ → 
 ## Experiment 2 — Beta-multiplier bias characterization
 
 ### Circuit concept
+
 A beta multiplier uses **device sizing + feedback** to create a self-biased reference current.
 
 **Implementation details**
@@ -172,27 +175,28 @@ $Q_2$ was implemented as **4×** the width of $Q_1$ by wiring **four NMOS device
 
 ### Operating point summary (Simulated vs. Measured)
 
-| Quantity | Simulated | Measured | Units |
-|---|---:|---:|---|
-| $R$ | 1.254 | 1.0361 | kΩ |
-| $V_{GS1}$ | 1.980 | 1.985 | V |
-| $V_{DS1}$ | 1.980 | 1.985 | V |
-| $V_{OV1}$ | 1.407 | 1.370 | V |
-| $I_{D1}$ | 552.000 | 506.814 | µA |
-| $V_{GS2}$ | 1.350 | 1.496 | V |
-| $V_{DS2}$ | 6.420 | 6.646 | V |
-| $V_{OV2}$ | 0.644 | 0.685 | V |
-| $I_{D2}$ | 500.000 | 506.814 | µA |
-| $V_{SG3}$ | 2.960 | 2.861 | V |
-| $V_{SD3}$ | 8.020 | 8.006 | V |
-| $|V_{OV3}|$ | 2.313 | 2.406 | V |
-| $I_{D3}$ | 552.000 | 506.814 | µA |
-| $V_{SG4}$ (row 1) | 2.960 | 2.862 | V |
-| $V_{SG4}$ (row 2) | 2.960 | 2.882 | V |
-| $|V_{OV4}|$ | 2.313 | 1.441 | V |
-| $I_{D4}$ | 500.000 | 506.814 | µA |
+| Quantity          | Simulated | Measured | Units |
+| ----------------- | --------: | -------: | ----- | ----- | --- |
+| $R$               |     1.254 |   1.0361 | kΩ    |
+| $V_{GS1}$         |     1.980 |    1.985 | V     |
+| $V_{DS1}$         |     1.980 |    1.985 | V     |
+| $V_{OV1}$         |     1.407 |    1.370 | V     |
+| $I_{D1}$          |   552.000 |  506.814 | µA    |
+| $V_{GS2}$         |     1.350 |    1.496 | V     |
+| $V_{DS2}$         |     6.420 |    6.646 | V     |
+| $V_{OV2}$         |     0.644 |    0.685 | V     |
+| $I_{D2}$          |   500.000 |  506.814 | µA    |
+| $V_{SG3}$         |     2.960 |    2.861 | V     |
+| $V_{SD3}$         |     8.020 |    8.006 | V     |
+| $                 |  V\_{OV3} |        $ | 2.313 | 2.406 | V   |
+| $I_{D3}$          |   552.000 |  506.814 | µA    |
+| $V_{SG4}$ (row 1) |     2.960 |    2.862 | V     |
+| $V_{SG4}$ (row 2) |     2.960 |    2.882 | V     |
+| $                 |  V\_{OV4} |        $ | 2.313 | 1.441 | V   |
+| $I_{D4}$          |   500.000 |  506.814 | µA    |
 
 Notes:
+
 - The source table lists **$V_{SG4}$ twice**; both rows are preserved here as recorded.
 - At the bias point, the **current target** is still close: $I_{D2}$ is about **+1.36%** above 500 µA.
 

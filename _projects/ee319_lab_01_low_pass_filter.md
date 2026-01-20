@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Low-Pass Filter Measurement and Analysis
 description: First-order RC low-pass filter build + Bode measurement (10 Hz–100 kHz) with MATLAB/LTspice validation.
@@ -76,7 +75,7 @@ H(j\omega)=\frac{\tfrac{1}{2}}{1 + j\omega\tfrac{RC_1}{2}}
 So the low-frequency gain is \(A_v(\text{LF}) = 0.5\) (\(-6.02\,\text{dB}\)), and the 3 dB frequency is
 
 \[
- f_H = \frac{1}{\pi R C_1}
+f_H = \frac{1}{\pi R C_1}
 \]
 
 ---
@@ -110,11 +109,11 @@ So the low-frequency gain is \(A_v(\text{LF}) = 0.5\) (\(-6.02\,\text{dB}\)), an
 
 ### Key parameters
 
-| Parameter | Calculated | LTspice | Measured | Units |
-|---|---:|---:|---:|---|
-| \(A_v(\text{LF})\) | 500.0000 | 500.0000 | 498.0422 | mV/V |
-| \(A_v(\text{LF})\) | -6.0206 | -6.0206 | -6.0547 | dB |
-| \(f_H\) | 9.6458 | 9.6458 | 9.4945 | kHz |
+| Parameter          | Calculated |  LTspice | Measured | Units |
+| ------------------ | ---------: | -------: | -------: | ----- |
+| \(A_v(\text{LF})\) |   500.0000 | 500.0000 | 498.0422 | mV/V  |
+| \(A_v(\text{LF})\) |    -6.0206 |  -6.0206 |  -6.0547 | dB    |
+| \(f_H\)            |     9.6458 |   9.6458 |   9.4945 | kHz   |
 
 **Measured vs calculated error:**
 

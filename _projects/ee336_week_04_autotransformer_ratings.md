@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Autotransformer Power Rating
 description: Isolation transformer to autotransformer conversion analysis (3:1 turns ratio • power rating comparison • step-up vs step-down configurations).
@@ -166,10 +165,10 @@ $$
 
 where $$x$$ is the **effective turns ratio** for the given configuration.
 
-| Configuration | Turns Ratio x | S<sub>auto</sub> | Increase |
-|:---:|:---:|:---:|:---:|
-| A (Step-Down) | N₁/N₂ = 3 | 10 × (4/3) = 13.33 kVA | +33.3% |
-| B (Step-Up) | N₂/N₁ = 1/3 | 10 × (4/1) = 40 kVA | +300% |
+| Configuration | Turns Ratio x |    S<sub>auto</sub>    | Increase |
+| :-----------: | :-----------: | :--------------------: | :------: |
+| A (Step-Down) |   N₁/N₂ = 3   | 10 × (4/3) = 13.33 kVA |  +33.3%  |
+|  B (Step-Up)  |  N₂/N₁ = 1/3  |  10 × (4/1) = 40 kVA   |  +300%   |
 
 The formula shows that **smaller values of x yield larger power ratings**. For a step-up configuration where x < 1, the multiplier (x+1)/x becomes large.
 

@@ -32,10 +32,10 @@ The objective was **maximum transducer gain at 15 GHz** by selecting the **optim
 
 Near **15 GHz**, the design exhibits a strong conjugate-match condition and produces near-maximum gain for the chosen device/bias point:
 
-- **Peak gain (|S21|):** ~12.9 dB near 15 GHz  
-- **Input match:** deep |S11| notch near 15 GHz (well below −30 dB)  
-- **Output match:** deep |S22| notch near 15 GHz (well below −30 dB)  
-- **Reverse transmission:** |S12| in the mid −10s dB range near 15 GHz  
+- **Peak gain (|S21|):** ~12.9 dB near 15 GHz
+- **Input match:** deep |S11| notch near 15 GHz (well below −30 dB)
+- **Output match:** deep |S22| notch near 15 GHz (well below −30 dB)
+- **Reverse transmission:** |S12| in the mid −10s dB range near 15 GHz
 
 The MATLAB/ADS overlays confirm the Touchstone workflow and the ideal-TL network implementation are consistent.
 

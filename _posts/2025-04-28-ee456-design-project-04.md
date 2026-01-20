@@ -1,5 +1,4 @@
 ---
-
 layout: post
 title: "Design of an 8 GHz Maximum Absolute Gain (or MAG) Amplifier with Non-linear Simulations and IP3 Analysis"
 slug: ee-456-design-project-04
@@ -12,4 +11,4 @@ related_posts: true
 show_on_home: false
 ---
 
-*Placeholder for EE-456 Design Project 04 detailed announcement.*
+_Placeholder for EE-456 Design Project 04 detailed announcement._

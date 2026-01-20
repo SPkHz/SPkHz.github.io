@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: "Frequency Response Analysis of a Common-Source Amplifier with Feedback"
 description: "Measured Bode magnitude/phase, −3 dB bandwidth, and gain-bandwidth product for a drain-to-gate feedback common-source MOSFET amplifier (ALD1105)."
@@ -23,12 +22,12 @@ tags:
 
 ## Overview
 
-  - **Course:** EE-322 — Electronics Lab II
-  - **Project:** Laboratory Portfolio Notebook Entry
-  - **Title:** Lab 05 -- Frequency Response Analysis of a Common-Source Amplifier with Feedback
-  - **Author:** Steven Placzek
-  - **Date:** 2025-03-18
-  - **Tools:** Bench measurement (oscilloscope + function generator) • LTspice • Python
+- **Course:** EE-322 — Electronics Lab II
+- **Project:** Laboratory Portfolio Notebook Entry
+- **Title:** Lab 05 -- Frequency Response Analysis of a Common-Source Amplifier with Feedback
+- **Author:** Steven Placzek
+- **Date:** 2025-03-18
+- **Tools:** Bench measurement (oscilloscope + function generator) • LTspice • Python
 
 ---
 
@@ -61,19 +60,19 @@ tags:
 
 ### Key parameters
 
-| Parameter | Value |
-|---|---:|
-| $V_{DD}$ | 10 V |
-| $R_F$ | 330 kΩ |
-| $R_{sig}$ | 100 kΩ |
-| $R$ (potentiometer) | 25 kΩ |
-| $R_L$ (probe) | 10 MΩ |
-| $C_B$ | 0.022 µF |
-| $C_1$ | 10 pF |
-| $C_2$ | 3.3 pF |
-| $C_3$ (probe) | 22 pF + 15 pF |
-| $C_4$ | 3.3 pF |
-| $C_5$ | 22 pF |
+| Parameter           |         Value |
+| ------------------- | ------------: |
+| $V_{DD}$            |          10 V |
+| $R_F$               |        330 kΩ |
+| $R_{sig}$           |        100 kΩ |
+| $R$ (potentiometer) |         25 kΩ |
+| $R_L$ (probe)       |         10 MΩ |
+| $C_B$               |      0.022 µF |
+| $C_1$               |         10 pF |
+| $C_2$               |        3.3 pF |
+| $C_3$ (probe)       | 22 pF + 15 pF |
+| $C_4$               |        3.3 pF |
+| $C_5$               |         22 pF |
 
 ---
 
@@ -136,14 +135,14 @@ $$
 
 ### Extracted metrics (measured)
 
-| Quantity | Measured value |
-|---|---:|
-| $|G_v(\mathrm{mid})|$ (V/V) | 3.05 V/V |
-| $|G_v(\mathrm{mid})|$ (dB) | 9.67 dB |
-| $f_L$ | 79.8 Hz |
-| $f_H$ | 71.8 kHz |
-| $BW = f_H - f_L$ | 71.7 kHz |
-| $GBP = |G_v(\mathrm{mid})| \cdot BW$ | 218 kHz |
+| Quantity         |    Measured value |
+| ---------------- | ----------------: | --------- | -------- |
+| $                | G_v(\mathrm{mid}) | $ (V/V)   | 3.05 V/V |
+| $                | G_v(\mathrm{mid}) | $ (dB)    | 9.67 dB  |
+| $f_L$            |           79.8 Hz |
+| $f_H$            |          71.8 kHz |
+| $BW = f_H - f_L$ |          71.7 kHz |
+| $GBP =           | G_v(\mathrm{mid}) | \cdot BW$ | 218 kHz  |
 
 ---
 

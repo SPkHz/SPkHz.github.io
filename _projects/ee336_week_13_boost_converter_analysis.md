@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Boost Converter Analysis
 description: DC waveform analysis and boost converter duty cycle calculations (Week 13 Assignment • DC-DC Converters • Switching Power Supplies).
@@ -49,6 +48,7 @@ Graphically, this corresponds to the horizontal line that makes the area above a
 </div>
 
 **Answer:**
+
 - **Waveform A** has the **highest** DC value
 - **Waveform C** has the **smallest** DC value
 
@@ -58,11 +58,11 @@ Graphically, this corresponds to the horizontal line that makes the area above a
 
 A boost converter circuit is given with the following specifications:
 
-| Parameter | Value |
-|:--|--:|
-| Input Voltage $$V_{in}$$ | 9 V |
-| Output Voltage $$V_{out}$$ | 12 V |
-| Average Output Current $$\langle I_{out} \rangle$$ | 9 A |
+| Parameter                                          | Value |
+| :------------------------------------------------- | ----: |
+| Input Voltage $$V_{in}$$                           |   9 V |
+| Output Voltage $$V_{out}$$                         |  12 V |
+| Average Output Current $$\langle I_{out} \rangle$$ |   9 A |
 
 ### Circuit Topology
 
@@ -113,6 +113,7 @@ $$
 ### Part B: Switch Timing Analysis
 
 Since $$D = 25\%$$:
+
 - **SW1 (main switch)** is closed for $$D \cdot T = 0.25T$$ each period
 - **SW2 (diode)** conducts for $$(1-D) \cdot T = 0.75T$$ each period
 
@@ -168,13 +169,13 @@ $$
   Complete summary of the boost converter analysis showing given values, key equations, solution steps, and final answers.
 </div>
 
-| Problem | Question | Answer |
-|:--|:--|:--|
-| 1 | Highest DC waveform | **Waveform A** |
-| 1 | Smallest DC waveform | **Waveform C** |
-| 2a | Duty cycle $$D$$ | **25%** |
-| 2b | Which switch conducts longer? | **SW2** (diode) |
-| 2c | Average inductor current | **12 A** |
+| Problem | Question                      | Answer          |
+| :------ | :---------------------------- | :-------------- |
+| 1       | Highest DC waveform           | **Waveform A**  |
+| 1       | Smallest DC waveform          | **Waveform C**  |
+| 2a      | Duty cycle $$D$$              | **25%**         |
+| 2b      | Which switch conducts longer? | **SW2** (diode) |
+| 2c      | Average inductor current      | **12 A**        |
 
 ---
 

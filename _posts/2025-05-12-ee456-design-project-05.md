@@ -19,6 +19,7 @@ I've published **EE-456 (RF & mm-Wave Active Circuits) — Design Project 05**: 
 The focus is **oscillator synthesis via S-parameter manipulation**: converting the device to common-gate configuration, introducing deliberate instability through feedback, and designing transmission-line termination/resonator networks to satisfy the oscillation conditions.
 
 **Key design targets:**
+
 - Oscillation frequency: 8 GHz
 - Optimize gate reactance $$X_B$$ to maximize $$\lvert S_{11}\rvert$$
 - Synthesize termination network for target $$\Gamma_T = 0.5000 \angle 162.019°$$

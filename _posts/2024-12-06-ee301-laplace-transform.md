@@ -18,10 +18,10 @@ This project treats the Laplace Transform as the “systems lens” of engineeri
 
 ## What the project covers
 
-- **Neural decoding (BCIs):** Laplace-domain framing for mixed neural measurements and decoding workflows  
-- **DC-DC converter stability:** classic control tools (root locus, Bode, Nyquist) derived from pole/zero structure  
-- **Electromagnetic partial inductance:** modeling that preserves causality and propagation for high-speed structures  
-- **Memristor modeling:** nonlinear device dynamics framed for simulation and circuit-level reasoning  
+- **Neural decoding (BCIs):** Laplace-domain framing for mixed neural measurements and decoding workflows
+- **DC-DC converter stability:** classic control tools (root locus, Bode, Nyquist) derived from pole/zero structure
+- **Electromagnetic partial inductance:** modeling that preserves causality and propagation for high-speed structures
+- **Memristor modeling:** nonlinear device dynamics framed for simulation and circuit-level reasoning
 
 ---
 

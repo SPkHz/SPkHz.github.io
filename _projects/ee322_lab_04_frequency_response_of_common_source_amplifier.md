@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: "Common-Source Amplifier: Frequency Response Measurement and Analysis"
 description: "DC bias + Bode magnitude response (Measured vs LTspice), using discrete capacitors to emulate MOSFET parasitics."
@@ -20,12 +19,12 @@ tags:
 
 ## Overview
 
-  - **Course:** EE-322 — Electronics Lab II
-  - **Project:** Laboratory Portfolio Notebook Entry
-  - **Title:** Lab 04 -- Common-Source Amplifier: Frequency Response Measurement and Analysis
-  - **Author:** Steven Placzek
-  - **Date:** 2025-03-05
-  - **Tools:** Bench measurement (oscilloscope + function generator) • LTspice
+- **Course:** EE-322 — Electronics Lab II
+- **Project:** Laboratory Portfolio Notebook Entry
+- **Title:** Lab 04 -- Common-Source Amplifier: Frequency Response Measurement and Analysis
+- **Author:** Steven Placzek
+- **Date:** 2025-03-05
+- **Tools:** Bench measurement (oscilloscope + function generator) • LTspice
 
 ---
 
@@ -63,20 +62,20 @@ Because intrinsic MOSFET capacitances are often too small to observe with standa
 
 ### Nominal component values
 
-| Parameter | Value | Notes |
-|---|---:|---|
-| $V_{DD}$ | 10 V | Supply |
-| Target $V_O$ | 5 V | Bias set by adjusting $V_{GG}$ / $V_G$ |
-| $R$ | 15 kΩ | Bias branch resistor |
-| $R_G$ | 100 kΩ | Gate bias resistor |
-| $R_{sig}$ | 100 kΩ | Signal source resistance |
-| $R_L$ | 10 MΩ | Oscilloscope probe input resistance |
-| $C_B$ | 0.022 µF | Coupling capacitor |
-| $C_1$ | 10 pF | Emulates small-signal gate capacitance |
-| $C_2$ | 3.3 pF | Feedback / parasitic emulation |
-| $C_3$ | 22 pF + 15 pF (probe) | Output loading capacitance |
-| $C_4$ | 3.3 pF | Feedback / parasitic emulation |
-| $C_5$ | 22 pF | Supply / reference node AC stabilization |
+| Parameter    |                 Value | Notes                                    |
+| ------------ | --------------------: | ---------------------------------------- |
+| $V_{DD}$     |                  10 V | Supply                                   |
+| Target $V_O$ |                   5 V | Bias set by adjusting $V_{GG}$ / $V_G$   |
+| $R$          |                 15 kΩ | Bias branch resistor                     |
+| $R_G$        |                100 kΩ | Gate bias resistor                       |
+| $R_{sig}$    |                100 kΩ | Signal source resistance                 |
+| $R_L$        |                 10 MΩ | Oscilloscope probe input resistance      |
+| $C_B$        |              0.022 µF | Coupling capacitor                       |
+| $C_1$        |                 10 pF | Emulates small-signal gate capacitance   |
+| $C_2$        |                3.3 pF | Feedback / parasitic emulation           |
+| $C_3$        | 22 pF + 15 pF (probe) | Output loading capacitance               |
+| $C_4$        |                3.3 pF | Feedback / parasitic emulation           |
+| $C_5$        |                 22 pF | Supply / reference node AC stabilization |
 
 ---
 
@@ -92,23 +91,23 @@ Because intrinsic MOSFET capacitances are often too small to observe with standa
 
 > Note: SPICE current sign conventions can produce negative drain currents depending on device orientation. Values below are reported as **magnitudes**.
 
-| Device | Quantity | Simulated | Measured | Units |
-|---:|---|---:|---:|---|
-| $Q_1$ | $I_D$ | 473.564 | 986.777 | µA |
-|  | $\lvert V_{OV}\rvert$ | 1.299 | 1.330 | V |
-|  | $V_G$ | 1.872 | 1.903 | V |
-|  | $V_D$ | 5.058 | 4.967 | V |
-|  | $V_S$ | 0.000 | 0.005 | V |
-| $Q_2$ | $I_D$ | 473.564 | 986.777 | µA |
-|  | $\lvert V_{OV}\rvert$ | 2.250 | 2.224 | V |
-|  | $V_G$ | 7.103 | 7.129 | V |
-|  | $V_D$ | 5.058 | 4.980 | V |
-|  | $V_S$ | 10.000 | 10.000 | V |
-| $Q_3$ | $I_D$ | 473.564 | 986.777 | µA |
-|  | $\lvert V_{OV}\rvert$ | 2.250 | 2.224 | V |
-|  | $V_G$ | 7.103 | 7.129 | V |
-|  | $V_D$ | 7.103 | 7.129 | V |
-|  | $V_S$ | 10.000 | 10.000 | V |
+| Device | Quantity              | Simulated | Measured | Units |
+| -----: | --------------------- | --------: | -------: | ----- |
+|  $Q_1$ | $I_D$                 |   473.564 |  986.777 | µA    |
+|        | $\lvert V_{OV}\rvert$ |     1.299 |    1.330 | V     |
+|        | $V_G$                 |     1.872 |    1.903 | V     |
+|        | $V_D$                 |     5.058 |    4.967 | V     |
+|        | $V_S$                 |     0.000 |    0.005 | V     |
+|  $Q_2$ | $I_D$                 |   473.564 |  986.777 | µA    |
+|        | $\lvert V_{OV}\rvert$ |     2.250 |    2.224 | V     |
+|        | $V_G$                 |     7.103 |    7.129 | V     |
+|        | $V_D$                 |     5.058 |    4.980 | V     |
+|        | $V_S$                 |    10.000 |   10.000 | V     |
+|  $Q_3$ | $I_D$                 |   473.564 |  986.777 | µA    |
+|        | $\lvert V_{OV}\rvert$ |     2.250 |    2.224 | V     |
+|        | $V_G$                 |     7.103 |    7.129 | V     |
+|        | $V_D$                 |     7.103 |    7.129 | V     |
+|        | $V_S$                 |    10.000 |   10.000 | V     |
 
 ---
 
@@ -140,14 +139,14 @@ $$
 
 ### AC summary (corrected from graded version)
 
-| Quantity | Simulated | Measured | Units |
-|---|---:|---:|---|
-| $\lvert G_{v(\text{mid})}\rvert$ | 27.545 | 17.134 | V/V |
-| $\lvert G_{v(\text{mid})}\rvert$ | 28.801 | 24.677 | dB |
-| $f_L$ | 10.536 | 33 | Hz |
-| $f_H$ | 13.002 | 8.000 | kHz |
-| $BW$ | 12.991 | 7.967 | kHz |
-| $GBP$ | 357.837 | 136.510 | kHz |
+| Quantity                         | Simulated | Measured | Units |
+| -------------------------------- | --------: | -------: | ----- |
+| $\lvert G_{v(\text{mid})}\rvert$ |    27.545 |   17.134 | V/V   |
+| $\lvert G_{v(\text{mid})}\rvert$ |    28.801 |   24.677 | dB    |
+| $f_L$                            |    10.536 |       33 | Hz    |
+| $f_H$                            |    13.002 |    8.000 | kHz   |
+| $BW$                             |    12.991 |    7.967 | kHz   |
+| $GBP$                            |   357.837 |  136.510 | kHz   |
 
 ---
 
@@ -185,25 +184,25 @@ Key measured markers (from the graded summary):
   <summary>Show measured frequency response points (gain magnitude)</summary>
 
 | Frequency (Hz) | $\lvert G_v\rvert$ (V/V) | Gain (dB) |
-|---:|---:|---:|
-| 6 | 2.172 | 6.735 |
-| 9 | 3.197 | 10.095 |
-| 13 | 5.652 | 15.043 |
-| 25 | 9.221 | 19.296 |
-| 33 | 11.890 | 21.503 |
-| 50 | 14.158 | 23.020 |
-| 100 | 15.126 | 23.595 |
-| 200 | 16.966 | 24.592 |
-| 514 | 17.134 | 24.677 |
-| 1,000 | 17.361 | 24.791 |
-| 3,000 | 16.331 | 24.260 |
-| 5,000 | 15.005 | 23.525 |
-| 8,000 | 13.106 | 22.349 |
-| 12,000 | 9.153 | 19.231 |
-| 16,000 | 7.325 | 17.296 |
-| 20,000 | 5.780 | 15.239 |
-| 50,000 | 2.374 | 7.510 |
-| 80,000 | 1.416 | 3.022 |
+| -------------: | -----------------------: | --------: |
+|              6 |                    2.172 |     6.735 |
+|              9 |                    3.197 |    10.095 |
+|             13 |                    5.652 |    15.043 |
+|             25 |                    9.221 |    19.296 |
+|             33 |                   11.890 |    21.503 |
+|             50 |                   14.158 |    23.020 |
+|            100 |                   15.126 |    23.595 |
+|            200 |                   16.966 |    24.592 |
+|            514 |                   17.134 |    24.677 |
+|          1,000 |                   17.361 |    24.791 |
+|          3,000 |                   16.331 |    24.260 |
+|          5,000 |                   15.005 |    23.525 |
+|          8,000 |                   13.106 |    22.349 |
+|         12,000 |                    9.153 |    19.231 |
+|         16,000 |                    7.325 |    17.296 |
+|         20,000 |                    5.780 |    15.239 |
+|         50,000 |                    2.374 |     7.510 |
+|         80,000 |                    1.416 |     3.022 |
 
 </details>
 

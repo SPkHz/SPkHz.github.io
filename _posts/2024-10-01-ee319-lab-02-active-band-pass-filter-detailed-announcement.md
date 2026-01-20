@@ -1,7 +1,4 @@
 ---
-
-
-
 layout: post
 title: "EE-319 Lab 02 — Active Band-Pass Filter Measurements"
 date: 2024-10-01 07:47:00-0400

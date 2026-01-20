@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Three-Phase Apparent Power
 description: Calculating total 3-phase apparent power for a Δ-connected balanced load (MATLAB • phasor analysis • power systems).
@@ -40,6 +39,7 @@ Consider the following balanced 3-phase system with a Δ-connected load:
 </div>
 
 **Given:**
+
 - Line-to-line voltage magnitude: $$|\tilde{V}_{LL}| = 480\ \text{V}$$
 - Load impedance magnitude (per phase): $$|\tilde{Z}| = 48\ \Omega$$
 
@@ -113,12 +113,12 @@ $$
 
 My initial submission contained an error by treating the Δ-connected load as if it were Y-connected:
 
-| Approach | Phase Voltage | Line Current | Apparent Power |
-|:---------|:-------------:|:------------:|:--------------:|
-| **Incorrect (Y assumption)** | $$480/\sqrt{3} = 277\ \text{V}$$ | $$5.77\ \text{A}$$ | $$4.8\ \text{kVA}$$ ❌ |
-| **Correct (Δ connection)** | $$480\ \text{V}$$ | $$17.32\ \text{A}$$ | $$14.4\ \text{kVA}$$ ✓ |
+| Approach                     |          Phase Voltage           |    Line Current     |     Apparent Power     |
+| :--------------------------- | :------------------------------: | :-----------------: | :--------------------: |
+| **Incorrect (Y assumption)** | $$480/\sqrt{3} = 277\ \text{V}$$ | $$5.77\ \text{A}$$  | $$4.8\ \text{kVA}$$ ❌ |
+| **Correct (Δ connection)**   |        $$480\ \text{V}$$         | $$17.32\ \text{A}$$ | $$14.4\ \text{kVA}$$ ✓ |
 
-The instructor's feedback highlighted: *"If using phase voltage, need to use wye impedance"*—meaning the impedance value given (48 Ω) was the **per-phase delta impedance**, not the wye-equivalent.
+The instructor's feedback highlighted: _"If using phase voltage, need to use wye impedance"_—meaning the impedance value given (48 Ω) was the **per-phase delta impedance**, not the wye-equivalent.
 
 ---
 
@@ -150,6 +150,7 @@ fprintf('Verification (alt):    %.4f kVA\n', apparentPowerAlt/1000)
 ```
 
 **Output:**
+
 ```
 === EE 336 Assignment 01 — Corrected Solution ===
 
@@ -175,5 +176,5 @@ Verification (alt):    14.4000 kVA
 
 ## References
 
-- Grainger, J.J. & Stevenson, W.D., *Power System Analysis*, McGraw-Hill
+- Grainger, J.J. & Stevenson, W.D., _Power System Analysis_, McGraw-Hill
 - EE 336 Course Notes, Spring 2025

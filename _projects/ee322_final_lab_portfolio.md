@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: "EE Lab II<br/>Final<br/>Portfolio<br/>Spring 2025"
 description: "A complete compendium of labs from the spring '25 semester, lab 01 through lab 08 (Please use ToC to navigate, everything is hyperlinked!) --> MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX)."
@@ -31,13 +30,13 @@ _styles: |
 
 ## Overview
 
-  - **Course:** EE-322 — Electrical Engineering Lab II (WNEU)
-  - **Project:** Final Laboratory Portfolio Notebook
-  - **Title:** EE-322 Final Lab Portfolio — Spring 2025
-  - **Author:** Steven Placzek
-  - **Date:** Spring 2025
-  - **Tools:** Analog Discovery Studio • LTspice • Python (NumPy/Pandas/Matplotlib) • LaTeX • VNA (S-parameters)
-  - **Core themes:** measurement vs simulation, biasing, small-signal gain, frequency response (Bode), feedback, differential operation, de-embedding
+- **Course:** EE-322 — Electrical Engineering Lab II (WNEU)
+- **Project:** Final Laboratory Portfolio Notebook
+- **Title:** EE-322 Final Lab Portfolio — Spring 2025
+- **Author:** Steven Placzek
+- **Date:** Spring 2025
+- **Tools:** Analog Discovery Studio • LTspice • Python (NumPy/Pandas/Matplotlib) • LaTeX • VNA (S-parameters)
+- **Core themes:** measurement vs simulation, biasing, small-signal gain, frequency response (Bode), feedback, differential operation, de-embedding
 
 This project is my **EE-322 (Electrical Engineering Lab II)** final portfolio: a full arc from **device-level MOSFET characterization** to **analog amplifier design**, **differential signaling + CMRR**, and **RF measurement workflows** using **S-parameters** and **de-embedding**.
 
@@ -73,22 +72,23 @@ This project is my **EE-322 (Electrical Engineering Lab II)** final portfolio: a
 
 ## Portfolio Contents
 
-| Lab | Topic | What it Proves |
-|---:|---|---|
-| 01 | NMOS characterization | Device behavior from sweeps; grounding “models” in data |
-| 02 | IC biasing techniques | Bias strategies + simulation/measurement cross-checks |
-| 03 | Actively-loaded common-source amplifier | Gain creation with active loads; early frequency behavior |
-| 04 | Common-source frequency response | Practical Bode measurement; added caps to emulate parasitics |
-| 05 | Feedback amplifier | Bias stabilization + gain/bandwidth tradeoff under feedback |
-| 06 | MOS differential pair | Differential vs single-ended operation; CMRR measurement workflow |
-| 07 | Differential pair + current mirror load | Differential-to-single-ended stage; mismatch sensitivity; CMRR |
-| 08 | VNA + de-embedding (LPF/HPF) | S-parameters, fixture removal via **Open/Short/Thru**, corrected DUT response |
+| Lab | Topic                                   | What it Proves                                                                |
+| --: | --------------------------------------- | ----------------------------------------------------------------------------- |
+|  01 | NMOS characterization                   | Device behavior from sweeps; grounding “models” in data                       |
+|  02 | IC biasing techniques                   | Bias strategies + simulation/measurement cross-checks                         |
+|  03 | Actively-loaded common-source amplifier | Gain creation with active loads; early frequency behavior                     |
+|  04 | Common-source frequency response        | Practical Bode measurement; added caps to emulate parasitics                  |
+|  05 | Feedback amplifier                      | Bias stabilization + gain/bandwidth tradeoff under feedback                   |
+|  06 | MOS differential pair                   | Differential vs single-ended operation; CMRR measurement workflow             |
+|  07 | Differential pair + current mirror load | Differential-to-single-ended stage; mismatch sensitivity; CMRR                |
+|  08 | VNA + de-embedding (LPF/HPF)            | S-parameters, fixture removal via **Open/Short/Thru**, corrected DUT response |
 
 ---
 
 ## Highlights by Lab
 
 ### Lab 01 — NMOS Characterization (Device-Level Ground Truth)
+
 Goal: measure NMOS behavior directly and connect the observed curves to thresholding, conduction regions, and sensitivity to bias.
 
 <div class="row">
@@ -104,6 +104,7 @@ Goal: measure NMOS behavior directly and connect the observed curves to threshol
 ---
 
 ### Lab 03 — Actively-Loaded Common-Source Amplifier (Gain + Load Strategy)
+
 Goal: implement an actively-loaded common-source amplifier and evaluate gain behavior and frequency response.
 
 <div class="row">
@@ -119,6 +120,7 @@ Goal: implement an actively-loaded common-source amplifier and evaluate gain beh
 ---
 
 ### Lab 04 — Common-Source Frequency Response (Measured Bode Reality)
+
 Goal: measure the **mid-band gain**, cutoff frequencies, and bandwidth; compare against LTspice.
 Because intrinsic device capacitances can be too small to observe cleanly with lab equipment, **discrete capacitors** were added to mimic parasitic behavior and force measurable poles.
 
@@ -131,12 +133,13 @@ Because intrinsic device capacitances can be too small to observe cleanly with l
 ---
 
 ### Lab 05 — Feedback Amplifier (Stability + Bandwidth Tradeoff)
+
 Goal: apply **negative feedback** to stabilize DC bias and make gain less device-dependent.
 
 A standard outcome shows up clearly:
 
-- Feedback **reduces gain** (often)  
-- Feedback **increases bandwidth** (often)  
+- Feedback **reduces gain** (often)
+- Feedback **increases bandwidth** (often)
 - Gain becomes more dependent on the feedback network than raw device variation
 
 <div class="row">
@@ -152,12 +155,13 @@ A standard outcome shows up clearly:
 ---
 
 ### Lab 06 — MOS Differential Pair (Differential vs Common-Mode)
+
 Goal: quantify differential operation and noise rejection using **CMRR**.
 
 Key metric:
 
 \[
-\mathrm{CMRR} = \left|\frac{A_d}{A_{cm}}\right|, \qquad \mathrm{CMRR_{dB}} = 20\log_{10}(\mathrm{CMRR})
+\mathrm{CMRR} = \left|\frac{A*d}{A*{cm}}\right|, \qquad \mathrm{CMRR*{dB}} = 20\log*{10}(\mathrm{CMRR})
 \]
 
 <div class="row">
@@ -169,6 +173,7 @@ Key metric:
 ---
 
 ### Lab 07 — Differential Pair + Current Mirror Load (Diff → Single-Ended Stage)
+
 Goal: build a differential pair with an **active (current mirror) load** to convert differential current into a single-ended voltage output, and evaluate **CMRR** and mismatch sensitivity.
 
 <div class="row">
@@ -180,9 +185,11 @@ Goal: build a differential pair with an **active (current mirror) load** to conv
 ---
 
 ### Lab 08 — VNA + De-embedding (LPF/HPF S-Parameters)
+
 Goal: measure LPF/HPF responses using a **VNA**, interpret **S-parameters**, and remove fixture influence via **de-embedding** (Open/Short/Thru).
 
 What changes after de-embedding:
+
 - The DUT response becomes less “polluted” by fixture resonances/parasitics
 - Stopband artifacts and weird notches often clean up
 - Passband behavior aligns better with the expected filter topology
@@ -222,12 +229,15 @@ If you want the entire document visible directly on this page, put the PDF at:
 Follow this link to visit the <a href="https://github.com/SPkHz/EE-322-Electrical-Engineering-Lab-II--Final-Portfolio">EE-322 - Electrical Engineering Lab II: Final Lab Portfolio Public Repository</a>, all of the analysis scripts will be kept public so that all the plots and tables from each lab will remain auditable.
 
 This portfolio is built from:
+
 - **LaTeX source:** `main.tex` + per-lab chapter files (`Chapter_*/*.tex`)
 - **Python analysis scripts:** `Appendix/Python_Code/*.py`
 - **S-parameter data:** `Chapter_8/sparam_files/*.s2p`
 
 ---
+
 <!-->
+
 ## Suggested Asset Layout for Your al-folio Repo
 
 Copy selected images + the PDF into your al-folio site using a predictable structure:

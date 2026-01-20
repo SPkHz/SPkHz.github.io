@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: "De-Embedding Device S-Parameters from Vector Network Analyzer Measurments"
 description: "Vector Network Analyzer (VNA) measurements of LPF/HPF frequency response with 2x-thru de-embedding (Touchstone • Python • SciPy)."
@@ -19,12 +18,12 @@ tags:
 
 ## Overview
 
-  - **Course:** EE-322 — Electronics Lab II
-  - **Project:** Laboratory Portfolio Notebook Entry
-  - **Title:** Lab 08 -- Vector Network Analyzer Basics and S-Parameter De-Embedding
-  - **Author:** Steven Placzek
-  - **Date:** 2025-04-28
-  - **Tools:** Keysight P9371A VNA • Keysight ECal • RF demo board (LPF/HPF) • Python (NumPy/SciPy/Matplotlib) • Touchstone (.s1p/.s2p)
+- **Course:** EE-322 — Electronics Lab II
+- **Project:** Laboratory Portfolio Notebook Entry
+- **Title:** Lab 08 -- Vector Network Analyzer Basics and S-Parameter De-Embedding
+- **Author:** Steven Placzek
+- **Date:** 2025-04-28
+- **Tools:** Keysight P9371A VNA • Keysight ECal • RF demo board (LPF/HPF) • Python (NumPy/SciPy/Matplotlib) • Touchstone (.s1p/.s2p)
 
 ---
 
@@ -273,5 +272,5 @@ Generated artifacts (this page):
 
 ## References
 
-- IEEE 370-2020: *Standard for Electrical Characterization of Printed Circuit Board and Related Interconnects at Frequencies up to 50 GHz*.
+- IEEE 370-2020: _Standard for Electrical Characterization of Printed Circuit Board and Related Interconnects at Frequencies up to 50 GHz_.
 - Additional background papers on de-embedding and fixture removal are included in the lab’s source package.

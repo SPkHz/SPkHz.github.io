@@ -49,12 +49,12 @@ This lab analyzes a **passive RC band-pass filter** using three parallel methods
 
 The circuit is a **2-pole RC band-pass** formed by a **series coupling capacitor** (sets the low cutoff) and a **shunt capacitor** (sets the high cutoff), with source/load resistances providing the real parts.
 
-| Component | Value | Role |
-|---:|---:|---|
-| \(R_1\) | 10 kΩ | Source series resistance |
-| \(R_2\) | 10 kΩ | Load resistance (output across \(R_2\)) |
-| \(C_1\) | 3.3 nF | Shunt capacitor → high cutoff |
-| \(C_2\) | 56 nF | Series capacitor → low cutoff |
+| Component |  Value | Role                                    |
+| --------: | -----: | --------------------------------------- |
+|   \(R_1\) |  10 kΩ | Source series resistance                |
+|   \(R_2\) |  10 kΩ | Load resistance (output across \(R_2\)) |
+|   \(C_1\) | 3.3 nF | Shunt capacitor → high cutoff           |
+|   \(C_2\) |  56 nF | Series capacitor → low cutoff           |
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-6 mt-3 mt-md-0">
@@ -81,7 +81,7 @@ $$
 A_v(\text{mid}) \approx \frac{R_2}{R_1 + R_2}
 $$
 
-With \(R_1 = R_2\), the *first-order intuition* is \(A_v(\text{mid})\approx 0.5\) (≈ −6.02 dB). The full network (exact nodal analysis) predicts a slightly smaller midband gain due to loading interaction between \(C_1\) and \(C_2\).
+With \(R_1 = R_2\), the _first-order intuition_ is \(A_v(\text{mid})\approx 0.5\) (≈ −6.02 dB). The full network (exact nodal analysis) predicts a slightly smaller midband gain due to loading interaction between \(C_1\) and \(C_2\).
 
 ### Corner-frequency estimates
 
@@ -164,17 +164,18 @@ The filter was built directly on the **Analog Discovery Studio protoboard** and 
 
 ### Key numeric results
 
-| Metric | Calculated | Simulated | Measured | Units |
-|---|---:|---:|---:|---|
-| \(A_v(\text{mid})\) | 485.6895 | 485.6895 | 483.2372 | mV/V |
-| \(|A_v(\text{mid})|_{dB}\) | −6.2728 | −6.2728 | −6.3168 | dB |
-| \(f_L\) | 136.1683 | 136.1683 | 131.6514 | Hz |
-| \(f_0\) | 1.1708 | 1.1708 | 1.0906 | kHz |
-| \(f_H\) | 10.0661 | 10.0661 | 9.8537 | kHz |
-| \(BW_f\) | 9.9210 | 9.9210 | 9.7221 | kHz |
-| \(Q\) | 0.1179 | 0.1179 | 0.1122 | Hz/Hz |
+| Metric              |      Calculated | Simulated | Measured | Units   |
+| ------------------- | --------------: | --------: | -------: | ------- | ------- | --- |
+| \(A_v(\text{mid})\) |        485.6895 |  485.6895 | 483.2372 | mV/V    |
+| \(                  | A_v(\text{mid}) |  \_{dB}\) |  −6.2728 | −6.2728 | −6.3168 | dB  |
+| \(f_L\)             |        136.1683 |  136.1683 | 131.6514 | Hz      |
+| \(f_0\)             |          1.1708 |    1.1708 |   1.0906 | kHz     |
+| \(f_H\)             |         10.0661 |   10.0661 |   9.8537 | kHz     |
+| \(BW_f\)            |          9.9210 |    9.9210 |   9.7221 | kHz     |
+| \(Q\)               |          0.1179 |    0.1179 |   0.1122 | Hz/Hz   |
 
 **Notes:**
+
 - Calculated vs simulated matched essentially identically.
 - The maximum measured deviation was at \(f_0\) (≈ 7.09%), which is consistent with component tolerance and practical measurement non-idealities.
 

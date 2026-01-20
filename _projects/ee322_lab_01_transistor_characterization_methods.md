@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Transistor Characterization Techniques
 description: Extracting NMOS SPICE parameters (VTn, KN, VA) from automated SMU sweeps + Python analysis.
@@ -21,12 +20,12 @@ tags:
 
 ## Overview
 
-  - **Course:** EE-322 — Electronics Lab II
-  - **Project:** Laboratory Portfolio Notebook Entry
-  - **Title:** Lab 01 -- Transistor Characterization Techniques
-  - **Author:** Steven Placzek
-  - **Date:** 2025-01-16 10:30:00-05:00
-  - **Tools:** LTspice • Python • MATLAB • LaTeX
+- **Course:** EE-322 — Electronics Lab II
+- **Project:** Laboratory Portfolio Notebook Entry
+- **Title:** Lab 01 -- Transistor Characterization Techniques
+- **Author:** Steven Placzek
+- **Date:** 2025-01-16 10:30:00-05:00
+- **Tools:** LTspice • Python • MATLAB • LaTeX
 
 This page documents **Lab 01 (2025-01-16)** for **EE-322 — Electrical Engineering Lab II**.
 
@@ -166,17 +165,17 @@ So from a line fit $\sqrt{I_D}=mV_{GS}+b$:
 **Per-curve results (by fixed $V_{DS}$):**
 
 | Fixed $V_{DS}$ (V) | Extracted $V_{Tn}$ (V) | Extracted $K_N$ ($\mu$A/V$^2$) |
-|---:|---:|---:|
-| 4 | 0.5891 | 522.2 |
-| 5 | 0.5884 | 528.6 |
-| 6 | 0.5870 | 533.9 |
+| -----------------: | ---------------------: | -----------------------------: |
+|                  4 |                 0.5891 |                          522.2 |
+|                  5 |                 0.5884 |                          528.6 |
+|                  6 |                 0.5870 |                          533.9 |
 
 **Summary (mean ± 1σ across $V_{DS}=4,5,6$ V):**
 
-| Parameter | Mean | Std. Dev. | Notes |
-|---|---:|---:|---|
-| $V_{Tn}$ | 0.5882 V | 0.0011 V | linear fit of $\sqrt{I_D}$ vs. $V_{GS}$ |
-| $K_N$ | 528.2 $\mu$A/V$^2$ | 5.85 $\mu$A/V$^2$ | using $I_D = (K_N/2)(V_{GS}-V_{Tn})^2$ |
+| Parameter |               Mean |         Std. Dev. | Notes                                   |
+| --------- | -----------------: | ----------------: | --------------------------------------- |
+| $V_{Tn}$  |           0.5882 V |          0.0011 V | linear fit of $\sqrt{I_D}$ vs. $V_{GS}$ |
+| $K_N$     | 528.2 $\mu$A/V$^2$ | 5.85 $\mu$A/V$^2$ | using $I_D = (K_N/2)(V_{GS}-V_{Tn})^2$  |
 
 > Unit correction note: the lab handout table lists units for $K_N$ as “$\mu$A/V”, but the square-law parameter has units of **A/V$^2$** (or **$\mu$A/V$^2$**).
 
@@ -209,11 +208,11 @@ $$
 **Extracted $V_A$ values (by fixed $V_{GS}$):**
 
 | Fixed $V_{GS}$ (V) | $V_A$ (V) |
-|---:|---:|
-| 1 | 65.27 |
-| 2 | 74.13 |
-| 3 | 96.02 |
-| 4 | 133.06 |
+| -----------------: | --------: |
+|                  1 |     65.27 |
+|                  2 |     74.13 |
+|                  3 |     96.02 |
+|                  4 |    133.06 |
 
 ---
 

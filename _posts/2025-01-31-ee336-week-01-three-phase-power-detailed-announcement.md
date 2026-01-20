@@ -1,7 +1,4 @@
 ---
-
-
-
 layout: post
 title: "EE-336 Assignment 01 — Three-Phase Apparent Power"
 date: 2025-01-31 08:00:00-0400

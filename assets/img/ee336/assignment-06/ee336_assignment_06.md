@@ -21,14 +21,14 @@ This assignment analyzes an **induction motor per-phase equivalent circuit** by 
 
 Given an induction motor with the following **per-phase equivalent circuit parameters**:
 
-| Parameter | Symbol | Value | Description |
-|:----------|:------:|------:|:------------|
-| Stator Resistance | $R_s$ | 0.5 Ω | Winding resistance |
-| Stator Reactance | $X_s$ | 1.0 Ω | Leakage reactance |
-| Magnetizing Reactance | $X_m$ | 25 Ω | Core magnetization |
-| Rotor Resistance | $R_r$ | 0.6 Ω | Referred to stator |
-| Rotor Reactance | $X_r$ | 1.2 Ω | Referred to stator |
-| Stator Voltage | $V_s$ | 220 V | Phase voltage |
+| Parameter             | Symbol | Value | Description        |
+| :-------------------- | :----: | ----: | :----------------- |
+| Stator Resistance     | $R_s$  | 0.5 Ω | Winding resistance |
+| Stator Reactance      | $X_s$  | 1.0 Ω | Leakage reactance  |
+| Magnetizing Reactance | $X_m$  |  25 Ω | Core magnetization |
+| Rotor Resistance      | $R_r$  | 0.6 Ω | Referred to stator |
+| Rotor Reactance       | $X_r$  | 1.2 Ω | Referred to stator |
+| Stator Voltage        | $V_s$  | 220 V | Phase voltage      |
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -45,12 +45,12 @@ Given an induction motor with the following **per-phase equivalent circuit param
 
 The speed-torque curve defines four operating points with different **slip values** ($s$):
 
-| Operating Point | Slip ($s$) | Operating Condition |
-|:---------------:|:----------:|:--------------------|
-| **A** | 0.80 | Near stall (high slip, low speed) |
-| **B** | 0.15 | Loaded operation |
-| **C** | 0.05 | Light load |
-| **D** | 0.01 | Near no-load (low slip, high speed) |
+| Operating Point | Slip ($s$) | Operating Condition                 |
+| :-------------: | :--------: | :---------------------------------- |
+|      **A**      |    0.80    | Near stall (high slip, low speed)   |
+|      **B**      |    0.15    | Loaded operation                    |
+|      **C**      |    0.05    | Light load                          |
+|      **D**      |    0.01    | Near no-load (low slip, high speed) |
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -147,11 +147,11 @@ This explains why **inrush current at startup** (when $s = 1$) can be 5-8× the 
 ### Numerical Results
 
 | Operating Point | Slip | $\|I_s\|$ (A) | $\|V_r\|$ (V) | $\|V_L\|$ (V) | $\angle I_s$ (°) |
-|:---------------:|:----:|:-------------:|:-------------:|:-------------:|:----------------:|
-| **A** | 0.80 | **89.20** | 120.39 | 63.81 | -61.36 |
-| B | 0.15 | 45.19 | 178.00 | 170.50 | -33.52 |
-| C | 0.05 | 19.27 | 201.64 | 200.64 | -33.39 |
-| D | 0.01 | 9.15 | 209.79 | 209.75 | -67.36 |
+| :-------------: | :--: | :-----------: | :-----------: | :-----------: | :--------------: |
+|      **A**      | 0.80 |   **89.20**   |    120.39     |     63.81     |      -61.36      |
+|        B        | 0.15 |     45.19     |    178.00     |    170.50     |      -33.52      |
+|        C        | 0.05 |     19.27     |    201.64     |    200.64     |      -33.39      |
+|        D        | 0.01 |     9.15      |    209.79     |    209.75     |      -67.36      |
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -195,13 +195,13 @@ for i = 1:length(slips)
     Zr = complex(Rr_s, Xr);
     Zm = complex(0, Xm);
     Zs = complex(Rs, Xs);
-    
+
     Z_parallel = (Zm * Zr) / (Zm + Zr);
     Ztotal = Zs + Z_parallel;
-    
+
     Is_complex(i) = Vs_complex / Ztotal;
     Vr_complex(i) = Is_complex(i) * Z_parallel;
-    
+
     % Current through rotor branch
     Ir = Vr_complex(i) / Zr;
     VL_complex(i) = Ir * complex(Rr_s, 0);

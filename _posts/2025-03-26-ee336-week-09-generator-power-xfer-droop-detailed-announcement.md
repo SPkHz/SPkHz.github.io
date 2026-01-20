@@ -1,7 +1,4 @@
 ---
-
-
-
 layout: post
 title: "EE-336 Power Transfer & Frequency Droop Analysis"
 date: 2025-03-26 08:00:00-0400

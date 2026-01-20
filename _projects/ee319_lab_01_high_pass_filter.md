@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: High-Pass Filter Measurement Techniques
 description: First-order RC high-pass filter characterization (theory vs. LTspice vs. WaveForms measurements) with MATLAB Bode magnitude/phase plots.
@@ -35,12 +34,13 @@ _styles: |
 
 **Course:** EE-319 — EE Lab I (WNEU ECE)  
 **Lab:** #01 — HPF Measurements  
-**Tools:** Digilent WaveForms (Bode + Scope), LTspice, MATLAB  
+**Tools:** Digilent WaveForms (Bode + Scope), LTspice, MATLAB
 
 This lab builds and measures a **first-order high-pass filter** and compares:
+
 - **Calculated** transfer-function expectations
 - **LTspice** AC simulation
-- **Measured** frequency response (10 Hz → 100 kHz) and time-domain spot checks  
+- **Measured** frequency response (10 Hz → 100 kHz) and time-domain spot checks
 
 (Full lab report: [`EE_319_Lab01_HPF_Report.pdf`](assets/img/ee319/lab-01/hpf/EE_319_Lab01_HPF_Report.pdf))
 
@@ -49,6 +49,7 @@ This lab builds and measures a **first-order high-pass filter** and compares:
 ## Circuit
 
 Component values (per lab spec):
+
 - $$R_1 = 10~\text{k}\Omega$$
 - $$R_2 = 10~\text{k}\Omega$$
 - $$C_2 = 56~\text{nF}$$
@@ -68,27 +69,28 @@ H(s)=\frac{V_o}{V_i}=\frac{s C_2 R_2}{1+sC_2(R_1+R_2)}
 $$
 
 Key metrics:
+
 - High-frequency gain:
-$$
-A_{v(\text{HF})}=\lim_{\omega\to\infty}|H(j\omega)|=\frac{R_2}{R_1+R_2}=0.5 \Rightarrow -6.02~\text{dB}
-$$
+  $$
+  A_{v(\text{HF})}=\lim_{\omega\to\infty}|H(j\omega)|=\frac{R_2}{R_1+R_2}=0.5 \Rightarrow -6.02~\text{dB}
+  $$
 - Corner (3 dB) frequency:
-$$
-f_L=\frac{1}{2\pi C_2 (R_1+R_2)}\approx 142.1~\text{Hz}
-$$
+  $$
+  f_L=\frac{1}{2\pi C_2 (R_1+R_2)}\approx 142.1~\text{Hz}
+  $$
 
 ---
 
 ## Measurement workflow
 
-1. Build the circuit on the bench.  
-2. Run WaveForms Bode Analyzer sweep: **10 Hz → 100 kHz** and export CSV.  
+1. Build the circuit on the bench.
+2. Run WaveForms Bode Analyzer sweep: **10 Hz → 100 kHz** and export CSV.
 3. Plot in MATLAB:
    - Magnitude $$20\log_{10}(|A_v(f)|)$$ (target display: **-30 to -5 dB**)
-   - Phase $$\theta(f)$$ (target display: **0° to +90°**)  
+   - Phase $$\theta(f)$$ (target display: **0° to +90°**)
 4. Extract:
    - $$A_{v(\text{HF})}$$ (linear and dB)
-   - $$f_L$$ (measured -3 dB point relative to HF gain)  
+   - $$f_L$$ (measured -3 dB point relative to HF gain)
 5. Capture time-domain scope traces at:
    - $$f=f_L$$
    - $$f=100~\text{kHz}$$
@@ -126,11 +128,11 @@ $$
 
 ## Key parameters
 
-| Parameter | Calculated | Simulated | Measured |
-|---|---:|---:|---:|
-| $$A_{v(\text{HF})}$$ (mV/V) | 500.0000 | 499.9995 | 496.4600 |
-| $$A_{v(\text{HF})}$$ (dB) | -6.0206 | -6.0206 | -6.0823 |
-| $$f_L$$ (Hz) | 142.1026 | 142.1023 | 136.8137 |
+| Parameter                   | Calculated | Simulated | Measured |
+| --------------------------- | ---------: | --------: | -------: |
+| $$A_{v(\text{HF})}$$ (mV/V) |   500.0000 |  499.9995 | 496.4600 |
+| $$A_{v(\text{HF})}$$ (dB)   |    -6.0206 |   -6.0206 |  -6.0823 |
+| $$f_L$$ (Hz)                |   142.1026 |  142.1023 | 136.8137 |
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
@@ -154,16 +156,19 @@ $$
 ## Time-domain spot checks
 
 ### At $$f=f_L \approx 136.8~\text{Hz}$$
+
 Near the corner frequency, the output magnitude is ~3 dB below the HF gain point and the phase is near 45°.
 
 {% include figure.liquid loading="eager" path="assets/img/ee319/lab-01/hpf/scope_fl_136hz.png" title="Scope capture at f = fL" class="img-fluid rounded z-depth-1" %}
 
 ### At $$f=100~\text{kHz}$$
+
 Well above $$f_L$$, the capacitor is effectively a short: $$V_o \approx 0.5V_i$$ and phase is near 0°.
 
 {% include figure.liquid loading="eager" path="assets/img/ee319/lab-01/hpf/scope_100khz.png" title="Scope capture at f = 100 kHz" class="img-fluid rounded z-depth-1" %}
 
 ### At $$f=10~\text{Hz}$$
+
 Well below $$f_L$$, the capacitor blocks the signal: strong attenuation and phase lead.
 
 {% include figure.liquid loading="eager" path="assets/img/ee319/lab-01/hpf/scope_10hz.png" title="Scope capture at f = 10 Hz" class="img-fluid rounded z-depth-1" %}
@@ -172,10 +177,11 @@ Well below $$f_L$$, the capacitor blocks the signal: strong attenuation and phas
 
 ## Downloads / reproducibility
 
-- **Report PDF:** [`EE_319_Lab01_HPF_Report.pdf`](assets/img/ee319/lab-01/hpf/EE_319_Lab01_HPF_Report.pdf)  
+- **Report PDF:** [`EE_319_Lab01_HPF_Report.pdf`](assets/img/ee319/lab-01/hpf/EE_319_Lab01_HPF_Report.pdf)
 - **Source bundle (MATLAB + LTspice + measured data):** [`EE_319_Lab01_HPF_Source.zip`](assets/img/ee319/lab-01/hpf/EE_319_Lab01_HPF_Source.zip)
 
 Contents of the source bundle include:
+
 - MATLAB script (`EE_319_Lab_01_HPF_Placzek.m`)
 - LTspice schematics (`*.asc`)
 - WaveForms projects (`*.dwf3work`)

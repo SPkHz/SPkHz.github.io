@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Faraday's Law, Synchronous Generator Speed, and Phasor Analysis
 description: Faraday's Law, Synchronous Generator Speed, and Phasor Analysis
@@ -93,6 +92,7 @@ The synchronous speed of an AC machine is given by:
 $$N_s = \frac{120 f}{P}$$
 
 where:
+
 - $$N_s$$ = synchronous speed (RPM)
 - $$f$$ = electrical frequency (Hz)
 - $$P$$ = number of poles
@@ -138,11 +138,11 @@ This gives an actual synchronous speed of:
 $$N_s = \frac{120 \times 50}{6} = 1000 \text{ RPM} \leq 1000 \text{ RPM} \checkmark$$
 
 | # of Poles | $$N_s$$ at 60 Hz (RPM) |
-|:----------:|:----------------------:|
-| 2          | 3600                   |
-| 4          | 1800                   |
-| 6          | 1200                   |
-| **8**      | **900** ✓              |
+| :--------: | :--------------------: |
+|     2      |          3600          |
+|     4      |          1800          |
+|     6      |          1200          |
+|   **8**    |       **900** ✓        |
 
 ---
 
@@ -219,6 +219,7 @@ Consider a generator model operating under two different loading conditions repr
 </div>
 
 Which condition(s):
+
 - Supply real power?
 - Supply reactive power?
 - Are underexcited?
@@ -266,12 +267,12 @@ $$\boxed{\text{More Real Power: Condition B}}$$
 
 ### Summary Table
 
-| Property | Condition A | Condition B |
-|:---------|:-----------:|:-----------:|
-| Supplies Real Power | ✓ | ✓ |
-| Supplies Reactive Power | ✗ (absorbs) | ✓ |
-| Underexcited | ✓ | ✗ |
-| More Real Power | ✗ | ✓ |
+| Property                | Condition A | Condition B |
+| :---------------------- | :---------: | :---------: |
+| Supplies Real Power     |      ✓      |      ✓      |
+| Supplies Reactive Power | ✗ (absorbs) |      ✓      |
+| Underexcited            |      ✓      |      ✗      |
+| More Real Power         |      ✗      |      ✓      |
 
 ---
 

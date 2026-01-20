@@ -21,7 +21,7 @@ Given a user **audiogram** (hearing loss vs. frequency), the goal is to synthesi
 Audiogram loss points (in dB) are converted into a gain target and smoothed using **PCHIP interpolation**, with small bandwidth padding around each point to avoid sharp transitions. Loss (dB) is mapped to linear gain via:
 
 \[
-G_{\text{linear}} = 10^{(\text{Loss}_{dB}/20)}
+G*{\text{linear}} = 10^{(\text{Loss}*{dB}/20)}
 \]
 
 That target then drives the filter-bank synthesis.
@@ -31,12 +31,14 @@ That target then drives the filter-bank synthesis.
 ## Two FIR filter-bank architectures
 
 ### Design 1 — Wideband overlapping bands (fir2, N = 300)
+
 - **8 overlapping FIR bands** spanning 0–10 kHz
 - Designed using **frequency-sampling** via `fir2`
 - Each band uses a controlled amplitude profile (plateau/triangle) and is scaled by the audiogram-derived gain
 - Produces a **smoother overall correction**, at the cost of more filters and higher order
 
 ### Design 2 — Center-frequency band-pass bank (fir1, N = 51)
+
 - **5 Hamming-window band-pass FIR filters**
 - Designed using `fir1`, centered near key audiogram regions
 - Reduced computational load with a more approximate fit to the compensation target

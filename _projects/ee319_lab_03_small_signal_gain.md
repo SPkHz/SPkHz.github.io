@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Utilizing Bode Plots to Determine Small-Signal Gain
 description: Calculated vs LTspice vs Analog Discovery measurements for a diode-biased LM741 amplifier (mid-band gain, cutoff frequencies, and small-signal limits).
@@ -27,13 +26,13 @@ This lab characterizes the frequency response of a diode-biased op-amp amplifier
 - **Simulated:** LTspice AC analysis
 - **Measured:** Digilent Analog Discovery (Bode tool + scope/FFT)
 
-The primary deliverables were the **mid-band gain**, the **low/high cutoff frequencies** (*f*<sub>L</sub>, *f*<sub>H</sub>), and a **small-signal verification** showing where the diode network begins to introduce nonlinearity.
+The primary deliverables were the **mid-band gain**, the **low/high cutoff frequencies** (_f_<sub>L</sub>, _f_<sub>H</sub>), and a **small-signal verification** showing where the diode network begins to introduce nonlinearity.
 
 ### Key results at a glance
 
 - **Mid-band gain** (V/V): calculated **-3.8391**, simulated **-3.8563**, measured **-4.2132**
 - **Mid-band gain** (dB): calculated **11.6845 dB**, simulated **11.7235 dB**, measured **12.4923 dB**
-- **Cutoffs (measured):** *f*<sub>L</sub> ≈ **5.43 Hz**, *f*<sub>H</sub> ≈ **89.46 kHz**
+- **Cutoffs (measured):** _f_<sub>L</sub> ≈ **5.43 Hz**, _f_<sub>H</sub> ≈ **89.46 kHz**
 
 ---
 
@@ -78,12 +77,12 @@ The primary deliverables were the **mid-band gain**, the **low/high cutoff frequ
 
 **Nominal component values (from schematic):**
 
-- *R*<sub>sig</sub> = 330 Ω
-- *R*<sub>D</sub> = 20 kΩ
-- *R*<sub>1</sub> = 1 kΩ
-- *R*<sub>2</sub> = 10 kΩ
-- *C*<sub>B1</sub> = 100 µF
-- *C*<sub>B2</sub> = 100 µF
+- _R_<sub>sig</sub> = 330 Ω
+- _R_<sub>D</sub> = 20 kΩ
+- _R_<sub>1</sub> = 1 kΩ
+- _R_<sub>2</sub> = 10 kΩ
+- _C_<sub>B1</sub> = 100 µF
+- _C_<sub>B2</sub> = 100 µF
 - Diodes: 1N914 (×3)
 - Op-amp: LM741, supplies ±12 V
 
@@ -124,17 +123,17 @@ The primary deliverables were the **mid-band gain**, the **low/high cutoff frequ
 
 ### Gain and bandwidth metrics
 
-| Metric | Calculated | Simulated (LTspice) | Measured (AD) | Units |
-|---|---:|---:|---:|---|
-| Mid-band gain, *G*<sub>v(mid)</sub> | -3.8391 | -3.8563 | -4.2132 | V/V |
-| Mid-band gain, \|*G*<sub>v(mid)</sub>\| | 11.6845 | 11.7235 | 12.4923 | dB |
-| Low cutoff, *f*<sub>L</sub> | — | 3.5456 | 5.4261 | Hz |
-| Reference mid-band test frequency, *f*<sub>x</sub> | — | 599.5625 | 872.8567 | Hz |
-| High cutoff, *f*<sub>H</sub> | — | 106.0952 | 89.4605 | kHz |
-| Bandwidth, BW<sub>f</sub> | — | 106.0917 | 89.4551 | kHz |
-| Quality factor, *Q* = *f*<sub>x</sub>/BW<sub>f</sub> | — | 0.0057 | 0.0098 | Hz/Hz |
+| Metric                                               | Calculated | Simulated (LTspice) | Measured (AD) | Units |
+| ---------------------------------------------------- | ---------: | ------------------: | ------------: | ----- |
+| Mid-band gain, _G_<sub>v(mid)</sub>                  |    -3.8391 |             -3.8563 |       -4.2132 | V/V   |
+| Mid-band gain, \|_G_<sub>v(mid)</sub>\|              |    11.6845 |             11.7235 |       12.4923 | dB    |
+| Low cutoff, _f_<sub>L</sub>                          |          — |              3.5456 |        5.4261 | Hz    |
+| Reference mid-band test frequency, _f_<sub>x</sub>   |          — |            599.5625 |      872.8567 | Hz    |
+| High cutoff, _f_<sub>H</sub>                         |          — |            106.0952 |       89.4605 | kHz   |
+| Bandwidth, BW<sub>f</sub>                            |          — |            106.0917 |       89.4551 | kHz   |
+| Quality factor, _Q_ = _f_<sub>x</sub>/BW<sub>f</sub> |          — |              0.0057 |        0.0098 | Hz/Hz |
 
-> **Note on units:** Some source tables label *f*<sub>x</sub> as “kHz”; the values (≈600–873) are treated as **Hz** (consistent with the bandwidth and *Q* values).
+> **Note on units:** Some source tables label _f_<sub>x</sub> as “kHz”; the values (≈600–873) are treated as **Hz** (consistent with the bandwidth and _Q_ values).
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
@@ -154,12 +153,12 @@ For comparisons, percent difference was computed using the symmetric “average 
 \%\,\mathrm{diff} = \frac{|a-b|}{\tfrac{|a|+|b|}{2}} \times 100\%
 \]
 
-| Comparison | Metric | Diff | % diff |
-|---|---|---:|---:|
-| Calculated vs Simulated | *G*<sub>v(mid)</sub> (V/V) | 0.0172 | 0.4470% |
-| Calculated vs Simulated | \|*G*<sub>v(mid)</sub>\| (dB) | 0.0390 | 0.3332% |
-| Calculated vs Measured | *G*<sub>v(mid)</sub> (V/V) | 0.3741 | 9.2918% |
-| Calculated vs Measured | \|*G*<sub>v(mid)</sub>\| (dB) | 0.8078 | 6.6824% |
+| Comparison              | Metric                        |   Diff |  % diff |
+| ----------------------- | ----------------------------- | -----: | ------: |
+| Calculated vs Simulated | _G_<sub>v(mid)</sub> (V/V)    | 0.0172 | 0.4470% |
+| Calculated vs Simulated | \|_G_<sub>v(mid)</sub>\| (dB) | 0.0390 | 0.3332% |
+| Calculated vs Measured  | _G_<sub>v(mid)</sub> (V/V)    | 0.3741 | 9.2918% |
+| Calculated vs Measured  | \|_G_<sub>v(mid)</sub>\| (dB) | 0.8078 | 6.6824% |
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">

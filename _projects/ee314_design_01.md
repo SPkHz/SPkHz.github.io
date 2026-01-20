@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Millimeter-Wave Impedance Matching Network Designs
 description: Transmission-line impedance matching in Keysight ADS — shunt-stub + quarter-wave transformer designs (ideal + microstrip), with Smith-chart synthesis and layout verification.
@@ -39,7 +38,8 @@ This project is my **EE-314 (Electromagnetic Fields and Waves)** final design pr
 2. **Quarter-wave transformer matching network** (short/long line solutions)
 
 Each network was completed in two forms:
-- **Ideal transmission-line (TL)** design and simulation in **Keysight ADS**  
+
+- **Ideal transmission-line (TL)** design and simulation in **Keysight ADS**
 - **Microstrip (MStrip)** physical design using a defined substrate stackup, with **layout-level verification** and S-parameter performance checks.
 
 ---
@@ -56,6 +56,7 @@ Each network was completed in two forms:
 ## Results Summary
 
 ### Shunt-Stub Matching
+
 - Multiple solutions were produced (e.g., **open-circuit vs short-circuit stubs**, and alternative placements/lengths).
 - Each solution was validated in:
   - **ADS ideal TL**
@@ -63,6 +64,7 @@ Each network was completed in two forms:
   - **Layout view**
 
 ### Quarter-Wave Transformer Matching
+
 - Implemented using standard **λ/4 transformer logic**, with **two valid line-length choices** (short/long alternatives).
 - Verified in:
   - **ADS ideal TL**
@@ -74,6 +76,7 @@ Each network was completed in two forms:
 ## Substrate / Stackup Used (Microstrip)
 
 The ADS microstrip designs use a defined substrate setup (shown in the ADS schematics), including:
+
 - dielectric thickness and permittivity settings
 - conductor thickness
 - loss tangent / conductivity style parameters

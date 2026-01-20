@@ -1,7 +1,4 @@
 ---
-
-
-
 layout: post
 title: "EE 319 Lab 06 — Measurements (LM741 Op-Amp)"
 date: 2024-12-03 07:59:00-0400

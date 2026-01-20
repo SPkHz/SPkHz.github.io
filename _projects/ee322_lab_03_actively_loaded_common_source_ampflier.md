@@ -1,7 +1,6 @@
 ---
-
 layout: page
-title: Building, Simulating, and Measuring a Common-Source Amplifier with an Active Load 
+title: Building, Simulating, and Measuring a Common-Source Amplifier with an Active Load
 description: DC biasing + small-signal gain sensitivity to Rsig and RL using an ALD1105 MOSFET array (bench + LTspice).
 img: /assets/img/ee322/lab-03/cover.png
 category: coursework
@@ -21,12 +20,12 @@ tags:
 
 ## Overview
 
-  - **Course:** EE-322 — Electronics Lab II
-  - **Project:** Laboratory Portfolio Notebook Entry
-  - **Title:** Lab 03 -- Building, Simulating, and Measuring a Common-Source Amplifier with an Active Load
-  - **Author:** Steven Placzek
-  - **Date:** 2025-02-24
-  - **Tools:** Bench PSU + Function Generator + Oscilloscope • LTspice • LaTeX
+- **Course:** EE-322 — Electronics Lab II
+- **Project:** Laboratory Portfolio Notebook Entry
+- **Title:** Lab 03 -- Building, Simulating, and Measuring a Common-Source Amplifier with an Active Load
+- **Author:** Steven Placzek
+- **Date:** 2025-02-24
+- **Tools:** Bench PSU + Function Generator + Oscilloscope • LTspice • LaTeX
 
 ---
 
@@ -38,7 +37,7 @@ This lab investigates a **common-source MOSFET amplifier** built using the **ALD
 The work is organized into three experiments:
 
 1. **DC operating point:** adjust the gate-bias supply until the output is near **\(V_O \approx 5\,\text{V}\)**.
-2. **Effect of source resistance \(R_{sig}\):** quantify how generator/source impedance attenuates the input and changes the overall gain.
+2. **Effect of source resistance \(R\_{sig}\):** quantify how generator/source impedance attenuates the input and changes the overall gain.
 3. **Effect of load resistance \(R_L\):** quantify how output loading reduces small-signal gain.
 
 > **Important bench note (from the graded notebook):** early measurements were contaminated by **60 Hz interference** caused by **ground loops**. The circuit is extremely sensitive to bias-node noise; all instruments must share a **single common ground**.
@@ -62,12 +61,12 @@ The work is organized into three experiments:
 
 **Nominal component/model values (from the lab handout):**
 
-- \(V_{DD} = 10\,\text{V}\)
+- \(V\_{DD} = 10\,\text{V}\)
 - \(R = 15\,\text{k}\Omega\)
 - \(R_G = 10\,\text{M}\Omega\)
 - \(C_B = 0.1\,\mu\text{F}\)
-- NMOS: \(K_N = 270\,\mu\text{A}/\text{V}^2\), \(V_{Tn}=0.573\,\text{V}\), \(\lambda_N=0.0165\,\text{V}^{-1}\)
-- PMOS: \(K_P = 88\,\mu\text{A}/\text{V}^2\), \(V_{Tp}=-0.647\,\text{V}\), \(\lambda_P=0.0219\,\text{V}^{-1}\)
+- NMOS: \(K*N = 270\,\mu\text{A}/\text{V}^2\), \(V*{Tn}=0.573\,\text{V}\), \(\lambda_N=0.0165\,\text{V}^{-1}\)
+- PMOS: \(K*P = 88\,\mu\text{A}/\text{V}^2\), \(V*{Tp}=-0.647\,\text{V}\), \(\lambda_P=0.0219\,\text{V}^{-1}\)
 
 ---
 
@@ -75,7 +74,7 @@ The work is organized into three experiments:
 
 ### Procedure
 
-- Adjust the DC bias supply (\(V_G\) / \(V_{GG}\)) until the output node is approximately **\(V_O = 5\,\text{V}\)**.
+- Adjust the DC bias supply (\(V*G\) / \(V*{GG}\)) until the output node is approximately **\(V_O = 5\,\text{V}\)**.
 - Record node voltages and compute/confirm currents.
 
 ### Results
@@ -85,25 +84,25 @@ The table below consolidates:
 - **Simulated** operating point from LTspice.
 - **Measured** operating point values recorded in the **graded** notebook.
 
-| Device | Quantity | Simulated | Measured | Units |
-|---|---:|---:|---:|---|
-| Q1 (NMOS) | \(I_D\) | 494.0 | 482.750 | \(\mu\text{A}\) |
-|  | \(|V_{OV}|\) | 1.299 | 1.296* | V |
-|  | \(V_G\) | 1.872 | 1.869 | V |
-|  | \(V_D\) | 5.058 | 5.322 | V |
-|  | \(V_S\) | 0.000 | 0.000 | V |
-| Q2 (PMOS load) | \(I_D\) | 494.0 | 482.750 | \(\mu\text{A}\) |
-|  | \(|V_{OV}|\) | 2.250 | 2.158 | V |
-|  | \(V_G\) | 7.103 | 7.142 | V |
-|  | \(V_D\) | 5.058 | 5.322 | V |
-|  | \(V_S\) | 10.000 | 10.000 | V |
-| Q3 (PMOS reference) | \(I_D\) | 494.0 | 482.750 | \(\mu\text{A}\) |
-|  | \(|V_{OV}|\) | 2.250 | 2.158 | V |
-|  | \(V_G\) | 7.103 | 7.142 | V |
-|  | \(V_D\) | 7.103 | 7.142 | V |
-|  | \(V_S\) | 10.000 | 10.000 | V |
+| Device              | Quantity | Simulated | Measured | Units           |
+| ------------------- | -------: | --------: | -------: | --------------- | ------- | --- |
+| Q1 (NMOS)           |  \(I_D\) |     494.0 |  482.750 | \(\mu\text{A}\) |
+|                     |       \( |   V\_{OV} |       \) | 1.299           | 1.296\* | V   |
+|                     |  \(V_G\) |     1.872 |    1.869 | V               |
+|                     |  \(V_D\) |     5.058 |    5.322 | V               |
+|                     |  \(V_S\) |     0.000 |    0.000 | V               |
+| Q2 (PMOS load)      |  \(I_D\) |     494.0 |  482.750 | \(\mu\text{A}\) |
+|                     |       \( |   V\_{OV} |       \) | 2.250           | 2.158   | V   |
+|                     |  \(V_G\) |     7.103 |    7.142 | V               |
+|                     |  \(V_D\) |     5.058 |    5.322 | V               |
+|                     |  \(V_S\) |    10.000 |   10.000 | V               |
+| Q3 (PMOS reference) |  \(I_D\) |     494.0 |  482.750 | \(\mu\text{A}\) |
+|                     |       \( |   V\_{OV} |       \) | 2.250           | 2.158   | V   |
+|                     |  \(V_G\) |     7.103 |    7.142 | V               |
+|                     |  \(V_D\) |     7.103 |    7.142 | V               |
+|                     |  \(V_S\) |    10.000 |   10.000 | V               |
 
-\*For Q1, \(|V_{OV}|\) was computed from measured \(V_G\) using \(|V_{OV}| \approx V_{GS}-V_{Tn} = 1.869-0.573 = 1.296\,\text{V}\).
+\*For Q1, \(|V*{OV}|\) was computed from measured \(V_G\) using \(|V*{OV}| \approx V*{GS}-V*{Tn} = 1.869-0.573 = 1.296\,\text{V}\).
 
 <div class="row">
   <div class="col-sm-10 mt-3 mt-md-0">
@@ -143,11 +142,11 @@ $$
 
 Using the simulated Q1 operating point:
 
-- \(g_{m1} \approx \frac{2I_D}{|V_{OV}|} \approx \frac{2\cdot 494\,\mu\text{A}}{1.299\,\text{V}} \approx 0.761\,\text{mS}\)
-- \(r_{o1} \approx \frac{1}{\lambda_N I_D} \approx \frac{1}{0.0165\cdot 494\,\mu\text{A}} \approx 123\,\text{k}\Omega\)
-- \(r_{o2} \approx \frac{1}{\lambda_P I_D} \approx \frac{1}{0.0219\cdot 494\,\mu\text{A}} \approx 92\,\text{k}\Omega\)
+- \(g*{m1} \approx \frac{2I_D}{|V*{OV}|} \approx \frac{2\cdot 494\,\mu\text{A}}{1.299\,\text{V}} \approx 0.761\,\text{mS}\)
+- \(r\_{o1} \approx \frac{1}{\lambda_N I_D} \approx \frac{1}{0.0165\cdot 494\,\mu\text{A}} \approx 123\,\text{k}\Omega\)
+- \(r\_{o2} \approx \frac{1}{\lambda_P I_D} \approx \frac{1}{0.0219\cdot 494\,\mu\text{A}} \approx 92\,\text{k}\Omega\)
 
-This yields \(r_{o1}\parallel r_{o2} \approx 53\,\text{k}\Omega\), giving a midband gain estimate:
+This yields \(r*{o1}\parallel r*{o2} \approx 53\,\text{k}\Omega\), giving a midband gain estimate:
 
 $$
 A_v \approx -(0.761\,\text{mS})(53\,\text{k}\Omega) \approx -40\,\text{V/V} \;\; (\approx 32\,\text{dB})
@@ -157,16 +156,16 @@ The LTspice values below are slightly higher (≈32.8 dB), consistent with model
 
 ---
 
-## Experiment 2 — Gain sensitivity to \(R_{sig}\) (\(R_L = 10\,\text{M}\Omega\))
+## Experiment 2 — Gain sensitivity to \(R\_{sig}\) (\(R_L = 10\,\text{M}\Omega\))
 
 ### Simulated results
 
-| \(R_{sig}\) | \(G_v\) (V/V) | \(|G_v|\) (dB) | Phase |
-|---:|---:|---:|---:|
-| 10 MΩ | -21.900 | 26.809 | ≈ -180° |
-| 100 kΩ | -43.366 | 32.743 | ≈ -180° |
-| 10 kΩ | -43.756 | 32.821 | ≈ -180° |
-| 1 kΩ | -43.795 | 32.829 | ≈ -180° |
+| \(R\_{sig}\) | \(G_v\) (V/V) |     \( |     G_v | \) (dB) | Phase |
+| -----------: | ------------: | -----: | ------: | ------- | ----- |
+|        10 MΩ |       -21.900 | 26.809 | ≈ -180° |
+|       100 kΩ |       -43.366 | 32.743 | ≈ -180° |
+|        10 kΩ |       -43.756 | 32.821 | ≈ -180° |
+|         1 kΩ |       -43.795 | 32.829 | ≈ -180° |
 
 <div class="row">
   <div class="col-sm-10 mt-3 mt-md-0">
@@ -180,25 +179,25 @@ The LTspice values below are slightly higher (≈32.8 dB), consistent with model
 
 ---
 
-## Experiment 3 — Gain sensitivity to \(R_L\) (\(R_{sig} = 1\,\text{k}\Omega\))
+## Experiment 3 — Gain sensitivity to \(R*L\) (\(R*{sig} = 1\,\text{k}\Omega\))
 
 ### Correction applied (graded notebook)
 
-The graded notebook indicates the intention of Experiment 3 is **\(R_{sig}=1\,\text{k}\Omega\)** (per the lab handout). The raw RL-sweep data file contained gains consistent with an additional **\(10\,\text{M}\Omega / 10\,\text{M}\Omega\)** input divider (i.e., \(R_{sig}=R_G\)), which halves \(v_g\) and therefore halves \(G_v\).
+The graded notebook indicates the intention of Experiment 3 is **\(R\_{sig}=1\,\text{k}\Omega\)** (per the lab handout). The raw RL-sweep data file contained gains consistent with an additional **\(10\,\text{M}\Omega / 10\,\text{M}\Omega\)** input divider (i.e., \(R\_{sig}=R_G\)), which halves \(v_g\) and therefore halves \(G_v\).
 
-Because \(R_{sig}\) only affects the **input attenuation** (not the bias point), the corrected RL-sweep values are obtained by removing the extra 0.5 divider:
+Because \(R\_{sig}\) only affects the **input attenuation** (not the bias point), the corrected RL-sweep values are obtained by removing the extra 0.5 divider:
 
-- \(G_{v,\text{corrected}} \approx 2\,G_{v,\text{raw}}\)
-- \(|G_v|_{dB,\text{corrected}} = |G_v|_{dB,\text{raw}} + 6.02\,\text{dB}\)
+- \(G*{v,\text{corrected}} \approx 2\,G*{v,\text{raw}}\)
+- \(|G*v|*{dB,\text{corrected}} = |G*v|*{dB,\text{raw}} + 6.02\,\text{dB}\)
 
 ### Corrected simulated results
 
-| \(R_L\) | \(G_v\) (V/V) | \(|G_v|\) (dB) | Phase |
-|---:|---:|---:|---:|
-| 10 MΩ | -43.800 | 32.829 | ≈ -180° |
-| 100 kΩ | -27.885 | 28.907 | ≈ -180° |
-| 10 kΩ | -6.480 | 16.232 | ≈ -180° |
-| 1 kΩ | -0.747 | -2.535 | ≈ -180° |
+| \(R_L\) | \(G_v\) (V/V) |     \( |     G_v | \) (dB) | Phase |
+| ------: | ------------: | -----: | ------: | ------- | ----- |
+|   10 MΩ |       -43.800 | 32.829 | ≈ -180° |
+|  100 kΩ |       -27.885 | 28.907 | ≈ -180° |
+|   10 kΩ |        -6.480 | 16.232 | ≈ -180° |
+|    1 kΩ |        -0.747 | -2.535 | ≈ -180° |
 
 <div class="row">
   <div class="col-sm-10 mt-3 mt-md-0">

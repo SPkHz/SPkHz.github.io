@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: FIR Filter-Bank for Hearing Aid Audio Response
 description: Audiogram-driven FIR filter-bank audio equalizer (MATLAB • fir1/fir2 • linear-phase FIR).
@@ -44,29 +43,31 @@ This project designs a **personalized "virtual hearing aid" audio equalizer** us
 The audiogram is represented by key loss points (dB) and then smoothed using **PCHIP interpolation** with a small ±200 Hz padding around each point to avoid sharp transitions. Gains are mapped from loss in dB to linear amplitude via:
 
 \[
-G_{\text{linear}} = 10^{(\text{Loss}_{dB}/20)}
+G*{\text{linear}} = 10^{(\text{Loss}*{dB}/20)}
 \]
 
 | Frequency (Hz) | Loss (dB) |
-|---:|---:|
-| 0 | 0 |
-| 1250 | 20 |
-| 2500 | 10 |
-| 3750 | 30 |
-| 5000 | 15 |
-| 6250 | 45 |
-| 7500 | 5 |
-| 8750 | 70 |
-| 10000 | 80 |
+| -------------: | --------: |
+|              0 |         0 |
+|           1250 |        20 |
+|           2500 |        10 |
+|           3750 |        30 |
+|           5000 |        15 |
+|           6250 |        45 |
+|           7500 |         5 |
+|           8750 |        70 |
+|          10000 |        80 |
 
 ---
 
 ## Two Filter-Bank Architectures
 
 ### Design 1 — Band-Based FIR Filter-Bank (fir2, N = 300)
+
 A straightforward approach: **8 overlapping band filters** spanning 0–10 kHz. Each band is shaped using `fir2` (frequency-sampling method) with a custom amplitude “plateau/triangle” profile, then scaled by the corresponding audiogram gain. This tends to produce a **smoother overall correction**, at the cost of more filters.
 
 ### Design 2 — Center-Frequency Band-Pass FIR Filter-Bank (fir1, N = 51)
+
 A more efficient approach: **5 Hamming-window band-pass filters** designed with `fir1`, centered near key audiogram regions. Bandwidths are chosen so that a single filter can cover multiple audiogram points where reasonable. This reduces computational load but can **approximate** (rather than explicitly hit) every point.
 
 ---
@@ -131,7 +132,7 @@ To validate practical behavior, the composite FIR filter-bank was applied to rea
 
 ## Reproducibility
 
-- **Design 1 (fir2):** Appendix/Matlab/Design_1_Final.m  
+- **Design 1 (fir2):** Appendix/Matlab/Design_1_Final.m
 - **Design 2 (fir1):** Appendix/Matlab/Design_2_Final.m
 
 ---

@@ -47,13 +47,13 @@ Goal: synthesize an **8 GHz negative-resistance oscillator** by (1) converting m
 - **Verify** the termination-attached input condition:
 
 \[
-\Gamma_{\text{in}} = S_{11} + \frac{S_{12}S_{21}\,\Gamma_T}{1 - S_{22}\Gamma_T}
+\Gamma*{\text{in}} = S*{11} + \frac{S*{12}S*{21}\,\Gamma*T}{1 - S*{22}\Gamma_T}
 \]
 
 Oscillation (negative-resistance view) requires:
 
-- **Start-up:** \(\lvert\Gamma_{\text{in}}\Gamma_R\rvert > 1\)
-- **Phase closure:** \(\angle(\Gamma_{\text{in}}\Gamma_R)=0\) (mod \(2\pi\))
+- **Start-up:** \(\lvert\Gamma\_{\text{in}}\Gamma_R\rvert > 1\)
+- **Phase closure:** \(\angle(\Gamma\_{\text{in}}\Gamma_R)=0\) (mod \(2\pi\))
 
 ---
 
@@ -71,54 +71,54 @@ S→Y conversion used:
 Indefinite admittance matrix:
 \[
 \mathbf{Y}^{(I)} = \begin{bmatrix}
-Y_{11} & Y_{12} & -Y_{11}-Y_{12}\\
-Y_{21} & Y_{22} & -Y_{21}-Y_{22}\\
--Y_{11}-Y_{21} & -Y_{12}-Y_{22} & Y_{11}+Y_{12}+Y_{21}+Y_{22}
+Y*{11} & Y*{12} & -Y*{11}-Y*{12}\\
+Y*{21} & Y*{22} & -Y*{21}-Y*{22}\\
+-Y*{11}-Y*{21} & -Y*{12}-Y*{22} & Y*{11}+Y*{12}+Y*{21}+Y*{22}
 \end{bmatrix}
 \]
 
 Common-gate extraction (gate = node 1 as common):
 \[
 \mathbf{Y}_{\text{CG}} = \begin{bmatrix}
-Y_{33}^{(I)} & Y_{32}^{(I)}\\
-Y_{23}^{(I)} & Y_{22}^{(I)}
+Y_{33}^{(I)} & Y*{32}^{(I)}\\
+Y*{23}^{(I)} & Y\_{22}^{(I)}
 \end{bmatrix}
 \]
 
 **Common-source S-parameters @ 8 GHz (Touchstone):**
 
-| Parameter | Magnitude | Phase |
-|:--:|:--:|:--:|
-| S<sub>11</sub> | 0.7373 | +84.18° |
-| S<sub>12</sub> | 0.1486 | −33.05° |
-| S<sub>21</sub> | 1.7979 | −22.87° |
-| S<sub>22</sub> | 0.2815 | +83.13° |
+|   Parameter    | Magnitude |  Phase  |
+| :------------: | :-------: | :-----: |
+| S<sub>11</sub> |  0.7373   | +84.18° |
+| S<sub>12</sub> |  0.1486   | −33.05° |
+| S<sub>21</sub> |  1.7979   | −22.87° |
+| S<sub>22</sub> |  0.2815   | +83.13° |
 
 **Common-gate S-parameters @ 8 GHz:**
 
-| Parameter | Magnitude | Phase |
-|:--:|:--:|:--:|
-| S<sub>11</sub> | 1.0823 | −17.95° |
-| S<sub>12</sub> | 0.9455 | −26.68° |
-| S<sub>21</sub> | 1.9676 | +96.82° |
-| S<sub>22</sub> | 1.3885 | +81.73° |
+|   Parameter    | Magnitude |  Phase  |
+| :------------: | :-------: | :-----: |
+| S<sub>11</sub> |  1.0823   | −17.95° |
+| S<sub>12</sub> |  0.9455   | −26.68° |
+| S<sub>21</sub> |  1.9676   | +96.82° |
+| S<sub>22</sub> |  1.3885   | +81.73° |
 
 ---
 
 ### Task 2 — Optimum gate feedback reactance
 
-Sweep \(X_B\in[-300,+300]~\Omega\) and maximize \(\lvert S_{11}\rvert\) after adding feedback admittance:
+Sweep \(X*B\in[-300,+300]~\Omega\) and maximize \(\lvert S*{11}\rvert\) after adding feedback admittance:
 
 \[
 \mathbf{Y}_{\text{FB}} = \begin{bmatrix}
-Y_{fb} & -Y_{fb}\\
--Y_{fb} & Y_{fb}
-\end{bmatrix},\qquad Y_{fb}=\frac{1}{jX_B}
+Y_{fb} & -Y*{fb}\\
+-Y*{fb} & Y*{fb}
+\end{bmatrix},\qquad Y*{fb}=\frac{1}{jX_B}
 \]
 
 Result:
 \[
-X_{B,\text{opt}}=+130~\Omega
+X\_{B,\text{opt}}=+130~\Omega
 \]
 Equivalent inductance at 8 GHz:
 \[
@@ -127,12 +127,12 @@ L_B=\frac{X_B}{2\pi f_0}=\frac{130}{2\pi\cdot 8\times 10^9}=2.586\ \text{nH}
 
 Common-gate S-parameters with optimum feedback @ 8 GHz:
 
-| Parameter | Magnitude | Phase |
-|:--:|:--:|:--:|
-| S<sub>11</sub> | 1.2295 | +17.05° |
-| S<sub>12</sub> | 1.2486 | −12.55° |
-| S<sub>21</sub> | 1.4692 | +123.23° |
-| S<sub>22</sub> | 1.4487 | +102.96° |
+|   Parameter    | Magnitude |  Phase   |
+| :------------: | :-------: | :------: |
+| S<sub>11</sub> |  1.2295   | +17.05°  |
+| S<sub>12</sub> |  1.2486   | −12.55°  |
+| S<sub>21</sub> |  1.4692   | +123.23° |
+| S<sub>22</sub> |  1.4487   | +102.96° |
 
 ---
 
@@ -141,7 +141,7 @@ Common-gate S-parameters with optimum feedback @ 8 GHz:
 Replace the lumped reactance with an ideal TL stub (\(Z_0=50~\Omega\)) by matching the required susceptance:
 
 \[
-B_{\text{stub}} = Y_0\tan(\theta_x)=\frac{1}{X_B}
+B\_{\text{stub}} = Y_0\tan(\theta_x)=\frac{1}{X_B}
 \]
 \[
 \theta_x=\arctan\left(\frac{Z_0}{X_B}\right)=\arctan\left(\frac{50}{130}\right)=21.04^{\circ}
@@ -199,34 +199,34 @@ Z_R = Z_0\,\frac{1+\Gamma_R}{1-\Gamma_R}=(8.8189 - j\,23.9129)\ \Omega
 With the termination attached to the feedback-enhanced common-gate network:
 
 \[
-\Gamma_{\text{in}} = S_{11} + \frac{S_{12}S_{21}\,\Gamma_T}{1 - S_{22}\Gamma_T}
+\Gamma*{\text{in}} = S*{11} + \frac{S*{12}S*{21}\,\Gamma*T}{1 - S*{22}\Gamma_T}
 \]
 
 Computed (course method at 8 GHz):
 
-- \(\Gamma_{\text{in}} = 0.8403\angle(-17.172^{\circ})\)
-- \(Z_{\text{in}} = Z_0\,\frac{1+\Gamma_{\text{in}}}{1-\Gamma_{\text{in}}}\approx (146.33 - j\,247.05)\ \Omega\)
-- Extracted term (course method): \(\tilde{Z}_R \approx 8.8188\ \Omega\)
+- \(\Gamma\_{\text{in}} = 0.8403\angle(-17.172^{\circ})\)
+- \(Z*{\text{in}} = Z_0\,\frac{1+\Gamma*{\text{in}}}{1-\Gamma\_{\text{in}}}\approx (146.33 - j\,247.05)\ \Omega\)
+- Extracted term (course method): \(\tilde{Z}\_R \approx 8.8188\ \Omega\)
 
 Start-up check (magnitude only):
 \[
-\lvert\Gamma_{\text{in}}\Gamma_R\rvert\approx 0.8403\times 0.75 \approx 0.63 < 1
+\lvert\Gamma\_{\text{in}}\Gamma_R\rvert\approx 0.8403\times 0.75 \approx 0.63 < 1
 \]
 
 ---
 
 ## Results summary
 
-| Parameter | Value | Notes |
-| --- | ---: | --- |
-| X<sub>B</sub> | 130 Ω | maximizes \(\lvert S_{11}\rvert\) (common-gate) |
-| L<sub>B</sub> | 2.586 nH | equivalent at 8 GHz |
-| θ<sub>x</sub> | 21.04° | feedback stub electrical length |
-| Γ<sub>T</sub> | 0.5000 ∠ 162.019° | drain termination target |
-| Γ<sub>R</sub> | 0.7500 ∠ −127.733° | source resonator target |
-| Γ<sub>in</sub> | 0.8403 ∠ −17.172° | with termination attached |
-| Z<sub>in</sub> | 146.33 − j247.05 Ω | derived from Γ<sub>in</sub> |
-| Z̃<sub>R</sub> | 8.8188 Ω | extracted term (course method) |
+| Parameter      |              Value | Notes                                            |
+| -------------- | -----------------: | ------------------------------------------------ |
+| X<sub>B</sub>  |              130 Ω | maximizes \(\lvert S\_{11}\rvert\) (common-gate) |
+| L<sub>B</sub>  |           2.586 nH | equivalent at 8 GHz                              |
+| θ<sub>x</sub>  |             21.04° | feedback stub electrical length                  |
+| Γ<sub>T</sub>  |  0.5000 ∠ 162.019° | drain termination target                         |
+| Γ<sub>R</sub>  | 0.7500 ∠ −127.733° | source resonator target                          |
+| Γ<sub>in</sub> |  0.8403 ∠ −17.172° | with termination attached                        |
+| Z<sub>in</sub> | 146.33 − j247.05 Ω | derived from Γ<sub>in</sub>                      |
+| Z̃<sub>R</sub>  |           8.8188 Ω | extracted term (course method)                   |
 
 ---
 
@@ -253,6 +253,5 @@ Start-up check (magnitude only):
 
 - MATLAB scripts: indefinite-Y conversion, feedback sweep, stability metrics, Γ sweeps/contours
 - Touchstone file(s): ATF-33143 S-parameters at the specified bias
-- Exported figures: \(\lvert S_{11}\rvert\) sweep, stability factors, Γ sweeps/contours
+- Exported figures: \(\lvert S\_{11}\rvert\) sweep, stability factors, Γ sweeps/contours
 - Hand-calculation scans used in the write-up
-

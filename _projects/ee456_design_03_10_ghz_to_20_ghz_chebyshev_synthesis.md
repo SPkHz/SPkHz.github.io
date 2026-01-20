@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Using Chebyshev Polynomials for the Synthesis of Impedance-Matching Networks
 description: Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.
@@ -55,6 +54,7 @@ assets/img/ee456/design03/Simulation_Comparison_Summary.png
 This project (EE-456: RF & mm-Wave Active Circuits) implements **wideband matching-network synthesis** using **Chebyshev-polynomial (insertion-loss) methods** to design a **10–20 GHz amplifier** around the **NEC NE321000 ultra-low-noise pseudomorphic pHEMT**, biased at **VDS = 2 V** and **IDS = 10 mA**.
 
 The core requirement was a **flat-ish wideband response**: an amplifier gain of approximately **8.15 dB ± 0.17 dB** across **10–20 GHz**, achieved by synthesizing:
+
 - a **7-element input matching network (IMN)** over **9–20 GHz** with a **sloped response (~6 dB/octave)** and **0.1 dB Chebyshev ripple**
 - a **7-element output matching network (OMN)** over **9–20 GHz** with a **non-sloped response** and **0.1 dB ripple**
 

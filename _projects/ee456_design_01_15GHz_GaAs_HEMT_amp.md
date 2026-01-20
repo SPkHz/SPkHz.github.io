@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: 15 GHz GaAs HEMT Amplifier Design
 description: 15 GHz GaAs HEMT amplifier (MGF4941AL) with TL-based input/output matching. MATLAB + Keysight ADS (ideal TRLs) verification.
@@ -42,12 +41,15 @@ This project (completed for the EE-456/556: RF & Microwave Active Circuit Design
 ## Design Strategy
 
 ### 1. Find the optimum source/load terminations (for max gain)
+
 The amplifier is designed around the device S-parameters at 15 GHz, selecting the **target source and load reflection coefficients** (Γ<sub>S</sub>, Γ<sub>L</sub>) for maximum gain operation.
 
 ### 2. Synthesize IMN + OMN with transmission lines
+
 Both the **Input Matching Network (IMN)** and **Output Matching Network (OMN)** are implemented using **ideal transmission-line (TRL/TLIN) models** (series lines + shunt stubs) and DC blocks to realize the target Γ<sub>S</sub> and Γ<sub>L</sub> at **f<sub>0</sub> = 15 GHz**.
 
 ### 3. Verify in two independent toolchains
+
 - **MATLAB:** compute/plot S-parameters and gain vs. frequency from Touchstone files
 - **ADS:** simulate the matching networks and complete amplifier schematic (ideal TLs), then export Touchstone and compare directly to MATLAB
 
@@ -78,9 +80,10 @@ Both the **Input Matching Network (IMN)** and **Output Matching Network (OMN)** 
 At 15 GHz, the design hits a strong conjugate-match condition and produces near-theoretical maximum transducer gain for the chosen device/bias point.
 
 **Representative performance near 15 GHz (from the final simulations):**
-- **Peak gain:** peak |S21| / gain = ~12.9 dB near 15 GHz  
-- **Input return loss:** deep notch near 15 GHz (|S11| well below −30 dB)  
-- **Output return loss:** deep notch near 15 GHz (|S22| well below −30 dB)  
+
+- **Peak gain:** peak |S21| / gain = ~12.9 dB near 15 GHz
+- **Input return loss:** deep notch near 15 GHz (|S11| well below −30 dB)
+- **Output return loss:** deep notch near 15 GHz (|S22| well below −30 dB)
 - **Reverse transmission:** |S12| around the mid −10s dB near 15 GHz
 
 <div class="row justify-content-sm-center">

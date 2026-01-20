@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Power Transfer & Frequency Droop Analysis
 description: Generator power transfer calculation via transformer and frequency droop characteristic analysis for parallel generators (Per-unit analysis • Power-angle relationship • Droop control).
@@ -30,12 +29,12 @@ This assignment analyzes **real power transfer** from a generator to the grid th
 
 Consider a generator connected to the transmission system via a transformer:
 
-| Parameter | Value |
-|:--|--:|
-| Generator base voltage | 23 kV |
-| Transformer reactance | 5% (p.u.) |
-| Transformer turns ratio | 1:5 |
-| System base power | 200 MVA |
+| Parameter               |     Value |
+| :---------------------- | --------: |
+| Generator base voltage  |     23 kV |
+| Transformer reactance   | 5% (p.u.) |
+| Transformer turns ratio |       1:5 |
+| System base power       |   200 MVA |
 
 **Question:** How much real power does the generator transfer to the grid when its voltage is **22.5 kV** and **leads** the grid voltage by **5 degrees**?
 
@@ -182,10 +181,10 @@ where $f_{FL}$ is the frequency at full load.
 
 From the characteristic curves at grid frequency $f_{grid}$:
 
-| Generator | Droop | Loading at $f_{grid}$ |
-|:--|:--|--:|
-| A | 2% (shallower) | ~50% |
-| B | 4% (steeper) | ~25% |
+| Generator | Droop          | Loading at $f_{grid}$ |
+| :-------- | :------------- | --------------------: |
+| A         | 2% (shallower) |                  ~50% |
+| B         | 4% (steeper)   |                  ~25% |
 
 #### Answer 1: More Heavily Loaded Generator
 
@@ -236,11 +235,13 @@ Generator A is **more responsive** to frequency changes, making it pick up (or s
 </div>
 
 ### Power Transfer (Problem 1)
+
 - Per-unit analysis simplifies calculations across transformer voltage zones
 - Power transfer follows $P = \frac{V_1 V_2}{X} \sin(\delta)$
 - Small angles: $\sin(\delta) \approx \delta$ provides good approximation
 
 ### Droop Control (Problem 2)
+
 - **Less droop (shallower slope):** More responsive, larger load share changes
 - **More droop (steeper slope):** Less responsive, more stable load sharing
 - Droop control enables **automatic load sharing** among parallel generators

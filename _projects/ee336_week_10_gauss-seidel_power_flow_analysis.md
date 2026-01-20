@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Gauss-Seidel Power Flow Analysis for Electrical Energy Systems
 description: Iterative power flow solution for a 6-bus system using the Gauss-Seidel method (MATLAB • Y-bus • per-unit system).
@@ -42,12 +41,12 @@ Consider the following 6-bus power system:
 
 **System Parameters:**
 
-| Parameter | Value |
-|:----------|------:|
-| Transmission Line Impedance | $$Z_{\text{line}} = 0.009 + j1.0$$ p.u. |
-| Load Impedance (all load buses) | $$Z_{L} = 1 + j1$$ p.u. |
-| Slack Bus | Bus 4: $$V_4(i) = 1\angle 0°$$ p.u. for all $$i$$ |
-| Initial Voltage Guess | $$V_k(0) = 1\angle 0°$$ p.u. for all buses |
+| Parameter                       |                                             Value |
+| :------------------------------ | ------------------------------------------------: |
+| Transmission Line Impedance     |           $$Z_{\text{line}} = 0.009 + j1.0$$ p.u. |
+| Load Impedance (all load buses) |                           $$Z_{L} = 1 + j1$$ p.u. |
+| Slack Bus                       | Bus 4: $$V_4(i) = 1\angle 0°$$ p.u. for all $$i$$ |
+| Initial Voltage Guess           |        $$V_k(0) = 1\angle 0°$$ p.u. for all buses |
 
 The line admittances can be computed as:
 
@@ -66,6 +65,7 @@ V_k^{(i+1)} = \frac{1}{Y_{kk}} \left[ \frac{P_k - jQ_k}{V_k^{*(i)}} - \sum_{\sub
 $$
 
 where:
+
 - $$Y_{kk}$$ is the self-admittance (sum of all admittances connected to bus $$k$$)
 - $$Y_{kn}$$ is the mutual admittance between buses $$k$$ and $$n$$ (negative of line admittance)
 - $$P_k + jQ_k$$ is the specified complex power injection at bus $$k$$
@@ -78,14 +78,14 @@ $$
 Y_{kk} = \sum_{\substack{n=1}}^{N} Y_{kn} \quad \text{(sum of all connected line admittances)}
 $$
 
-| Bus | Self-Admittance $$Y_{kk}$$ | $$\|Y_{kk}\|$$ |
-|:---:|:---------------------------|---------------:|
-| 1 | $$(1.7855 - j19.8393)$$ p.u. | 19.8792 p.u. |
-| 2 | $$(1.7855 - j19.8393)$$ p.u. | 19.8792 p.u. |
-| 3 | $$(2.6783 - j29.7540)$$ p.u. | **29.8792 p.u.** |
-| 4 | $$(1.7855 - j19.8393)$$ p.u. | 19.8792 p.u. |
-| 5 | $$(0.8928 - j9.9197)$$ p.u. | 9.9197 p.u. |
-| 6 | $$(1.7855 - j19.8393)$$ p.u. | 19.8792 p.u. |
+| Bus | Self-Admittance $$Y_{kk}$$   |   $$\|Y_{kk}\|$$ |
+| :-: | :--------------------------- | ---------------: |
+|  1  | $$(1.7855 - j19.8393)$$ p.u. |     19.8792 p.u. |
+|  2  | $$(1.7855 - j19.8393)$$ p.u. |     19.8792 p.u. |
+|  3  | $$(2.6783 - j29.7540)$$ p.u. | **29.8792 p.u.** |
+|  4  | $$(1.7855 - j19.8393)$$ p.u. |     19.8792 p.u. |
+|  5  | $$(0.8928 - j9.9197)$$ p.u.  |      9.9197 p.u. |
+|  6  | $$(1.7855 - j19.8393)$$ p.u. |     19.8792 p.u. |
 
 ---
 
@@ -123,6 +123,7 @@ $$
 $$
 
 The slack bus serves two critical functions:
+
 1. Provides the voltage magnitude and angle reference ($$\delta_4 = 0°$$)
 2. Supplies the power balance mismatch (losses + generation-load imbalance)
 
@@ -206,11 +207,11 @@ The Gauss-Seidel method converged smoothly over 10 iterations for this system.
 
 ## Summary of Answers
 
-| Part | Question | Answer |
-|:----:|:---------|:-------|
-| (a) | $$V_3(1)$$ magnitude and angle | $$\|V_3(1)\| = 1.0368$$ p.u., $$\angle V_3(1) = 1.6766°$$ |
-| (b) | $$V_4(10)$$ | $$1.0000\angle 0.0000°$$ p.u. (slack bus, unchanged) |
-| (c) | Bus with max $$\|Y_{kk}\|$$ | **Bus 3** with $$\|Y_{33}\| = 29.8792$$ p.u. |
+| Part | Question                       | Answer                                                    |
+| :--: | :----------------------------- | :-------------------------------------------------------- |
+| (a)  | $$V_3(1)$$ magnitude and angle | $$\|V_3(1)\| = 1.0368$$ p.u., $$\angle V_3(1) = 1.6766°$$ |
+| (b)  | $$V_4(10)$$                    | $$1.0000\angle 0.0000°$$ p.u. (slack bus, unchanged)      |
+| (c)  | Bus with max $$\|Y_{kk}\|$$    | **Bus 3** with $$\|Y_{33}\| = 29.8792$$ p.u.              |
 
 ---
 

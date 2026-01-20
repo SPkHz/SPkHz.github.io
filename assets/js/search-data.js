@@ -623,11 +623,6 @@ ninja.data = [{
           description: "Transmission-line impedance matching in Keysight ADS — shunt-stub + quarter-wave transformer designs (ideal + microstrip), with Smith-chart synthesis and layout verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee314_design_01/";
-            },},{id: "projects-passive-rc-band-pass-filter-measurement-and-analysis",
-          title: 'Passive RC Band-Pass Filter Measurement and Analysis',
-          description: "Two-pole passive RC band-pass filter: analytic frequency response + LTspice AC sweep + Analog Discovery Studio measurements (MATLAB post-processing).",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ee319_lab_01_band_pass_filter/";
             },},{id: "projects-high-pass-filter-measurement-techniques",
           title: 'High-Pass Filter Measurement Techniques',
           description: "First-order RC high-pass filter characterization (theory vs. LTspice vs. WaveForms measurements) with MATLAB Bode magnitude/phase plots.",
@@ -668,6 +663,11 @@ ninja.data = [{
           description: "Differential-mode gain, common-mode gain, and CMRR for a single-op-amp difference amplifier and a 3-op-amp instrumentation amplifier (LM741).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319/lab-07/";
+            },},{id: "projects-passive-rc-band-pass-filter-measurement-and-analysis",
+          title: 'Passive RC Band-Pass Filter Measurement and Analysis',
+          description: "Two-pole passive RC band-pass filter: analytic frequency response + LTspice AC sweep + Analog Discovery Studio measurements (MATLAB post-processing).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee319_lab_01_band_pass_filter/";
             },},{id: "projects-electronics-laboratory-portfolio-mosfet-characterization-through-s-parameter-de-embedding",
           title: 'Electronics Laboratory Portfolio: MOSFET Characterization through S-Parameter De-Embedding',
           description: "A complete compendium of labs from the spring &#39;25 semester, lab 01 through lab 08 (Please use ToC to navigate, everything is hyperlinked!) --&gt; MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).",
@@ -833,6 +833,11 @@ ninja.data = [{
           description: "Micro-heater tuning of a silicon Mach–Zehnder interferometer (Vπ ≈ 3.05 V, Pπ ≈ 48.5 mW, ER ≈ 33 dB).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee548_lab_05/";
+            },},{id: "projects-ee-548-lab-06-thermal-phase-shifting-in-a-silicon-photonic-mzi",
+          title: 'EE-548 Lab 06 - Thermal Phase Shifting in a Silicon Photonic MZI',
+          description: "DC thermal tuning and small-signal frequency response of an on-chip thermo-optic phase shifter (pi at ~50 mW, f3dB ~ 12 kHz, two-pole behavior).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee548_lab_06/";
             },},{
         id: 'social-cv',
         title: 'CV',

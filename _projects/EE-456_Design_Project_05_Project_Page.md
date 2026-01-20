@@ -249,20 +249,7 @@ Start-up check (magnitude only):
 
 ---
 
-## Hand calculations
-
-<div class="row">
-  <div class="col-md-6">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design05/calculations_page1.png" class="img-fluid rounded z-depth-1" caption="Hand calculations (page 1): conversion + feedback + termination work." %}
-  </div>
-  <div class="col-md-6">
-    {% include figure.liquid loading="eager" path="assets/img/ee456/design05/calculations_page2.png" class="img-fluid rounded z-depth-1" caption="Hand calculations (page 2): resonator work + verification notes." %}
-  </div>
-</div>
-
----
-
-## What’s included in the repo
+## Repository Contents
 
 - MATLAB scripts: indefinite-Y conversion, feedback sweep, stability metrics, Γ sweeps/contours
 - Touchstone file(s): ATF-33143 S-parameters at the specified bias

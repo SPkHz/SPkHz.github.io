@@ -37,7 +37,7 @@ This project surveys how the Laplace Transform turns time-domain differential eq
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee301-lt-thumb.jpg" title="Laplace Transform Project 02 overview" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="eager" path="assets/img/ee301/ee301-lt-thumb.jpg" title="Laplace Transform Project 02 overview" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
 </div>
 

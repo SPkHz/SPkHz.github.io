@@ -196,4 +196,4 @@ This repo is organized so someone can reproduce the work end-to-end:
 
 ## Download
 
-- **Full report PDF:** [EE_314_Design_Project_Placzek.pdf](assets/img/ee314/EE_314_Design_Project_Placzek.pdf)
+- **Full report PDF:** [EE_314_Design_Project_Placzek.pdf](assets/pdf/ee314/EE_314_Design_Project_Placzek.pdf)

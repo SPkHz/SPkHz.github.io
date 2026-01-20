@@ -4241,7 +4241,9 @@ ${css}
 
       if (this.hasAttribute("block")) {
         // normalize the tab indents
-        content = content.replace(/\n/, "");
+        if (content.startsWith("\n")) {
+          content = content.slice(1);
+        }
         const tabs = content.match(/\s*/);
         content = content.replace(new RegExp("\n" + tabs, "g"), "\n");
         content = content.trim();
@@ -4686,8 +4688,10 @@ d-references {
       // create TOC entry
       const title = el.textContent;
       const link = "#" + el.getAttribute("id");
+      const safeTitle = escapeHtml(title);
+      const safeLink = sanitizeHash(link);
 
-      let newLine = "<li>" + '<a href="' + link + '">' + title + "</a>" + "</li>";
+      let newLine = "<li>" + '<a href="' + safeLink + '">' + safeTitle + "</a>" + "</li>";
       if (el.tagName == "H3") {
         newLine = "<ul>" + newLine + "</ul>";
       } else {
@@ -4698,6 +4702,23 @@ d-references {
 
     ToC += "</ul></nav>";
     element.innerHTML = ToC;
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function sanitizeHash(value) {
+    const text = String(value || "");
+    if (text.startsWith("#")) {
+      return "#" + text.slice(1).replace(/[^\w\-:.]/g, "");
+    }
+    return "#";
   }
 
   // Copyright 2018 The Distill Template Authors

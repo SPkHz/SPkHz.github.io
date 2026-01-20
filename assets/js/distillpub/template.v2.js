@@ -3093,7 +3093,7 @@ d-citation-list .references .title {
       comment: /<!--[\s\S]*?-->/,
       prolog: /<\?[\s\S]+?\?>/,
       doctype: {
-        pattern: /<!DOCTYPE(?:[^>"'[\]]|"[^"]*"|'[^']*')+(?:\[(?:(?!<!--)[^"'\]]|"[^"]*"|'[^']*'|<!--[\s\S]*?-->)*\]\s*)?>/i,
+        pattern: /<!DOCTYPE[\s\S]*?>/i,
         greedy: true,
       },
       cdata: /<!\[CDATA\[[\s\S]*?]]>/i,
@@ -3174,11 +3174,16 @@ d-citation-list .references .title {
         };
 
         var def = {};
+        var tag = tagName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         def[tagName] = {
           pattern: RegExp(
-            /(<__[\s\S]*?>)(?:<!\[CDATA\[[\s\S]*?\]\]>\s*|[\s\S])*?(?=<\/__>)/.source.replace(/__/g, function () {
-              return tagName;
-            }),
+            "(<" +
+              tag +
+              "[\\s\\S]*?>)" +
+              "(?:<!\\[CDATA\\[[\\s\\S]*?\\]\\]>\\s*|[\\s\\S])*?" +
+              "(?=<\\/" +
+              tag +
+              ">)",
             "i"
           ),
           lookbehind: true,

@@ -11,7 +11,7 @@ tagline: "RF • Millimeter-Wave Circuit Design • Millimeter-Wave Test & Measu
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
     <p><strong>Connect</strong></p>
     <br/>
@@ -35,7 +35,7 @@ latest_posts:
   limit: 5 # leave blank to include all the blog posts
 ---
 
-Electrical Engineering student specializing in RF/microwave circuit design, digital signal processing, and embedded systems. Experienced with industry-standard tools (Keysight ADS, LTspice, MATLAB/Simulink) and delivering comprehensive technical documentation with reproducible results.
+I am an Electrical Engineering student (graduating May 16th, 2026) specializing in RF/microwave circuit design, digital signal processing, and embedded systems. Experienced with industry-standard tools (Keysight ADS, LTspice, MATLAB/Simulink) and delivering comprehensive technical documentation with reproducible results.
 
 <div class="d-flex flex-wrap" style="gap: .5rem; margin: 1rem 0 1.25rem 0;">
   <a class="btn btn-primary btn-sm" href="{{ '/projects/' | relative_url }}">Projects</a>

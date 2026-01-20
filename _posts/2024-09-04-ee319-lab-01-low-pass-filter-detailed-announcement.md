@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE 319 Lab 01 — Low-Pass Filter Measurements"
+title: "Low-Pass Filter Measurement and Analysis"
 date: 2024-09-04 10:14:00-0400
 categories: coursework
 thumbnail: /assets/img/ee319/lab-01/lpf/thumbnail.png

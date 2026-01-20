@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-319 Lab 01 — Passive RC Band-Pass Filter"
+title: "Passive RC Band-Pass Filter Measurement and Analysis"
 date: 2024-09-04 08:04:00-0400
 tags: [electronics, filters, rc, band-pass, bode, matlab, ltspice, digilent]
 categories: coursework

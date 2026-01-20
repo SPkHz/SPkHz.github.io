@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-336 Assignment 04 — Autotransformer Power Rating"
+title: "Autotransformer Power Rating"
 date: 2025-02-16 08:00:00-0400
 categories: coursework
 thumbnail: /assets/img/ee336/assignment-04/04_power_comparison.png

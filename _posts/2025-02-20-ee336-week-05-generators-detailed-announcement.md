@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-336 Induction Motor Slip Analysis"
+title: "Induction Motor Slip Analysis"
 date: 2025-02-20 08:00:00-0400
 categories: coursework
 thumbnail: /assets/img/ee336/assignment-05/slip_vs_speed.png

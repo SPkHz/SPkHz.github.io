@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-336 Gauss-Seidel Power Flow Analysis"
+title: "Iterative Gauss-Seidel Power Flow Analysis for Multi-Bus Power Networks"
 date: 2025-04-01 08:00:00-0400
 categories: coursework
 thumbnail: /assets/img/ee336/assignment-10/convergence_combined.png

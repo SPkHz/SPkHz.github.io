@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-336 Single-Phase H-Bridge Inverter Analysis"
+title: "Single-Phase H-Bridge Inverter Analysis"
 date: 2025-04-30 08:00:00-0400
 categories: coursework
 thumbnail: /assets/img/ee336/assignment-14/switch_signals_and_vload.png

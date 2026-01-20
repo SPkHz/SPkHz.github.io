@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE 319 Lab 05 — Measurements"
+title: "Distortion Measurements of a Common-Emitter BJT Amplifier"
 date: 2024-11-26 11:38:00-0400
 categories: coursework
 thumbnail: assets/img/ee319/lab-05/cover.png

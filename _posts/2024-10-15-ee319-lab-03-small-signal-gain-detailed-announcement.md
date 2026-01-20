@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE 319 Lab 03 — Bode Plot & Small-Signal Gain"
+title: "Utilizing Bode Plots to Determine Small-Signal Gain"
 date: 2024-10-15 10:52:00-0400
 categories: coursework
 thumbnail: assets/img/ee319/lab-03/midband-gain.png

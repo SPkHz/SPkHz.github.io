@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-336 Transmission Line Analysis"
+title: "Transmission Line Voltage Regulation and Surge Impedance Loading"
 date: 2025-04-14 08:00:00-0400
 categories: coursework
 thumbnail: /assets/img/ee336/assignment-12/two_port_model.png

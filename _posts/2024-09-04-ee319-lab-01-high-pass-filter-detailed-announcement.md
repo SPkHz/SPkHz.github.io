@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-319 Lab 01 — High-Pass Filter Measurements"
+title: "High-Pass Filter Measurement Techniques"
 date: 2024-09-04 07:26:00-0400
 tags: [circuits, filters, bode-plot, ltspice, matlab, measurements, waveforms]
 categories: coursework

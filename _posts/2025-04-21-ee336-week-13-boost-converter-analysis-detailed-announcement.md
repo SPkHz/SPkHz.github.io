@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-336 Boost Converter Analysis"
+title: "Boost Converter Analysis"
 date: 2025-04-21 08:00:00-0400
 categories: coursework
 thumbnail: /assets/img/ee336/assignment-13/boost_converter_circuit.png

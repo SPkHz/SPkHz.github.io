@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-319 Lab 02 — Active Band-Pass Filter Measurements"
+title: "Active Band-Pass Filter Measurement and Analysis"
 date: 2024-10-01 07:47:00-0400
 categories: coursework
 thumbnail: /assets/img/ee319/lab-02/thumbnail.png

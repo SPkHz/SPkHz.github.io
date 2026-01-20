@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-336 Assignment 01 — Three-Phase Apparent Power"
+title: "Three-Phase Apparent Power"
 date: 2025-01-31 08:00:00-0400
 categories: coursework
 thumbnail: /assets/img/ee336/assignment-01/delta_connected_circuit.png

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Assignment 02"
+title: "Faraday's Law, Synchronous Generator Speed, and Phasor Analysis"
 date: 2025-02-18 08:00:00-0400
 categories: EE-336
 thumbnail: assets/img/ee336/assignment-02/problem4_phasor.png

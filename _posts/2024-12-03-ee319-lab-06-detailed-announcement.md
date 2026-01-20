@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE 319 Lab 06 — Measurements (LM741 Op-Amp)"
+title: "Measuring the Non-Ideal Characteristics of an Operational Amplifier (LM741)"
 date: 2024-12-03 07:59:00-0400
 categories: coursework
 thumbnail: /assets/img/ee319/lab-06/cover-bode-3db.jpg

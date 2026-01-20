@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE 319 Lab 07 — Measurements"
+title: "Differential and Instrumentation Amplifier CMRR Characterization"
 date: 2024-12-06 10:16:00-0400
 categories: EE 319
 thumbnail: assets/img/ee319/lab-07/hero.png

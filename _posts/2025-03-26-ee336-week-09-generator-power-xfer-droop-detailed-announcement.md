@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-336 Power Transfer & Frequency Droop Analysis"
+title: "Power Transfer & Frequency Droop Analysis"
 date: 2025-03-26 08:00:00-0400
 categories: coursework
 thumbnail: /assets/img/ee336/assignment-09/problem1_power_angle.png

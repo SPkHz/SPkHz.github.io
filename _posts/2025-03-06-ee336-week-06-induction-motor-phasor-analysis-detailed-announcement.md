@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EE-336 Induction Motor Phasor Analysis"
+title: "Induction Motor Phasor Analysis"
 date: 2025-03-06 08:00:00-0400
 categories: coursework
 thumbnail: /assets/img/ee336/assignment-06/phasor_all_points.png

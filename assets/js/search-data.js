@@ -59,9 +59,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee212-design-01-optimized-solar-cell-detailed-announcement/";
           
         },
-      },{id: "post-eelab-ii-final-lab-portfolio",
+      },{id: "post-final-lab-portfolio-notebook-lt-br-gt-lt-br-gt-ee-322-electronics-laboratory-ii-lt-br-gt-western-new-england-university-lt-br-gt-college-of-engineering-lt-br-gt-e-c-e-department-lt-br-gt-spring-2025",
         
-          title: "eeLab II — Final Lab Portfolio",
+          title: "Final Lab Portfolio Notebook &lt;br/&gt;&lt;br/&gt;EE-322 — Electronics Laboratory II &lt;br/&gt;Western New England University...",
         
         description: "",
         section: "Posts",
@@ -70,9 +70,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee322-final-lab-portfolio-detailed-announcement/";
           
         },
-      },{id: "post-ee-336-single-phase-h-bridge-inverter-analysis",
+      },{id: "post-single-phase-h-bridge-inverter-analysis",
         
-          title: "EE-336 Single-Phase H-Bridge Inverter Analysis",
+          title: "Single-Phase H-Bridge Inverter Analysis",
         
         description: "",
         section: "Posts",
@@ -136,9 +136,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee-456-design-project-04/";
           
         },
-      },{id: "post-ee-456-design-project-04-published-mag-amplifier-design-amp-non-linear-simulation-8-ghz",
+      },{id: "post-maximum-available-gain-mag-amplifier-design-and-nonlinear-simulation-at-8-ghz",
         
-          title: "EE-456 Design Project 04 Published: MAG Amplifier Design &amp; Non-Linear Simulation (8 GHz)...",
+          title: "Maximum-Available-Gain (MAG) Amplifier Design and Nonlinear Simulation at 8 GHz",
         
         description: "",
         section: "Posts",
@@ -147,9 +147,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee456-design-04-detailed-announcement/";
           
         },
-      },{id: "post-ee-336-boost-converter-analysis",
+      },{id: "post-boost-converter-analysis",
         
-          title: "EE-336 Boost Converter Analysis",
+          title: "Boost Converter Analysis",
         
         description: "",
         section: "Posts",
@@ -180,9 +180,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee456-design-03-10-ghz-to-20-ghz-chebyshev-synthesis-detailed-announcement/";
           
         },
-      },{id: "post-ee-336-transmission-line-analysis",
+      },{id: "post-transmission-line-voltage-regulation-and-surge-impedance-loading",
         
-          title: "EE-336 Transmission Line Analysis",
+          title: "Transmission Line Voltage Regulation and Surge Impedance Loading",
         
         description: "",
         section: "Posts",
@@ -191,9 +191,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee336-week-12-trl-voltage-regulation-and-surge-impedance-loading-detailed-announcement/";
           
         },
-      },{id: "post-ee-336-transmission-line-abcd-parameters",
+      },{id: "post-transmission-line-abcd-parameters",
         
-          title: "EE-336 Transmission Line ABCD Parameters",
+          title: "Transmission Line ABCD Parameters",
         
         description: "",
         section: "Posts",
@@ -202,9 +202,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee336-week-11-transmission-line-abcd-parameters-detailed-announcement/";
           
         },
-      },{id: "post-ee-336-gauss-seidel-power-flow-analysis",
+      },{id: "post-iterative-gauss-seidel-power-flow-analysis-for-multi-bus-power-networks",
         
-          title: "EE-336 Gauss-Seidel Power Flow Analysis",
+          title: "Iterative Gauss-Seidel Power Flow Analysis for Multi-Bus Power Networks",
         
         description: "",
         section: "Posts",
@@ -224,9 +224,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee456-design-02-lna-matching-network-for-mgf4941al-detailed-announcement/";
           
         },
-      },{id: "post-ee-336-power-transfer-amp-frequency-droop-analysis",
+      },{id: "post-power-transfer-amp-frequency-droop-analysis",
         
-          title: "EE-336 Power Transfer &amp; Frequency Droop Analysis",
+          title: "Power Transfer &amp; Frequency Droop Analysis",
         
         description: "",
         section: "Posts",
@@ -235,9 +235,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee336-week-09-generator-power-xfer-droop-detailed-announcement/";
           
         },
-      },{id: "post-ee-336-induction-motor-phasor-analysis",
+      },{id: "post-induction-motor-phasor-analysis",
         
-          title: "EE-336 Induction Motor Phasor Analysis",
+          title: "Induction Motor Phasor Analysis",
         
         description: "",
         section: "Posts",
@@ -268,9 +268,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee456-design-01-15ghz-gaas-hemt-amp-detailed-announcement/";
           
         },
-      },{id: "post-ee-336-induction-motor-slip-analysis",
+      },{id: "post-induction-motor-slip-analysis",
         
-          title: "EE-336 Induction Motor Slip Analysis",
+          title: "Induction Motor Slip Analysis",
         
         description: "",
         section: "Posts",
@@ -279,9 +279,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee336-week-05-generators-detailed-announcement/";
           
         },
-      },{id: "post-assignment-02",
+      },{id: "post-faraday-39-s-law-synchronous-generator-speed-and-phasor-analysis",
         
-          title: "Assignment 02",
+          title: "Faraday&#39;s Law, Synchronous Generator Speed, and Phasor Analysis",
         
         description: "",
         section: "Posts",
@@ -290,9 +290,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee336-week-02-faradays-law-detailed-announcement/";
           
         },
-      },{id: "post-ee-336-assignment-04-autotransformer-power-rating",
+      },{id: "post-autotransformer-power-rating",
         
-          title: "EE-336 Assignment 04 — Autotransformer Power Rating",
+          title: "Autotransformer Power Rating",
         
         description: "",
         section: "Posts",
@@ -301,9 +301,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee336-week-04-autotransformer-ratings-detailed-announcement/";
           
         },
-      },{id: "post-ee-336-assignment-3-delta-y-transformer-analysis",
+      },{id: "post-delta-y-transformer-analysis",
         
-          title: "EE-336 Assignment 3 – Delta-Y Transformer Analysis",
+          title: "Delta-Y Transformer Analysis",
         
         description: "",
         section: "Posts",
@@ -312,9 +312,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee336-week-03-transformers-detailed-announcement/";
           
         },
-      },{id: "post-ee-336-assignment-01-three-phase-apparent-power",
+      },{id: "post-three-phase-apparent-power",
         
-          title: "EE-336 Assignment 01 — Three-Phase Apparent Power",
+          title: "Three-Phase Apparent Power",
         
         description: "",
         section: "Posts",
@@ -334,9 +334,9 @@ ninja.data = [{
             window.location.href = "/blog/2024/ee301-laplace-transform/";
           
         },
-      },{id: "post-ee-319-lab-07-measurements",
+      },{id: "post-differential-and-instrumentation-amplifier-cmrr-characterization",
         
-          title: "EE 319 Lab 07 — Measurements",
+          title: "Differential and Instrumentation Amplifier CMRR Characterization",
         
         description: "",
         section: "Posts",
@@ -356,9 +356,9 @@ ninja.data = [{
             window.location.href = "/blog/2024/ee301-report-02-laplace-transform-detailed-announcement/";
           
         },
-      },{id: "post-ee-319-lab-06-measurements-lm741-op-amp",
+      },{id: "post-measuring-the-non-ideal-characteristics-of-an-operational-amplifier-lm741",
         
-          title: "EE 319 Lab 06 — Measurements (LM741 Op-Amp)",
+          title: "Measuring the Non-Ideal Characteristics of an Operational Amplifier (LM741)",
         
         description: "",
         section: "Posts",
@@ -389,9 +389,9 @@ ninja.data = [{
             window.location.href = "/blog/2024/ee301-report-01-fourier-transform-detailed-announcement/";
           
         },
-      },{id: "post-ee-319-lab-05-measurements",
+      },{id: "post-distortion-measurements-of-a-common-emitter-bjt-amplifier",
         
-          title: "EE 319 Lab 05 — Measurements",
+          title: "Distortion Measurements of a Common-Emitter BJT Amplifier",
         
         description: "",
         section: "Posts",
@@ -433,9 +433,9 @@ ninja.data = [{
             window.location.href = "/blog/2024/ee314-design-01-detailed-announcement/";
           
         },
-      },{id: "post-ee-319-lab-03-bode-plot-amp-small-signal-gain",
+      },{id: "post-utilizing-bode-plots-to-determine-small-signal-gain",
         
-          title: "EE 319 Lab 03 — Bode Plot &amp; Small-Signal Gain",
+          title: "Utilizing Bode Plots to Determine Small-Signal Gain",
         
         description: "",
         section: "Posts",
@@ -444,9 +444,9 @@ ninja.data = [{
             window.location.href = "/blog/2024/ee319-lab-03-small-signal-gain-detailed-announcement/";
           
         },
-      },{id: "post-ee-319-lab-02-active-band-pass-filter-measurements",
+      },{id: "post-active-band-pass-filter-measurement-and-analysis",
         
-          title: "EE-319 Lab 02 — Active Band-Pass Filter Measurements",
+          title: "Active Band-Pass Filter Measurement and Analysis",
         
         description: "",
         section: "Posts",
@@ -455,9 +455,9 @@ ninja.data = [{
             window.location.href = "/blog/2024/ee319-lab-02-active-band-pass-filter-detailed-announcement/";
           
         },
-      },{id: "post-ee-319-lab-01-low-pass-filter-measurements",
+      },{id: "post-low-pass-filter-measurement-and-analysis",
         
-          title: "EE 319 Lab 01 — Low-Pass Filter Measurements",
+          title: "Low-Pass Filter Measurement and Analysis",
         
         description: "",
         section: "Posts",
@@ -466,9 +466,9 @@ ninja.data = [{
             window.location.href = "/blog/2024/ee319-lab-01-low-pass-filter-detailed-announcement/";
           
         },
-      },{id: "post-ee-319-lab-01-passive-rc-band-pass-filter",
+      },{id: "post-passive-rc-band-pass-filter-measurement-and-analysis",
         
-          title: "EE-319 Lab 01 — Passive RC Band-Pass Filter",
+          title: "Passive RC Band-Pass Filter Measurement and Analysis",
         
         description: "",
         section: "Posts",
@@ -477,9 +477,9 @@ ninja.data = [{
             window.location.href = "/blog/2024/ee319-lab-01-band-pass-filter-detailed-announcement/";
           
         },
-      },{id: "post-ee-319-lab-01-high-pass-filter-measurements",
+      },{id: "post-high-pass-filter-measurement-techniques",
         
-          title: "EE-319 Lab 01 — High-Pass Filter Measurements",
+          title: "High-Pass Filter Measurement Techniques",
         
         description: "",
         section: "Posts",

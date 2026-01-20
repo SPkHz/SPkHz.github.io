@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Steven Placzek, Electrical Engineering Portfolio
+title: Steven Placzek
 first_name: Steven
 middle_name: M.
 last_name: Placzek
@@ -90,8 +90,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Steven M. Placzek - Electrical Engineering Portfolio # blog_name will be displayed in your blog page
-blog_description: A Portfolio of all my coursework from throughout my time at Western New England University, done while completing my Bachelor's of Science in Electrical Engineering degree, and featuring a variety of different Electrical Engineering Design Projects.
+blog_name: Technical Articles # blog_name will be displayed in your blog page
+blog_description: Design write-ups, coursework summaries, and engineering deep dives.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 

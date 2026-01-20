@@ -8,12 +8,12 @@ pagination:
   enabled: true
   collection: posts
   permalink: /page/:num/
-  per_page: 30
+  per_page: 50
   sort_field: date
   sort_reverse: true
   trail:
-    before: 2 # The number of links before the current page
-    after: 2 # The number of links after the current page
+    before: 3 # The number of links before the current page
+    after: 3 # The number of links after the current page
 ---
 
 <div class="post">

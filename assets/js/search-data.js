@@ -16,8 +16,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-projects",
-          title: "projects",
+        },{id: "nav-design-project-portfolio",
+          title: "Design Project Portfolio",
           description: "A growing collection of all of my electrical engineering design projects and coursework.",
           section: "Navigation",
           handler: () => {

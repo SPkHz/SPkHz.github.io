@@ -828,6 +828,11 @@ ninja.data = [{
           description: "Broadband spectral characterization of a thermo-optic Mach-Zehnder interferometer (MZI); extracted FSR and π-shift heater power (Pπ).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee548_lab_04/";
+            },},{id: "projects-ee-548-lab-05-thermo-optic-phase-modulation-in-a-silicon-mzi",
+          title: 'EE-548 Lab 05 — Thermo-Optic Phase Modulation in a Silicon MZI',
+          description: "Micro-heater tuning of a silicon Mach–Zehnder interferometer (Vπ ≈ 3.05 V, Pπ ≈ 48.5 mW, ER ≈ 33 dB).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee548_lab_05/";
             },},{
         id: 'social-cv',
         title: 'CV',

@@ -2,15 +2,17 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Steven Placzek
+title: Steven Placzek | Electrical Engineer
 first_name: Steven
 middle_name: M.
 last_name: Placzek
 contact_note: "Feel free to reach out to me via email or connect on LinkedIn."
 description: "Electrical engineering portfolio showcasing design projects, coursework, and research in RF wireless power transfer systems, analog, mixed-signal design, SDR signal processing, and measurement-driven project work."
 footer_text: >
-  Github repositories: <a href="https://github.com/SPkHz">Github.com/SPkHz</a>. 
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  © {{ site.time | date: "%Y" }} Steven M. Placzek. All rights reserved.  
+  LinkedIn: <a href="https://www.linkedin.com/in/" target="LinkedIn Profile">linkedin.com/</a>.
+  Github repositories: <a href="https://github.com/SPkHz">GitHub Profile</a>. 
+  # Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: resume, cv, academic-website, portfolio-website, rf, dsp, electrical-engineering, mmwave, millimeterwave, radar, wireless-power-transfer, medical-devices # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)

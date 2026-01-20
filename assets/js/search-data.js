@@ -9,15 +9,15 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
-          title: "blog",
+  },{id: "nav-articles",
+          title: "Articles",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-project-portfolio",
-          title: "Project Portfolio",
+        },{id: "nav-projects",
+          title: "Projects",
           description: "A growing collection of all of my electrical engineering design projects and coursework.",
           section: "Navigation",
           handler: () => {

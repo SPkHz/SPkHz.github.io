@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Design Project Portfolio
+title: Project Portfolio
 permalink: /projects/
 description: A growing collection of all of my electrical engineering design projects and coursework.
 nav: true

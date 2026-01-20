@@ -9,8 +9,13 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p><a href="https://github.com/SPkHz">github.com/SPkHz</a></p>
-    <p><a href="https://www.linkedin.com/in/PLACE-LINKEDIN-HERE/">LinkedIn</a></p>
+    <p><strong>Connect</strong></p>
+    <br/>
+    <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/PLACE-LINKEDIN-HERE/">LinkedIn</a></p>
+    <br/>
+    <p><i class="fa-brands fa-github"></i> <a href="https://github.com/SPkHz">GitHub</a></p>
+    <br/>
+    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:Steven.Placzek@ieee.org">Email</a></p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
@@ -18,12 +23,12 @@ social: false # includes social icons at the bottom of the page
 announcements:
   enabled: true # includes a list of news items
   scrollable: false # adds a vertical scroll bar if there are more than 3 news items
-  limit: # leave blank to include all the news in the `_news` folder
+  limit: 25 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  limit: 5 # leave blank to include all the blog posts
 ---
 
 I design RF/microwave circuits, DSP systems, and digital controllers—from Smith chart synthesis and MATLAB analysis through dual-tool simulation (Keysight ADS, LTspice, Simulink) to comprehensive LaTeX reports with reproducible code and schematics.

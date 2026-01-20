@@ -9,10 +9,7 @@ last_name: Placzek
 contact_note: "Feel free to reach out to me via email or connect on LinkedIn."
 description: "Electrical engineering portfolio showcasing design projects, coursework, and research in RF wireless power transfer systems, analog, mixed-signal design, SDR signal processing, and measurement-driven project work."
 footer_text: >
-  © {{ site.time | date: "%Y" }} Steven M. Placzek. All rights reserved.  
-  LinkedIn: <a href="https://www.linkedin.com/in/" target="LinkedIn Profile">linkedin.com/</a>.
-  Github repositories: <a href="https://github.com/SPkHz">GitHub Profile</a>. 
-  # Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  © {{ site.time | date: "%Y" }} Steven M. Placzek. All rights reserved.   |   <a href="https://www.linkedin.com/in/placeholder" target="LinkedIn Profile">LinkedIn Profile</a>    |   <a href="https://github.com/SPkHz" target="GitHub Profile">GitHub Profile</a>
 keywords: resume, cv, academic-website, portfolio-website, rf, dsp, electrical-engineering, mmwave, millimeterwave, radar, wireless-power-transfer, medical-devices # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -24,7 +21,7 @@ impressum_path: # set to path to include impressum link in the footer, use the s
 back_to_top: true # set to false to disable the back to top button
 
 # -----------------------------------------------------------------------------
-# Theme
+# Theme -- # Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 # -----------------------------------------------------------------------------
 
 # repo color theme
@@ -95,7 +92,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 blog_name: Technical Articles # blog_name will be displayed in your blog page
 blog_description: Design write-ups, coursework summaries, and engineering deep dives.
 permalink: /blog/:year/:title/
-lsi: false # produce an index for related posts
+lsi: true # produce an index for related posts
 
 # Pagination
 pagination:
@@ -198,8 +195,17 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
+  - _bibliography/
+  - _pages/publications.md
   - _pages/about_einstein.md
+  - _pages/books.md
+  - _pages/cv.md
+  - _pages/dropdowns.md
+  - _pages/publications.md
+  - _pages/teaching.md
   - purgecss.config.js
+  - TODO_NOTES.md
+  - TODO.md
   - README.md
   - readme_preview/
   - vendor
@@ -226,10 +232,6 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
-
-# exclude:
-#   - _bibliography/
-#   - _pages/publications.md
 
 # Sitemap settings
 defaults:
@@ -272,7 +274,20 @@ jekyll-archives:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
 display_tags: ["rf", "microwave", "signal-processing", "control", "matching-networks", "oscillators", "amplifiers", "filters"] # these tags will be displayed on the front page of your blog
-display_categories: ["coursework"] # these categories will be displayed on the front page of your blog
+display_categories: [
+    "coursework",
+    "Antenna Designs",
+    "millimeter-Wave Circuit Designs",
+    "Control-System Designs",
+    "Artificial Neural Network Designs",
+    "Silicon Photonic Devices",
+    "Laboratory Notebook Entries",
+    "Digital Signal Processing",
+    "Signals & Systems",
+    "Written Essays & Reports",
+    "Assignments & Coursework",
+    "Fun",
+  ] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

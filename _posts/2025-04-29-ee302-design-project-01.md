@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Designing a Personalized Audiogram-Driven FIR Filter-Bank for a Virtual Hearing Aid"
+title: "Designing a Personalized Audiogram-Driven FIR Virtual Filterbank for a Hearing Aid using MATLAB ©"
 date: 2025-04-29 11:48:00-0400
 tags: [signal-processing, dsp, fir, filter-bank, audio, audiogram, equalization, matlab]
 categories: coursework
@@ -10,7 +10,7 @@ related_posts: true
 show_on_home: false
 ---
 
-I’ve published an **EE-302 (Introduction to Digital Signal Processing)** project that designs a **personalized “virtual hearing aid” audio equalizer** using **linear-phase FIR filter banks**.
+I've published an **EE-302 (Introduction to Digital Signal Processing)** project that designs a **personalized audio equalizer** using a **virtual FIR filterbank** for a **hearing aid**.
 
 Given a user **audiogram** (hearing loss vs. frequency), the goal is to synthesize a composite FIR magnitude response that applies **frequency-dependent gain** to counteract the loss—ideally bringing the effective response back toward **0 dB** across **0–10 kHz** at **\(f_s = 20~\text{kHz}\)**.
 

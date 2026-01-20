@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: "RF / Analog / DSP — Millimeter-wave circuit design, digital signal processing, and simulation-validated engineering."
+subtitle: "RF, Analog, DSP, Millimeter-Wave Circuit Design, and Artificial Neural Networks."
 
 profile:
   align: right

@@ -29,12 +29,17 @@ _styles: |
   }
 ---
 
-This project is my **EE-322 (Electrical Engineering Lab II)** final portfolio: a full arc from **device-level MOSFET characterization** to **analog amplifier design**, **differential signaling + CMRR**, and **RF measurement workflows** using **S-parameters** and **de-embedding**.
+## Overview
 
-**Course:** EE-322 — Electrical Engineering Lab II (WNEU)  
-**Author:** Steven Placzek  
-**Tools:** Analog Discovery Studio, LTspice, Python (NumPy/Pandas/Matplotlib), LaTeX, VNA (S-parameters)  
-**Core themes:** measurement vs simulation, biasing, small-signal gain, frequency response (Bode), feedback, differential operation, de-embedding
+  - **Course:** EE-322 — Electrical Engineering Lab II (WNEU)
+  - **Project:** Final Laboratory Portfolio Notebook
+  - **Title:** EE-322 Final Lab Portfolio — Spring 2025
+  - **Author:** Steven Placzek
+  - **Date:** Spring 2025
+  - **Tools:** Analog Discovery Studio • LTspice • Python (NumPy/Pandas/Matplotlib) • LaTeX • VNA (S-parameters)
+  - **Core themes:** measurement vs simulation, biasing, small-signal gain, frequency response (Bode), feedback, differential operation, de-embedding
+
+This project is my **EE-322 (Electrical Engineering Lab II)** final portfolio: a full arc from **device-level MOSFET characterization** to **analog amplifier design**, **differential signaling + CMRR**, and **RF measurement workflows** using **S-parameters** and **de-embedding**.
 
 ---
 

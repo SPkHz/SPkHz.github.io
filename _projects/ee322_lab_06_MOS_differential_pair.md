@@ -17,13 +17,16 @@ tags:
   - measurement
 ---
 
-**Course:** EE-322 — Electrical Engineering Lab II  \\
-**Lab:** 06 — MOS Differential Pair: Single-Ended vs. Differential Signaling  \\
-**Date:** 2025-03-31
+## Overview
+
+  - **Course:** EE-322 — Electronics Lab II
+  - **Project:** Laboratory Portfolio Notebook Entry
+  - **Title:** Lab 06 -- MOS Differential Pair: Single-Ended vs. Differential Signaling
+  - **Author:** Steven Placzek
+  - **Date:** 2025-03-31
+  - **Tools:** Analog Discovery Studio • LTspice
 
 ---
-
-## Overview
 
 This lab investigates a **MOS differential pair** implemented with the **ALD1105 MOSFET array** and compares:
 
@@ -31,8 +34,6 @@ This lab investigates a **MOS differential pair** implemented with the **ALD1105
 - **Differential output** (measuring the voltage across both drain nodes)
 
 The main goal is to quantify how differential signaling improves **common-mode rejection** (CMRR) while preserving (or improving) differential gain.
-
-**Tools:** Analog Discovery Studio (bench measurement), LTspice (simulation)
 
 ---
 
@@ -207,4 +208,3 @@ The plot below shows the output behavior for **differential excitation** (out-of
   - bias offsets,
   - probe ground/reference configuration,
   - and device mismatch in the MOS array.
-

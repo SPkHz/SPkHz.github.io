@@ -17,14 +17,16 @@ tags:
   - lpf hpf measurement
 ---
 
-**Course:** EE-322 — Electrical Engineering Lab II  \
-**Lab:** 08 — Vector Network Analyzer Basics and S-Parameter De-Embedding  \
-**Date:** 2025-04-28  \
-**Tools:** Keysight P9371A VNA, Keysight ECal, RF demo board (LPF/HPF), Python (NumPy/SciPy/Matplotlib), Touchstone (`.s1p`, `.s2p`)
+## Overview
+
+  - **Course:** EE-322 — Electronics Lab II
+  - **Project:** Laboratory Portfolio Notebook Entry
+  - **Title:** Lab 08 -- Vector Network Analyzer Basics and S-Parameter De-Embedding
+  - **Author:** Steven Placzek
+  - **Date:** 2025-04-28
+  - **Tools:** Keysight P9371A VNA • Keysight ECal • RF demo board (LPF/HPF) • Python (NumPy/SciPy/Matplotlib) • Touchstone (.s1p/.s2p)
 
 ---
-
-## Overview
 
 This lab focused on using a **Vector Network Analyzer (VNA)** to measure **S-parameters** and then applying **de-embedding** to remove the measurement fixture’s influence from the results.
 

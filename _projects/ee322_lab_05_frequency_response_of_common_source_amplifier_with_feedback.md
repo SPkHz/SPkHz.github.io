@@ -21,9 +21,14 @@ tags:
   - bench measurement
 ---
 
-**Course:** EE-322 — Electrical Engineering Lab II  \
-**Lab Date:** 2025-03-18  \
-**Topic:** Negative feedback applied to a common-source MOSFET amplifier; frequency-response measurement and comparison to an ideal feedback gain.
+## Overview
+
+  - **Course:** EE-322 — Electronics Lab II
+  - **Project:** Laboratory Portfolio Notebook Entry
+  - **Title:** Lab 05 -- Frequency Response Analysis of a Common-Source Amplifier with Feedback
+  - **Author:** Steven Placzek
+  - **Date:** 2025-03-18
+  - **Tools:** Bench measurement (oscilloscope + function generator) • LTspice • Python
 
 ---
 

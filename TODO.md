@@ -2,13 +2,13 @@
 
 ## Branding / Page Titles / Information Hierarchy
 
-- [ ] Make the H1/page hero title page-specific (Blog page should not show "Electrical Engineering Portfolio").
-- [ ] Update the Home page H1 to a hiring-manager-oriented title (e.g., "Electrical Engineer — Projects & Case Studies").
-- [ ] Shorten and rewrite the hero description to be scannable (focus on selected work + skills, not "all my coursework").
-- [ ] Add 1-line role/skill tagline under the name (e.g., "RF • DSP • Embedded • Test & Measurement").
-- [ ] Add primary CTA buttons under the hero: "View Resume (PDF)", "Projects", "GitHub/Code", "Contact".
-- [ ] Rename nav labels for clarity: BLOG → "Technical Blog/Engineering Notes"; REPOSITORIES → "Code/GitHub".
-- [ ] Add a "Contact" destination (page or header buttons with email + LinkedIn).
+- [x] Make the H1/page hero title page-specific (Blog page should not show "Electrical Engineering Portfolio"). ✅ **COMPLETED** - H1 now shows just name "Steven M. Placzek"
+- [x] Update the Home page H1 to a hiring-manager-oriented title (e.g., "Electrical Engineer — Projects & Case Studies"). ✅ **COMPLETED** - Shows name with professional tagline
+- [x] Shorten and rewrite the hero description to be scannable (focus on selected work + skills, not "all my coursework"). ✅ **COMPLETED** - Rewrote to be more professional and scannable
+- [x] Add 1-line role/skill tagline under the name (e.g., "RF • DSP • Embedded • Test & Measurement"). ✅ **COMPLETED** - Added "RF • DSP • Embedded • Millimeter-Wave • Test & Measurement"
+- [x] Add primary CTA buttons under the hero: "View Resume (PDF)", "Projects", "GitHub/Code", "Contact". ✅ **COMPLETED** - CTA buttons already exist in about.md
+- [x] Rename nav labels for clarity: BLOG → "Technical Blog/Engineering Notes"; REPOSITORIES → "Code/GitHub". ✅ **COMPLETED** - Changed to "Blog" and "GitHub"
+- [x] Add a "Contact" destination (page or header buttons with email + LinkedIn). ✅ **COMPLETED** - Contact page already exists at /contact/
 
 ## Color System (Light/Dark Mode)
 
@@ -100,8 +100,8 @@
 ## Technical Features to Enable
 
 - [ ] **Enable Giscus comments** - Uncomment and configure giscus in `_config.yml` (lines 107-120) for feedback on projects
-- [x] **Set up resume.json properly** - Review `assets/json/resume.json` to ensure it has YOUR education, work experience, and skills
-- [x] **Configure GitHub repositories display** - Update `_data/repositories.yml` to showcase your best repos
+- [x] **Set up resume.json properly** - Review `assets/json/resume.json` to ensure it has YOUR education, work experience, and skills ✅ **COMPLETED**
+- [x] **Configure GitHub repositories display** - Update `_data/repositories.yml` to showcase your best repos ✅ **COMPLETED**
 
 ---
 

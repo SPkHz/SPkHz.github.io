@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /blog/
+permalink: /articles/
 title: Articles
 nav: true
 nav_order: 1

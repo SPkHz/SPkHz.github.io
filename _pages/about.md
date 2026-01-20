@@ -2,7 +2,11 @@
 layout: about
 title: About
 permalink: /
-subtitle: "RF, Analog, DSP, Millimeter-Wave Circuit Design, and Artificial Neural Networks."
+subtitle: Electrical Engineer
+tagline: "RF • Millimeter-Wave Circuit Design • Millimeter-Wave Test & Measurement
+  <br/> Analog Circuit Design • Artificial Neural Network Applications
+  <br/> Digital Signal Processing • Embedded Real-Time Kernels
+  <br/> Discrete Digital Control Systems • Analog Control Systems"
 
 profile:
   align: right
@@ -31,7 +35,7 @@ latest_posts:
   limit: 5 # leave blank to include all the blog posts
 ---
 
-I design RF/microwave circuits, DSP systems, and digital controllers—from Smith chart synthesis and MATLAB analysis through dual-tool simulation (Keysight ADS, LTspice, Simulink) to comprehensive LaTeX reports with reproducible code and schematics.
+Electrical Engineering student specializing in RF/microwave circuit design, digital signal processing, and embedded systems. Experienced with industry-standard tools (Keysight ADS, LTspice, MATLAB/Simulink) and delivering comprehensive technical documentation with reproducible results.
 
 <div class="d-flex flex-wrap" style="gap: .5rem; margin: 1rem 0 1.25rem 0;">
   <a class="btn btn-primary btn-sm" href="{{ '/projects/' | relative_url }}">Projects</a>

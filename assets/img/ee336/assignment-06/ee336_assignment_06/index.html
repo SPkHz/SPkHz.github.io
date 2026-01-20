@@ -14,13 +14,13 @@
     <span class="n">Zr</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="n">Rr_s</span><span class="p">,</span> <span class="n">Xr</span><span class="p">);</span>
     <span class="n">Zm</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Xm</span><span class="p">);</span>
     <span class="n">Zs</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="n">Rs</span><span class="p">,</span> <span class="n">Xs</span><span class="p">);</span>
-    
+
     <span class="n">Z_parallel</span> <span class="o">=</span> <span class="p">(</span><span class="n">Zm</span> <span class="o">*</span> <span class="n">Zr</span><span class="p">)</span> <span class="p">/</span> <span class="p">(</span><span class="n">Zm</span> <span class="o">+</span> <span class="n">Zr</span><span class="p">);</span>
     <span class="n">Ztotal</span> <span class="o">=</span> <span class="n">Zs</span> <span class="o">+</span> <span class="n">Z_parallel</span><span class="p">;</span>
-    
+
     <span class="n">Is_complex</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vs_complex</span> <span class="p">/</span> <span class="n">Ztotal</span><span class="p">;</span>
     <span class="n">Vr_complex</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">Is_complex</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="n">Z_parallel</span><span class="p">;</span>
-    
+
     <span class="c1">% Current through rotor branch</span>
     <span class="n">Ir</span> <span class="o">=</span> <span class="n">Vr_complex</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">/</span> <span class="n">Zr</span><span class="p">;</span>
     <span class="n">VL_complex</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">Ir</span> <span class="o">*</span> <span class="nb">complex</span><span class="p">(</span><span class="n">Rr_s</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>

@@ -13,7 +13,7 @@ Suggestions for improving this portfolio site for hiring managers.
   - A "custom_social" link to alberteinstein.com
   - Missing GitHub username
 - [ ] **CV data is Einstein's** - `_data/cv.yml` contains Albert Einstein's biography. Either update this file or ensure `resume.json` is properly configured
-- [ ] **Syntax error in _config.yml** - Line 281 has `first_name: Steven, M.]` (mismatched bracket)
+- [ ] **Syntax error in \_config.yml** - Line 281 has `first_name: Steven, M.]` (mismatched bracket)
 
 ---
 
@@ -62,13 +62,13 @@ Suggestions for improving this portfolio site for hiring managers.
 
 ## File Reference
 
-| File | What to Update |
-|------|----------------|
-| `_config.yml` | Open Graph, analytics, keywords, syntax fix (line 281) |
-| `_pages/about.md` | LinkedIn URLs, enable social icons |
-| `_data/socials.yml` | Email, GitHub, remove Einstein data |
-| `_data/cv.yml` | Replace Einstein's CV with yours (or use resume.json) |
-| `assets/json/resume.json` | Your actual resume data |
-| `_data/repositories.yml` | Your GitHub repos to feature |
-| `assets/img/prof_pic.jpg` | Professional headshot |
-| `assets/pdf/Steven_Placzek_Resume.pdf` | Your resume PDF |
+| File                                   | What to Update                                         |
+| -------------------------------------- | ------------------------------------------------------ |
+| `_config.yml`                          | Open Graph, analytics, keywords, syntax fix (line 281) |
+| `_pages/about.md`                      | LinkedIn URLs, enable social icons                     |
+| `_data/socials.yml`                    | Email, GitHub, remove Einstein data                    |
+| `_data/cv.yml`                         | Replace Einstein's CV with yours (or use resume.json)  |
+| `assets/json/resume.json`              | Your actual resume data                                |
+| `_data/repositories.yml`               | Your GitHub repos to feature                           |
+| `assets/img/prof_pic.jpg`              | Professional headshot                                  |
+| `assets/pdf/Steven_Placzek_Resume.pdf` | Your resume PDF                                        |

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Gauss-Seidel Power Flow Analysis for Electrical Energy Systems
+title: Iterative Gauss-Seidel Power Flow Analysis for Multi-Bus Power Networks
 description: Iterative power flow solution for a 6-bus system using the Gauss-Seidel method (MATLAB • Y-bus • per-unit system).
 img: /assets/img/ee336/assignment-10/convergence_combined.png
 category: coursework

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EE-548 Final Design Project 01 — Silicon Photonic Mach–Zehnder Modulator
+title: Carrier-Depletion Silicon Photonic Mach-Zehnder Modulator Design
 description: Carrier-depletion silicon MZM in 220 nm SOI (Tidy3D MODE + CHARGE) meeting Vπ, ER, IL, and RC bandwidth specifications.
 img: /assets/img/ee548/design-01/mzm_schematic.png
 importance: 1

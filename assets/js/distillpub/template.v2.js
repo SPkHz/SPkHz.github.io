@@ -2704,7 +2704,12 @@ d-citation-list .references .title {
               if (Object.prototype.hasOwnProperty.call(grammar, token)) {
                 continue;
               }
-              grammar[token] = rest[token];
+              Object.defineProperty(grammar, token, {
+                value: rest[token],
+                configurable: true,
+                enumerable: true,
+                writable: true,
+              });
             }
 
             delete grammar.rest;
@@ -3023,12 +3028,40 @@ d-citation-list .references .title {
           _self.addEventListener(
             "message",
             function (evt) {
-              var message = JSON.parse(evt.data),
-                lang = message.language,
-                code = message.code,
-                immediateClose = message.immediateClose;
+              var message;
+              try {
+                message = JSON.parse(evt.data);
+              } catch (e) {
+                return;
+              }
 
-              _self.postMessage(_.highlight(code, _.languages[lang], lang));
+              if (!message || typeof message !== "object") {
+                return;
+              }
+
+              var lang = message.language;
+              if (typeof lang !== "string") {
+                return;
+              }
+              if (lang === "__proto__" || lang === "constructor" || lang === "prototype") {
+                return;
+              }
+              if (!Object.prototype.hasOwnProperty.call(_.languages, lang)) {
+                return;
+              }
+
+              var grammar = _.languages[lang];
+              if (!grammar || typeof grammar !== "object") {
+                return;
+              }
+
+              var code = message.code,
+                immediateClose = message.immediateClose;
+              if (typeof code !== "string") {
+                code = String(code || "");
+              }
+
+              _self.postMessage(_.highlight(code, grammar, lang));
               if (immediateClose) {
                 _self.close();
               }

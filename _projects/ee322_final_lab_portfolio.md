@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "EE Lab II<br/>Final<br/>Portfolio<br/>Spring 2025"
+title: "Electronics Laboratory Portfolio: MOSFET Characterization through S-Parameter De-Embedding"
 description: "A complete compendium of labs from the spring '25 semester, lab 01 through lab 08 (Please use ToC to navigate, everything is hyperlinked!) --> MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX)."
 img: /assets/img/ee322/hero/Lab_05_Bode_Sim_Vs_Meas_Gain_Phase.png
 category: coursework

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Design Project 04 Published: MAG Amplifier Design & Non-Linear Simulation (8 GHz)"
+title: "Maximum-Available-Gain (MAG) Amplifier Design and Nonlinear Simulation at 8 GHz"
 description: Maximum-Available-Gain (MAG) amplifier design at 8 GHz using transmission-line + stub matching (ATF34143 pHEMT). Verified in MATLAB vs Keysight ADS; evaluated with 1 dB compression, harmonic balance, and two-tone IP3.
 category: coursework
 date: 2025-05-02 09:08:12-0500

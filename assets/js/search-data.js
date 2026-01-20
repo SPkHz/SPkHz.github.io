@@ -663,13 +663,13 @@ ninja.data = [{
           description: "Non-ideal op-amp characteristics measured in LTspice—offset voltage, input bias currents, slew rate, and gain-bandwidth product.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319-lab-06/";
-            },},{id: "projects-measurements",
-          title: 'Measurements',
+            },},{id: "projects-differential-and-instrumentation-amplifier-cmrr-characterization",
+          title: 'Differential and Instrumentation Amplifier CMRR Characterization',
           description: "Differential-mode gain, common-mode gain, and CMRR for a single-op-amp difference amplifier and a 3-op-amp instrumentation amplifier (LM741).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee319/lab-07/";
-            },},{id: "projects-ee-lab-ii-final-portfolio-spring-2025",
-          title: 'EE Lab II Final Portfolio Spring 2025',
+            },},{id: "projects-electronics-laboratory-portfolio-mosfet-characterization-through-s-parameter-de-embedding",
+          title: 'Electronics Laboratory Portfolio: MOSFET Characterization through S-Parameter De-Embedding',
           description: "A complete compendium of labs from the spring &#39;25 semester, lab 01 through lab 08 (Please use ToC to navigate, everything is hyperlinked!) --&gt; MOSFET characterization → amplifier design → differential pairs → VNA S-parameter de-embedding (LTspice • Python • LaTeX).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee322_final_lab_portfolio/";
@@ -748,8 +748,8 @@ ninja.data = [{
           description: "Generator power transfer calculation via transformer and frequency droop characteristic analysis for parallel generators (Per-unit analysis • Power-angle relationship • Droop control).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_09_generator_power_xfer_droop/";
-            },},{id: "projects-gauss-seidel-power-flow-analysis-for-electrical-energy-systems",
-          title: 'Gauss-Seidel Power Flow Analysis for Electrical Energy Systems',
+            },},{id: "projects-iterative-gauss-seidel-power-flow-analysis-for-multi-bus-power-networks",
+          title: 'Iterative Gauss-Seidel Power Flow Analysis for Multi-Bus Power Networks',
           description: "Iterative power flow solution for a 6-bus system using the Gauss-Seidel method (MATLAB • Y-bus • per-unit system).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee336_week_10_gauss-seidel_power_flow_analysis/";
@@ -788,8 +788,8 @@ ninja.data = [{
           description: "Wideband 10–20 GHz pHEMT amplifier using Chebyshev (insertion-loss) matching synthesis. 7-element IMN/OMN, MATLAB + ADS verification.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_03_10_ghz_to_20_ghz_chebyshev_synthesis/";
-            },},{id: "projects-design-project-04-published-mag-amplifier-design-amp-non-linear-simulation-8-ghz",
-          title: 'Design Project 04 Published: MAG Amplifier Design &amp;amp; Non-Linear Simulation (8 GHz)',
+            },},{id: "projects-maximum-available-gain-mag-amplifier-design-and-nonlinear-simulation-at-8-ghz",
+          title: 'Maximum-Available-Gain (MAG) Amplifier Design and Nonlinear Simulation at 8 GHz',
           description: "Maximum-Available-Gain (MAG) amplifier design at 8 GHz using transmission-line + stub matching (ATF34143 pHEMT). Verified in MATLAB vs Keysight ADS; evaluated with 1 dB compression, harmonic balance, and two-tone IP3.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee456_design_04/";
@@ -803,33 +803,33 @@ ninja.data = [{
           description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee470_design_01_servomotor_control_sys/";
-            },},{id: "projects-ee-548-final-design-project-01-silicon-photonic-mach-zehnder-modulator",
-          title: 'EE-548 Final Design Project 01 — Silicon Photonic Mach–Zehnder Modulator',
+            },},{id: "projects-carrier-depletion-silicon-photonic-mach-zehnder-modulator-design",
+          title: 'Carrier-Depletion Silicon Photonic Mach-Zehnder Modulator Design',
           description: "Carrier-depletion silicon MZM in 220 nm SOI (Tidy3D MODE + CHARGE) meeting Vπ, ER, IL, and RC bandwidth specifications.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee548_final_design_project_mach_zender_modulator/";
-            },},{id: "projects-ee-548-lab-01-laser-beam-quality-m-measurements",
-          title: 'EE-548 Lab 01: Laser Beam Quality (M²) Measurements',
+            },},{id: "projects-laser-beam-quality-m-measurements-for-single-mode-and-multimode-fiber",
+          title: 'Laser Beam Quality (M²) Measurements for Single-Mode and Multimode Fiber',
           description: "ISO 11146 beam-quality comparison of single-mode (1550 nm) vs. multimode (850 nm) propagation through optical fiber.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee548_lab_01/";
-            },},{id: "projects-ee-548-lab-02-measuring-polarization-dependent-loss-pdl",
-          title: 'EE-548 Lab 02 — Measuring Polarization Dependent Loss (PDL)',
+            },},{id: "projects-measuring-polarization-dependent-loss-pdl-in-silicon-photonic-waveguides",
+          title: 'Measuring Polarization Dependent Loss (PDL) in Silicon Photonic Waveguides',
           description: "All-States polarization sweep on a silicon photonic waveguide chip (1550 nm), with and without a fiber amplifier.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee548_lab_02/";
-            },},{id: "projects-ee-548-lab-03-polarization-dependent-loss-pdl-measurement",
-          title: 'EE-548 Lab 03 — Polarization-Dependent Loss (PDL) Measurement',
+            },},{id: "projects-mueller-stokes-polarization-dependent-loss-pdl-measurement-with-fringe-analysis",
+          title: 'Mueller-Stokes Polarization-Dependent Loss (PDL) Measurement with Fringe Analysis',
           description: "4-state Mueller–Stokes PDL characterization (1520–1530 nm) and fringe/FSR interpretation for a silicon-photonic DUT.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee548_lab_03/";
-            },},{id: "projects-ee-548-lab-04-thermal-phase-shifting-mach-zehnder-interferometers",
-          title: 'EE-548 Lab 04 — Thermal Phase-Shifting Mach-Zehnder Interferometers',
+            },},{id: "projects-thermal-phase-shifting-in-silicon-mach-zehnder-interferometers",
+          title: 'Thermal Phase-Shifting in Silicon Mach-Zehnder Interferometers',
           description: "Broadband spectral characterization of a thermo-optic Mach-Zehnder interferometer (MZI); extracted FSR and π-shift heater power (Pπ).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee548_lab_04/";
-            },},{id: "projects-ee-548-lab-05-thermo-optic-phase-modulation-in-a-silicon-mzi",
-          title: 'EE-548 Lab 05 — Thermo-Optic Phase Modulation in a Silicon MZI',
+            },},{id: "projects-thermo-optic-phase-modulation-characterization-in-a-silicon-mach-zehnder-interferometer",
+          title: 'Thermo-Optic Phase Modulation Characterization in a Silicon Mach-Zehnder Interferometer',
           description: "Micro-heater tuning of a silicon Mach–Zehnder interferometer (Vπ ≈ 3.05 V, Pπ ≈ 48.5 mW, ER ≈ 33 dB).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee548_lab_05/";

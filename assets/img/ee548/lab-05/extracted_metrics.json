@@ -1,0 +1,13 @@
+{
+  "digitized_from": "ee548__Lab_06__Optical_Power_vs_Watts.png",
+  "heater_resistance_ohm_assumed": 192.30769230769232,
+  "linear_fit_phase_rad_per_mW": 0.06403948341152595,
+  "linear_fit_phase_intercept_rad": 0.037885220415434614,
+  "Ppi_mW_from_fit": 48.46552888675782,
+  "Vpi_V_from_fit": 3.052915658298505,
+  "Pmax_dBm": -26.35021185994055,
+  "Pmin_dBm": -59.7834795395771,
+  "extinction_ratio_dB": 33.43326767963656,
+  "thermal_f3dB_Hz_assumed": 12020.0,
+  "thermal_time_constant_s": 1.3240843851239214e-05
+}

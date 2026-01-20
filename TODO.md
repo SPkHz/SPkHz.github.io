@@ -7,13 +7,6 @@ Suggestions for improving this portfolio site for hiring managers.
 ## Critical Issues (Fix First)
 
 - [ ] **Placeholder LinkedIn URLs** - `_pages/about.md` lines 13-14 and 34 have placeholder LinkedIn links (`YOUR-LINKEDIN-HERE`, `PLACE-LINKEDIN-HERE`)
-- [x] **Default socials.yml data** - `_data/socials.yml` still has:
-  - Placeholder email: `you@example.com`
-  - Einstein's Google Scholar ID and InspireHEP ID
-  - A "custom_social" link to alberteinstein.com
-  - Missing GitHub username
-- [x] **CV data is Einstein's** - `_data/cv.yml` contains Albert Einstein's biography. Either update this file or ensure `resume.json` is properly configured
-- [x] **Syntax error in \_config.yml** - Line 281 has `first_name: Steven, M.]` (mismatched bracket)
 
 ---
 
@@ -36,7 +29,6 @@ Suggestions for improving this portfolio site for hiring managers.
 
 ## Content Enhancements
 
-- [ ] **Add a publications page** - If you have published work, conference papers, or senior thesis, add them to `_bibliography/papers.bib`
 - [ ] **Create a dedicated Skills section** - Make skills more prominent on the about page with visual skill bars or categorized lists
 - [ ] **Add project thumbnails** - Enable `enable_publication_thumbnails: true` in config and add preview images for key projects
 - [ ] **Remove or customize books.md** - If not using the bookshelf feature, remove from navigation

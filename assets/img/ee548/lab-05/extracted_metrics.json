@@ -9,5 +9,5 @@
   "Pmin_dBm": -59.7834795395771,
   "extinction_ratio_dB": 33.43326767963656,
   "thermal_f3dB_Hz_assumed": 12020.0,
-  "thermal_time_constant_s": 1.3240843851239214e-05
+  "thermal_time_constant_s": 1.3240843851239214e-5
 }

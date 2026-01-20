@@ -5,6 +5,7 @@ title: Transistor Characterization Techniques
 description: Extracting NMOS SPICE parameters (VTn, KN, VA) from automated SMU sweeps + Python analysis.
 img: /assets/img/ee322/lab-01/plot_exp1_id_vs_vds.png
 category: coursework
+date: 2025-01-16 10:30:00-05:00
 importance: 9
 related_publications: true
 tags:
@@ -17,6 +18,15 @@ tags:
   - python analysis
   - curve fitting
 ---
+
+## Overview
+
+  - **Course:** EE-322 — Electronics Lab II
+  - **Project:** Laboratory Portfolio Notebook Entry
+  - **Title:** Lab 01 -- Transistor Characterization Techniques
+  - **Author:** Steven Placzek
+  - **Date:** 2025-01-16 10:30:00-05:00
+  - **Tools:** LTspice • Python • MATLAB • LaTeX
 
 This page documents **Lab 01 (2025-01-16)** for **EE-322 — Electrical Engineering Lab II**.
 

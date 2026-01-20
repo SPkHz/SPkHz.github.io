@@ -19,14 +19,16 @@ tags:
   - bench measurement
 ---
 
-**Course:** EE-322 — Electrical Engineering Lab II  
-**Lab date:** 2025-02-24  
-**Topic:** Actively-loaded NMOS common-source amplifier (ALD1105)  
-**Tools:** Bench PSU + function generator + oscilloscope, LTspice
+## Overview
+
+  - **Course:** EE-322 — Electronics Lab II
+  - **Project:** Laboratory Portfolio Notebook Entry
+  - **Title:** Lab 03 -- Building, Simulating, and Measuring a Common-Source Amplifier with an Active Load
+  - **Author:** Steven Placzek
+  - **Date:** 2025-02-24
+  - **Tools:** Bench PSU + Function Generator + Oscilloscope • LTspice • LaTeX
 
 ---
-
-## Overview
 
 This lab investigates a **common-source MOSFET amplifier** built using the **ALD1105** matched transistor array. The stage uses:
 

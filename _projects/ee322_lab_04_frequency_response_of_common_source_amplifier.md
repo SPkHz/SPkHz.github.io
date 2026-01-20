@@ -18,9 +18,14 @@ tags:
   - measurement
 ---
 
-**Course:** EE-322 - Electrical Engineering Lab II  
-**Lab Date:** 2025-03-05  
-**Topic:** Frequency response characterization of a **common-source MOSFET amplifier** (ALD1105), including **DC operating point** verification and **Bode magnitude** measurement.
+## Overview
+
+  - **Course:** EE-322 — Electronics Lab II
+  - **Project:** Laboratory Portfolio Notebook Entry
+  - **Title:** Lab 04 -- Common-Source Amplifier: Frequency Response Measurement and Analysis
+  - **Author:** Steven Placzek
+  - **Date:** 2025-03-05
+  - **Tools:** Bench measurement (oscilloscope + function generator) • LTspice
 
 ---
 
@@ -209,4 +214,3 @@ Key measured markers (from the graded summary):
 - **Data source:** `EE_322_eeLab_II_Lab_4_Data.xlsx` (scope measurements and computed gains)
 - **Simulation files:** `Lab_04_LTSpice/EE322_Lab_4_Bode.asc`, `Lab_04_LTSpice/EE322_Lab_04_DC_Operating_Point2.asc`, `Lab_04_LTSpice/Lab_04_SPICE_MODELS.txt`
 - Plot generation can be reproduced by reading frequency + gain columns from the spreadsheet and generating a semilog magnitude plot with a 0–30 dB y-axis window.
-

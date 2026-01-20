@@ -922,10 +922,12 @@ figure.highlight {
 }
 
 pre {
+  font-family: "JetBrains Mono", monospace;
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
   border-radius: 6px;
   padding: 6px 12px;
+  font-variant-ligatures: contextual;
 
   // Responsive behavior for code blocks
   overflow-x: auto;
@@ -944,10 +946,12 @@ pre {
 }
 
 code {
+  font-family: "JetBrains Mono", monospace;
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
   border-radius: 3px;
   padding: 3px 3px;
+  font-variant-ligatures: contextual;
 
   // Inline code should wrap
   white-space: normal;

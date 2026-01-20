@@ -2,12 +2,13 @@
 
 layout: page
 title: Integrated Circuit Biasing Techniques
-description: "MOSFET-resistor bias vs. beta-multiplier bias using ALD1106/ALD1105 (LTSpice + breadboard). Focus: operating point accuracy and power-supply sensitivity. (2025-01-28)"
-img: /assets/img/ee322/lab-01/lab02_cover.png
+description: "MOSFET-resistor bias vs. beta-multiplier bias using ALD1106/ALD1105 (LTSpice + breadboard). Focus: operating point accuracy and power-supply sensitivity."
+img: /assets/img/ee322/lab-02/lab02_cover.png
 category: coursework
+date: 2025-01-28 11:15:37-05:00
 toc:
   sidebar: left
-importance: 6
+importance: 66
 related_publications: true
 tags:
   - ic biasing
@@ -20,13 +21,24 @@ tags:
   - ltspice
 ---
 
+## Overview
+
+  - **Course:** EE-322 — Electronics Lab II
+  - **Project:** Laboratory Portfolio Notebook Entry
+  - **Title:** Lab 02 -- Integrated Circuit Biasing Techniques
+  - **Author:** Steven Placzek
+  - **Date:** 2025-01-28 11:15:37-05:00
+  - **Tools:** LTspice • MATLAB • LaTeX
+
+---
+
 This page summarizes **Lab 02 (2025-01-28)** for **EE-322 - Electrical Engineering Lab II**.
 
 **Topic:** Compare two IC biasing approaches:
 1. **MOSFET-resistor bias** (simple, but typically supply-sensitive)
 2. **Beta-multiplier bias** (feedback-based, typically more supply/process robust)
 
-**Reference notebook/report:** `EE_322_Lab_02_Notebook_Placzek_Rdy_To_Print.pdf`
+<!-- **Reference notebook/report:** `EE_322_Lab_02_Notebook_Placzek.pdf` -->
 
 ---
 
@@ -60,7 +72,7 @@ In this lab, both bias circuits were:
 
 <div class="row">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_ald110x_pinout.png" title="ALD1106/ALD1105 pinout and internal devices" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-02/lab02_ald110x_pinout.png" title="ALD1106/ALD1105 pinout and internal devices" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -87,10 +99,10 @@ A diode-connected NMOS (gate tied to drain) with a resistor from **$V_{DD}$ → 
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_exp1_wiring_diagram.png" title="Experiment 1 wiring diagram (MOSFET-resistor bias)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-02/lab02_exp1_wiring_diagram.png" title="Experiment 1 wiring diagram (MOSFET-resistor bias)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_breadboard_setup_2.jpg" title="Breadboard build (photo)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-02/lab02_breadboard_setup_2.jpg" title="Breadboard build (photo)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -116,7 +128,7 @@ A diode-connected NMOS (gate tied to drain) with a resistor from **$V_{DD}$ → 
 
 <div class="row">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_exp1_measured_vs_sim.png" title="Experiment 1: $I_D$ vs $V_{DD}$ (measured vs simulated)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-02/lab02_exp1_measured_vs_sim.png" title="Experiment 1: $I_D$ vs $V_{DD}$ (measured vs simulated)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -147,10 +159,10 @@ $Q_2$ was implemented as **4×** the width of $Q_1$ by wiring **four NMOS device
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_exp2_wiring_diagram.png" title="Experiment 2 wiring diagram (beta multiplier)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-02/lab02_exp2_wiring_diagram.png" title="Experiment 2 wiring diagram (beta multiplier)" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_breadboard_setup_1.jpg" title="Breadboard build (photo)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-02/lab02_breadboard_setup_1.jpg" title="Breadboard build (photo)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -188,7 +200,7 @@ Notes:
 
 <div class="row">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_exp2_measured_vs_sim.png" title="Experiment 2: $I_D$ vs $V_{DD}$ (measured vs simulated)" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-02/lab02_exp2_measured_vs_sim.png" title="Experiment 2: $I_D$ vs $V_{DD}$ (measured vs simulated)" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -200,7 +212,7 @@ Notes:
 
 <div class="row">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-01/lab02_exp2_supply_sensitivity.png" title="Experiment 2: derivative-based supply sensitivity visualization" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/ee322/lab-02/lab02_exp2_supply_sensitivity.png" title="Experiment 2: derivative-based supply sensitivity visualization" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -220,16 +232,3 @@ Why (conceptually):
 - A mirror/cascode-like structure can present a **higher small-signal impedance** at the bias node, reducing coupling from $V_{DD}$.
 
 ---
-
-## How to add this to your al-folio repo
-
-1. Save this file as:
-   - `_projects/ee322_lab_02.md` (recommended), or
-   - wherever your site stores project pages.
-
-2. Copy the provided images into:
-   - `assets/img/ee322/lab-01/`
-
-3. Rebuild your GitHub Pages site.
-
-If your repo uses a different images folder naming convention (e.g., `lab-02`), update the `img:` field and the `figure.liquid` paths accordingly.

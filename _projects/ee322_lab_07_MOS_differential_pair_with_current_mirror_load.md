@@ -20,13 +20,16 @@ tags:
   - lab measurement
 ---
 
-**Course:** EE-322 - Electrical Engineering Lab II  
-**Lab Date:** 2025-04-08  
-**Topic:** MOS differential pair with current-mirror active load (differential → single-ended) and **common-mode rejection ratio (CMRR)**
+## Overview
+
+  - **Course:** EE-322 — Electronics Lab II
+  - **Project:** Laboratory Portfolio Notebook Entry
+  - **Title:** Lab 07 -- MOS Differential Pair with a Current Mirror Load
+  - **Author:** Steven Placzek
+  - **Date:** 2025-04-08
+  - **Tools:** Analog Discovery Studio • LTspice • Python
 
 ---
-
-## Overview
 
 This lab characterizes a **MOS differential pair** (\(Q_1, Q_2\)) with a **PMOS current-mirror active load** (\(Q_3, Q_4\)), implemented using the **ALD1105 matched MOSFET array**. The circuit operates as a **differential-to-single-ended amplifier**, where the output \(v_O\) is taken from one side of the differential pair.
 

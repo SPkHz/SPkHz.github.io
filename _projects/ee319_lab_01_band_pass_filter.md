@@ -30,15 +30,18 @@ _styles: |
   }
 ---
 
+## Overview
+
+**Course:** EE-319 — Electronics Lab I
+**Project/Assignment:** Laboratory 02
+**Team:** Steven Placzek, Jeremy Burke  
+**Tools:** MATLAB • LTspice • Analog Discovery Studio (WaveForms)
+
 This lab analyzes a **passive RC band-pass filter** using three parallel methods:
 
 1. **Closed-form frequency-domain analysis** (transfer function + Bode asymptotes)
 2. **LTspice AC sweep** (SPICE validation)
 3. **Hardware measurement** using a **Digilent Analog Discovery Studio**, with MATLAB used for post-processing and overlay plots.
-
-**Course:** EE-319 — Electronics Lab I  
-**Team:** Steven Placzek, Jeremy Burke  
-**Tools:** MATLAB • LTspice • Analog Discovery Studio (WaveForms)
 
 ---
 

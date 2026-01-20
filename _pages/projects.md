@@ -5,7 +5,21 @@ permalink: /projects/
 description: A growing collection of all of my electrical engineering design projects and coursework.
 nav: true
 nav_order: 3
-display_categories: [coursework, Antenna Designs, millimeter-Wave Circuit Designs, Control-System Designs, Artificial Neural Network Designs, Silicon Photonic Circuit Design, Laboratory Notebook Entries, DSP Design, Signals & Systems, Written Essays & Reports, Assignments & Coursework, Fun]
+display_categories:
+  [
+    coursework,
+    Antenna Designs,
+    millimeter-Wave Circuit Designs,
+    Control-System Designs,
+    Artificial Neural Network Designs,
+    Silicon Photonic Circuit Design,
+    Laboratory Notebook Entries,
+    DSP Design,
+    Signals & Systems,
+    Written Essays & Reports,
+    Assignments & Coursework,
+    Fun,
+  ]
 horizontal: false
 ---
 

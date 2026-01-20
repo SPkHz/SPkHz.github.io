@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Final Lab Portfolio Notebook
-    <br/><br/>EE-322  —  Electronics Laboratory II
-    <br/>Western New England University
-    <br/>College of Engineering
-    <br/>E.C.E. Department
-    <br/>Spring 2025"
+  <br/><br/>EE-322  —  Electronics Laboratory II
+  <br/>Western New England University
+  <br/>College of Engineering
+  <br/>E.C.E. Department
+  <br/>Spring 2025"
 date: 2025-05-03 07:03:00-0400
 categories: coursework
 thumbnail: /assets/img/ee322/hero/Lab_05_Bode_Sim_Vs_Meas_Gain_Phase.png

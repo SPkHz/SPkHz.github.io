@@ -16,8 +16,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-project-portfolio",
-          title: "Project Portfolio",
+        },{id: "nav-projects",
+          title: "Projects",
           description: "A growing collection of all of my electrical engineering design projects and coursework.",
           section: "Navigation",
           handler: () => {
@@ -81,26 +81,15 @@ ninja.data = [{
             window.location.href = "/blog/2025/ee336-week-14-h-bridge-inverter-analysis-detailed-announcement/";
           
         },
-      },{id: "post-designing-a-personalized-audiogram-driven-fir-filter-bank-for-a-virtual-hearing-aid",
+      },{id: "post-designing-a-personalized-audiogram-driven-fir-virtual-filterbank-for-a-hearing-aid-using-matlab",
         
-          title: "Designing a Personalized Audiogram-Driven FIR Filter-Bank for a Virtual Hearing Aid",
+          title: "Designing a Personalized Audiogram-Driven FIR Virtual Filterbank for a Hearing Aid using MATLAB...",
         
         description: "",
         section: "Posts",
         handler: () => {
           
             window.location.href = "/blog/2025/ee302-design-project-01/";
-          
-        },
-      },{id: "post-fir-filter-bank-for-hearing-aid-audio-response",
-        
-          title: "FIR Filter-Bank for Hearing Aid Audio Response",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/ee302-design-01-fir-filterbank-for-hearing-aid-detailed-announcement/";
           
         },
       },{id: "post-discrete-time-control-for-receiver-positioning-and-satellite-tracking",

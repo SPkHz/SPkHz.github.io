@@ -9,10 +9,10 @@ last_name: Placzek
 contact_note: "Feel free to reach out to me via email or connect on LinkedIn."
 description: "Electrical engineering portfolio showcasing design projects, coursework, and research in RF wireless power transfer systems, analog, mixed-signal design, SDR signal processing, and measurement-driven project work."
 footer_text: >
-  © {{ site.time | date: "%Y" }} Steven M. Placzek. All rights reserved.   |   <a href="https://www.linkedin.com/in/placeholder" target="LinkedIn Profile">LinkedIn Profile</a>    |   <a href="https://github.com/SPkHz" target="GitHub Profile">GitHub Profile</a>
+  All rights reserved. | <a href="https://www.linkedin.com/in/stevenplaczek" target="_blank" rel="noopener">LinkedIn Profile</a> | <a href="https://github.com/SPkHz" target="_blank" rel="noopener">GitHub Profile</a>
 keywords: resume, cv, academic-website, portfolio-website, rf, dsp, electrical-engineering, mmwave, millimeterwave, radar, wireless-power-transfer, medical-devices # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.svg # Custom SVG favicon matching the site's accent color (Deep Navy + Aqua)
 
 url: https://spkhz.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -66,9 +66,10 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: https://spkhz.github.io/assets/img/prof_pic_color.png # The site-wide (default for all links) Open Graph preview image
+# Note: Consider creating a dedicated og-preview.png (1200x630px) for better social media appearance
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -397,6 +398,7 @@ imagemagick:
     - ".gif"
   output_formats:
     webp: "-auto-orient -quality 85"
+    # avif: "-auto-orient -quality 80"  # Uncomment if ImageMagick has AVIF support (requires libheif)
 
 # Lazy loading images
 #   If you enable lazy loading, all images will add the loading="lazy" attribute.

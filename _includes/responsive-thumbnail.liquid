@@ -1,0 +1,47 @@
+{% comment %}
+  Responsive thumbnail include - outputs a picture element with srcset for WebP
+  without the figure wrapper. Used for post cards and featured cards.
+
+  Parameters:
+    path: (required) Path to the image
+    alt: (required) Alt text for the image
+    loading: (optional) "lazy" or "eager", defaults to "lazy"
+    class: (optional) CSS class for the img element
+    sizes: (optional) Sizes attribute for responsive images
+    width: (optional) Width attribute
+    height: (optional) Height attribute
+{% endcomment %}
+
+{% assign img_path = include.path | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' %}
+{% assign parts = include.path | split: '.' %}
+{% assign ext = parts.last %}
+
+<picture>
+  {% if site.imagemagick.enabled %}
+    {% if ext == 'gif' or ext == 'jpeg' or ext == 'jpg' or ext == 'png' or ext == 'tiff' %}
+      {% comment %} AVIF source - higher priority (better compression) {% endcomment %}
+      {% if site.imagemagick.output_formats.avif %}
+      <source
+        srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.avif {{ i }}w{% unless forloop.last %}, {% endunless %}{% endfor %}"
+        type="image/avif"
+        {% if include.sizes %}sizes="{{ include.sizes }}"{% else %}sizes="(max-width: 576px) 100vw, (max-width: 768px) 50vw, 280px"{% endif %}
+      >
+      {% endif %}
+      {% comment %} WebP source - fallback for browsers without AVIF support {% endcomment %}
+      <source
+        srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{ i }}w{% unless forloop.last %}, {% endunless %}{% endfor %}"
+        type="image/webp"
+        {% if include.sizes %}sizes="{{ include.sizes }}"{% else %}sizes="(max-width: 576px) 100vw, (max-width: 768px) 50vw, 280px"{% endif %}
+      >
+    {% endif %}
+  {% endif %}
+  <img
+    src="{{ include.path | relative_url }}"
+    alt="{{ include.alt | default: 'Thumbnail' }}"
+    {% if include.class %}class="{{ include.class }}"{% endif %}
+    {% if include.loading %}loading="{{ include.loading }}"{% elsif site.lazy_loading_images %}loading="lazy"{% endif %}
+    {% if include.width %}width="{{ include.width }}"{% endif %}
+    {% if include.height %}height="{{ include.height }}"{% endif %}
+    decoding="async"
+  >
+</picture>

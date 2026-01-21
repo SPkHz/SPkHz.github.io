@@ -68,7 +68,12 @@ pagination:
     <a href="{{ post.url | relative_url }}" class="featured-card hoverable">
       {% if post.thumbnail %}
       <div class="featured-card-thumbnail">
-        <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}" loading="lazy">
+        {% include responsive-thumbnail.liquid
+          path=post.thumbnail
+          alt=post.title
+          loading="lazy"
+          sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 280px"
+        %}
       </div>
       {% endif %}
       <div class="featured-card-content">
@@ -129,7 +134,12 @@ pagination:
         <div class="post-card-inner">
           {% if post.thumbnail %}
           <div class="post-card-thumbnail">
-            <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}" loading="lazy">
+            {% include responsive-thumbnail.liquid
+              path=post.thumbnail
+              alt=post.title
+              loading="lazy"
+              sizes="(max-width: 576px) 100vw, (max-width: 768px) 200px, 280px"
+            %}
           </div>
           {% endif %}
           <div class="post-card-content">

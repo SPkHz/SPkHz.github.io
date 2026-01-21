@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Deep Navy background circle -->
+  <circle cx="50" cy="50" r="48" fill="#1f4e79"/>
+
+  <!-- Stylized "S" for Steven/SPkHz with circuit-inspired design -->
+  <path d="M 35 30
+           C 35 30, 65 25, 65 40
+           C 65 50, 35 50, 35 60
+           C 35 75, 65 70, 65 70"
+        stroke="#2dd4bf"
+        stroke-width="8"
+        stroke-linecap="round"
+        fill="none"/>
+
+  <!-- Small circuit nodes -->
+  <circle cx="35" cy="30" r="4" fill="#2dd4bf"/>
+  <circle cx="65" cy="70" r="4" fill="#2dd4bf"/>
+</svg>

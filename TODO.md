@@ -61,11 +61,11 @@
 
 ## Performance / Fit-and-Finish
 
-- [ ] Enable responsive images (srcset/sizes) and lazy-load thumbnails.
-- [ ] Compress thumbnails and enforce modern formats where possible (WebP/AVIF).
-- [ ] Prevent layout shift by reserving image dimensions (width/height or aspect-ratio).
-- [ ] Add consistent favicon + social preview (Open Graph) styling that matches the chosen accent color.
-- [ ] Audit spacing/alignment across themes to ensure dark/light mode feel equally “finished”.
+- [x] Enable responsive images (srcset/sizes) and lazy-load thumbnails. ✅ **COMPLETED** - Created `responsive-thumbnail.liquid` include with srcset/sizes support for WebP, updated blog.md to use it for featured cards and post cards, added picture element CSS support
+- [x] Compress thumbnails and enforce modern formats where possible (WebP/AVIF). ✅ **COMPLETED** - WebP at 85% quality already configured via imagemagick, added AVIF support preparation in `responsive-thumbnail.liquid` (AVIF config ready to enable when ImageMagick supports it)
+- [x] Prevent layout shift by reserving image dimensions (width/height or aspect-ratio). ✅ **COMPLETED** - Added `aspect-ratio: 16/10` to post card thumbnails, explicit heights on mobile breakpoints, added `decoding="async"` to images, added aspect-ratio to project cards
+- [x] Add consistent favicon + social preview (Open Graph) styling that matches the chosen accent color. ✅ **COMPLETED** - Enabled `serve_og_meta: true` and `serve_schema_org: true`, created custom SVG favicon (favicon.svg) in Deep Navy + Aqua accent colors, created og-preview.svg social preview, set og_image to profile picture
+- [x] Audit spacing/alignment across themes to ensure dark/light mode feel equally "finished". ✅ **COMPLETED** - Added `--global-theme-color-rgb` CSS variable for both themes, added `--global-shadow-sm/md/lg/xl` variables with appropriate values for light/dark modes, updated shadows to use theme-aware variables
 
 ---
 

@@ -812,6 +812,21 @@ ninja.data = [{
           description: "Discrete-time state-space controller (pole placement) for a servo-driven receiver positioning system. Validated in MATLAB/Simulink across multiple sampling rates.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ee470_design_01_servomotor_control_sys/";
+            },},{id: "projects-ee-545-project-01-perceptron-vs-hebb-e-vs-f",
+          title: 'EE-545 Project 01 — Perceptron vs Hebb (E vs F)',
+          description: "Binary classification of 5×5 letter glyphs under missing &amp; mistaken pixel noise (Hebbian learning vs perceptron).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee545_project_01_perceptron_vs_hebb/";
+            },},{id: "projects-ee-545-project-02-backpropagation-glyph-classification",
+          title: 'EE-545 Project 02: Backpropagation Glyph Classification',
+          description: "Backpropagation-trained MLP (MATLAB patternnet) for 12×10 glyph classification across letters, fonts, and letter+font pairs; robustness to bit-flip and replacement noise.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee545_project_02_backpropagation_glyph_classification/";
+            },},{id: "projects-ee-545-project-03-rf-modulation-classification",
+          title: 'EE-545 Project 03 — RF Modulation Classification',
+          description: "Automatic RF modulation classification (AMC) using a baseline 1‑D CNN in MATLAB on synthetic I/Q frames with realistic channel impairments.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ee545_project_03_rf_modulation_classification/";
             },},{id: "projects-carrier-depletion-silicon-photonic-mach-zehnder-modulator-design",
           title: 'Carrier-Depletion Silicon Photonic Mach-Zehnder Modulator Design',
           description: "Carrier-depletion silicon MZM in 220 nm SOI (Tidy3D MODE + CHARGE) meeting Vπ, ER, IL, and RC bandwidth specifications.",

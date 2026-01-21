@@ -8,6 +8,7 @@ thumbnail: assets/img/ee456/design01/ADS_all_TRL_Simulation.png
 inline: false
 related_posts: true
 show_on_home: false
+featured: true
 ---
 
 I’ve published **EE-456 Microwave Active Circuits — Design Project 01**: a **15 GHz single-stage amplifier** designed around the **MGF4941AL super–low-noise InGaAs HEMT** at **VDS = 2 V** and **IDS = 10 mA**.

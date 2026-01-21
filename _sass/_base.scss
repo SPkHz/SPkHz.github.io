@@ -93,6 +93,58 @@ article p,
 }
 
 // =============================================================================
+// GLOBAL FOCUS STYLES (Accessibility)
+// =============================================================================
+// Ensure all interactive elements have visible focus indicators
+
+button,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  &:focus {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+}
+
+// =============================================================================
+// SKIP LINK (Accessibility)
+// =============================================================================
+// Allows keyboard users to skip navigation and jump directly to main content
+// Visually hidden until focused
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--global-theme-color);
+  color: var(--global-bg-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 9999;
+  transition: top 0.2s ease;
+
+  &:focus {
+    top: 0;
+    outline: 2px solid var(--global-text-color);
+    outline-offset: 2px;
+  }
+}
+
+// =============================================================================
 // BASE ELEMENT STYLES
 // =============================================================================
 
@@ -143,6 +195,60 @@ table.table a {
   &:hover:after :not(.nav-item.dropdown) {
     width: 100%;
   }
+
+  // Focus styles for keyboard accessibility
+  &:focus {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+}
+
+// =============================================================================
+// LINK ACCESSIBILITY (Non-color-only styling)
+// =============================================================================
+// Body content links have underlines by default for accessibility
+// This ensures links are distinguishable for colorblind users
+// Nav and UI element links have other visual context and don't need underlines
+
+article a,
+.post-content a,
+.page-content a,
+.prose a,
+main p a,
+main li a,
+.card-body a,
+blockquote a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--global-theme-color) 50%, transparent);
+  text-underline-offset: 2px;
+
+  &:hover,
+  &:focus {
+    text-decoration-color: var(--global-theme-color);
+  }
+}
+
+// Exclude certain link types from underlines
+.nav-link,
+.navbar-brand,
+.btn,
+.tag-chip,
+.post-card-link,
+.featured-card,
+.social a,
+.pagination a,
+.badge,
+.dropdown-item {
+  text-decoration: none !important;
 }
 
 .table-dark {
@@ -556,6 +662,12 @@ kbd {
 // =============================================================================
 // Consistent sizing, alignment, and accessibility for theme/search toggles
 
+// Consistent alignment for icon button containers in navbar
+.navbar-nav .icon-button-container {
+  display: flex;
+  align-items: center;
+}
+
 #light-toggle,
 #search-toggle {
   padding: 0.5rem;
@@ -568,6 +680,7 @@ kbd {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.25rem;
 
   &:hover {
     color: var(--global-hover-color);
@@ -622,13 +735,10 @@ html[data-theme="dark"] {
 
 // Search toggle specific styling
 #search-toggle {
-  .nav-link {
-    padding: 0;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: var(--type-xs);
-    color: inherit;
+  font-size: var(--type-xs);
+
+  kbd {
+    font-size: inherit;
   }
 }
 
@@ -872,7 +982,7 @@ footer.sticky-bottom {
 }
 
 // =============================================================================
-// POST LIST
+// POST LIST (Legacy - keeping for backwards compatibility)
 // =============================================================================
 
 .post-list {
@@ -922,6 +1032,322 @@ footer.sticky-bottom {
     mjx-container[jax="CHTML"][display="true"] {
       display: unset;
     }
+  }
+}
+
+// =============================================================================
+// POST CARD LIST (New card-based layout)
+// =============================================================================
+
+.post-card-list {
+  margin: var(--space-xl) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+// =============================================================================
+// POST CARD
+// =============================================================================
+
+.post-card {
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+
+  // Link wrapper for the card content
+  .post-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    // Focus styles for keyboard accessibility
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  // Card focus-within state (when link inside is focused)
+  &:focus-within {
+    border-color: var(--global-theme-color);
+    box-shadow: 0 0 0 3px rgba(var(--global-theme-color-rgb, 31, 78, 121), 0.25);
+  }
+
+  // Inner flex container for thumbnail + content
+  .post-card-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  // Thumbnail section
+  .post-card-thumbnail {
+    flex: 0 0 280px;
+    max-width: 280px;
+    overflow: hidden;
+    background-color: var(--global-divider-color);
+
+    img {
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:hover .post-card-thumbnail img {
+    transform: scale(1.03);
+  }
+
+  // Content section
+  .post-card-content {
+    flex: 1;
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0; // Prevent flex child from overflowing
+  }
+
+  // Card title
+  .post-card-title {
+    font-size: var(--type-h3);
+    font-weight: 600;
+    line-height: var(--leading-snug);
+    margin: 0 0 var(--space-sm) 0;
+    color: var(--global-text-color);
+    transition: color 0.2s ease;
+
+    .external-link-icon {
+      vertical-align: middle;
+      margin-left: 0.25rem;
+      opacity: 0.6;
+    }
+  }
+
+  &:hover .post-card-title {
+    color: var(--global-theme-color);
+  }
+
+  // Card description
+  .post-card-description {
+    font-size: var(--type-base);
+    line-height: var(--leading-relaxed);
+    color: var(--global-text-color);
+    margin: 0 0 var(--space-sm) 0;
+    max-width: var(--content-width-prose);
+
+    // Clamp to 3 lines
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  // Card meta (date, read time)
+  .post-card-meta {
+    font-size: var(--type-xs);
+    color: var(--global-text-color-light);
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem;
+
+    .meta-separator {
+      opacity: 0.5;
+      margin: 0 0.125rem;
+    }
+  }
+
+  // Tags section (outside the link, at bottom of card)
+  .post-card-tags {
+    padding: var(--space-sm) var(--space-lg) var(--space-md);
+    border-top: 1px solid var(--global-divider-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    align-items: center;
+
+    .tags-expanded {
+      display: none;
+    }
+
+    &.show-all-tags .tags-expanded {
+      display: contents;
+    }
+  }
+
+  // Alternating thumbnail position (thumbnail on right for even cards)
+  &:nth-child(even) .post-card-inner {
+    flex-direction: row-reverse;
+  }
+}
+
+// =============================================================================
+// TAG CHIPS
+// =============================================================================
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.625rem;
+  font-size: var(--type-xs);
+  font-weight: 500;
+  color: var(--global-text-color-light);
+  background-color: transparent;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  cursor: pointer;
+
+  i {
+    font-size: 0.625rem;
+    opacity: 0.7;
+  }
+
+  &:hover {
+    color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    background-color: rgba(var(--global-theme-color-rgb, 31, 78, 121), 0.08);
+    text-decoration: none;
+  }
+
+  // Focus styles for keyboard accessibility
+  &:focus {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+    color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+  }
+
+  // Category chip variant
+  &.category-chip {
+    border-style: dashed;
+  }
+
+  // Year chip variant
+  &.year-chip {
+    background-color: rgba(var(--global-theme-color-rgb, 31, 78, 121), 0.05);
+    border-color: transparent;
+  }
+
+  // More button
+  &.tag-more-btn {
+    background-color: var(--global-bg-color);
+    border-style: dotted;
+    font-weight: 600;
+
+    &:hover {
+      background-color: var(--global-theme-color);
+      color: var(--global-bg-color);
+      border-style: solid;
+    }
+  }
+}
+
+// =============================================================================
+// POST CARD RESPONSIVE STYLES
+// =============================================================================
+
+// Tablet breakpoint
+@media (max-width: 768px) {
+  .post-card {
+    .post-card-inner {
+      flex-direction: column !important;
+    }
+
+    .post-card-thumbnail {
+      flex: none;
+      max-width: 100%;
+      height: 200px;
+
+      img {
+        min-height: 200px;
+      }
+    }
+
+    .post-card-content {
+      padding: var(--space-md);
+    }
+
+    .post-card-tags {
+      padding: var(--space-sm) var(--space-md);
+    }
+
+    // Remove alternating direction on mobile
+    &:nth-child(even) .post-card-inner {
+      flex-direction: column !important;
+    }
+  }
+}
+
+// Mobile breakpoint
+@media (max-width: 576px) {
+  .post-card-list {
+    gap: var(--space-md);
+  }
+
+  .post-card {
+    .post-card-thumbnail {
+      height: 160px;
+
+      img {
+        min-height: 160px;
+      }
+    }
+
+    .post-card-content {
+      padding: var(--space-sm) var(--space-md);
+    }
+
+    .post-card-title {
+      font-size: var(--type-h4);
+    }
+
+    .post-card-description {
+      font-size: var(--type-sm);
+      -webkit-line-clamp: 2;
+    }
+
+    .post-card-tags {
+      padding: var(--space-xs) var(--space-md) var(--space-sm);
+    }
+  }
+
+  .tag-chip {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.6875rem;
   }
 }
 
@@ -1471,7 +1897,170 @@ nav[data-toggle="toc"] {
 }
 
 // =============================================================================
-// FEATURED POSTS
+// FEATURED SECTION
+// =============================================================================
+
+.featured-section {
+  margin: var(--space-xl) 0;
+}
+
+.featured-section-title {
+  font-size: var(--type-h4);
+  font-weight: 600;
+  color: var(--global-theme-color);
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+
+  i {
+    opacity: 0.8;
+  }
+}
+
+.featured-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.featured-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--global-card-bg-color);
+  border: 2px solid var(--global-theme-color);
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    text-decoration: none;
+  }
+
+  // Focus styles for keyboard accessibility
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--global-theme-color-rgb, 31, 78, 121), 0.4);
+  }
+
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--global-theme-color-rgb, 31, 78, 121), 0.4);
+    transform: translateY(-2px);
+  }
+
+  .featured-card-thumbnail {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    background-color: var(--global-divider-color);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:hover .featured-card-thumbnail img {
+    transform: scale(1.05);
+  }
+
+  .featured-card-content {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .featured-card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: var(--type-xs);
+    font-weight: 600;
+    color: var(--global-theme-color);
+    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .featured-card-title {
+    font-size: var(--type-h4);
+    font-weight: 600;
+    line-height: var(--leading-snug);
+    margin: 0 0 var(--space-sm) 0;
+    color: var(--global-text-color);
+    transition: color 0.2s ease;
+
+    // Clamp to 2 lines
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &:hover .featured-card-title {
+    color: var(--global-theme-color);
+  }
+
+  .featured-card-description {
+    font-size: var(--type-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--global-text-color-light);
+    margin: 0 0 var(--space-sm) 0;
+    flex-grow: 1;
+
+    // Clamp to 3 lines
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .featured-card-meta {
+    font-size: var(--type-xs);
+    color: var(--global-text-color-light);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    .meta-separator {
+      opacity: 0.5;
+    }
+  }
+}
+
+// Featured section responsive
+@media (max-width: 576px) {
+  .featured-posts-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .featured-card {
+    .featured-card-thumbnail {
+      height: 140px;
+    }
+
+    .featured-card-title {
+      font-size: var(--type-h5);
+    }
+  }
+}
+
+// =============================================================================
+// FEATURED POSTS (Legacy - keeping for backwards compatibility)
 // =============================================================================
 
 .featured-posts {

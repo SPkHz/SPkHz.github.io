@@ -38,22 +38,26 @@
 
 ## Blog / Project Listing Presentation
 
-- [ ] Convert post listings into consistent "cards" (title, meta, tags, thumbnail) with a clear hover state.
-- [ ] Standardize thumbnail aspect ratio + size so rows align cleanly.
-- [ ] Improve mobile layout: stack thumbnail below/above text with consistent spacing.
-- [ ] Make post meta (date/read time) smaller and visually secondary.
-- [ ] Reduce tag clutter: show top tags + "More…" expand, or move tags into a filter panel.
-- [ ] Restyle hashtag links as “chips” with consistent padding/border (instead of inline text + separators).
-- [ ] Add a "Featured/Selected" section at top (3–6 best projects) before the full list.
+- [x] Convert post listings into consistent "cards" (title, meta, tags, thumbnail) with a clear hover state. ✅ **COMPLETED** - Created new `.post-card` component with `.post-card-link`, `.post-card-inner`, `.post-card-thumbnail`, `.post-card-content`, `.post-card-title`, `.post-card-description`, `.post-card-meta`, and `.post-card-tags` elements. Cards have border, rounded corners, hover lift effect with shadow, and title color change on hover.
+- [x] Standardize thumbnail aspect ratio + size so rows align cleanly. ✅ **COMPLETED** - Thumbnails use fixed 280px width on desktop with `object-fit: cover` and min-height: 180px. Mobile uses full width with fixed 160-200px heights.
+- [x] Have thumbnails alternate their positioning (align left alternate with align right) every over row. ✅ **COMPLETED** - Used CSS `:nth-child(even) .post-card-inner { flex-direction: row-reverse; }` to alternate thumbnail position on even cards.
+- [x] Improve mobile layout: stack thumbnail below/above text with consistent spacing. ✅ **COMPLETED** - Added responsive breakpoints at 768px and 576px that switch to `flex-direction: column` and adjust thumbnail heights and padding.
+- [x] Make post meta (date/read time) smaller and visually secondary. ✅ **COMPLETED** - Meta now uses `--type-xs` (0.75rem/12px) with `--global-text-color-light` for visual de-emphasis.
+- [x] Reduce tag clutter: show top tags + "More…" expand, or move tags into a filter panel. ✅ **COMPLETED** - Shows only first 3 tags with a "+N more" button that toggles `.show-all-tags` class to reveal remaining tags using `display: contents`.
+- [x] Restyle hashtag links as "chips" with consistent padding/border (instead of inline text + separators). ✅ **COMPLETED** - Created `.tag-chip` class with pill shape (border-radius: 100px), padding, border, hover states, and variants for categories (dashed border) and year (subtle background).
+- [x] Add a "Featured/Selected" section at top (3–6 best projects) before the full list. ✅ **COMPLETED** - Created `.featured-section` with grid layout of `.featured-card` elements. Added `featured: true` to 4 best projects: EE456 Design 01 (15 GHz HEMT), EE456 Design 03 (10-20 GHz Chebyshev), EE470 Design 01 (Control Systems), and EE314 Design 01 (TL Matching).
+
+## Further Blog / Project Listing Presentation Work
+
 - [ ] Add quick filters for content types: Projects vs Coursework vs Notes (if applicable).
 
 ## Accessibility
 
-- [ ] Verify only one H1 per page and correct heading order (H1 → H2 → H3).
-- [ ] Ensure all interactive elements are keyboard reachable and have visible focus.
-- [ ] Ensure icon-only buttons have accessible names (aria-label).
-- [ ] Add a "Skip to content" link for keyboard users.
-- [ ] Ensure link styling is not color-only (underline on hover/focus, or always-underlined in body content).
+- [x] Verify only one H1 per page and correct heading order (H1 → H2 → H3). ✅ **COMPLETED** - Fixed book-shelf.liquid (changed year headings from H1 to H2), verified cv.liquid and archive.liquid have conditional H1 logic
+- [x] Ensure all interactive elements are keyboard reachable and have visible focus. ✅ **COMPLETED** - Added global focus styles for buttons, links, tag-chips, post-cards (`:focus-within`), and featured-cards in _base.scss
+- [x] Ensure icon-only buttons have accessible names (aria-label). ✅ **COMPLETED** - All social icons in social.liquid have `aria-label` attributes and `aria-hidden="true"` on icons; header buttons already had proper labels
+- [x] Add a "Skip to content" link for keyboard users. ✅ **COMPLETED** - Added `.skip-link` in header.liquid targeting `#main-content` in default.liquid, with CSS that shows link on keyboard focus
+- [x] Ensure link styling is not color-only (underline on hover/focus, or always-underlined in body content). ✅ **COMPLETED** - Added default underlines for body content links (article, prose, main paragraphs) with subtle color that intensifies on hover; excluded nav/UI links that have other visual context
 
 ## Performance / Fit-and-Finish
 

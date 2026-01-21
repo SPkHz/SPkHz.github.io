@@ -8,6 +8,7 @@ thumbnail: assets/img/ee456/design03/Design_Objective.png
 inline: false
 related_posts: true
 show_on_home: false
+featured: true
 ---
 
 I’ve published **EE-456 (RF & mm-Wave Active Circuits) — Design Project 03**: a **wideband 10–20 GHz amplifier** built around the **NEC NE321000 ultra-low-noise pHEMT** (biased at **VDS = 2 V**, **IDS = 10 mA**) using **Chebyshev-polynomial (insertion-loss) matching synthesis**.

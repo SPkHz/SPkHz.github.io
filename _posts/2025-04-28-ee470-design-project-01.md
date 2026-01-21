@@ -9,6 +9,7 @@ thumbnail: assets/img/ee470/Position_Full_Plot.jpg
 inline: false
 related_posts: true
 show_on_home: false
+featured: true
 giscus_comments: false
 pretty_table: true
 _styles: |

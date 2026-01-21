@@ -1,4 +1,6 @@
 <header>
+  <!-- Skip to main content link for keyboard users -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
@@ -119,20 +121,20 @@
           {% endfor %}
           {% if site.search_enabled %}
             <!-- Search -->
-            <li class="nav-item">
+            <li class="nav-item icon-button-container">
               <button
                 id="search-toggle"
                 title="Search (Ctrl+K)"
                 aria-label="Open search dialog. Keyboard shortcut: Control K"
                 onclick="openSearchModal()"
               >
-                <span class="nav-link"><kbd>ctrl k</kbd> <i class="ti ti-search" aria-hidden="true"></i></span>
+                <kbd>ctrl k</kbd> <i class="ti ti-search" aria-hidden="true"></i>
               </button>
             </li>
           {% endif %}
           {% if site.enable_darkmode %}
             <!-- Toggle theme mode -->
-            <li class="toggle-container">
+            <li class="nav-item icon-button-container">
               <button
                 id="light-toggle"
                 title="Toggle color theme"

@@ -8,6 +8,7 @@ thumbnail: assets/img/ee314/Shunt_Stub_Soln_1_OC_Plots.JPG
 inline: false
 related_posts: true
 show_on_home: false
+featured: true
 ---
 
 I’ve published my **EE-314 (Electromagnetic Fields and Waves)** final design project: **Millimeter-Wave Impedance Matching Network Designs**.

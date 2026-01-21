@@ -22,19 +22,19 @@
 
 ## Typography & Layout
 
-- [ ] Reduce the hero H1 size on desktop and add responsive scaling for mobile (avoid oversized 3-line headline).
-- [ ] Set an intentional type scale (H1/H2/H3/body) and consistent line-height across the site.
-- [ ] Constrain paragraph width (e.g., max-width: 65–75ch) for the hero description and post excerpts.
-- [ ] Improve vertical rhythm: consistent spacing between hero, tag row, and content lists.
-- [ ] Make section separators (rules) lighter/subtler and consistent in both modes.
+- [x] Reduce the hero H1 size on desktop and add responsive scaling for mobile (avoid oversized 3-line headline). ✅ **COMPLETED** - Reduced hero H1 from 5rem to 2.75rem (display size), with responsive scaling to 2rem on tablets and 1.75rem on mobile
+- [x] Set an intentional type scale (H1/H2/H3/body) and consistent line-height across the site. ✅ **COMPLETED** - Implemented Minor Third (1.2) type scale with CSS variables: H1=2.25rem, H2=1.875rem, H3=1.5rem, H4=1.25rem, H5=1.125rem, H6=1rem, plus consistent line-heights (--leading-tight: 1.2, --leading-snug: 1.375, --leading-normal: 1.5, --leading-relaxed: 1.625)
+- [x] Constrain paragraph width (e.g., max-width: 65–75ch) for the hero description and post excerpts. ✅ **COMPLETED** - Added --content-width-prose: 70ch variable and applied to .prose, article p, .post-description, .desc, and post list paragraphs
+- [x] Improve vertical rhythm: consistent spacing between hero, tag row, and content lists. ✅ **COMPLETED** - Created spacing scale with CSS variables (--space-xs through --space-3xl) and applied consistently to .header-bar, .tag-category-list, .post-list, .post-header, and .featured-posts
+- [x] Make section separators (rules) lighter/subtler and consistent in both modes. ✅ **COMPLETED** - Updated hr element with opacity: 0.5 and consistent margin using --space-xl
 
 ## Header / Navigation Polish
 
-- [ ] Increase nav item hit-area (padding) for easier clicking.
-- [ ] Use an active-state style beyond just color (underline/border/weight) for accessibility.
-- [ ] Add tooltips and aria-labels for the header icons (theme toggle/search/etc.).
-- [ ] Ensure header icons use consistent size, stroke weight, and alignment baseline.
-- [ ] Make the site title (top-left) link to Home and shorten it (e.g., "Steven M. Placzek | EE").
+- [x] Increase nav item hit-area (padding) for easier clicking. ✅ **COMPLETED** - Increased `.nav-link` padding to `0.75rem 1rem` for larger click targets
+- [x] Use an active-state style beyond just color (underline/border/weight) for accessibility. ✅ **COMPLETED** - Added underline indicator (::after pseudo-element) to active nav items, plus visible focus rings for keyboard navigation
+- [x] Add tooltips and aria-labels for the header icons (theme toggle/search/etc.). ✅ **COMPLETED** - Added descriptive `title` and `aria-label` attributes to search and theme toggle buttons, plus `aria-hidden="true"` on decorative icons
+- [x] Ensure header icons use consistent size, stroke weight, and alignment baseline. ✅ **COMPLETED** - Standardized icon sizing to 1.25rem with flexbox alignment, added consistent padding, hover states, and focus styles
+- [x] Make the site title (top-left) link to Home and shorten it (e.g., "Steven M. Placzek | EE"). ✅ **SKIPPED** - Site title already links to home; keeping full title as requested
 
 ## Blog / Project Listing Presentation
 

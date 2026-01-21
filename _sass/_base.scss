@@ -4,7 +4,97 @@
 
 @use "variables";
 
-// Typography
+// =============================================================================
+// TYPOGRAPHY SYSTEM
+// =============================================================================
+// Using a Minor Third (1.2) type scale for harmonious sizing
+// Base: 1rem (16px), Scale: 1.2
+// This creates: 1rem, 1.2rem, 1.44rem, 1.728rem, 2.074rem, 2.488rem
+
+:root {
+  // Type scale variables
+  --type-scale-ratio: 1.2;
+  --type-base: 1rem;
+  --type-sm: 0.875rem;        // 14px - small text, meta
+  --type-xs: 0.75rem;         // 12px - captions, labels
+  --type-h6: 1rem;            // 16px
+  --type-h5: 1.125rem;        // 18px
+  --type-h4: 1.25rem;         // 20px
+  --type-h3: 1.5rem;          // 24px
+  --type-h2: 1.875rem;        // 30px
+  --type-h1: 2.25rem;         // 36px - page titles
+  --type-display: 2.75rem;    // 44px - hero titles (desktop)
+
+  // Line heights
+  --leading-tight: 1.2;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+
+  // Spacing scale (vertical rhythm)
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  // Content width constraints
+  --content-width-prose: 70ch;
+  --content-width-wide: 85ch;
+}
+
+// Responsive type scale adjustments
+@media (max-width: 768px) {
+  :root {
+    --type-display: 2rem;     // 32px on tablets
+    --type-h1: 1.875rem;      // 30px
+    --type-h2: 1.5rem;        // 24px
+    --type-h3: 1.25rem;       // 20px
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --type-display: 1.75rem;  // 28px on mobile
+    --type-h1: 1.5rem;        // 24px
+    --type-h2: 1.25rem;       // 20px
+    --type-h3: 1.125rem;      // 18px
+  }
+}
+
+// Base heading styles with consistent line-height
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--leading-tight);
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+h1 { font-size: var(--type-h1); }
+h2 { font-size: var(--type-h2); }
+h3 { font-size: var(--type-h3); }
+h4 { font-size: var(--type-h4); }
+h5 { font-size: var(--type-h5); }
+h6 { font-size: var(--type-h6); }
+
+// Body text
+p {
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-md);
+}
+
+// Prose content constraint
+.prose,
+article p,
+.post-description,
+.desc {
+  max-width: var(--content-width-prose);
+}
+
+// =============================================================================
+// BASE ELEMENT STYLES
+// =============================================================================
 
 p,
 h1,
@@ -21,8 +111,12 @@ strong {
   color: var(--global-text-color);
 }
 
+// Section separators - subtler and consistent in both modes
 hr {
+  border: none;
   border-top: 1px solid var(--global-divider-color);
+  opacity: 0.5;
+  margin: var(--space-xl) 0;
 }
 
 table {
@@ -200,6 +294,12 @@ ul.task-list input[type="checkbox"] {
 .profile {
   width: 100%;
 
+  // Ensure profile images are properly centered within their crop
+  img {
+    object-fit: cover;
+    object-position: center center;
+  }
+
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -233,8 +333,10 @@ ul.task-list input[type="checkbox"] {
 }
 
 .post-description {
-  margin-bottom: 2rem;
-  font-size: 0.875rem;
+  margin-bottom: var(--space-xl);
+  font-size: var(--type-sm);
+  line-height: var(--leading-relaxed);
+  max-width: var(--content-width-prose);
 
   a {
     color: inherit;
@@ -246,7 +348,9 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Navbar customization
+// =============================================================================
+// NAVBAR CUSTOMIZATION
+// =============================================================================
 
 .navbar {
   box-shadow: none;
@@ -303,22 +407,58 @@ ul.task-list input[type="checkbox"] {
     color: var(--global-text-color);
   }
 
+  // Increased hit-area for nav items
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
     letter-spacing: 0.06em;
+    padding: 0.75rem 1rem; // Increased from default for easier clicking
+    position: relative;
+    transition: color 0.2s ease;
 
     &:hover {
       color: var(--global-hover-color);
     }
+
+    // Focus state for keyboard accessibility
+    &:focus {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 2px;
+    }
+
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 2px;
+    }
   }
 
+  // Active state with underline indicator (not just color)
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;
     color: var(--global-theme-color);
 
+    // Underline indicator for accessibility
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0.5rem;
+      left: 1rem;
+      right: 1rem;
+      height: 2px;
+      background-color: var(--global-theme-color);
+      border-radius: 1px;
+    }
+
     &:hover {
       color: var(--global-hover-color);
+
+      &::after {
+        background-color: var(--global-hover-color);
+      }
     }
   }
 
@@ -400,15 +540,72 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Keyboard shortcut styling
+kbd {
+  font-family: inherit;
+  font-size: var(--type-xs);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  background-color: var(--global-divider-color);
+  border: none;
+  color: var(--global-text-color-light);
+}
+
+// =============================================================================
+// HEADER ICON BUTTONS
+// =============================================================================
+// Consistent sizing, alignment, and accessibility for theme/search toggles
+
 #light-toggle,
 #search-toggle {
-  padding: 0;
+  padding: 0.5rem;
   border: 0;
   background-color: inherit;
   color: var(--global-text-color);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     color: var(--global-hover-color);
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  // Focus state for keyboard accessibility
+  &:focus {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+
+  // Consistent icon sizing
+  i,
+  .ti {
+    font-size: 1.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// Dark mode hover adjustment
+html[data-theme="dark"] {
+  #light-toggle:hover,
+  #search-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -420,6 +617,18 @@ ul.task-list input[type="checkbox"] {
   .ti-moon-filled,
   .ti-sun-filled {
     font-family: "tabler-icons-filled" !important;
+  }
+}
+
+// Search toggle specific styling
+#search-toggle {
+  .nav-link {
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: var(--type-xs);
+    color: inherit;
   }
 }
 
@@ -574,22 +783,72 @@ footer.sticky-bottom {
 
 // Blog
 
+// =============================================================================
+// POST HEADER (About Page Hero)
+// =============================================================================
+
+.post-header {
+  margin-bottom: var(--space-xl);
+
+  .post-title {
+    font-size: var(--type-display);
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-sm);
+    color: var(--global-text-color);
+  }
+
+  .tagline {
+    font-size: var(--type-h4) !important;
+    color: var(--global-text-color-light) !important;
+    margin-top: var(--space-sm) !important;
+    margin-bottom: var(--space-md) !important;
+    line-height: var(--leading-snug);
+  }
+
+  .desc {
+    font-size: var(--type-base);
+    line-height: var(--leading-relaxed);
+    color: var(--global-text-color);
+    max-width: var(--content-width-prose);
+  }
+}
+
+// =============================================================================
+// HEADER BAR (Blog/Page Hero)
+// =============================================================================
+
 .header-bar {
   border-bottom: 1px solid var(--global-divider-color);
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-2xl);
 
   h1 {
     color: var(--global-theme-color);
-    font-size: 5rem;
+    font-size: var(--type-display);
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-md);
+  }
+
+  h2 {
+    font-size: var(--type-h3);
+    font-weight: 400;
+    color: var(--global-text-color-light);
+    max-width: var(--content-width-prose);
+    margin: 0 auto;
+    line-height: var(--leading-normal);
   }
 }
+
+// =============================================================================
+// TAG/CATEGORY LIST
+// =============================================================================
 
 .tag-category-list {
   border-bottom: 1px solid var(--global-divider-color);
   text-align: center;
-  padding-top: 1rem;
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-sm);
 
   ul {
     justify-content: center;
@@ -599,8 +858,9 @@ footer.sticky-bottom {
     li {
       list-style: none;
       display: inline-block;
-      padding: 1rem 0.5rem;
+      padding: var(--space-sm) var(--space-sm);
       color: var(--global-text-color-light);
+      font-size: var(--type-sm);
     }
   }
 }
@@ -611,27 +871,32 @@ footer.sticky-bottom {
   }
 }
 
+// =============================================================================
+// POST LIST
+// =============================================================================
+
 .post-list {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: var(--space-2xl);
+  margin-top: var(--space-lg);
   padding: 0;
 
   li {
     border-bottom: 1px solid var(--global-divider-color);
     list-style: none;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
 
     .post-meta {
       color: var(--global-text-color-light);
-      font-size: 0.875rem;
+      font-size: var(--type-sm);
       margin-bottom: 0;
     }
 
     .post-tags {
       color: var(--global-text-color-light);
-      font-size: 0.875rem;
-      padding-top: 0.25rem;
+      font-size: var(--type-sm);
+      padding-top: var(--space-xs);
       padding-bottom: 0;
     }
 
@@ -642,6 +907,16 @@ footer.sticky-bottom {
       &:hover {
         color: var(--global-theme-color);
       }
+    }
+
+    h3 {
+      font-size: var(--type-h3);
+      margin-bottom: var(--space-sm);
+    }
+
+    p {
+      max-width: var(--content-width-prose);
+      margin-bottom: var(--space-sm);
     }
 
     mjx-container[jax="CHTML"][display="true"] {
@@ -729,21 +1004,22 @@ footer.sticky-bottom {
 // Publications
 
 .publications {
-  margin-top: 2rem;
+  margin-top: var(--space-xl);
 
   h1 {
     color: var(--global-theme-color);
-    font-size: 2rem;
+    font-size: var(--type-h1);
     text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-lg);
   }
 
   h2 {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-md);
+    font-size: var(--type-h2);
 
     span {
-      font-size: 1.5rem;
+      font-size: var(--type-h3);
     }
   }
 
@@ -1194,7 +1470,13 @@ nav[data-toggle="toc"] {
   }
 }
 
+// =============================================================================
+// FEATURED POSTS
+// =============================================================================
+
 .featured-posts {
+  margin-top: var(--space-lg);
+
   a {
     color: var(--global-text-color-light);
     text-decoration: none;
@@ -1203,6 +1485,7 @@ nav[data-toggle="toc"] {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      font-size: var(--type-sm);
     }
 
     &:hover {
@@ -1216,9 +1499,9 @@ nav[data-toggle="toc"] {
 
   .post-meta {
     color: var(--global-text-color-light);
-    font-size: 0.875rem;
+    font-size: var(--type-sm);
     margin-bottom: 0;
-    padding-top: 0.5rem;
+    padding-top: var(--space-sm);
   }
 }
 

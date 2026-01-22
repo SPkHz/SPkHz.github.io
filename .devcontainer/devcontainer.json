@@ -2,9 +2,8 @@
   "name": "Jekyll",
   "image": "mcr.microsoft.com/devcontainers/jekyll",
   "mounts": [
-    "source=${localEnv:HOME}/.config/claude,target=/home/vscode/.config/claude,type=bind,consistency=cached",
-    "source=${localEnv:HOME}/.config/openai,target=/home/vscode/.config/openai,type=bind,consistency=cached",
-    "source=${localEnv:HOME}/.codex,target=/home/vscode/.codex,type=bind,consistency=cached"
+    "source=claude-auth,target=/home/vscode/.claude,type=volume",
+    "source=codex-auth,target=/home/vscode/.codex,type=volume"
   ],
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {

@@ -72,8 +72,11 @@ html[data-theme="dark"] .tag {
 
 <div class="row">
 {% for p in featured %}
-  <div class="col-12 col-md-6 col-lg-4 mb-3">
+  <div class="col-12 col-md-6 mb-3">
     <div class="card h-100">
+      {% if p.img and p.img != "" %}
+      <img src="{{ p.img | relative_url }}" class="card-img-top" alt="{{ p.title }}" style="aspect-ratio: 16/9; object-fit: cover;">
+      {% endif %}
       <div class="card-body">
         <h5 class="card-title">{{ p.title }}</h5>
         {% if p.summary and p.summary != "" %}

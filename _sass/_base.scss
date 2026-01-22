@@ -426,6 +426,7 @@ ul.task-list input[type="checkbox"] {
   img {
     object-fit: cover;
     object-position: center center;
+    transform: rotate(-1.5deg) translateX(9pt);
   }
 
   .more-info {

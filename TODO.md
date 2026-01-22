@@ -13,8 +13,6 @@
 ## Color System (Light/Dark Mode)
 
 - [ ] Define theme tokens with CSS variables (e.g., --accent, --accent-hover, --text, --bg, --muted, --border).
-- [ ] Replace light-mode magenta with a more professional accent (Deep Navy / Deep Teal / Steel Blue).
-- [ ] Replace dark-mode bright cyan with a less-neon accent (Muted Aqua OR Soft Amber OR Sage).
 - [ ] Use the same accent hue across both themes (different luminance, same brand color).
 - [ ] Standardize link colors + hover/visited states for both themes.
 - [ ] Ensure color contrast meets WCAG AA for normal text (especially nav links + tag links).

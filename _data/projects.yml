@@ -5,6 +5,7 @@
     - MOSFETs
     - LTspice
     - Python
+  img: "" # e.g., /assets/img/projects/ee322-portfolio.jpg
   view: "https://spkhz.github.io/EE-322-Electrical-Engineering-Lab-II--Final-Portfolio/"
   source: "https://github.com/SPkHz/EE-322-Electrical-Engineering-Lab-II--Final-Portfolio"
   pdf: "" # TODO: add a stable PDF link
@@ -14,6 +15,7 @@
 # - title: "..."
 #   summary: "..."
 #   tags: [RF, DSP, MATLAB]
+#   img: "/assets/img/projects/thumbnail.jpg"  # 16:9 aspect ratio recommended
 #   view: "https://spkhz.github.io/REPO-NAME/"
 #   source: "https://github.com/SPkHz/REPO-NAME"
 #   pdf: ""
@@ -26,6 +28,7 @@
     - S-parameters
     - De-embedding
     - Python
+  img: ""
   view: "/projects/ee322_lab_08_de-embedding_s-parameters/"
   source: ""
   pdf: ""
@@ -38,6 +41,7 @@
     - Amplifier
     - Matching
     - ADS
+  img: ""
   view: "/projects/ee456_design_04/"
   source: ""
   pdf: ""
@@ -49,6 +53,7 @@
     - Analog
     - MOSFETs
     - CMRR
+  img: ""
   view: "/projects/ee322_lab_07_MOS_differential_pair_with_current_mirror_load/"
   source: ""
   pdf: ""
@@ -60,6 +65,7 @@
     - Control
     - State-space
     - MATLAB
+  img: ""
   view: "/projects/ee470_design_01_servomotor_control_sys/"
   source: ""
   pdf: ""
@@ -71,6 +77,7 @@
     - DSP
     - FIR
     - MATLAB
+  img: "/assets/img/ee302/design01/Filterbank_Design1_Responses_V2.png"
   view: "/projects/ee302_design_01_fir_filterbank_for_hearing_aid/"
   source: ""
   pdf: ""

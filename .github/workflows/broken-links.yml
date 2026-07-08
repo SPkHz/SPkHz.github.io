@@ -44,10 +44,10 @@ jobs:
     # only run on the main repo
     if: github.repository == 'alshedivat/al-folio'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # pinned from actions/checkout@v4; security-version pin to actions/checkout@v7
 
       - name: Link Checker 🔗
-        uses: lycheeverse/lychee-action@v2.0.2
+        uses: lycheeverse/lychee-action@7cd0af4c74a61395d455af97419279d86aafaede # pinned from lycheeverse/lychee-action@v2.0.2
         with:
           fail: true
           # removed md files that include liquid tags

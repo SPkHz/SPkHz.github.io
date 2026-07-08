@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout gh-pages branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # pinned from actions/checkout@v4; security-version pin to actions/checkout@v7
         with:
           ref: gh-pages
 
@@ -16,7 +16,7 @@ jobs:
         run: find . -type f -name "*.html" -exec sed -i 's/<\/source>//g' {} +
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # pinned from actions/setup-node@v4
 
       - name: Install Prettier
         run: npm install -g prettier

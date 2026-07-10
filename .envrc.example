@@ -1,0 +1,28 @@
+# Local direnv example. Copy to .envrc when you want this repo to load shared secrets.
+        export LANG=C.UTF-8
+        export LC_ALL=C.UTF-8
+
+        load_sops_dotenv() {
+  local encrypted="$1"
+  [ -f "$encrypted" ] || return 0
+  if ! command -v sops >/dev/null 2>&1; then
+    echo "sops not found while loading $encrypted" >&2
+    return 1
+  fi
+  watch_file "$encrypted"
+  local line key value
+  while IFS= read -r line || [ -n "$line" ]; do
+    case "$line" in
+      ''|'#'*) continue ;;
+    esac
+    key="${line%%=*}"
+    value="${line#*=}"
+    eval "export ${key}=${value@Q}"
+  done < <(sops -d --output-type dotenv "$encrypted")
+}
+
+export SPKHZ_SHARED_SECRETS_SOPS="${SPKHZ_SHARED_SECRETS_SOPS:-/home/adminimax/.config/spkhz-secrets/shared.sops.env}"
+export SPKHZ_PROJECT_SECRETS_SOPS="${SPKHZ_PROJECT_SECRETS_SOPS:-$PWD/secrets/project.sops.env}"
+
+load_sops_dotenv "$SPKHZ_SHARED_SECRETS_SOPS"
+load_sops_dotenv "$SPKHZ_PROJECT_SECRETS_SOPS"

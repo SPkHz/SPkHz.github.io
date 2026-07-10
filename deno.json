@@ -1,0 +1,18 @@
+{
+  "lock": true,
+  "tasks": {
+    "fmt:check": "deno fmt --check deno.json site",
+    "lint": "deno lint site",
+    "check": "deno check site/build.ts site/serve.ts site/security_defaults_test.ts",
+    "test": "deno test --no-prompt --allow-read=deno.json site/security_defaults_test.ts",
+    "build": "deno run --no-prompt --allow-read=./_pages,./_posts,./_projects,./_news,./assets,./readme_preview,./robots.txt,./README.md,./FAQ.md --allow-write=./_site_deno site/build.ts",
+    "serve": "deno run --no-prompt --allow-read=./_site_deno --allow-env=PORT --allow-net=127.0.0.1:8080 site/serve.ts",
+    "ci": "deno task fmt:check && deno task lint && deno task check && deno task test && deno task build"
+  },
+  "fmt": {
+    "include": ["deno.json", "site"]
+  },
+  "lint": {
+    "include": ["site"]
+  }
+}

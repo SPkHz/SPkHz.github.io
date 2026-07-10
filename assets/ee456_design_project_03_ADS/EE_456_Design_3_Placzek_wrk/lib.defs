@@ -1,4 +1,0 @@
-INCLUDE $HPEESOF_DIR/oalibs/analog_rf.defs
-INCLUDE $HPEESOF_DIR/oalibs/dsp.defs
-DEFINE EE#20456#20Design#201_lib EE${__SPACE}456${__SPACE}Design${__SPACE}1_lib
-ASSIGN EE#20456#20Design#201_lib libMode shared

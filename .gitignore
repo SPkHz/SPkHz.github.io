@@ -23,3 +23,22 @@ TODO.md
 codex.resume
 
 PODMAN_SETUP.md
+
+# >>> sops-age-secret-scaffolding >>>
+.envrc.local
+.envrc.*.local
+.decrypted/
+*.dec
+secrets/*.plaintext
+secrets/*.tmp
+# <<< sops-age-secret-scaffolding <<<
+
+secrets/
+
+*.prf
+
+*.dds~
+
+_site_deno/
+
+assets/ee456_design_project_03_ADS/EE_456_Design_3_Placzek_wrk/EE_456_Design_1_lib/

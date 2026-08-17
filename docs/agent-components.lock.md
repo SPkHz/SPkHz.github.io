@@ -17,5 +17,5 @@ machine_specific_paths=0
 
 | component_id | path | owner | harness_routing | sha256 | invocation_policy | network_posture |
 | --- | --- | --- | --- | --- | --- | --- |
-| agents-instructions | AGENTS.md | spkhz-github-io | claude+codex root instructions | sha256:8d12bf184871175acff3bf57ecad124cb389736cabb85d15dc34bab01c669c99 | ALWAYS_LOADED | network_default=OFF |
-| claude-instructions | CLAUDE.md | spkhz-github-io | claude root instructions | sha256:aae1cd0d18e8825296ba13d38f89f631ada412471a90ca8cc46e5b88fdc43842 | ALWAYS_LOADED | network_default=OFF |
+| agents-instructions | AGENTS.md | spkhz-github-io | claude+codex root instructions | sha256:c252d6dcf49dca7c8ec1f4739a5dfd2d740d136ec42031dadb2e459974ebc839 | ALWAYS_LOADED | network_default=OFF |
+| claude-instructions | CLAUDE.md | spkhz-github-io | claude root instructions | sha256:503fa0f23957f1d007013810b72c782fb8b2c0c751ef697e503c9890f88e9c77 | ALWAYS_LOADED | network_default=OFF |

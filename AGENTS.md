@@ -38,6 +38,14 @@ and maintains no local workflow catalog. Any future workflow, command,
 subagent, hook, plugin, or MCP declaration requires separate, explicit
 operator authorization naming the exact component and its owner.
 
+## Memory authority
+
+Read `docs/agent-memory.md` for the cross-tool memory policy. This repository
+has no registered eeKG identity, canonical key, or authorized namespace, and
+its memory mode is static evidence only. Standing project policy authorizes no
+memory-tool call, infrastructure startup, cross-project identity inference, or
+write-like memory operation.
+
 ## Application versus harness work
 
 Application (site) development and agent-harness governance are distinct

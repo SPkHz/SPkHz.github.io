@@ -31,5 +31,12 @@ them.
 This repository declares no command, subagent, hook, plugin, or MCP route,
 and maintains no local workflow catalog.
 
+## Memory authority
+
+Read `docs/agent-memory.md` for the detailed memory boundary. No eeKG identity,
+canonical key, or namespace is registered for this repository, so this adapter
+authorizes static guidance only and grants no memory-tool or infrastructure
+operation.
+
 Application (site) development and agent-harness governance remain distinct
 lines of work.

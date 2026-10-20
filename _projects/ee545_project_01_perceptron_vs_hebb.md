@@ -11,12 +11,12 @@ tags: [EE-545, neural-networks, perceptron, hebbian-learning, robustness, monte-
 
 ## Overview
 
-**Course:** EE-545 — Neural Networks / Deep Learning  
-**Project:** 01 (dated 2025-10-24)  
+**Course:** EE-545 — Neural Networks / Deep Learning
+**Project:** 01 (dated 2025-10-24)
 **Task:** Train a **Hebb network** and a **Perceptron** to recognize the 5×5 letter **E** (positive class) vs **F** (negative class), then quantify robustness under two noise models:
 
-- **Missing pixels:** randomly flip *active* pixels (+1) to inactive (-1)
-- **Mistaken pixels:** randomly flip arbitrary pixels (+1 ↔ -1), including a worst-case setting where flips are forced to hit the *discriminative* pixels (where E and F differ)
+- **Missing pixels:** randomly flip _active_ pixels (+1) to inactive (-1)
+- **Mistaken pixels:** randomly flip arbitrary pixels (+1 ↔ -1), including a worst-case setting where flips are forced to hit the _discriminative_ pixels (where E and F differ)
 
 The key takeaway is that—with only two prototypes—both learning rules converge to the same sparse separator that depends only on the pixels where **E and F differ** (6 total). That structure explains the robustness trends seen below.
 
@@ -29,7 +29,7 @@ Each glyph is encoded with the bipolar mapping:
 - `# → +1`
 - `. → -1`
 
-Then the 5×5 matrix is **flattened in row-major order** to form a 25‑D vector \(\mathbf{x} \in \{-1,+1\}^{25}\).  
+Then the 5×5 matrix is **flattened in row-major order** to form a 25‑D vector \(\mathbf{x} \in \{-1,+1\}^{25}\).
 We assign labels:
 
 - \(y=+1\) for **E**
@@ -72,13 +72,13 @@ A single-layer perceptron is trained on the same inputs. Targets are mapped to \
 
 ## A useful analytic shortcut (why both methods look similar)
 
-With only two training prototypes \(\mathbf{x}_E\) and \(\mathbf{x}_F\), the Hebb solution becomes:
+With only two training prototypes \(\mathbf{x}\_E\) and \(\mathbf{x}\_F\), the Hebb solution becomes:
 
 \[
-\mathbf{w} = \mathbf{x}_E - \mathbf{x}_F, \qquad b = (+1) + (-1) = 0.
+\mathbf{w} = \mathbf{x}\_E - \mathbf{x}\_F, \qquad b = (+1) + (-1) = 0.
 \]
 
-In this dataset, **all 6 differing pixels are +1 in E and −1 in F**, so \(\mathbf{w}\) is sparse: it is nonzero *only* on those 6 locations.
+In this dataset, **all 6 differing pixels are +1 in E and −1 in F**, so \(\mathbf{w}\) is sparse: it is nonzero _only_ on those 6 locations.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -89,7 +89,7 @@ In this dataset, **all 6 differing pixels are +1 in E and −1 in F**, so \(\mat
   Learned weights reshaped back to 5×5. Nonzero weights land only on the 6 discriminative pixels (E ≠ F), which explains much of the robustness behavior.
 </div>
 
-Because the decision depends only on those 6 pixels, flipping *any other pixel* has no effect on the classification score \(\mathbf{w}^\top\mathbf{x}\).
+Because the decision depends only on those 6 pixels, flipping _any other pixel_ has no effect on the classification score \(\mathbf{w}^\top\mathbf{x}\).
 
 ---
 
@@ -104,11 +104,11 @@ For each \(k\), we randomly select \(k\) active pixels (value +1) and flip them 
 
 ### 2) Mistaken pixels (+1 ↔ −1)
 
-For each \(k\), we randomly flip \(k\) pixels anywhere in the 5×5 grid.  
+For each \(k\), we randomly flip \(k\) pixels anywhere in the 5×5 grid.
 We report two settings:
 
 - **Any-pixel mistakes:** flips can land anywhere
-- **Differing-only mistakes (worst-case):** flips are forced to hit *only* discriminative pixels
+- **Differing-only mistakes (worst-case):** flips are forced to hit _only_ discriminative pixels
 
 ### Statistics
 
@@ -137,9 +137,9 @@ Uncertainty is summarized with **Wilson score confidence intervals** (95%).
 **Threshold summary (strict = always correct; prob = 95% Wilson lower bound ≥ 0.95):**
 
 | Pattern | Hebb k_strict | Hebb k_prob95 | Perceptron k_strict | Perceptron k_prob95 |
-|---|---:|---:|---:|---:|
-| E (+1) | 3 | 5 | 3 | 5 |
-| F (−1) | 10 | 10 | 10 | 10 |
+| ------- | ------------: | ------------: | ------------------: | ------------------: |
+| E (+1)  |             3 |             5 |                   3 |                   5 |
+| F (−1)  |            10 |            10 |                  10 |                  10 |
 
 ### Mistaken pixels (any location)
 
@@ -165,10 +165,10 @@ A more detailed view (for the perceptron) shows that **conditional accuracy is 1
 
 **Threshold summary (prob = 95% Wilson lower bound ≥ 0.80):**
 
-| Scenario | Hebb k_strict | Hebb k_prob80 | Perceptron k_strict | Perceptron k_prob80 |
-|---|---:|---:|---:|---:|
-| Any-pixel mistakes (E) | 3 | 10 | 3 | 10 |
-| Any-pixel mistakes (F) | 2 | 6 | 2 | 7 |
+| Scenario               | Hebb k_strict | Hebb k_prob80 | Perceptron k_strict | Perceptron k_prob80 |
+| ---------------------- | ------------: | ------------: | ------------------: | ------------------: |
+| Any-pixel mistakes (E) |             3 |            10 |                   3 |                  10 |
+| Any-pixel mistakes (F) |             2 |             6 |                   2 |                   7 |
 
 ### Mistaken pixels (forced to discriminative locations)
 
@@ -198,4 +198,3 @@ The original implementation and artifacts for this project were produced via scr
 - `EE545_Project_01_Hebb.m` — Hebb training + robustness sweeps
 - `EE545_Project_01_Perceptron.m` — Perceptron training + robustness sweeps
 - `+ee545proj01/runAnalysis.m` — shared experiment driver (missing/mistake Monte Carlo)
-

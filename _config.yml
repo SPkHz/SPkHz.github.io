@@ -180,7 +180,7 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts"]
+include: ["_pages"]
 exclude:
   - bin/
   - CONTRIBUTING.md
@@ -210,6 +210,49 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - HUMAN_README.md
+  - AGENTS.md
+  - CLAUDE.md
+  - .agents
+  - .claude
+  - .codex
+  - .github
+  - .vscode
+  - .idea
+  - .devcontainer
+  - .superpowers
+  - .kicad-mcp
+  - .playwright-cli
+  - .bundle
+  - .ruby-lsp
+  - .archived
+  - .archived-splaczek.engineer
+  - docs
+  - scripts
+  - tests
+  - _scripts
+  - site
+  - plans
+  - reports
+  - secrets
+  - config
+  - public
+  - _site_deno
+  - output
+  - deno.json
+  - deno.lock
+  - Procfile
+  - static.json
+  - app.json
+  - requirements.txt
+  - SECURITY.md
+  - GH_ACTIONS_REMEDIATION_TODO.md
+  - PODMAN_SETUP.md
+  - codex.resume
+  - splaczek.engineer__site_deployment_plan.md
+  - livereload_log.txt
+  - splaczek.engineer.code-workspace
+
 keep_files:
   - CNAME
   - .nojekyll

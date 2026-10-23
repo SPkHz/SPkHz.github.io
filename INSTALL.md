@@ -229,7 +229,7 @@ The quote below is taken directly from the [jekyll configuration docs](https://j
 > Do not use an important location for `<destination>`; instead, use it as a staging area and copy files from there to your web server.
 
 If `$HOME/repo/publishing-source` contains files that you want jekyll to leave untouched, specify them under `keep_files` in `_config.yml`.
-In its default configuration, al-folio will copy the top-level `README.md` to the publishing source. If you want to change this behavior, add `README.md` under `exclude` in `_config.yml`.
+This repository excludes `README.md`, `HUMAN_README.md`, `AGENTS.md`, `CLAUDE.md`, and development FAQ output from publication. `HUMAN_README.md` contains the project/theme guide. The Jekyll post-write guard validates the final public tree; do not remove those exclusions.
 
 **Note:** Do _not_ run `jekyll clean` on your publishing source repo as this will result in the entire directory getting deleted, irrespective of the content of `keep_files` in `_config.yml`.
 

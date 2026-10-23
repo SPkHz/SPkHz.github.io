@@ -183,7 +183,7 @@ Use Code Wiki and DeepWiki **only after**:
 
 - You have reviewed the relevant sections in this `CUSTOMIZE.md` file
 - You have checked the [project structure](#project-structure) section above
-- You have explored the [main documentation files](README.md) (README.md, INSTALL.md, FAQ.md)
+- You have explored the [main documentation files](HUMAN_README.md) (HUMAN_README.md, INSTALL.md, FAQ.md)
 - You have checked the [GitHub Discussions Q&A section](https://github.com/alshedivat/al-folio/discussions/categories/q-a)
 
 These tools are best used for:

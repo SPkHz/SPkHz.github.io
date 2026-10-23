@@ -1,7 +1,7 @@
 const configUrl = new URL("../deno.json", import.meta.url);
 
 const buildReadAllowlist =
-  "--allow-read=./_pages,./_posts,./_projects,./_news,./assets,./readme_preview,./robots.txt,./README.md,./FAQ.md";
+  "--allow-read=./_pages,./_posts,./_projects,./_news,./assets,./readme_preview,./robots.txt";
 
 function assert(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message);

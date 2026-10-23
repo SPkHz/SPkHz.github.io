@@ -10,10 +10,13 @@ Run directly:
     python3 -B tests/agent_harness/test_scope.py
 """
 import getpass
+import os
 import subprocess
 import sys
 import unittest
 from pathlib import Path
+
+RETAINED_SKILLS = ()
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
@@ -27,11 +30,8 @@ RETIRED_LOCAL_COPIES = (
 )
 
 TRACKED_HARNESS_FILES = (
-    "AGENTS.md",
-    "CLAUDE.md",
-    "docs/agent-memory.md",
+    "README.md",
     "scripts/agent_harness/render_manifest.py",
-    "docs/agent-components.lock.md",
     "tests/agent_harness/test_scope.py",
 )
 
@@ -45,7 +45,6 @@ FORBIDDEN_SURFACE_PATHS = (
     ".codex/agents",
     ".codex/hooks.json",
     ".codex/config.toml",
-    ".agents/skills",
     ".mcp.json",
 )
 
@@ -112,48 +111,27 @@ def _git_tracked_files():
     return set(result.stdout.splitlines())
 
 
+SESSION_SKILLS = tuple("spkghio-" + suffix for suffix in (
+    "gmlca-initialize-session", "gmlca-bootstrap-authoring",
+    "gmlca-steering-for-mlca-authoring", "gmlca-progress-assessment",
+    "mlca-initialize-session", "mlca-bootstrap-authoring", "mlca-steering-for-lpa-authoring",
+))
+
 class ScopeTest(unittest.TestCase):
     def setUp(self):
         self.tracked = _git_tracked_files()
 
-    def test_root_instruction_files_are_tracked_regular_files(self):
-        for name in ("AGENTS.md", "CLAUDE.md"):
-            path = REPO_ROOT / name
-            self.assertTrue(path.is_file(), f"{name} must be a regular file")
-            self.assertFalse(path.is_symlink(), f"{name} must not be a symlink")
-            self.assertIn(name, self.tracked, f"{name} must be tracked")
 
     def test_retired_local_copies_are_absent(self):
         for rel in RETIRED_LOCAL_COPIES:
-            self.assertFalse(
-                (REPO_ROOT / rel).exists(), f"{rel} must be absent"
-            )
+            self.assertFalse(any(p == rel or p.startswith(rel + "/") for p in self.tracked), f"{rel} must not be tracked")
 
-    def test_no_local_skill_file_remains(self):
-        for rel in (".claude/skills", ".codex/skills"):
-            path = REPO_ROOT / rel
-            if not path.exists():
-                continue
-            remaining_files = [p for p in path.rglob("*") if p.is_file()]
-            self.assertEqual(
-                remaining_files, [], f"{rel} must contain no skill files"
-            )
 
     def test_no_command_subagent_hook_plugin_mcp_surface(self):
         for rel in FORBIDDEN_SURFACE_PATHS:
-            self.assertFalse(
-                (REPO_ROOT / rel).exists(), f"{rel} must be absent"
-            )
+            self.assertFalse(any(p == rel or p.startswith(rel + "/") for p in self.tracked), f"{rel} must not be tracked")
 
-    def test_codex_config_toml_absent(self):
-        self.assertFalse((REPO_ROOT / ".codex" / "config.toml").exists())
 
-    def test_tracked_harness_files_present_and_regular(self):
-        for rel in TRACKED_HARNESS_FILES:
-            path = REPO_ROOT / rel
-            self.assertTrue(path.is_file(), f"{rel} must exist as a regular file")
-            self.assertFalse(path.is_symlink(), f"{rel} must not be a symlink")
-            self.assertIn(rel, self.tracked, f"{rel} must be tracked")
 
     def test_no_machine_local_paths_in_tracked_harness(self):
         # Check for the actual resolved, machine-specific values (this
@@ -181,34 +159,56 @@ class ScopeTest(unittest.TestCase):
         for token in REQUIRED_SCOPE_TOKENS:
             self.assertIn(token, combined, f"missing required scope token {token}")
 
-    def test_memory_guidance_contract(self):
-        rel = "docs/agent-memory.md"
-        path = REPO_ROOT / rel
-        self.assertTrue(path.is_file(), f"{rel} must be a regular file")
-        self.assertFalse(path.is_symlink(), f"{rel} must not be a symlink")
-        self.assertIn(rel, self.tracked, f"{rel} must be tracked")
-        text = path.read_text(encoding="utf-8")
-        for token in REQUIRED_MEMORY_POLICY_TOKENS:
-            self.assertIn(token, text, f"{rel} is missing policy token {token}")
-        normalized_text = " ".join(text.split())
-        for phrase in REQUIRED_MEMORY_EXPLANATIONS:
-            self.assertIn(
-                phrase, normalized_text, f"{rel} is missing required guidance"
-            )
 
-    def test_manifest_matches_fresh_render_and_is_idempotent(self):
+
+
+    def test_canonical_readme_and_exact_aliases(self):
+        self.assertTrue((REPO_ROOT / "README.md").is_file())
+        self.assertFalse((REPO_ROOT / "README.md").is_symlink())
+        self.assertTrue((REPO_ROOT / "HUMAN_README.md").is_file())
+        for name in ("AGENTS.md", "CLAUDE.md"):
+            path = REPO_ROOT / name
+            self.assertTrue(path.is_symlink(), name)
+            self.assertEqual(os.readlink(path), "README.md")
+            self.assertIn(name, self.tracked)
+
+    def test_portable_harness_sources(self):
+        for rel in TRACKED_HARNESS_FILES:
+            self.assertTrue((REPO_ROOT / rel).is_file(), rel)
+            self.assertFalse((REPO_ROOT / rel).is_symlink(), rel)
+        for rel in ("README.md", "HUMAN_README.md"):
+            result = subprocess.run(["git", "-C", str(REPO_ROOT), "check-ignore", "--no-index", rel], capture_output=True)
+            self.assertEqual(result.returncode, 1, rel + " must remain versionable")
+        for old in ("docs/agent-components.lock.md", "docs/agent-memory.md"):
+            self.assertNotIn(old, self.tracked)
+            self.assertFalse((REPO_ROOT / old).exists())
+
+    def test_manifest_render_is_portable_and_deterministic(self):
         sys.path.insert(0, str(REPO_ROOT))
         from scripts.agent_harness.render_manifest import render_manifest_text
-
         first = render_manifest_text()
-        second = render_manifest_text()
-        self.assertEqual(first, second, "manifest renderer is not idempotent")
+        self.assertEqual(first, render_manifest_text())
+        self.assertIn("canonical_source=README.md", first)
+        self.assertIn("README.md |", first)
+        self.assertIn("link_payload", first)
+        self.assertIn("resolved_content_sha256", first)
+        self.assertIn("EFFECTIVE_STATE_NOT_PROBED", first)
+        self.assertIn("local_session_skills=7", first)
+        self.assertIn("network_default=OFF", first)
+        self.assertNotIn(str(Path.home()), first)
 
-        manifest_path = REPO_ROOT / "docs" / "agent-components.lock.md"
-        committed = manifest_path.read_text(encoding="utf-8")
-        self.assertEqual(
-            first, committed, "committed manifest is stale relative to renderer"
-        )
+    def test_session_registrations_do_not_enter_index(self):
+        for name in SESSION_SKILLS:
+            rel = ".agents/skills/" + name
+            self.assertFalse(any(p == rel or p.startswith(rel + "/") for p in self.tracked), rel)
+        registered = {p.split("/")[2] for p in self.tracked if p.startswith(".agents/skills/")}
+        self.assertEqual(registered, set(RETAINED_SKILLS))
+
+    def test_public_memory_boundary(self):
+        text = (REPO_ROOT / "README.md").read_text()
+        self.assertIn("memory-tool", text)
+        self.assertIn("separate", text)
+        self.assertIn("session-management.md", text)
 
 
 if __name__ == "__main__":

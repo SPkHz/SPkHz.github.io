@@ -23,7 +23,12 @@ function child(base: URL, name: string, isDirectory = false): URL {
 }
 
 async function copyTree(from: URL, to: URL): Promise<void> {
-  const info = await Deno.stat(from);
+  // Do not turn a source alias to hidden/private material into an ordinary
+  // public output file. Strip the trailing slash so lstat sees directory links.
+  const info = await Deno.lstat(new URL(from.href.replace(/\/$/, "")));
+  if (info.isSymlink) {
+    throw new Error("Symbolic links are not accepted as Deno build inputs");
+  }
   if (info.isDirectory) {
     await Deno.mkdir(to, { recursive: true });
     for await (const entry of Deno.readDir(from)) {
@@ -70,10 +75,10 @@ for (const dir of ["assets", "readme_preview"]) {
   }
 }
 
-for (const file of ["robots.txt", "README.md", "FAQ.md"]) {
+for (const file of ["robots.txt"]) {
   const source = new URL(`./${file}`, root);
   if (await exists(source)) {
-    await Deno.copyFile(source, new URL(`./${file}`, outDir));
+    await copyTree(source, new URL(`./${file}`, outDir));
   }
 }
 

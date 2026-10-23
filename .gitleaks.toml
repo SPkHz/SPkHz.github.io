@@ -1,0 +1,3 @@
+# Keep the full built-in rule set; project exceptions require explicit review.
+[extend]
+useDefault = true

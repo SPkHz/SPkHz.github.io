@@ -21,7 +21,7 @@
   done < <(sops -d --output-type dotenv "$encrypted")
 }
 
-export SPKHZ_SHARED_SECRETS_SOPS="${SPKHZ_SHARED_SECRETS_SOPS:-/home/adminimax/.config/spkhz-secrets/shared.sops.env}"
+export SPKHZ_SHARED_SECRETS_SOPS="${SPKHZ_SHARED_SECRETS_SOPS:-${HOME}/.config/spkhz-secrets/shared.sops.env}"
 export SPKHZ_PROJECT_SECRETS_SOPS="${SPKHZ_PROJECT_SECRETS_SOPS:-$PWD/secrets/project.sops.env}"
 
 load_sops_dotenv "$SPKHZ_SHARED_SECRETS_SOPS"

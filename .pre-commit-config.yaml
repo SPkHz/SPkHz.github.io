@@ -1,37 +1,18 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
-  - repo: local
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.27.2
     hooks:
-      - id: gitleaks-system
-        name: gitleaks (system)
-        entry: gitleaks protect --staged --redact
-        language: system
+      - id: gitleaks
+        name: Scan staged changes for secrets
+        entry: >-
+          gitleaks git --staged --pre-commit --no-banner --redact
+          --config=.gitleaks.toml --ignore-gitleaks-allow
+          --max-decode-depth=3 --max-archive-depth=2
         pass_filenames: false
-      - id: prevent-plaintext-secret-files
-        name: prevent plaintext secret files under secrets/
-        entry: >-
-          bash -lc 'for f in "$@"; do
-          case "$f" in
-            secrets/*)
-              case "$f" in
-                secrets/README.md|*.example|*.example.*|*.sops.env|*.sops.yaml|*.sops.yml|*.sops.json) ;;
-                *) echo "plaintext secret file blocked: $f" >&2; exit 1 ;;
-              esac
-            ;;
-          esac
-          done' --
-        language: system
-        files: ^secrets/
-      - id: validate-sops-secrets
-        name: validate sops-encrypted secrets
-        entry: >-
-          bash -lc 'for f in "$@"; do
-          [ -f "$f" ] || continue
-          sops -d "$f" >/dev/null || exit 1
-          done' --
-        language: system
-        files: ^secrets/.*\.sops\.(env|ya?ml|json)$
+        always_run: true
+        stages: [pre-commit]
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
@@ -42,3 +23,18 @@ repos:
       - id: check-added-large-files
       - id: check-merge-conflict
       - id: detect-private-key
+
+  - repo: local
+    hooks:
+      - id: forbid-local-secret-files
+        name: Block local environment, secret, and private-key files
+        entry: >-
+          python3 -c 'import sys; raise SystemExit("Local-only or private-key files cannot be committed:\n" + "\n".join(sys.argv[1:]))'
+        language: system
+        types: []
+        files: >-
+          (?ix)(^|/)(?:\.env(?:\..+)?|\.envrc(?:\..+)?|\.\.envrc\.sw.|\.envrc~|.*\.env|
+          \.sops\.ya?ml|secrets/.*|\.claude/settings\.local\.json|\.codex/config\.toml|
+          id_(?:rsa|dsa|ecdsa|ed25519)(?:\.pub)?|.*\.(?:p12|pfx|jks|keystore))$
+        exclude: '(?i)^\.env(?:rc)?\.(?:example|sample|template)$'
+        stages: [pre-commit]

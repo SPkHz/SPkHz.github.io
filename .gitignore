@@ -44,3 +44,13 @@ _site_deno/
 assets/ee456_design_project_03_ADS/EE_456_Design_3_Placzek_wrk/EE_456_Design_1_lib/
 
 assets/ee456_design_project_03_ADS/EE_456_Design_3_Placzek_wrk/
+
+# Local environment, encryption policy, agent settings, and secrets.
+.env
+.env.*
+.envrc
+..envrc.sw?
+.envrc~
+.sops.yaml
+.claude/
+.codex/

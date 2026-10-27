@@ -11,8 +11,13 @@
   "postCreateCommand": [
     "/bin/sh",
     "-c",
-    "cp .devcontainer/.gitconfig /home/vscode/.gitconfig"
+    "gem install --no-document bundler --version 4.0.15 && cp .devcontainer/.gitconfig /home/vscode/.gitconfig"
   ],
+  "postStartCommand": "BUNDLE_FROZEN=true bundle _4.0.15_ install",
+  "containerEnv": {
+    "RBENV_VERSION": "system",
+    "BUNDLE_FROZEN": "true"
+  },
   "customizations": {
     "vscode": {
       "extensions": [

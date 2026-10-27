@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           fetch-depth: 0 # OR "2" -> To retrieve the preceding commit.
 
@@ -39,12 +39,12 @@ jobs:
             if [[ "$file" != *.md ]]; then
               continue
             fi
-            ./gh-md-toc --indent 2 --insert --no-backup --hide-footer $file
+            ./gh-md-toc --indent 2 --insert --no-backup --hide-footer "$file"
           done
           rm gh-md-toc
 
       - name: Commit changes
         if: steps.changed-files.outputs.any_changed == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v7.1.0
+        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
         with:
           commit_message: Auto update markdown TOC

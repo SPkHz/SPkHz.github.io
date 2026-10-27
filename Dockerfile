@@ -61,8 +61,9 @@ ADD Gemfile /srv/jekyll
 WORKDIR /srv/jekyll
 
 # install jekyll and dependencies
-RUN gem install --no-document jekyll bundler
-RUN bundle install --no-cache
+RUN gem install --no-document bundler --version 4.0.15
+ENV BUNDLE_FROZEN=true
+RUN bundle _4.0.15_ install --no-cache
 
 EXPOSE 8080
 

@@ -24,16 +24,16 @@ jobs:
           persist-credentials: false
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
-      - name: Install Prettier 💾
-        run: npm install --save-dev --save-exact prettier @shopify/prettier-plugin-liquid
+      - name: Install locked Prettier dependencies 💾
+        run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Prettier Check 🔎
         id: prettier
-        run: npx prettier . --check
+        run: npx --no-install prettier . --check
       - name: Create diff 📝
         # https://docs.github.com/en/actions/learn-github-actions/expressions#failure
         if: ${{ failure() }}
         run: |
-          npx prettier . --write
+          npx --no-install prettier . --write
           git diff -- . ':(exclude)package-lock.json' ':(exclude)package.json' > diff.txt
           npm install -g diff2html-cli
           diff2html -i file -s side -F diff.html -- diff.txt

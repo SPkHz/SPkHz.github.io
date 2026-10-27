@@ -10,27 +10,36 @@ jobs:
   format:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout gh-pages branch
+      - name: Checkout lock-owning source
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
-          ref: gh-pages
-
-      - name: Find and Remove </source> Tags
-        run: find . -type f -name "*.html" -exec sed -i 's/<\/source>//g' {} +
+          persist-credentials: false
 
       - name: Set up Node.js
         uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
 
-      - name: Install Prettier
-        run: npm install -g prettier
+      - name: Install locked Prettier dependencies
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: gh-pages
+          path: gh-pages
+          persist-credentials: true
+
+      - name: Find and Remove </source> Tags
+        working-directory: gh-pages
+        run: find . -type f -name "*.html" -exec sed -i 's/<\/source>//g' {} +
 
       - name: Check for Prettier
-        run: npx prettier --version || echo "Prettier not found"
+        run: npx --no-install prettier --version
 
       - name: Run Prettier on HTML files
-        run: npx prettier --write '**/*.html'
+        run: npx --no-install prettier --write 'gh-pages/**/*.html'
 
       - name: Commit and push changes
+        working-directory: gh-pages
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"

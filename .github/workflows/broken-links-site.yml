@@ -5,6 +5,9 @@ on:
     workflows: [Deploy site]
     types: [completed]
 
+permissions:
+  contents: read
+
 jobs:
   check-links-on-site:
     # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-a-workflow-based-on-the-conclusion-of-another-workflow
@@ -14,6 +17,8 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
       - name: Setup Ruby
         uses: ruby/setup-ruby@7f797815d8adceb1c412e7abefdd1ab4abc47a5f # v1
         with:

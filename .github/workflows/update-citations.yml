@@ -7,6 +7,9 @@ on:
     - cron: "0 0 * * 5" # Friday
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update-citations:
     runs-on: ubuntu-latest
@@ -59,6 +62,7 @@ jobs:
             echo "❌ Citation update script failed with exit code $status (started at $start_time, ended at $end_time)."
             echo "❌ Citation update script failed with exit code $status." >> "$GITHUB_STEP_SUMMARY"
           fi
+          echo "exit_code=$status" >> "$GITHUB_OUTPUT"
           set -e
 
       - name: Save new citations.yml hash
@@ -84,6 +88,14 @@ jobs:
             echo "ℹ️ _data/citations.yml was not changed."
             echo "ℹ️ _data/citations.yml was not changed." >> "$GITHUB_STEP_SUMMARY"
           fi
+
+      - name: Fail if citation update failed
+        if: steps.run_citation_update.outputs.exit_code != '0'
+        env:
+          CITATION_UPDATE_EXIT_CODE: ${{ steps.run_citation_update.outputs.exit_code }}
+        run: |
+          echo "::error::Citation update script failed with exit code ${CITATION_UPDATE_EXIT_CODE}."
+          exit 1
 
       - name: Configure Git
         run: |

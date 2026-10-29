@@ -73,6 +73,17 @@ jobs:
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           persist-credentials: false
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "24.22.1"
+          cache: "npm"
+          cache-dependency-path: ".github/ci-tools/package-lock.json"
+      - name: Install locked CI tools 💾
+        run: |
+          test "$(node --version)" = "v24.22.1"
+          test "$(npm --version)" = "11.19.1"
+          npm ci --prefix .github/ci-tools --ignore-scripts --no-audit --no-fund
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@7f797815d8adceb1c412e7abefdd1ab4abc47a5f # v1
         with:
@@ -97,9 +108,7 @@ jobs:
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
-        run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
+        run: .github/ci-tools/node_modules/.bin/purgecss -c purgecss.config.js
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@fa24774553152dd7873cd16ebd8d959b010c5445 # v4

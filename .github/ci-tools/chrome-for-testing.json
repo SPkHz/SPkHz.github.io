@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "version": "156.0.8078.73",
+  "platform": "linux64",
+  "captured_at_utc": "2026-10-27T23:41:17Z",
+  "capture_method": "Exact operator-approved HTTPS URLs; TLS verified by the maintained curl client; byte lengths and SHA-256 calculated locally before extraction or execution.",
+  "integrity_limit": "Google did not publish per-archive checksums in the reviewed Chrome for Testing source. These locally captured hashes establish repeatability after first capture, not an independently publisher-authenticated archive checksum.",
+  "retention": {
+    "minimum_days": 90,
+    "keep_current_and_previous": true,
+    "deletion_authorized": false
+  },
+  "artifacts": {
+    "chrome": {
+      "url": "https://storage.googleapis.com/chrome-for-testing-public/156.0.8078.73/linux64/chrome-linux64.zip",
+      "filename": "chrome-linux64.zip",
+      "size_bytes": 201336602,
+      "sha256": "c51c24f0126534aaf6d21d1f85b8e243934b3951989dbb59a1f8aab8e32b20c1",
+      "executable": "chrome-linux64/chrome",
+      "publisher_checksum_available": false
+    },
+    "chromedriver": {
+      "url": "https://storage.googleapis.com/chrome-for-testing-public/156.0.8078.73/linux64/chromedriver-linux64.zip",
+      "filename": "chromedriver-linux64.zip",
+      "size_bytes": 11835555,
+      "sha256": "7b168a60f0e27f74dd13cc51a66f4f48c5046d1108280e3d77bb5af873c0c8a6",
+      "executable": "chromedriver-linux64/chromedriver",
+      "publisher_checksum_available": false
+    }
+  }
+}

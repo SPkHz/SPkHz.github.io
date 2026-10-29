@@ -46,11 +46,11 @@ This yields a bipolar feature vector **x ∈ {−1,+1}¹²⁰** per glyph.
 
 The project is organized into three task definitions (matching the typical EE-545 “modes” pattern):
 
-| Task | Objective | # Classes | Output meaning |
-|---|---:|---:|---|
-| **Task 1** | Letter classification (font-invariant) | 7 | A / B / C / D / E / J / K |
-| **Task 2** | Font classification (letter-invariant) | 3 | Font 1 / Font 2 / Font 3 |
-| **Task 3** | Joint classification | 21 | (Letter, Font) pair |
+| Task       |                              Objective | # Classes | Output meaning            |
+| ---------- | -------------------------------------: | --------: | ------------------------- |
+| **Task 1** | Letter classification (font-invariant) |         7 | A / B / C / D / E / J / K |
+| **Task 2** | Font classification (letter-invariant) |         3 | Font 1 / Font 2 / Font 3  |
+| **Task 3** |                   Joint classification |        21 | (Letter, Font) pair       |
 
 ---
 
@@ -59,9 +59,9 @@ The project is organized into three task definitions (matching the typical EE-54
 All tasks use a standard **feedforward MLP**:
 
 - **Input layer:** 120 features (flattened 12×10 glyph)
-- **Hidden layers:** `tansig` nonlinearity  
-  - Task 1: `[64, 32]`  
-  - Task 2: `[32]`  
+- **Hidden layers:** `tansig` nonlinearity
+  - Task 1: `[64, 32]`
+  - Task 2: `[32]`
   - Task 3: `[64, 32]`
 - **Output layer:** `softmax` (task-dependent dimension)
 
@@ -198,6 +198,7 @@ If you keep the same dataset file names/paths, you can regenerate the plots by r
 - `EE_545_Project_02_Placzek_v2_fixed.m`
 
 This script:
+
 1. Loads and visualizes glyphs,
 2. Trains three networks (Tasks 1–3),
 3. Runs noise robustness sweeps,
@@ -214,6 +215,7 @@ assets/img/ee545/project-02/
 ```
 
 This page expects the following key files (included in the ZIP):
+
 - `cover.png`
 - `glyphs_dataset_grid.png`
 - `mlp_architecture.png`

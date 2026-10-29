@@ -29,12 +29,12 @@ The full workflow covers:
 
 ## Project at a glance
 
-- **Classes (8):** BPSK, QPSK, 8PSK, 16QAM, 64QAM, FSK, AM, FM  
-- **Input per example:** 2×1024 (I/Q) real-valued sequence (normalized)  
-- **Dataset SNR grid:** 0–20 dB (step 2 dB)  
-- **Dataset size:** 4048 frames (46 frames / class / SNR)  
-- **Split:** 80% train / 10% val / 10% test  
-- **Model:** baseline 1‑D CNN (Conv‑BN‑ReLU‑Pool stacks → GAP → Dropout → FC → Softmax)  
+- **Classes (8):** BPSK, QPSK, 8PSK, 16QAM, 64QAM, FSK, AM, FM
+- **Input per example:** 2×1024 (I/Q) real-valued sequence (normalized)
+- **Dataset SNR grid:** 0–20 dB (step 2 dB)
+- **Dataset size:** 4048 frames (46 frames / class / SNR)
+- **Split:** 80% train / 10% val / 10% test
+- **Model:** baseline 1‑D CNN (Conv‑BN‑ReLU‑Pool stacks → GAP → Dropout → FC → Softmax)
 - **Headline test accuracy (full demo):** **≈ 89.2%** overall
 
 ## Data and signal representation
@@ -43,12 +43,12 @@ The full workflow covers:
 
 The classifier operates over the following eight modulation types:
 
-| Family | Classes |
-|---|---|
-| PSK | BPSK, QPSK, 8PSK |
-| QAM | 16QAM, 64QAM |
-| FSK | FSK |
-| Analog | AM, FM |
+| Family | Classes          |
+| ------ | ---------------- |
+| PSK    | BPSK, QPSK, 8PSK |
+| QAM    | 16QAM, 64QAM     |
+| FSK    | FSK              |
+| Analog | AM, FM           |
 
 ### I/Q framing
 
@@ -100,7 +100,7 @@ Key design choices:
 The baseline network is constructed as:
 
 1. `sequenceInputLayer(2, Normalization="zscore")`
-2. 1‑D Conv (filters = *samplesPerSymbol*, channels: 32) → BN → ReLU → MaxPool
+2. 1‑D Conv (filters = _samplesPerSymbol_, channels: 32) → BN → ReLU → MaxPool
 3. 1‑D Conv (channels: 48) → BN → ReLU → MaxPool
 4. 1‑D Conv (channels: 64) → BN → ReLU → MaxPool
 5. 1‑D Conv (channels: 96) → BN → ReLU
@@ -110,11 +110,11 @@ The baseline network is constructed as:
 
 Default “full demo” settings:
 
-- **Optimizer:** Adam  
-- **Epochs:** 40  
-- **Mini-batch size:** 128  
-- **Initial learning rate:** 1e‑3  
-- **Dropout:** 0.35  
+- **Optimizer:** Adam
+- **Epochs:** 40
+- **Mini-batch size:** 128
+- **Initial learning rate:** 1e‑3
+- **Dropout:** 0.35
 - **Random seed:** 545 (for reproducibility)
 
 Two operational modes are supported in the training script:
@@ -144,7 +144,7 @@ To balance precision and recall (especially under class confusion), per‑class 
 
 Notable observations:
 
-- **FSK / AM / FM:** 100% F1 in this evaluation split  
+- **FSK / AM / FM:** 100% F1 in this evaluation split
 - **16QAM and 64QAM:** the main performance bottleneck (mutual confusion)
 
 ## Statistical validation
@@ -155,18 +155,18 @@ To evaluate run-to-run robustness, the baseline configuration was trained across
 
 Summary (20 seeds):
 
-- **Mean test accuracy:** 88.86%  
-- **Std. dev.:** 1.00%  
+- **Mean test accuracy:** 88.86%
+- **Std. dev.:** 1.00%
 - **Min / Max:** 86.72% / 90.46%
 
 ## Reproducibility
 
 Key MATLAB entry points (relative to the repository root):
 
-- `matlab/cpu_acm/runDemo.m` — end-to-end demo (dataset → train → evaluate)  
-- `matlab/cpu_acm/generateAMCDataset.m` — synthetic dataset generator  
-- `matlab/cpu_acm/createModClassCNN.m` — baseline CNN definition  
-- `matlab/cpu_acm/trainModClassifier.m` — training loop + split management  
+- `matlab/cpu_acm/runDemo.m` — end-to-end demo (dataset → train → evaluate)
+- `matlab/cpu_acm/generateAMCDataset.m` — synthetic dataset generator
+- `matlab/cpu_acm/createModClassCNN.m` — baseline CNN definition
+- `matlab/cpu_acm/trainModClassifier.m` — training loop + split management
 - `matlab/cpu_acm/evaluateModClassifier.m` — evaluation + plotting (confusion/SNR curves)
 
 Example command-line run:

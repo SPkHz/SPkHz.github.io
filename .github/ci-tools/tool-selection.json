@@ -38,11 +38,7 @@
     "purgecss": {
       "version": "8.0.0",
       "released": "2026-01-24",
-      "consumer": [
-        ".github/workflows/axe.yml",
-        ".github/workflows/broken-links-site.yml",
-        ".github/workflows/deploy.yml"
-      ]
+      "consumer": [".github/workflows/axe.yml", ".github/workflows/broken-links-site.yml", ".github/workflows/deploy.yml"]
     }
   },
   "browser_artifacts": {

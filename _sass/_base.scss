@@ -15,15 +15,15 @@
   // Type scale variables
   --type-scale-ratio: 1.2;
   --type-base: 1rem;
-  --type-sm: 0.875rem;        // 14px - small text, meta
-  --type-xs: 0.75rem;         // 12px - captions, labels
-  --type-h6: 1rem;            // 16px
-  --type-h5: 1.125rem;        // 18px
-  --type-h4: 1.25rem;         // 20px
-  --type-h3: 1.5rem;          // 24px
-  --type-h2: 1.875rem;        // 30px
-  --type-h1: 2.25rem;         // 36px - page titles
-  --type-display: 2.75rem;    // 44px - hero titles (desktop)
+  --type-sm: 0.875rem; // 14px - small text, meta
+  --type-xs: 0.75rem; // 12px - captions, labels
+  --type-h6: 1rem; // 16px
+  --type-h5: 1.125rem; // 18px
+  --type-h4: 1.25rem; // 20px
+  --type-h3: 1.5rem; // 24px
+  --type-h2: 1.875rem; // 30px
+  --type-h1: 2.25rem; // 36px - page titles
+  --type-display: 2.75rem; // 44px - hero titles (desktop)
 
   // Line heights
   --leading-tight: 1.2;
@@ -48,35 +48,52 @@
 // Responsive type scale adjustments
 @media (max-width: 768px) {
   :root {
-    --type-display: 2rem;     // 32px on tablets
-    --type-h1: 1.875rem;      // 30px
-    --type-h2: 1.5rem;        // 24px
-    --type-h3: 1.25rem;       // 20px
+    --type-display: 2rem; // 32px on tablets
+    --type-h1: 1.875rem; // 30px
+    --type-h2: 1.5rem; // 24px
+    --type-h3: 1.25rem; // 20px
   }
 }
 
 @media (max-width: 480px) {
   :root {
-    --type-display: 1.75rem;  // 28px on mobile
-    --type-h1: 1.5rem;        // 24px
-    --type-h2: 1.25rem;       // 20px
-    --type-h3: 1.125rem;      // 18px
+    --type-display: 1.75rem; // 28px on mobile
+    --type-h1: 1.5rem; // 24px
+    --type-h2: 1.25rem; // 20px
+    --type-h3: 1.125rem; // 18px
   }
 }
 
 // Base heading styles with consistent line-height
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: var(--leading-tight);
   margin-top: 0;
   margin-bottom: var(--space-md);
 }
 
-h1 { font-size: var(--type-h1); }
-h2 { font-size: var(--type-h2); }
-h3 { font-size: var(--type-h3); }
-h4 { font-size: var(--type-h4); }
-h5 { font-size: var(--type-h5); }
-h6 { font-size: var(--type-h6); }
+h1 {
+  font-size: var(--type-h1);
+}
+h2 {
+  font-size: var(--type-h2);
+}
+h3 {
+  font-size: var(--type-h3);
+}
+h4 {
+  font-size: var(--type-h4);
+}
+h5 {
+  font-size: var(--type-h5);
+}
+h6 {
+  font-size: var(--type-h6);
+}
 
 // Body text
 p {
@@ -572,7 +589,7 @@ ul.task-list input[type="checkbox"] {
 
     // Underline indicator for accessibility
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0.5rem;
       left: 1rem;
@@ -699,7 +716,9 @@ kbd {
   color: var(--global-text-color);
   cursor: pointer;
   border-radius: 4px;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1078,7 +1097,10 @@ footer.sticky-bottom {
   border: 1px solid var(--global-divider-color);
   border-radius: 8px;
   overflow: hidden;
-  transition: box-shadow 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.2s ease,
+    border-color 0.3s ease;
 
   &:hover {
     border-color: var(--global-theme-color);
@@ -1957,7 +1979,9 @@ nav[data-toggle="toc"] {
   border-radius: 8px;
   overflow: hidden;
   text-decoration: none;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
 
   &:hover {
     box-shadow: var(--global-shadow-xl);
@@ -2151,7 +2175,10 @@ nav[data-toggle="toc"] {
   border: 1px solid var(--global-divider-color);
   border-radius: 8px;
   overflow: hidden;
-  transition: box-shadow 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.2s ease,
+    border-color 0.3s ease;
 
   &:hover {
     border-color: var(--global-theme-color);

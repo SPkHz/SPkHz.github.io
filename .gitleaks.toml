@@ -1,0 +1,27 @@
+# Keep the full built-in rule set; project exceptions require explicit review.
+[extend]
+useDefault = true
+
+[[rules]]
+id = "generic-api-key"
+
+[[rules.allowlists]]
+description = "Public @actions/core setSecret documentation example"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^\.github/actions/setup-python/dist/(setup|cache-save)/index\.js$''']
+regexes = ['''^apiToken = "abc123xyz456"$''']
+
+[[rules.allowlists]]
+description = "Public Azure storage CRC64 WebAssembly data, not credentials"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^\.github/actions/setup-python/dist/(setup|cache-save)/index\.js$''']
+regexes = ['''^JqIgUgAEHIksECaigCACIAKAIIIgdHDQBBACACQX4gBHdxIgI2ApiSwQIMAQ",\n"sgByAFNgIMIAUgBzYCCAsgACADQQNyNgIEIAAgA2oiByAEQQN0IgQgA2siBUEBcjYCBCAAIARqIAU2AgACQ"$''']
+
+[[rules.allowlists]]
+description = "Public Azure emulator devstoreaccount1 default key"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^\.github/actions/setup-python/dist/(setup|cache-save)/index\.js$''']
+regexes = ['''^AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;$''']

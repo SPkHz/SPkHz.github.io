@@ -1,0 +1,30 @@
+{
+  "upstream_repository": "https://github.com/actions/setup-python",
+  "upstream_commit": "6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+  "upstream_release": "v7.1.0",
+  "license": "MIT; originalLICENSEretained",
+  "changes": [
+    "Undici6.29.1 override fixes GHSA-xjj6-f33q-929c andGHSA-4qv8-2p9j-2685",
+    "CompatibleHandlebars4.7.10 builddependency refresh",
+    "Owneddeepmerge4.3.1-remediation.1 replaces3assignmentwriteswithownpropertydefinition; originalMITlicense retained; GHSA-gcqx-w48m-w2h4 reproduced and fixed",
+    "Oneupstreamtest missingmanifestmock supplied for hermetic qualification; production behavior unchanged"
+  ],
+  "runtime": "node24; requiresrunner>=2.327.1 perupstreamv6+supportcontract",
+  "qualification": {
+    "node": "24.22.1",
+    "npm": "11.19.1",
+    "full_npm_audit_vulnerabilities": 0,
+    "upstream_tests": 249,
+    "mocked_side_effects": ["network", "childprocess", "listen"],
+    "deepmerge_regression": "unmodifiedRED/ownedGREEN",
+    "clean_install": "npmci--ignore-scripts fromsourceonly,actualjest-config resolution torootownedmodule verified",
+    "rebuild": "Bundlesrebuilt aftercanonicalsourceformatting; priorcleaninstallgraph proof reusedbecauseparsedpackage+lock unchanged",
+    "formatting": "Website lockedPrettier3.8.1 configprintWidth150,trailingCommaes5; allnongeneratedfiles pass. Cachedrebuild and249tests pass; formattedowneddeepmerge regression passes."
+  },
+  "maintenance": "Finite remediation of this frozenrelease. Retain source/lock/tests and replace withqualifiedofficialrelease onceactualdeliveredcode resolvesnamedfindings; anyfunctional expansion requiresreview. Noautomaticupstreamsync.",
+  "limits": [
+    "Nohostedqualification bythispacket.",
+    "DownloadedPythonoractualtoolcache provenance remainsconsumer-specific.",
+    "Localauditdoesnotclaim futureadvisoryabsence."
+  ]
+}

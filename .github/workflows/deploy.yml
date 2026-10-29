@@ -116,3 +116,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@fa24774553152dd7873cd16ebd8d959b010c5445 # v4
         with:
           folder: _site
+          branch: gh-pages
+          force: false
+          single-commit: false

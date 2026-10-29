@@ -38,6 +38,9 @@ permissions:
 
 jobs:
   lighthouse-badger-easy:
+    # Quarantined pending immutable helper qualification and explicit approval
+    # for the external live target and master-branch report publication.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:

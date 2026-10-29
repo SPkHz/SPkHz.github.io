@@ -92,8 +92,9 @@ jobs:
       - name: Setup Python 🐍
         uses: ./.github/actions/setup-python # owned, qualified repair; see action PROVENANCE.json
         with:
-          python-version: "3.13"
-          cache: "pip" # caching pip dependencies
+          python-version: "3.13.18"
+          cache: "pip"
+          cache-dependency-path: .github/python-build-tools/requirements.lock
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@dffe9a5223d84653c13374032382f6bb5de8e5ef # main
         with:
@@ -104,7 +105,8 @@ jobs:
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
+          python -m pip install --require-hashes --only-binary=:all: --disable-pip-version-check -r .github/python-installer/requirements.lock
+          python -m pip install --require-hashes --only-binary=:all: --disable-pip-version-check -r .github/python-build-tools/requirements.lock
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹

@@ -27,21 +27,39 @@ jobs:
         uses: tj-actions/changed-files@22103cc46bda19c2b464ffe86db46df6922fd323 # v47.0.5
         with:
           files: ./*.md
+          json: true
+          escape_json: false
 
       - name: Updated toc on all markdown changed files
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
-          curl https://raw.githubusercontent.com/george-gca/github-markdown-toc/main/gh-md-toc -o gh-md-toc
-          chmod a+x gh-md-toc
-          for file in ${ALL_CHANGED_FILES}; do
-            # Check if the file is a markdown file
-            if [[ "$file" != *.md ]]; then
-              continue
-            fi
-            ./gh-md-toc --indent 2 --insert --no-backup --hide-footer "$file"
-          done
-          rm gh-md-toc
+          toc_dir=$(mktemp -d "$RUNNER_TEMP/verified-toc.XXXXXX")
+          toc_tool="$toc_dir/gh-md-toc"
+          export TOC_TOOL_PATH="$toc_tool"
+          curl --fail --silent --show-error --location --proto '=https' --tlsv1.2 \
+            https://raw.githubusercontent.com/george-gca/github-markdown-toc/e9e9197682f98d98d22ea6f1ae39afd95a054481/gh-md-toc \
+            --output "$toc_tool"
+          printf '%s  %s\n' 8f36b5409a9ef5d4973c77cfa47d0be99cdfa22727467a611af3d47694936f20 "$toc_tool" | sha256sum --check --strict
+          python3 - <<'PYTHON'
+          import json
+          import os
+          from pathlib import Path
+          import subprocess
+          root = Path.cwd()
+          files = json.loads(os.environ["ALL_CHANGED_FILES"])
+          if not isinstance(files, list) or not all(isinstance(name, str) for name in files):
+              raise ValueError("expected changed-file JSON array")
+          for name in files:
+              source = root / name
+              if source.suffix != ".md":
+                  continue
+              if source.is_symlink() or source.resolve().parent != root or not source.is_file():
+                  raise ValueError("TOC source must be a regular root Markdown file")
+              subprocess.run(["bash", os.environ["TOC_TOOL_PATH"],
+                              "--indent", "2", "--insert", "--no-backup", "--hide-footer",
+                              "./" + source.name], check=True)
+          PYTHON
 
       - name: Commit changes
         if: steps.changed-files.outputs.any_changed == 'true'

@@ -24,13 +24,13 @@ jobs:
       - name: Set up Python
         uses: ./.github/actions/setup-python # owned, qualified repair; see action PROVENANCE.json
         with:
-          python-version: "3.13"
+          python-version: "3.13.18"
 
       - name: Install dependencies
         run: |
           echo "🔧 Installing dependencies..."
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          python -m pip install --require-hashes --only-binary=:all: --disable-pip-version-check -r .github/python-installer/requirements.lock
+          python -m pip install --require-hashes --only-binary=:all: --disable-pip-version-check -r requirements.lock
 
       - name: Save current citations.yml hash
         id: before

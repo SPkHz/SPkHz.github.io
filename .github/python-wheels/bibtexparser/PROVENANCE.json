@@ -1,0 +1,17 @@
+{
+  "package": "bibtexparser",
+  "version": "1.4.4",
+  "source": "https://pypi.org/project/bibtexparser/1.4.4/",
+  "source_sha256": "093b6c824f7a71d3a748867c4057b71f77c55b8dbc07efc993b781771520d8fb",
+  "wheel_sha256": "2310a2541f6b0da8903a5b3354fa1c79742ba6a2e52e1c25ac866f1200b34ca9",
+  "build_python": "3.13.18",
+  "build_dependencies": "build-requirements.lock; initial installation uses hashes and binary wheels only",
+  "build_review": "setup.py invokes setuptools.setup with explicit package list, reads version text and README; setup.cfg only egg_info settings; no pyproject or custom build entrypoint",
+  "source_modifications": false,
+  "SOURCE_DATE_EPOCH": "1735689600",
+  "PYTHONHASHSEED": "0",
+  "reproducibility": "Two independent source copies produced identical wheels with network namespace disabled",
+  "reason": "Scholarly requires v1 bibdatabase/bparser APIs; published bibtexparser2.x breaks import. PyPI1.4.4 has only an sdist. This finite reviewed wheel avoids runtime source builds.",
+  "license": "COPYING retained; package declares LGPLv3 or BSD",
+  "scope": "No package version, dependency source or installed files patched"
+}

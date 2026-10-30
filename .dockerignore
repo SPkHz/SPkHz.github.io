@@ -1,3 +1,16 @@
-_site/
-.git/
-assets/
+# Only the exact files consumed by this Dockerfile enter the build context.
+**
+!Dockerfile
+!Gemfile
+!Gemfile.lock
+!bin/
+bin/*
+!bin/entry_point.sh
+!.github/
+.github/*
+!.github/python-installer/
+.github/python-installer/*
+!.github/python-installer/requirements.lock
+!.github/python-build-tools/
+.github/python-build-tools/*
+!.github/python-build-tools/requirements.lock

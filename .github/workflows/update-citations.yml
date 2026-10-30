@@ -7,27 +7,30 @@ on:
     - cron: "0 0 * * 5" # Friday
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update-citations:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       # See CUSTOMIZE.md for details on how to set up PAT for triggering subsequent workflows
       #        with:
       #          token: ${{ secrets.PAT }}
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: ./.github/actions/setup-python # owned, qualified repair; see action PROVENANCE.json
         with:
-          python-version: "3.13"
+          python-version: "3.13.18"
 
       - name: Install dependencies
         run: |
           echo "🔧 Installing dependencies..."
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          python -m pip install --require-hashes --only-binary=:all: --disable-pip-version-check -r .github/python-installer/requirements.lock
+          python -m pip install --require-hashes --only-binary=:all: --disable-pip-version-check -r requirements.lock
 
       - name: Save current citations.yml hash
         id: before
@@ -35,10 +38,10 @@ jobs:
           echo "📦 Checking existing citations.yml hash..."
           if [ -f _data/citations.yml ]; then
             sha_before=$(sha256sum _data/citations.yml | awk '{print $1}')
-            echo "sha_before=$sha_before" >> $GITHUB_OUTPUT
+            echo "sha_before=$sha_before" >> "$GITHUB_OUTPUT"
             echo "📝 SHA before: $sha_before"
           else
-            echo "sha_before=none" >> $GITHUB_OUTPUT
+            echo "sha_before=none" >> "$GITHUB_OUTPUT"
             echo "📝 No existing citations.yml file found."
           fi
 
@@ -54,11 +57,12 @@ jobs:
           end_time=$(date)
           if [ $status -eq 0 ]; then
             echo "✅ Citation update succeeded (started at $start_time, ended at $end_time)."
-            echo "✅ Citation update succeeded." >> $GITHUB_STEP_SUMMARY
+            echo "✅ Citation update succeeded." >> "$GITHUB_STEP_SUMMARY"
           else
             echo "❌ Citation update script failed with exit code $status (started at $start_time, ended at $end_time)."
-            echo "❌ Citation update script failed with exit code $status." >> $GITHUB_STEP_SUMMARY
+            echo "❌ Citation update script failed with exit code $status." >> "$GITHUB_STEP_SUMMARY"
           fi
+          echo "exit_code=$status" >> "$GITHUB_OUTPUT"
           set -e
 
       - name: Save new citations.yml hash
@@ -67,10 +71,10 @@ jobs:
           echo "🔍 Checking updated citations.yml hash..."
           if [ -f _data/citations.yml ]; then
             sha_after=$(sha256sum _data/citations.yml | awk '{print $1}')
-            echo "sha_after=$sha_after" >> $GITHUB_OUTPUT
+            echo "sha_after=$sha_after" >> "$GITHUB_OUTPUT"
             echo "📝 SHA after: $sha_after"
           else
-            echo "sha_after=none" >> $GITHUB_OUTPUT
+            echo "sha_after=none" >> "$GITHUB_OUTPUT"
             echo "📝 citations.yml was not created or is missing."
           fi
 
@@ -79,11 +83,19 @@ jobs:
           echo "📋 Comparing citation file hashes..."
           if [ "${{ steps.before.outputs.sha_before }}" != "${{ steps.after.outputs.sha_after }}" ]; then
             echo "✅ _data/citations.yml was updated."
-            echo "✅ _data/citations.yml was updated." >> $GITHUB_STEP_SUMMARY
+            echo "✅ _data/citations.yml was updated." >> "$GITHUB_STEP_SUMMARY"
           else
             echo "ℹ️ _data/citations.yml was not changed."
-            echo "ℹ️ _data/citations.yml was not changed." >> $GITHUB_STEP_SUMMARY
+            echo "ℹ️ _data/citations.yml was not changed." >> "$GITHUB_STEP_SUMMARY"
           fi
+
+      - name: Fail if citation update failed
+        if: steps.run_citation_update.outputs.exit_code != '0'
+        env:
+          CITATION_UPDATE_EXIT_CODE: ${{ steps.run_citation_update.outputs.exit_code }}
+        run: |
+          echo "::error::Citation update script failed with exit code ${CITATION_UPDATE_EXIT_CODE}."
+          exit 1
 
       - name: Configure Git
         run: |

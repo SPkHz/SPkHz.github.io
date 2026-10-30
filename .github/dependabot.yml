@@ -65,6 +65,18 @@ updates:
           - "minor"
           - "patch"
 
+  # Repository-owned CI tools - check weekly with human review
+  - package-ecosystem: "npm"
+    directory: "/.github/ci-tools"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+    commit-message:
+      prefix: "ci(deps)"
+    labels:
+      - "dependencies"
+      - "github-actions"
+
   # pip (Python) - check weekly
   - package-ecosystem: "pip"
     directory: "/"

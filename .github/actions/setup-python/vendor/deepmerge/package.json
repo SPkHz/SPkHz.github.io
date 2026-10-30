@@ -1,0 +1,8 @@
+{
+  "name": "@remediation/deepmerge",
+  "version": "4.3.1-remediation.1",
+  "private": true,
+  "main": "index.cjs",
+  "license": "MIT",
+  "description": "Owned deepmerge4.3.1 repair for GHSA-gcqx-w48m-w2h4; prototype-safe own-property writes"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-27T23:41:17Z",
+  "runtime": {
+    "node": "24.22.1",
+    "npm": "11.19.1"
+  },
+  "install": {
+    "command": "npm ci --prefix .github/ci-tools --ignore-scripts --no-audit --no-fund",
+    "lifecycle_scripts": "disabled",
+    "audit": "separate complete changed-graph advisory audit"
+  },
+  "resolver_configuration": {
+    "get-uri/basic-ftp": {
+      "selected": "6.2.3",
+      "reason": "The unmodified axe 4.14.0 graph resolves basic-ftp 5.3.1 through the unused chromedriver download path and npm reports GHSA-c475-qrg2-pj4r. The owning resolver override selects the reviewed patched release; the existing engineer development candidate already proved constructor, API, Unix-list, and MLSD parser compatibility for this same parent/child override.",
+      "execution_scope": "The chromedriver lifecycle/download path remains disabled and is not used to supply browser bytes."
+    }
+  },
+  "direct_tools": {
+    "@axe-core/cli": {
+      "version": "4.14.0",
+      "released": "2026-10-15",
+      "node_engine": ">=22.12.0",
+      "consumer": ".github/workflows/axe.yml"
+    },
+    "diff2html-cli": {
+      "version": "5.2.15",
+      "released": "2024-01-12",
+      "consumer": ".github/workflows/prettier.yml"
+    },
+    "http-server": {
+      "version": "14.1.1",
+      "released": "2022-05-31",
+      "node_engine": ">=12",
+      "consumer": ".github/workflows/axe.yml"
+    },
+    "purgecss": {
+      "version": "8.0.0",
+      "released": "2026-01-24",
+      "consumer": [".github/workflows/axe.yml", ".github/workflows/broken-links-site.yml", ".github/workflows/deploy.yml"]
+    }
+  },
+  "browser_artifacts": {
+    "manifest": ".github/ci-tools/chrome-for-testing.json",
+    "ownership": "separate from npm lifecycle scripts",
+    "first_capture_limit": "Locally calculated archive hashes provide repeatability after capture; Google did not publish per-archive checksums in the reviewed source."
+  }
+}

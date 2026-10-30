@@ -1,4 +1,4 @@
-FROM ruby:slim
+FROM ruby:slim@sha256:1fbc01ba38b664604059211f69fa5414301100e84468479a08225245cced1ba2
 
 # uncomment these if you are having this issue with the build:
 # /usr/local/bundle/gems/jekyll-4.3.4/lib/jekyll/site.rb:509:in `initialize': Permission denied @ rb_sysopen - /srv/jekyll/.jekyll-cache/.gitignore (Errno::EACCES)
@@ -19,6 +19,10 @@ LABEL authors="Amir Pourmand,George Araújo" \
 # RUN groupadd -r $GROUPNAME -g $GROUPID && \
 #     useradd -u $USERID -m -g $GROUPNAME $USERNAME
 
+# Python consumers are independently locked for CPython 3.13/Linux x86-64.
+COPY .github/python-installer/requirements.lock /opt/python-locks/installer.lock
+COPY .github/python-build-tools/requirements.lock /opt/python-locks/build.lock
+
 # install system dependencies
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends \
@@ -30,9 +34,17 @@ RUN apt-get update -y && \
         locales \
         nodejs \
         procps \
-        python3-pip \
+        python3-venv \
         zlib1g-dev && \
-    pip --no-cache-dir install --upgrade --break-system-packages nbconvert
+    test "$(dpkg --print-architecture)" = "amd64" && \
+    python3 -c 'import sys; assert sys.version_info[:2] == (3, 13)' && \
+    python3 -m venv /opt/site-python && \
+    /opt/site-python/bin/python -m pip install --require-hashes --only-binary=:all: \
+        --disable-pip-version-check --no-cache-dir -r /opt/python-locks/installer.lock && \
+    /opt/site-python/bin/python -m pip install --require-hashes --only-binary=:all: \
+        --disable-pip-version-check --no-cache-dir -r /opt/python-locks/build.lock
+
+ENV PATH="/opt/site-python/bin:${PATH}"
 
 # clean up
 RUN apt-get clean && \
@@ -61,8 +73,9 @@ ADD Gemfile /srv/jekyll
 WORKDIR /srv/jekyll
 
 # install jekyll and dependencies
-RUN gem install --no-document jekyll bundler
-RUN bundle install --no-cache
+RUN gem install --no-document bundler --version 4.0.15
+ENV BUNDLE_FROZEN=true
+RUN bundle _4.0.15_ install --no-cache
 
 EXPOSE 8080
 

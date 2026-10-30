@@ -10,39 +10,54 @@ on:
       - master
       - main
 
+permissions:
+  contents: write
+
 jobs:
   check:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v6
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
       - name: Setup Node.js ⚙️
-        uses: actions/setup-node@v6
-      - name: Install Prettier 💾
-        run: npm install --save-dev --save-exact prettier @shopify/prettier-plugin-liquid
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "24.22.1"
+          cache: "npm"
+          cache-dependency-path: |
+            package-lock.json
+            .github/ci-tools/package-lock.json
+      - name: Verify Node.js toolchain 🔎
+        run: |
+          test "$(node --version)" = "v24.22.1"
+          test "$(npm --version)" = "11.19.1"
+      - name: Install locked Prettier dependencies 💾
+        run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Prettier Check 🔎
         id: prettier
-        run: npx prettier . --check
+        run: npx --no-install prettier . --check
       - name: Create diff 📝
         # https://docs.github.com/en/actions/learn-github-actions/expressions#failure
         if: ${{ failure() }}
         run: |
-          npx prettier . --write
+          npx --no-install prettier . --write
           git diff -- . ':(exclude)package-lock.json' ':(exclude)package.json' > diff.txt
-          npm install -g diff2html-cli
-          diff2html -i file -s side -F diff.html -- diff.txt
+          npm ci --prefix .github/ci-tools --ignore-scripts --no-audit --no-fund
+          .github/ci-tools/node_modules/.bin/diff2html -i file -s side -F diff.html -- diff.txt
       - name: Upload html diff ⬆️
         id: artifact-upload
         if: ${{ failure() && steps.prettier.conclusion == 'failure' }}
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: HTML Diff
           path: diff.html
           retention-days: 7
       - name: Dispatch information to repository 🗣️
         if: ${{ failure() && steps.prettier.conclusion == 'failure' && github.event_name == 'pull_request' }}
-        uses: peter-evans/repository-dispatch@v4
+        uses: peter-evans/repository-dispatch@28959ce8df70de7be546dd1250a005dd32156697 # v4
         with:
           event-type: prettier-failed-on-pr
           client-payload: '{"pr_number": "${{ github.event.number }}", "artifact_url": "${{ steps.artifact-upload.outputs.artifact-url }}", "run_id": "${{ github.run_id }}"}'

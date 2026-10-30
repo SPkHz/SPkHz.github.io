@@ -26,6 +26,30 @@
 
 </div>
 
+## Dependency security policy
+
+This fork pins direct Ruby gems to exact reviewed releases and retains
+`Gemfile.lock`, including its platform variants and checksums. Git dependencies
+use immutable commits. For Ruby gems, prefer compatible
+stable releases at least six weeks old; four weeks is the fallback preference.
+Release age is a review preference, not a mandatory waiting period or evidence
+that a package is secure. Audit the complete resolved tree against current
+advisories and test the affected consumers before accepting an update.
+
+Required security fixes take precedence over age. Record each exception's release
+date, advisory, fixed version and compatibility evidence. The 2026-10-27 repair
+requires `css_parser` 3.3.0 (released 2026-10-07, GHSA-w3mx-4vv9-hjpg) and
+`jekyll-feed` 0.18.0 (released 2026-09-29, GHSA-3gx8-pqcm-38hw); older releases
+that meet the age preference do not satisfy these security fixes. Never downgrade
+a required fix merely to meet the age preference or suppress an unresolved advisory.
+
+Use the Ruby version in `.ruby-version` for the maintained build lanes and the
+Bundler version under `BUNDLED WITH` in the lock. The Gemfile requires Ruby >=3.3.
+Install with `BUNDLE_FROZEN=true bundle _4.0.15_ install`; retain the manifest and
+lock unchanged during verification. Review native extension builds separately.
+Regenerate locks only as a deliberate dependency update. Source changes do not
+verify an existing container or deployed site, or authorize CI or deployment.
+
 ## User community
 
 The vibrant community of **al-folio** users is growing!
@@ -192,7 +216,7 @@ Feel free to add your own page(s) by sending a PR.
 <a href="https://inbt.jhu.edu/epidiagnostics/" target="_blank">★</a>
 <a href="https://www.nuesl.org/" target="_blank">★</a>
 <a href="https://big-culture.github.io/" target="_blank">★</a>
-<a href="https://martinbulla.github.io/bullab/" target="_blank">★</a>  
+<a href="https://martinbulla.github.io/bullab/" target="_blank">★</a>
 <a href="https://gpforesteyes.github.io/" target="_blank">★</a>
 </td>
 </tr>

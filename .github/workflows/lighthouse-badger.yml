@@ -33,29 +33,36 @@ on:
 # THAT'S IT; YOU DON'T HAVE TO DEFINE ANYTHING IN THE FOLLOWING
 ########################################################################
 
+permissions:
+  contents: read
+
 jobs:
   lighthouse-badger-easy:
+    # Quarantined pending immutable helper qualification and explicit approval
+    # for the external live target and master-branch report publication.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
       - name: Preparatory Tasks
         run: |
-          REPOSITORY=`expr "${{ env.REPO_BRANCH }}" : "\([^ ]*\)"`
-          BRANCH=`expr "${{ env.REPO_BRANCH }}" : ".* \([^ ]*\)"`
-          echo "REPOSITORY=$REPOSITORY" >> $GITHUB_ENV
-          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+          REPOSITORY=$(expr "$REPO_BRANCH" : "\([^ ]*\)")
+          BRANCH=$(expr "$REPO_BRANCH" : ".* \([^ ]*\)")
+          echo "REPOSITORY=$REPOSITORY" >> "$GITHUB_ENV"
+          echo "BRANCH=$BRANCH" >> "$GITHUB_ENV"
         env:
           REPO_BRANCH: ${{ env.REPO_BRANCH }}
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           repository: ${{ env.REPOSITORY }}
           token: ${{ secrets.LIGHTHOUSE_BADGER_TOKEN }}
           ref: ${{ env.BRANCH }}
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           repository: "myactionway/lighthouse-badges"
           path: temp_lighthouse_badges_nested
-      - uses: myactionway/lighthouse-badger-action@v2.2
+          persist-credentials: false
+      - uses: myactionway/lighthouse-badger-action@0064f8e52023fe836d42f65e71231c54a93f7d0b # v2.2
         with:
           urls: ${{ env.URLS }}
           mobile_lighthouse_params: ${{ env.MOBILE_LIGHTHOUSE_PARAMS }}

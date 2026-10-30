@@ -3,4 +3,4 @@ pyyaml>=6.0.3
 scholarly>=1.7.11
 tornado>=6.5.5
 # Scholarly imports bibtexparser v1 APIs; v2 removes them.
-bibtexparser==1.4.4
+bibtexparser==2.1.0

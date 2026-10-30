@@ -30,8 +30,8 @@ end
 # Gems for development or external data fetching (outside :jekyll_plugins)
 group :other_plugins do
     gem 'css_parser', '3.3.0'
-    gem 'feedjira', '4.0.1'
-    gem 'httparty', '0.24.2'
+    gem 'feedjira', '4.0.3'
+    gem 'httparty', '0.24.3'
     gem 'observer', '0.1.2'       # used by jekyll-scholar
     gem 'ostruct', '0.6.3'        # used by jekyll-twitter-plugin
     # gem 'terser'         # used by jekyll-terser

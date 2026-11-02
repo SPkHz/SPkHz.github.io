@@ -80,6 +80,13 @@ def policy_errors(workflow, lock):
 
 
 class WorkflowSecurity(unittest.TestCase):
+    def test_upload_preserves_security_contact(self):
+        workflow = load_yaml(ROOT / '.github/workflows/pages.yml')
+        upload = next(step for step in workflow['jobs']['build']['steps']
+                      if step.get('uses', '').startswith('actions/upload-pages-artifact@'))
+        self.assertIs(upload.get('with', {}).get('include-hidden-files'), True,
+                      'Pages archive must retain validated .well-known/security.txt')
+
     def test_structural_policy_and_negative_mutations(self):
         workflow = load_yaml(ROOT / '.github/workflows/pages.yml')
         lock = load_yaml(ROOT / '.github/workflows/actions.lock')

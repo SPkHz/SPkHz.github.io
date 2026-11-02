@@ -27,6 +27,15 @@ class BuiltSite(unittest.TestCase):
     def test_valid(self):
         self.assertEqual(self.module.validate_site(self.root), [])
 
+    def test_social_images_require_absolute_https_urls(self):
+        for attribute, name in (('property', 'og:image'), ('name', 'twitter:image')):
+            for url in ('/assets/img/card.png', '//example.com/card.png', 'http://example.com/card.png'):
+                with self.subTest(name=name, url=url):
+                    (self.root / 'index.html').write_text(f'<meta {attribute}="{name}" content="{url}">')
+                    self.assertTrue(self.module.validate_site(self.root))
+            (self.root / 'index.html').write_text(f'<meta {attribute}="{name}" content="https://spkhz.github.io/assets/img/card.png">')
+            self.assertEqual(self.module.validate_site(self.root), [])
+
     def test_missing_required(self):
         for name in REQUIRED:
             p = self.root / name

@@ -35,6 +35,10 @@ class PageParser(HTMLParser):
         if len(names) != len(set(names)):
             self.failures.append('duplicate HTML attributes')
         attrs = dict(attributes)
+        if tag == 'meta' and (attrs.get('property') == 'og:image' or attrs.get('name') == 'twitter:image'):
+            social_url = urlsplit(attrs.get('content', ''))
+            if social_url.scheme != 'https' or not social_url.netloc:
+                self.failures.append('social image must use an absolute HTTPS URL')
         if tag == 'base':
             self.failures.append('document base overrides are forbidden')
         if tag == 'style':

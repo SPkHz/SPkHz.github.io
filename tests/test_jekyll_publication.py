@@ -5,6 +5,15 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class JekyllPublication(unittest.TestCase):
+    def test_liquid_script_templates_are_not_javascript_sources(self):
+        directory = ROOT / '_scripts'
+        self.assertEqual(sorted(p.name for p in directory.iterdir()), ['search-data.liquid'])
+        self.assertIn('permalink: /assets/js/search-data.js', (directory / 'search-data.liquid').read_text())
+
+    def test_generated_search_javascript_is_syntax_checked(self):
+        workflow = (ROOT / '.github/workflows/pages.yml').read_text()
+        self.assertIn('node --check _site/assets/js/search-data.js', workflow)
+
     def test_profile_sources_use_board_and_alt(self):
         for name in ('about.md', 'profiles.md'):
             text = (ROOT / '_pages' / name).read_text()

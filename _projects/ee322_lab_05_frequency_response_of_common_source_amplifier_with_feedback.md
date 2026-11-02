@@ -34,7 +34,7 @@ tags:
 ## Objectives
 
 1. Modify the common-source amplifier (from Lab 04) by adding **drain-to-gate negative feedback**.
-2. Adjust the bias network so the circuit operates at the specified DC current (handout target: **$I_{Total}=1\,\mathrm{mA}$**).
+2. Adjust the bias network so the circuit operates at the specified DC current (handout target: **$I\_{Total}=1\,\mathrm{mA}$**).
 3. Measure the amplifier’s frequency response and extract:
    - midband gain $|G_v(\mathrm{mid})|$
    - cutoff frequencies $f_L$, $f_H$
@@ -135,14 +135,14 @@ $$
 
 ### Extracted metrics (measured)
 
-| Quantity         |    Measured value |
+| Quantity | Measured value |
 | ---------------- | ----------------: | --------- | -------- |
-| $                | G_v(\mathrm{mid}) | $ (V/V)   | 3.05 V/V |
-| $                | G_v(\mathrm{mid}) | $ (dB)    | 9.67 dB  |
-| $f_L$            |           79.8 Hz |
-| $f_H$            |          71.8 kHz |
-| $BW = f_H - f_L$ |          71.7 kHz |
-| $GBP =           | G_v(\mathrm{mid}) | \cdot BW$ | 218 kHz  |
+| $ | G_v(\mathrm{mid}) | $ (V/V) | 3.05 V/V |
+| $ | G_v(\mathrm{mid}) | $ (dB) | 9.67 dB |
+| $f_L$ | 79.8 Hz |
+| $f_H$ | 71.8 kHz |
+| $BW = f_H - f_L$ | 71.7 kHz |
+| $GBP = | G_v(\mathrm{mid}) | \cdot BW$ | 218 kHz |
 
 ---
 

@@ -24,7 +24,7 @@ A **1×8** linear slot array is synthesized using a **Chebyshev amplitude taper*
 
 ## Antenna concept
 
-A resonant slotted waveguide array uses the **TE$_{10}$** mode in a rectangular waveguide. Each **longitudinal slot** cut into the broad wall behaves like a radiating element whose coupling is primarily set by its **offset from the centerline**. By:
+A resonant slotted waveguide array uses the **TE$\_{10}$** mode in a rectangular waveguide. Each **longitudinal slot** cut into the broad wall behaves like a radiating element whose coupling is primarily set by its **offset from the centerline**. By:
 
 - spacing slots by approximately **$\lambda_g/2$** along the guide, and
 - alternating the slot offsets from one side of the centerline to the other,
@@ -182,14 +182,14 @@ Two HFSS models were created:
 
 ## Results summary (HFSS)
 
-| Metric                    |       1×8 array |       8×8 array | Units   |
+| Metric | 1×8 array | 8×8 array | Units |
 | :------------------------ | --------------: | --------------: | :------ | --- | ------- | ------------------ | --- |
-| Peak gain (linear)        |           34.70 |          272.42 | W/W     |
-| Peak gain                 |           15.40 |           24.35 | dB      |
-| 10-dB beamwidth (E-plane) |           11.24 |           11.26 | degrees |
-| 10-dB beamwidth (H-plane) |           77.69 |            9.72 | degrees |
-| Match (near resonance)    |               $ |         S\_{11} | < -40$  | $   | S\_{nn} | < -25$ (all ports) | dB  |
-| Resonant frequency        | $\approx 13.75$ | $\approx 13.75$ | GHz     |
+| Peak gain (linear) | 34.70 | 272.42 | W/W |
+| Peak gain | 15.40 | 24.35 | dB |
+| 10-dB beamwidth (E-plane) | 11.24 | 11.26 | degrees |
+| 10-dB beamwidth (H-plane) | 77.69 | 9.72 | degrees |
+| Match (near resonance) | $ | S\_{11} | < -40$ | $ | S\_{nn} | < -25$ (all ports) | dB |
+| Resonant frequency | $\approx 13.75$ | $\approx 13.75$ | GHz |
 
 ---
 

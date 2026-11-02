@@ -35,14 +35,14 @@ This design project models a **WR-62 open-ended rectangular waveguide** radiatin
 
 Key outcomes (HFSS results):
 
-| Metric                                        |                                Result | Notes                          |
+| Metric | Result | Notes |
 | --------------------------------------------- | ------------------------------------: | ------------------------------ | ---------------------------- | --------------------------------------- |
-| Aperture reflection (unmatched) @ 14&nbsp;GHz |                                    \( | \Gamma_L                       | = 0.256\angle -88.17^\circ\) | Return loss \(\approx 11.8\,\text{dB}\) |
-| Matched return loss @ 14&nbsp;GHz             | \(S\_{11} \approx -35.06\,\text{dB}\) | \(                             | \Gamma                       | \approx 0.0177\)                        |
-| \(-20\,\text{dB}\) return-loss bandwidth      |                    13.3–14.8&nbsp;GHz | BW = 1.5&nbsp;GHz (≈10.7% FBW) |
-| Peak realized gain @ 14&nbsp;GHz              |                          6.87&nbsp;dB | Broadside                      |
-| 3&nbsp;dB beamwidth (E-plane)                 |                               123.93° | Principal-plane cut            |
-| 3&nbsp;dB beamwidth (H-plane)                 |                                61.70° | Principal-plane cut            |
+| Aperture reflection (unmatched) @ 14&nbsp;GHz | \( | \Gamma_L | = 0.256\angle -88.17^\circ\) | Return loss \(\approx 11.8\,\text{dB}\) |
+| Matched return loss @ 14&nbsp;GHz | \(S\_{11} \approx -35.06\,\text{dB}\) | \( | \Gamma | \approx 0.0177\) |
+| \(-20\,\text{dB}\) return-loss bandwidth | 13.3–14.8&nbsp;GHz | BW = 1.5&nbsp;GHz (≈10.7% FBW) |
+| Peak realized gain @ 14&nbsp;GHz | 6.87&nbsp;dB | Broadside |
+| 3&nbsp;dB beamwidth (E-plane) | 123.93° | Principal-plane cut |
+| 3&nbsp;dB beamwidth (H-plane) | 61.70° | Principal-plane cut |
 
 ---
 

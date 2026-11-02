@@ -9,6 +9,10 @@ lockfile. Python validators use the standard library.
 Perform lockfile updates in the exact devcontainer toolchain. Review the diff to
 preserve unaffected gem pins, platforms, and Git SHAs. Dependency changes require
 tests, formatting, a production build, and both publication validators.
+Update the manifest, lockfile and explicit dependency-contract expectations in
+`tests/test_dependency_surface.py` together. The test must agree with both the
+lockfile's root requirements and resolved direct versions; keep the exact
+Node/npm toolchain contract when updating formatter dependencies.
 Dependabot checks root Bundler, root npm, and GitHub Actions weekly with grouped
 updates. Updates require human review and are never automatically merged.
 

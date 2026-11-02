@@ -100,15 +100,15 @@ A compact transfer-function form (idealized):
 
 The table below summarizes the key filter metrics (calculated vs LTspice vs measured). For readability, fL/f0/fH are shown in kHz.
 
-| Metric  | Calculated | LTspice | Measured | Units   | Calc vs LTspice (% diff) | Calc vs Measured (% diff) |
+| Metric | Calculated | LTspice | Measured | Units | Calc vs LTspice (% diff) | Calc vs Measured (% diff) |
 | ------- | ---------: | ------: | -------: | ------- | -----------------------: | ------------------------: | -------- | ------ |
-| Av(mid) |    -6.1818 | -6.1811 |  -6.8075 | V/V     |                  0.0118% |                    9.634% |
-|         |    Av(mid) |         |  15.8223 | 15.8213 |                  16.6598 |                        dB | 0.00649% | 5.157% |
-| fL      |     1.0818 |  1.0802 |   1.0038 | kHz     |                   0.150% |                    7.484% |
-| f0      |     1.3278 |  1.3253 |   1.5000 | kHz     |                   0.186% |                    12.18% |
-| fH      |     1.6296 |  1.6261 |   1.5409 | kHz     |                   0.215% |                    5.594% |
-| BW      |     547.78 |  545.89 |   537.14 | Hz      |                   0.345% |                    1.961% |
-| Q       |     2.4239 |  2.4278 |   2.2957 | —       |                   0.159% |                    5.433% |
+| Av(mid) | -6.1818 | -6.1811 | -6.8075 | V/V | 0.0118% | 9.634% |
+| | Av(mid) | | 15.8223 | 15.8213 | 16.6598 | dB | 0.00649% | 5.157% |
+| fL | 1.0818 | 1.0802 | 1.0038 | kHz | 0.150% | 7.484% |
+| f0 | 1.3278 | 1.3253 | 1.5000 | kHz | 0.186% | 12.18% |
+| fH | 1.6296 | 1.6261 | 1.5409 | kHz | 0.215% | 5.594% |
+| BW | 547.78 | 545.89 | 537.14 | Hz | 0.345% | 1.961% |
+| Q | 2.4239 | 2.4278 | 2.2957 | — | 0.159% | 5.433% |
 
 ---
 

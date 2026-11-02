@@ -1,4 +1,7 @@
 **/*.map
+.superpowers/
+_site/
+.github/workflows/actions.lock
 **/*.min.css
 **/*.min.js
 assets/css/main.scss

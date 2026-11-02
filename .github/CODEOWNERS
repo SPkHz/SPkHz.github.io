@@ -1,0 +1,12 @@
+/.github/workflows/ @SPkHz
+/.github/dependabot.yml @SPkHz
+/.github/CODEOWNERS @SPkHz
+/.github/ACTIONS_SECURITY.md @SPkHz
+/.github/DEPENDENCY_POLICY.md @SPkHz
+/Gemfile @SPkHz
+/Gemfile.lock @SPkHz
+/package.json @SPkHz
+/package-lock.json @SPkHz
+/.devcontainer/ @SPkHz
+/SECURITY.md @SPkHz
+/.well-known/security.txt @SPkHz

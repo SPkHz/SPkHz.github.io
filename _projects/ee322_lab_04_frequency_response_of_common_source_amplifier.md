@@ -30,7 +30,7 @@ tags:
 
 ## Goals
 
-1. **Bias** the amplifier to a symmetric operating point (**$V_O \approx 5\,\text{V}$** with **$V_{DD}=10\,\text{V}$**).
+1. **Bias** the amplifier to a symmetric operating point (**$V_O \approx 5\,\text{V}$** with **$V\_{DD}=10\,\text{V}$**).
 2. Measure the **DC operating point** (node voltages and drain currents) and compare to simulation.
 3. Measure the **frequency response magnitude** from **10 Hz to 100 kHz**, then extract:
    - **Mid-band gain** $\lvert G_{v(\text{mid})}\rvert$

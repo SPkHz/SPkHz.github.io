@@ -84,23 +84,23 @@ The table below consolidates:
 - **Simulated** operating point from LTspice.
 - **Measured** operating point values recorded in the **graded** notebook.
 
-| Device              | Quantity | Simulated | Measured | Units           |
+| Device | Quantity | Simulated | Measured | Units |
 | ------------------- | -------: | --------: | -------: | --------------- | ------- | --- |
-| Q1 (NMOS)           |  \(I_D\) |     494.0 |  482.750 | \(\mu\text{A}\) |
-|                     |       \( |   V\_{OV} |       \) | 1.299           | 1.296\* | V   |
-|                     |  \(V_G\) |     1.872 |    1.869 | V               |
-|                     |  \(V_D\) |     5.058 |    5.322 | V               |
-|                     |  \(V_S\) |     0.000 |    0.000 | V               |
-| Q2 (PMOS load)      |  \(I_D\) |     494.0 |  482.750 | \(\mu\text{A}\) |
-|                     |       \( |   V\_{OV} |       \) | 2.250           | 2.158   | V   |
-|                     |  \(V_G\) |     7.103 |    7.142 | V               |
-|                     |  \(V_D\) |     5.058 |    5.322 | V               |
-|                     |  \(V_S\) |    10.000 |   10.000 | V               |
-| Q3 (PMOS reference) |  \(I_D\) |     494.0 |  482.750 | \(\mu\text{A}\) |
-|                     |       \( |   V\_{OV} |       \) | 2.250           | 2.158   | V   |
-|                     |  \(V_G\) |     7.103 |    7.142 | V               |
-|                     |  \(V_D\) |     7.103 |    7.142 | V               |
-|                     |  \(V_S\) |    10.000 |   10.000 | V               |
+| Q1 (NMOS) | \(I_D\) | 494.0 | 482.750 | \(\mu\text{A}\) |
+| | \( | V\_{OV} | \) | 1.299 | 1.296\* | V |
+| | \(V_G\) | 1.872 | 1.869 | V |
+| | \(V_D\) | 5.058 | 5.322 | V |
+| | \(V_S\) | 0.000 | 0.000 | V |
+| Q2 (PMOS load) | \(I_D\) | 494.0 | 482.750 | \(\mu\text{A}\) |
+| | \( | V\_{OV} | \) | 2.250 | 2.158 | V |
+| | \(V_G\) | 7.103 | 7.142 | V |
+| | \(V_D\) | 5.058 | 5.322 | V |
+| | \(V_S\) | 10.000 | 10.000 | V |
+| Q3 (PMOS reference) | \(I_D\) | 494.0 | 482.750 | \(\mu\text{A}\) |
+| | \( | V\_{OV} | \) | 2.250 | 2.158 | V |
+| | \(V_G\) | 7.103 | 7.142 | V |
+| | \(V_D\) | 7.103 | 7.142 | V |
+| | \(V_S\) | 10.000 | 10.000 | V |
 
 \*For Q1, \(|V*{OV}|\) was computed from measured \(V_G\) using \(|V*{OV}| \approx V*{GS}-V*{Tn} = 1.869-0.573 = 1.296\,\text{V}\).
 

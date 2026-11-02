@@ -73,7 +73,7 @@ where $\beta = k_0\,\Re\{n_{\mathrm{eff}}\}$ and $\alpha$ is derived from $\Im\{
 
 The fundamental **TE mode** is solved using the MODE eigenmode solver.
 
-- Extracted effective index: **$n_{\mathrm{eff}} \approx 2.822$**
+- Extracted effective index: **$n\_{\mathrm{eff}} \approx 2.822$**
 - Verified that the optical field at the metal interface satisfies **≥ 30 dB attenuation** to avoid significant metal loss.
 
 <div class="row">

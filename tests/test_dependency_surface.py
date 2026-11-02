@@ -23,9 +23,15 @@ class DependencySurface(unittest.TestCase):
 
     def test_exact_node_dependencies(self):
         package = json.loads((ROOT / 'package.json').read_text())
+        lock = json.loads((ROOT / 'package-lock.json').read_text())
         self.assertEqual(package['devDependencies'], {
-            'prettier': '3.8.3', '@shopify/prettier-plugin-liquid': '1.10.2', 'purgecss': '8.0.0'})
+            'prettier': '3.9.10', '@shopify/prettier-plugin-liquid': '1.11.3', 'purgecss': '8.0.0'})
+        self.assertEqual(lock['packages']['']['devDependencies'], package['devDependencies'])
+        for name, version in package['devDependencies'].items():
+            with self.subTest(dependency=name):
+                self.assertEqual(lock['packages'][f'node_modules/{name}']['version'], version)
         self.assertEqual(package.get('packageManager'), 'npm@11.19.1')
         self.assertEqual(package.get('engines'), {'node': '24.22.1', 'npm': '11.19.1'})
+        self.assertEqual(lock['packages']['']['engines'], package['engines'])
         self.assertIn('format:check', package.get('scripts', {}))
         self.assertIn('css:purge', package.get('scripts', {}))

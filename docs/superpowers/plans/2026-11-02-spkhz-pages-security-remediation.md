@@ -193,13 +193,13 @@ Implementation
 6. Deterministically generate the 1200×630 social card:
 
    convert assets/img/kicad_main_board.png \
-    -auto-orient \
-    -resize '1200x630^' \
-    -gravity center \
-    -extent 1200x630 \
-    -strip \
-    -define png:exclude-chunk=time,date \
-    assets/img/og-kicad-main-board.png
+   -auto-orient \
+   -resize '1200x630^' \
+   -gravity center \
+   -extent 1200x630 \
+   -strip \
+   -define png:exclude-chunk=time,date \
+   assets/img/og-kicad-main-board.png
 
 7. Set \_config.yml og_image to /assets/img/og-kicad-main-board.png.
 8. Retain but explicitly exclude these tracked source files from \_site:

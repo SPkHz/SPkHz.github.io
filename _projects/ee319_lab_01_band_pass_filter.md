@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: Passive RC Band-Pass Filter Measurement and Analysis
 description: "Two-pole passive RC band-pass filter: analytic frequency response + LTspice AC sweep + Analog Discovery Studio measurements (MATLAB post-processing)."
@@ -164,15 +163,15 @@ The filter was built directly on the **Analog Discovery Studio protoboard** and 
 
 ### Key numeric results
 
-| Metric              |      Calculated | Simulated | Measured | Units   |
+| Metric | Calculated | Simulated | Measured | Units |
 | ------------------- | --------------: | --------: | -------: | ------- | ------- | --- |
-| \(A_v(\text{mid})\) |        485.6895 |  485.6895 | 483.2372 | mV/V    |
-| \(                  | A_v(\text{mid}) |  \_{dB}\) |  −6.2728 | −6.2728 | −6.3168 | dB  |
-| \(f_L\)             |        136.1683 |  136.1683 | 131.6514 | Hz      |
-| \(f_0\)             |          1.1708 |    1.1708 |   1.0906 | kHz     |
-| \(f_H\)             |         10.0661 |   10.0661 |   9.8537 | kHz     |
-| \(BW_f\)            |          9.9210 |    9.9210 |   9.7221 | kHz     |
-| \(Q\)               |          0.1179 |    0.1179 |   0.1122 | Hz/Hz   |
+| \(A_v(\text{mid})\) | 485.6895 | 485.6895 | 483.2372 | mV/V |
+| \( | A_v(\text{mid}) | \_{dB}\) | −6.2728 | −6.2728 | −6.3168 | dB |
+| \(f_L\) | 136.1683 | 136.1683 | 131.6514 | Hz |
+| \(f_0\) | 1.1708 | 1.1708 | 1.0906 | kHz |
+| \(f_H\) | 10.0661 | 10.0661 | 9.8537 | kHz |
+| \(BW_f\) | 9.9210 | 9.9210 | 9.7221 | kHz |
+| \(Q\) | 0.1179 | 0.1179 | 0.1122 | Hz/Hz |
 
 **Notes:**
 

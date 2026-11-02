@@ -124,8 +124,8 @@ The device under test is the **ALD1106** quad matched **N-channel enhancement-mo
 The measured sweeps were logged to CSV and then processed in Python to:
 
 1. Re-plot the two curve families ($I_D$–$V_{DS}$ and $I_D$–$V_{GS}$)
-2. Fit **$\sqrt{I_D}$ vs. $V_{GS}$** to extract $K_N$ and $V_{Tn}$
-3. Fit **$I_D$ vs. $V_{DS}$** in saturation to extract $V_A$
+2. Fit **$\sqrt{I_D}$ vs. $V\_{GS}$** to extract $K_N$ and $V_{Tn}$
+3. Fit **$I_D$ vs. $V\_{DS}$** in saturation to extract $V_A$
 
 A compact CSV summary of the extracted parameters is included here:
 
@@ -162,7 +162,7 @@ So from a line fit $\sqrt{I_D}=mV_{GS}+b$:
   </div>
 </div>
 
-**Per-curve results (by fixed $V_{DS}$):**
+**Per-curve results (by fixed $V\_{DS}$):**
 
 | Fixed $V_{DS}$ (V) | Extracted $V_{Tn}$ (V) | Extracted $K_N$ ($\mu$A/V$^2$) |
 | -----------------: | ---------------------: | -----------------------------: |
@@ -170,7 +170,7 @@ So from a line fit $\sqrt{I_D}=mV_{GS}+b$:
 |                  5 |                 0.5884 |                          528.6 |
 |                  6 |                 0.5870 |                          533.9 |
 
-**Summary (mean ± 1σ across $V_{DS}=4,5,6$ V):**
+**Summary (mean ± 1σ across $V\_{DS}=4,5,6$ V):**
 
 | Parameter |               Mean |         Std. Dev. | Notes                                   |
 | --------- | -----------------: | ----------------: | --------------------------------------- |
@@ -205,7 +205,7 @@ $$
   </div>
 </div>
 
-**Extracted $V_A$ values (by fixed $V_{GS}$):**
+**Extracted $V_A$ values (by fixed $V\_{GS}$):**
 
 | Fixed $V_{GS}$ (V) | $V_A$ (V) |
 | -----------------: | --------: |

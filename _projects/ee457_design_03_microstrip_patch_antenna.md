@@ -23,13 +23,13 @@ This project designs and simulates a **3 GHz coaxial-fed rectangular microstrip 
 
 ## Requirements (assignment targets)
 
-| Item                  | Target                                                                   |
+| Item | Target |
 | --------------------- | ------------------------------------------------------------------------ | ------- | ------------------- |
-| Center frequency      | 3.0 GHz                                                                  |
-| Substrate             | FR4, $h = 1.5748\,\text{mm}$, $\varepsilon_r = 4.4$, $\tan\delta = 0.02$ |
-| Patch width guideline | $W \approx 1.5\,L_e$                                                     |
-| Match at 3 GHz        | $                                                                        | S\_{11} | \le -30\,\text{dB}$ |
-| Characterize          | gain, directivity, E/H beamwidths, radiation efficiency                  |
+| Center frequency | 3.0 GHz |
+| Substrate | FR4, $h = 1.5748\,\text{mm}$, $\varepsilon_r = 4.4$, $\tan\delta = 0.02$ |
+| Patch width guideline | $W \approx 1.5\,L_e$ |
+| Match at 3 GHz | $ | S\_{11} | \le -30\,\text{dB}$ |
+| Characterize | gain, directivity, E/H beamwidths, radiation efficiency |
 
 ---
 
@@ -104,7 +104,7 @@ A TL model provides an initial patch size before full-wave simulation. The basic
 
 ## HFSS optimization (feed tuning)
 
-The MATLAB design is imported into HFSS and refined with an **optimetrics sweep** (primary knob: **coax feed offset**) to force the return-loss minimum onto **3.0 GHz** while meeting the **$|S_{11}|\le -30$ dB** requirement.
+The MATLAB design is imported into HFSS and refined with an **optimetrics sweep** (primary knob: **coax feed offset**) to force the return-loss minimum onto **3.0 GHz** while meeting the **$|S\_{11}|\le -30$ dB** requirement.
 
 ### Table 2 (geometry updates across sweeps)
 

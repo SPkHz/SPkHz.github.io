@@ -108,23 +108,23 @@ The table below summarizes the operating point used for comparison. (In the grad
 
 **NMOS differential pair (\(Q_1\), \(Q_2\))**
 
-| Quantity | LTspice (sim) | “Measured” (from \(V\_{OV}\) model) | Units           |
+| Quantity | LTspice (sim) | “Measured” (from \(V\_{OV}\) model) | Units |
 | -------- | ------------: | ----------------------------------: | --------------- | ----- | --- |
-| \(I_D\)  |       514.000 |                             540.335 | \(\mu\text{A}\) |
-| \(       |       V\_{OV} |                                  \) | 1.267           | 1.365 | V   |
-| \(V_G\)  |         0.000 |                               0.000 | V               |
-| \(V_D\)  |   9.010–9.011 |                               8.606 | V               |
-| \(V_S\)  |        -1.844 |                              -1.985 | V               |
+| \(I_D\) | 514.000 | 540.335 | \(\mu\text{A}\) |
+| \( | V\_{OV} | \) | 1.267 | 1.365 | V |
+| \(V_G\) | 0.000 | 0.000 | V |
+| \(V_D\) | 9.010–9.011 | 8.606 | V |
+| \(V_S\) | -1.844 | -1.985 | V |
 
 **PMOS current mirror load (\(Q_3\), \(Q_4\))**
 
-| Quantity | LTspice (sim) | “Measured” (from \(V\_{OV}\) model) | Units           |
+| Quantity | LTspice (sim) | “Measured” (from \(V\_{OV}\) model) | Units |
 | -------- | ------------: | ----------------------------------: | --------------- | ----- | --- |
-| \(I_D\)  |       514.000 |                             540.335 | \(\mu\text{A}\) |
-| \(       |       V\_{OV} |                                  \) | 2.343           | 2.394 | V   |
-| \(V_G\)  |         9.010 |                               8.606 | V               |
-| \(V_D\)  |         9.010 |                               8.606 | V               |
-| \(V_S\)  |        12.000 |                              12.000 | V               |
+| \(I_D\) | 514.000 | 540.335 | \(\mu\text{A}\) |
+| \( | V\_{OV} | \) | 2.343 | 2.394 | V |
+| \(V_G\) | 9.010 | 8.606 | V |
+| \(V_D\) | 9.010 | 8.606 | V |
+| \(V_S\) | 12.000 | 12.000 | V |
 
 ### Device mismatch observation
 

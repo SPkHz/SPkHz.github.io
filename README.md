@@ -15,6 +15,7 @@ npm run format:check
 BUNDLE_FROZEN=true bundle _4.0.15_ check
 python3 -B -m unittest discover -s tests -p 'test_*.py' -v
 JEKYLL_ENV=production bundle _4.0.15_ exec jekyll build --trace
+node --check _site/assets/js/search-data.js
 npm run css:purge
 python3 -B scripts/validate_public_artifacts.py _site
 python3 -B scripts/validate_built_site.py _site
@@ -45,8 +46,11 @@ The About and people pages use the KiCad board image. Original portraits remain
 in source and Git history but are excluded from website output and image
 conversion. Validators also reject development material, unsafe filesystem
 entries, portrait references, mixed content, and unprotected executable CDN
-resources. Search source remains a Jekyll input; only generated search data is
-published. Security contact information is published at
+resources. The search template is `_scripts/search-data.liquid`; its permalink
+produces `/assets/js/search-data.js`, which is syntax-checked before publication.
+Keep Liquid templates distinct from JavaScript sources so CodeQL can parse the
+actual JavaScript without encountering Jekyll front matter.
+Security contact information is published at
 [/.well-known/security.txt](https://spkhz.github.io/.well-known/security.txt).
 Report vulnerabilities as described in [SECURITY.md](SECURITY.md).
 

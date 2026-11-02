@@ -56,6 +56,7 @@ jobs:
       - name: Build and validate publication
         run: |
           bundle _4.0.15_ exec jekyll build --trace
+          node --check _site/assets/js/search-data.js
           npm run css:purge
           python3 -B scripts/validate_public_artifacts.py _site
           python3 -B scripts/validate_built_site.py _site

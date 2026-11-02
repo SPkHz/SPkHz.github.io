@@ -8,7 +8,6 @@
   img: "" # e.g., /assets/img/projects/ee322-portfolio.jpg
   view: "https://spkhz.github.io/EE-322-Electrical-Engineering-Lab-II--Final-Portfolio/"
   source: "https://github.com/SPkHz/EE-322-Electrical-Engineering-Lab-II--Final-Portfolio"
-  pdf: "" # TODO: add a stable PDF link
   featured: true
 
 # Template for new entries:
@@ -18,7 +17,6 @@
 #   img: "/assets/img/projects/thumbnail.jpg"  # 16:9 aspect ratio recommended
 #   view: "https://spkhz.github.io/REPO-NAME/"
 #   source: "https://github.com/SPkHz/REPO-NAME"
-#   pdf: ""
 #   featured: false
 
 - title: "Vector Network Analyzer Basics & S-Parameter De-Embedding"
@@ -31,7 +29,6 @@
   img: ""
   view: "/projects/ee322_lab_08_de-embedding_s-parameters/"
   source: ""
-  pdf: ""
   featured: true
 
 - title: "MAG Amplifier Design & Nonlinear Verification (8 GHz)"
@@ -44,7 +41,6 @@
   img: ""
   view: "/projects/ee456_design_04/"
   source: ""
-  pdf: ""
   featured: true
 
 - title: "MOS Differential Pair with Current Mirror Load"
@@ -56,7 +52,6 @@
   img: ""
   view: "/projects/ee322_lab_07_MOS_differential_pair_with_current_mirror_load/"
   source: ""
-  pdf: ""
   featured: true
 
 - title: "Satellite Tracking Control"
@@ -68,7 +63,6 @@
   img: ""
   view: "/projects/ee470_design_01_servomotor_control_sys/"
   source: ""
-  pdf: ""
   featured: true
 
 - title: "Audiogram-Tuned FIR Filter Bank"
@@ -80,5 +74,4 @@
   img: "/assets/img/ee302/design01/Filterbank_Design1_Responses_V2.png"
   view: "/projects/ee302_design_01_fir_filterbank_for_hearing_aid/"
   source: ""
-  pdf: ""
   featured: true

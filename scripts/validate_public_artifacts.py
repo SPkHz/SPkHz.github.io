@@ -24,7 +24,7 @@ FORBIDDEN_NAMES = {
     'readme', 'human_readme', 'agents', 'claude', 'faq', 'skill', 'skills',
     'session-management', 'private-system-notes', 'agent-components.lock',
     'agent-memory', 'contributing', 'customize', 'install', 'security',
-    'todo', 'todo_notes', 'development', 'old_readme', 'podman_setup',
+    'todo', 'todo_notes', 'next_plan', 'development', 'old_readme', 'podman_setup',
     'claude_integration', 'readme_claude_code_repo', 'migration_checklist',
     'production_security_checklist', 'old_production_security_checklist',
     'gh_actions_remediation_todo',

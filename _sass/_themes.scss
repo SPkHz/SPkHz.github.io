@@ -11,10 +11,12 @@
   --global-bg-color: #{variables.$white-color};
   --global-code-bg-color: #{variables.$code-bg-color-light};
   --global-text-color: #{variables.$black-color};
-  --global-text-color-light: #{variables.$grey-color};
+  --global-text-color-light: #595959;
   --global-theme-color: #{variables.$accent-color-light};
-  --global-theme-color-rgb: 31, 78, 121; // Deep Navy RGB for rgba() usage
-  --global-hover-color: #{variables.$accent-color-light};
+  --global-theme-color-rgb:
+    #{color.channel(variables.$accent-color-light, "red", $space: rgb)}, #{color.channel(variables.$accent-color-light, "green", $space: rgb)},
+    #{color.channel(variables.$accent-color-light, "blue", $space: rgb)};
+  --global-hover-color: #163a5d;
   --global-hover-text-color: #{variables.$white-color};
   --global-footer-bg-color: #{variables.$grey-color-dark};
   --global-footer-text-color: #{variables.$grey-color-light};
@@ -87,11 +89,13 @@ html[data-theme="dark"] {
   --global-bg-color: #{variables.$grey-color-dark};
   --global-code-bg-color: #{variables.$code-bg-color-dark};
   --global-text-color: #{variables.$grey-color-light};
-  --global-text-color-light: #{variables.$grey-color};
-  --global-theme-color: #{variables.$cyan-color};
-  --global-theme-color-rgb: 38, 152, 186; // Cyan RGB for rgba() usage in dark mode
-  --global-hover-color: #{variables.$cyan-color};
-  --global-hover-text-color: #{variables.$white-color};
+  --global-text-color-light: #a6a6a6;
+  --global-theme-color: #{variables.$accent-color-dark};
+  --global-theme-color-rgb:
+    #{color.channel(variables.$accent-color-dark, "red", $space: rgb)}, #{color.channel(variables.$accent-color-dark, "green", $space: rgb)},
+    #{color.channel(variables.$accent-color-dark, "blue", $space: rgb)};
+  --global-hover-color: #a9c9e5;
+  --global-hover-text-color: #{variables.$grey-color-dark};
   --global-footer-bg-color: #{variables.$grey-color-light};
   --global-footer-text-color: #{variables.$grey-color-dark};
   --global-footer-link-color: #{variables.$black-color};

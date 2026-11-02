@@ -10,7 +10,8 @@ tagline: "RF • Millimeter-Wave Circuit Design • Millimeter-Wave Test & Measu
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: kicad_main_board.png
+  image_alt: KiCad PCB layout for an RF/microwave main board
   image_circular: true # crops the image to make it circular
   more_info: >
     <p><strong>Connect</strong></p>

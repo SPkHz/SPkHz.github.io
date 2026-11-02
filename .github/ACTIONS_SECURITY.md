@@ -1,27 +1,25 @@
-# Actions maintenance
+# Actions security
 
-Keep direct action references pinned to full commit SHAs. The adjacent comments
-map each pin to the upstream ref reviewed on 2026-10-27; moving a tag does not
-change a committed pin. Weekly Dependabot version updates require review and
-must not be merged automatically.
+The sole tracked workflow is Pages. Required PR check: **Build and validate**.
+Checkout does not persist credentials. Default permissions are empty; build has
+contents/read and pages/read. Deployment requires main and a non-PR event, with
+pages/write and id-token/write in the github-pages environment.
 
-The repository maintainer owns upstream release, advisory and shipped-bundle
-review before accepting updates and before reusing retained branches.
-Dependabot security alerts currently cover semantically versioned Actions;
-SHA pins do not have that alert coverage. Version-update PRs alone therefore
-do not establish security clearance. Keep the immutable pins.
+Every external action uses a reviewed full commit SHA. The generated
+`.github/workflows/actions.lock` also covers transitive action dependencies.
+Version comments are informational; the SHA and lockfile are authoritative.
 
-Review the action's own runtime and executable bundle separately from the
-application runtime selected by setup-node or setup-python. Also inspect nested
-actions, reusable workflows, Docker digests and packages, tools or images
-downloaded at execution time. A source SHA does not freeze those downloads.
-The current direct-reference repair does not close those separate surfaces,
-or the reported setup-python Undici and Claude Action body-parser/Zod findings.
+Review official releases before upgrading. Generate with github/gh-actions-lock
+v0.4.0, then restore the reviewed full SHA references if the tool rewrites them
+to tags. Never hand-edit actions.lock. Verify with:
 
-Before a push or workflow invocation, review deployment, release, token/OIDC,
-write-capable bot and auto-merge triggers. Existing manual activation and CI
-holds remain authoritative. Historical green checks do not qualify a reused
-branch; validate its entire resulting workflow tree and upstream action paths.
+```sh
+gh actions-lock --verify
+python3 -B -m unittest tests.test_workflow_security -v
+actionlint
+```
 
-References: [secure use](https://docs.github.com/en/actions/reference/security/secure-use)
-and [Dependabot alerts](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-alerts).
+The tool's advisory about bare SHA references does not weaken workflow pins.
+Compare lockfile hashes before and after regeneration. Review any changed
+transitive action before accepting it. GitHub-managed Dependabot and CodeQL are
+configured through repository settings and do not add tracked workflow files.

@@ -1,6 +1,17 @@
 {
+  "private": true,
+  "packageManager": "npm@11.19.1",
+  "engines": {
+    "node": "24.22.1",
+    "npm": "11.19.1"
+  },
+  "scripts": {
+    "format:check": "prettier --check .",
+    "css:purge": "purgecss --config purgecss.config.js"
+  },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "1.10.2",
-    "prettier": "^3.8.3"
+    "prettier": "3.8.3",
+    "purgecss": "8.0.0"
   }
 }

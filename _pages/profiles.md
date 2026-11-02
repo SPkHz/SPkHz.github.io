@@ -12,7 +12,8 @@ profiles:
   # if you want to include more than one profile, just replicate the following block
   # and create one content file for each profile inside _pages/
   - align: right
-    image: prof_pic.jpg
+    image: kicad_main_board.png
+    image_alt: KiCad PCB layout for an RF/microwave main board
     content: about_steven.md
     image_circular: false # crops the image to make it circular
     more_info: >
@@ -20,7 +21,8 @@ profiles:
       <p>123 your address street</p>
       <p>Your City, State 12345</p>
   - align: left
-    image: prof_pic.jpg
+    image: kicad_main_board.png
+    image_alt: KiCad PCB layout for an RF/microwave main board
     content: about_steven.md
     image_circular: false # crops the image to make it circular
     more_info: >

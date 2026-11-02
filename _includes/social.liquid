@@ -15,7 +15,9 @@
     {% when 'bluesky_url' %}
       <a href="{{ social[1] }}" title="Bluesky" aria-label="Bluesky"><i class="fa-brands fa-bluesky" aria-hidden="true"></i></a>
     {% when 'cv_pdf' %}
-      <a href="{{ social[1] | relative_url }}" title="CV" aria-label="Download CV" target="_blank"><i class="ai ai-cv" aria-hidden="true"></i></a>
+      <a href="{{ social[1] | relative_url }}" title="CV" aria-label="Download CV" target="_blank" rel="noopener"
+        ><i class="ai ai-cv" aria-hidden="true"></i
+      ></a>
     {% when 'dblp_url' %}
       <a href="{{ social[1] }}" title="DBLP" aria-label="DBLP"><i class="ai ai-dblp" aria-hidden="true"></i></a>
     {% when 'discord_id' %}

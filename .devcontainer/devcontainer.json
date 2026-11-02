@@ -11,16 +11,10 @@
   },
   "containerUser": "vscode",
   "remoteUser": "vscode",
-  "runArgs": [
-    "--platform=linux/amd64",
-    "--userns=keep-id",
-    "--security-opt=no-new-privileges"
-  ],
+  "runArgs": ["--platform=linux/amd64", "--userns=keep-id", "--security-opt=no-new-privileges"],
   "containerEnv": {
     "BUNDLE_FROZEN": "true"
   },
   "postCreateCommand": "gem install --no-document bundler --version 4.0.15 && bundle _4.0.15_ install && npm install --global npm@11.19.1 --ignore-scripts --no-audit --no-fund && npm ci --ignore-scripts --no-audit --no-fund",
-  "forwardPorts": [
-    4000
-  ]
+  "forwardPorts": [4000]
 }

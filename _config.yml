@@ -6,10 +6,10 @@ title: Steven M. Placzek, Electrical Engineer
 first_name: Steven
 middle_name: M.
 last_name: Placzek
-contact_note: "Feel free to reach out to me via email or connect on LinkedIn."
+contact_note: "Feel free to reach out to me via email."
 description: "Electrical engineering portfolio showcasing design projects, coursework, and research in RF wireless power transfer systems, analog, mixed-signal design, SDR signal processing, and measurement-driven project work."
 footer_text: >
-  All rights reserved. | <a href="https://www.linkedin.com/in/stevenplaczek" target="_blank" rel="noopener">LinkedIn Profile</a> | <a href="https://github.com/SPkHz" target="_blank" rel="noopener">GitHub Profile</a>
+  All rights reserved. | <a href="https://github.com/SPkHz" target="_blank" rel="noopener">GitHub Profile</a>
 keywords: resume, cv, academic-website, portfolio-website, rf, dsp, electrical-engineering, mmwave, millimeterwave, radar, wireless-power-transfer, medical-devices # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.svg # Custom SVG favicon matching the site's accent color (Deep Navy + Aqua)
@@ -181,7 +181,6 @@ exclude:
   - Gemfile.lock
   - INSTALL.md
   - LICENSE
-  - lighthouse_results/
   - package.json
   - package-lock.json
   - _bibliography/
@@ -189,11 +188,11 @@ exclude:
   - _pages/about_steven.md
   - _pages/books.md
   - _pages/cv.md
-  - _pages/dropdowns.md
-  - _pages/publications.md
+  - _pages/dropdown.md
   - _pages/teaching.md
   - purgecss.config.js
   - TODO_NOTES.md
+  - NEXT_PLAN.md
   - TODO.md
   - README.md
   - readme_preview/

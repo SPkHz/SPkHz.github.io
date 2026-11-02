@@ -65,7 +65,7 @@ pagination:
   </h2>
   <div class="featured-posts-grid">
     {% for post in featured_posts %}
-    <a href="{{ post.url | relative_url }}" class="featured-card hoverable">
+    <a href="{{ post.url | relative_url }}" class="featured-card">
       {% if post.thumbnail %}
       <div class="featured-card-thumbnail">
         {% include responsive-thumbnail.liquid
@@ -121,7 +121,7 @@ pagination:
     {% assign tags = post.tags | join: "" %}
     {% assign categories = post.categories | join: "" %}
 
-    <article class="post-card hoverable">
+    <article class="post-card">
       {% if post.redirect == blank %}
         {% assign post_url = post.url | relative_url %}
       {% elsif post.redirect contains '://' %}

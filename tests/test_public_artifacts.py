@@ -27,6 +27,27 @@ class PublicArtifacts(unittest.TestCase):
         (self.root / 'index.html').unlink()
         self.assertTrue(self.validator.validate(self.root))
 
+    def test_backlog_variants_are_forbidden_everywhere(self):
+        for name in ('NEXT_PLAN.md', 'NEXT_PLAN.html', 'NEXT_PLAN.txt',
+                     'next_plan.MARKDOWN', 'notes/NEXT_PLAN.md',
+                     'notes/NEXT_PLAN.html', 'assets/archive/next_plan.txt',
+                     'assets/NEXT_PLAN/index.html'):
+            with self.subTest(name=name):
+                self.assertTrue(self.validator.forbidden(Path(name)))
+                path = self.root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text('Unfinished development work')
+                self.assertIn(f'forbidden development material: {name}',
+                              self.validator.validate(self.root))
+                path.unlink()
+
+    def test_security_contact_remains_publishable(self):
+        contact = self.root / '.well-known/security.txt'
+        contact.parent.mkdir()
+        contact.write_text('Contact: mailto:security@example.test\n')
+        self.assertFalse(self.validator.forbidden(Path('.well-known/security.txt')))
+        self.assertEqual(self.validator.validate(self.root), [])
+
     def test_forbidden_material(self):
         for name in ('docs/plan.md', '_scripts/search.liquid.js', '.git/config',
                      'assets/.env', 'assets/img/prof_pic.jpg', 'node_modules/x.js',

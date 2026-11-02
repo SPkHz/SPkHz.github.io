@@ -6,9 +6,6 @@ repos:
     hooks:
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
-        exclude: '^\.github/actions/setup-python/dist/(setup|cache-save)/index\.js$'
       - id: end-of-file-fixer
-        exclude: '^\.github/actions/setup-python/dist/(setup|cache-save)/index\.js$'
       - id: check-yaml
       - id: check-added-large-files
-        exclude: '^\.github/actions/setup-python/dist/(setup|cache-save)/index\.js$'

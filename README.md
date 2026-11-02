@@ -35,8 +35,8 @@ locked transitive dependencies, and disabled npm installation scripts. Regenerat
 Ruby and npm locks in the container without broad upgrades. Never automatically
 merge dependency updates. See [.github/DEPENDENCY_POLICY.md](.github/DEPENDENCY_POLICY.md).
 
-Action upgrades require official release review, full commit SHA updates,
-regenerated `actions.lock`, workflow security tests, and actionlint. See
+Action upgrades require official release review, exact release references,
+reviewed full commit SHAs in regenerated `actions.lock`, workflow security tests, and actionlint. See
 [.github/ACTIONS_SECURITY.md](.github/ACTIONS_SECURITY.md).
 
 ## Publication and security

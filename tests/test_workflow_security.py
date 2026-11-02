@@ -14,6 +14,14 @@ APPROVED = {
     'actions/upload-pages-artifact': 'fc324d3547104276b827a68afc52ff2a11cc49c9',
     'actions/deploy-pages': '368f82528645a54fb793d4d04e342629a3f51346',
 }
+RELEASES = {
+    'actions/checkout': 'v7.0.1',
+    'actions/setup-node': 'v7.1.0',
+    'ruby/setup-ruby': 'v1.336.0',
+    'actions/configure-pages': 'v6.0.0',
+    'actions/upload-pages-artifact': 'v5.0.0',
+    'actions/deploy-pages': 'v5.0.1',
+}
 
 
 def load_yaml(path):
@@ -53,14 +61,14 @@ def policy_errors(workflow, lock):
             ref = step['uses']
             seen.append(ref)
             name, _, sha = ref.partition('@')
-            check(APPROVED.get(name) == sha, 'unapproved action')
+            check(RELEASES.get(name) == sha, 'unapproved action release')
             if name == 'actions/deploy-pages':
                 check(job_name == 'deploy', 'deployment outside deployment job')
             else:
                 check(job_name == 'build', 'build action outside build job')
             if name == 'actions/checkout':
                 check(step.get('with', {}).get('persist-credentials') is False, 'persisted credentials')
-    check(sorted(seen) == sorted(name + '@' + sha for name, sha in APPROVED.items()), 'action multiplicity')
+    check(sorted(seen) == sorted(name + '@' + version for name, version in RELEASES.items()), 'action multiplicity')
     locked_refs = lock.get('workflows', {}).get('.github/workflows/pages.yml', [])
     check(len(locked_refs) == len(APPROVED), 'workflow lock mapping')
     mapped = {}
@@ -101,7 +109,7 @@ class WorkflowSecurity(unittest.TestCase):
         self.assertEqual([p.name for p in workflows], ['pages.yml'])
         text = workflows[0].read_text()
         uses = re.findall(r'uses:\s*([^\s#]+)', text)
-        self.assertEqual(set(uses), {name + '@' + sha for name, sha in APPROVED.items()})
+        self.assertEqual(set(uses), {name + '@' + version for name, version in RELEASES.items()})
 
     def test_token_and_deployment_boundaries(self):
         path = ROOT / '.github/workflows/pages.yml'

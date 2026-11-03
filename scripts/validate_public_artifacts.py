@@ -38,9 +38,12 @@ BUILD_FILES = {
     'lighthouserc.json', '.mcp.json', 'codex.resume', 'livereload_log.txt',
     'firebase.json', 'firebase.rules', 'firestore.rules', 'firestore.indexes.json',
 }
+RETIRED_SAMPLES = {'assets/plotly/demo.html', 'assets/video/tutorial_al_folio.mp4'}
 
 
 def forbidden(relative):
+    if relative.as_posix().lower() in RETIRED_SAMPLES:
+        return True
     if relative.as_posix() == '.well-known/security.txt':
         return False
     if not relative.parts:

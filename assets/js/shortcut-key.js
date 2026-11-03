@@ -5,7 +5,7 @@ document.addEventListener(
     if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
       event.preventDefault();
       event.stopImmediatePropagation();
-      openSearchModal();
+      toggleSearchModal();
     }
   },
   true

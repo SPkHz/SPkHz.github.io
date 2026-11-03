@@ -17,6 +17,86 @@ async function check(name, fn) {
   }
 }
 try {
+  await check("search highlighting preserves readable inert quoted and Unicode text", async () => {
+    const page = await browser.newPage();
+    await page.goto(base);
+    await page.keyboard.press("Control+k");
+    const input = page.locator("ninja-keys input");
+    await input.waitFor({ state: "visible" });
+    const titles = () =>
+      page.evaluate(async () => {
+        const ninja = document.querySelector("ninja-keys");
+        await ninja.updateComplete;
+        const rows = [...ninja.shadowRoot.querySelectorAll("ninja-action")];
+        await Promise.all(rows.map((row) => row.updateComplete));
+        return rows.map((row) => row.shadowRoot.querySelector(".ninja-title").textContent);
+      });
+    for (const [query, expected] of [
+      ["Frequency", "Power Transfer & Frequency Droop Analysis"],
+      ["Law", "Faraday's Law, Synchronous Generator Speed, and Phasor Analysis"],
+    ]) {
+      await input.fill(query);
+      assert.ok((await titles()).includes(expected), JSON.stringify(await titles()));
+    }
+    const news = await page.evaluate(() =>
+      document.querySelector("ninja-keys").data.find((action) => action.id.startsWith("news-") && action.title.includes("Faraday"))
+    );
+    assert.ok(news);
+    await page.evaluate((action) => {
+      document.querySelector("ninja-keys").data = [action];
+    }, news);
+    await input.fill("");
+    assert.ok((await titles())[0].includes("Faraday’s Law & Phasor Analysis"), JSON.stringify(await titles()));
+    await page.evaluate(() => {
+      document.querySelector("ninja-keys").data = [
+        { id: "quoted", section: "Fixture", title: "Quoted &quot;O&#39;Neill&quot; \\ Ω 😀 &lt;img src=x onerror=alert(1)&gt;" },
+      ];
+    });
+    const expected = 'Quoted "O\'Neill" \\ Ω 😀 <img src=x onerror=alert(1)>';
+    for (const query of ["", "Neill", "Ω", "😀"]) {
+      await input.fill(query);
+      assert.deepEqual(await titles(), [expected]);
+      assert.equal(await page.locator("ninja-keys ninja-action img, ninja-keys ninja-action script").count(), 0);
+    }
+    await page.evaluate(() => {
+      document.querySelector("ninja-keys").data = [
+        {
+          id: "external",
+          section: "Fixture",
+          title:
+            'External &amp; label <svg viewBox="0 0 40 40" width="1.2rem" onload="window.searchInjected=true"><path d="M0 0 L10 10" stroke="currentColor"></path></svg>',
+        },
+      ];
+    });
+    await input.fill("External");
+    assert.deepEqual(await titles(), ["External & label "]);
+    assert.equal(await page.locator("ninja-keys ninja-action svg path").count(), 1);
+    assert.equal(await page.locator("ninja-keys ninja-action svg[onload]").count(), 0);
+    assert.equal(await page.evaluate(() => window.searchInjected), undefined);
+    await page.close();
+  });
+  await check("search shortcut toggles open and closed", async () => {
+    const page = await browser.newPage();
+    await page.goto(base);
+    await page.keyboard.press("Control+k");
+    await page.locator("ninja-keys input").waitFor({ state: "visible" });
+    await page.keyboard.press("Control+k");
+    assert.equal(await page.locator("ninja-keys").evaluate((el) => el.visible), false);
+    await page.close();
+  });
+  await check("search Escape restores a visible keyboard focus target", async () => {
+    for (const width of [390, 1440]) {
+      const page = await browser.newPage({ viewport: { width, height: 900 } });
+      await page.goto(base);
+      if (width === 390) await page.locator(".navbar-toggler").click();
+      await page.locator("#search-toggle").click();
+      await page.locator("ninja-keys input").waitFor({ state: "visible" });
+      await page.keyboard.press("Escape");
+      await page.waitForFunction(() => !document.querySelector("ninja-keys").visible);
+      assert.equal(await page.evaluate(() => document.activeElement.matches(innerWidth < 768 ? ".navbar-toggler" : "#search-toggle")), true);
+      await page.close();
+    }
+  });
   await check("menu API, Escape focus and search coordination", async () => {
     const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
     await page.goto(base);

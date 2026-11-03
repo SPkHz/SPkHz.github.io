@@ -93,9 +93,9 @@ and positive security.txt fixture; generated/first-party JavaScript syntax check
 PASS: 144 rendering cases at 390/768/1440 pixels, light/dark themes, 100%/200% zoom,
 normal/reduced motion, with no status, overflow, contrast or script-error cases.
 All 24 keyboard/widget combinations pass, with 4.5:1 normal-text and 3:1 applicable
-focus/control thresholds. Seven focused browser scenarios cover menu/focus/search,
+focus/control thresholds. Ten focused browser scenarios cover menu/focus/search,
 blocked storage, picture fallback, bibliography, sidebar, back-to-top/progress and
-JavaScript-disabled navigation/tab contents. Screenshots stay outside publication.
+JavaScript-disabled navigation/tab contents, decoded search highlighting, shortcut toggle and search focus return. Screenshots stay outside publication.
 
 ## Build protection and maintenance
 
@@ -137,3 +137,52 @@ reviewed cleanup tree. The native branch's signed synchronization merge preserve
 existing refs and maintenance worktrees. Main deployment/live checks and the
 separate native-delivery review and protected PR remain release gates; no success
 is inferred from old runs or from this implementation record.
+
+## Independent review corrections
+
+The final fresh-context review found that Ninja Keys inserted highlight spans
+using decoded positions against encoded strings. This corrupted existing
+apostrophe/ampersand titles and the hostile-string fixture, despite passing JSON
+serialization tests. Three real-browser failures reproduced this defect, lost
+Ctrl/Cmd+K toggle-close behavior, and hidden keyboard focus after search closure.
+The keyboard findings were treated as Important because the approved scope
+preserves existing keyboard and focus behavior.
+
+The fix preserves upstream distribution bytes. A small, version-pinned first-party
+adapter builds highlighted DOM text nodes and retains SVG/emoji decorations with
+a narrow attribute allowlist. A Ruby filter using the already-locked Nokogiri
+extracts decoded text from rendered inline announcements before their single HTML
+escape. Search closure returns focus to a visible opener or the mobile menu toggle;
+the shortcut again opens and closes the dialog. Actual browser assertions cover
+existing engineering titles, inline announcements, quotes, apostrophes, ampersands,
+Greek and supplementary-plane Unicode, and inert HTML-like text. All ten focused
+browser scenarios and the complete 46-test generation suite pass after the fix.
+No deferred review findings remain. Release gates still apply to the resulting head.
+
+## Final-source artifact and preserved measurements
+
+The final corrected source passes all 46 generation tests and a full production
+build with the Node installation physically hidden under an empty read-only mount,
+Node/npm absent from PATH, no node_modules in the generation source, and container
+networking disabled. Generation takes 173.370 s warm (175.010 s wall), with zero
+new image conversions. Both publication validators pass on that exact output.
+
+The final artifact has 3,510 files and 506,945,833 bytes versus 3,526 files and
+539,407,268 bytes initially. Its core stylesheet is 56,443 uncompressed file bytes,
+with no PurgeCSS step. Total local CSS is 229,127 bytes: retained, unreferenced
+notebook styles are no longer pruned and account for the increase over the baseline
+176,362 local CSS bytes. They are not requested by the representative pages.
+All local JavaScript is 209,230 bytes versus 281,366 initially; optional widget CSS
+and fonts are accounted for separately above.
+
+The publication-excluded [machine-readable measurements](2026-11-03-native-foundation-metrics.json)
+preserve all 204 route/article/code hashes and six technical-download URL/hash
+pairs so they remain reviewable after temporary build logs are removed. The final
+routes, article text/code and those download hashes match the original baseline.
+The three review corrections pass their failing-then-passing browser regressions,
+and all 24 search matrix combinations pass after the correction.
+
+Cleanup main Pages run [41644782272](https://github.com/SPkHz/SPkHz.github.io/actions/runs/41644782272)
+succeeds. All four main analyses match signed merge `a8bdfecc60f7ad41a3f21e73a56f73a7f366201e`
+with zero results/errors/warnings. Six retained live routes return 200 and both
+retired samples return 404. The native PR's own remote gates remain separate.

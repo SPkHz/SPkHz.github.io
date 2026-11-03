@@ -16,7 +16,7 @@ class SearchSerialization(unittest.TestCase):
         fixture = {'pages': [{'permalink': '/', 'title': title},
                              {'nav': True, 'title': title, 'description': description, 'url': destination}],
                    'posts_in_search': True, 'posts': [{'title': title, 'description': description, 'url': destination}],
-                   'collections': [{'label': 'projects', 'docs': [{'title': title, 'description': description, 'url': destination}]}],
+                   'collections': [{'label': 'projects', 'docs': [{'title': title, 'description': description, 'url': destination}, {'inline': True, 'content': '<p><strong>Faraday’s Law &amp; Phasor Analysis</strong> — Ω</p>', 'description': description}]}],
                    'socials_in_search': False, 'enable_darkmode': False}
         script = r'''
 require 'jekyll'
@@ -28,13 +28,14 @@ puts Liquid::Template.parse(source).render!({'site' => JSON.parse(STDIN.read)}, 
         result = subprocess.run(['bundle', '_4.0.15_', 'exec', 'ruby', '-e', script],
                                 input=json.dumps(fixture), cwd=ROOT, capture_output=True, text=True, check=True)
         titles = re.findall(r'^\s*title:\s*(.+?),\s*$', result.stdout, re.M)
-        self.assertEqual(len(titles), 4, result.stdout)
-        for value in titles:
+        self.assertEqual(len(titles), 5, result.stdout)
+        for value in titles[:4]:
             decoded = json.loads(value)
             self.assertEqual(html.unescape(decoded).split(' <img')[0], title.split(' <img')[0])
             self.assertNotIn('<img', decoded)
+        self.assertEqual(html.unescape(json.loads(titles[-1])), 'Faraday’s Law & Phasor Analysis — Ω')
         ids = re.findall(r'\bid:\s*(.+?),', result.stdout, re.M)
-        self.assertEqual(len(ids), 4)
+        self.assertEqual(len(ids), 5)
         for value in ids:
             self.assertIsInstance(json.loads(value), str)
         urls = re.findall(r'window.location.href\s*=\s*(.+?);', result.stdout)

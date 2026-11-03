@@ -103,3 +103,10 @@ automatic merging remains prohibited.
 The unused Academicons and Scholar Icons stylesheets remain in source for their
 upstream attribution, but are excluded from publication. Existing font URLs and
 font files remain available; the core emits only the glyphs listed above.
+
+The first-party search setup adapts the pinned Ninja Action `highlightMatch`
+boundary to build DOM text nodes from decoded match positions. Trusted SVG/emoji
+decorations retain a narrow attribute allowlist. Vendored distribution bytes are
+unchanged. Browser regressions must pass for quotes, apostrophes, ampersands,
+Unicode, inert markup, shortcut toggling and focus return on every search upgrade.
+Rendered inline-announcement HTML is decoded once before Liquid escapes its title.

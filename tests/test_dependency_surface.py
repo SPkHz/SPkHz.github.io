@@ -62,3 +62,12 @@ class DependencySurface(unittest.TestCase):
         config = json.loads((ROOT / '.devcontainer/devcontainer.json').read_text())
         self.assertEqual(config['features']['ghcr.io/devcontainers/features/node:2']['version'], package['engines']['node'])
         self.assertNotRegex(config['postCreateCommand'], r'\b(npm|npx)\b')
+        result = subprocess.run(['ruby', '-ryaml', '-rjson', '-e',
+                                 'puts JSON.generate(YAML.load_file(ARGV[0], aliases: true))',
+                                 str(ROOT / '.github/workflows/pages.yml')],
+                                check=True, capture_output=True, text=True)
+        steps = json.loads(result.stdout)['jobs']['checks']['steps']
+        setup = next(step for step in steps if step.get('uses', '').startswith('actions/setup-node@'))
+        self.assertEqual(setup['with']['node-version'], package['engines']['node'])
+        install = next(step['run'] for step in steps if 'npm install --global' in step.get('run', ''))
+        self.assertEqual(re.search(r'npm install --global npm@([^\s]+)', install)[1], package['engines']['npm'])

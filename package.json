@@ -1,4 +1,5 @@
 {
+  "name": "spkhz-portfolio-quality",
   "private": true,
   "packageManager": "npm@11.19.1",
   "engines": {
@@ -7,11 +8,10 @@
   },
   "scripts": {
     "format:check": "prettier --check .",
-    "css:purge": "purgecss --config purgecss.config.js"
+    "js:check": "python3 -B scripts/check_javascript.py"
   },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "1.11.3",
-    "prettier": "3.9.10",
-    "purgecss": "8.0.0"
+    "prettier": "3.9.10"
   }
 }

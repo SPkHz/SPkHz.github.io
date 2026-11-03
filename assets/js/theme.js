@@ -12,9 +12,17 @@ let toggleThemeSetting = () => {
   }
 };
 
+// Keep session state usable when browser storage is disabled.
+let sessionThemeSetting;
+
 // Change the theme setting and apply the theme.
 let setThemeSetting = (themeSetting) => {
-  localStorage.setItem("theme", themeSetting);
+  sessionThemeSetting = themeSetting;
+  try {
+    localStorage.setItem("theme", themeSetting);
+  } catch {
+    // Session state still supports manual selection.
+  }
 
   document.documentElement.setAttribute("data-theme-setting", themeSetting);
 
@@ -27,25 +35,14 @@ let applyTheme = () => {
 
   transTheme();
   setHighlight(theme);
-  setGiscusTheme(theme);
   setSearchTheme(theme);
 
   document.documentElement.setAttribute("data-theme", theme);
 
-  // Add class to tables.
-  let tables = document.getElementsByTagName("table");
-  for (let i = 0; i < tables.length; i++) {
-    if (theme == "dark") {
-      tables[i].classList.add("table-dark");
-    } else {
-      tables[i].classList.remove("table-dark");
-    }
-  }
-
   // Updates the background of medium-zoom overlay.
   if (typeof medium_zoom !== "undefined") {
     medium_zoom.update({
-      background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee", // + 'ee' for trasparency.
+      background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color").trim(), // + 'ee' for trasparency.
     });
   }
 };
@@ -58,20 +55,6 @@ let setHighlight = (theme) => {
     document.getElementById("highlight_theme_dark").media = "none";
     document.getElementById("highlight_theme_light").media = "";
   }
-};
-
-let setGiscusTheme = (theme) => {
-  function sendMessage(message) {
-    const iframe = document.querySelector("iframe.giscus-frame");
-    if (!iframe) return;
-    iframe.contentWindow.postMessage({ giscus: message }, "https://giscus.app");
-  }
-
-  sendMessage({
-    setConfig: {
-      theme: theme,
-    },
-  });
 };
 
 let setSearchTheme = (theme) => {
@@ -95,7 +78,14 @@ let transTheme = () => {
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
 // "system". Default is "system".
 let determineThemeSetting = () => {
-  let themeSetting = localStorage.getItem("theme");
+  let themeSetting = sessionThemeSetting;
+  if (!themeSetting) {
+    try {
+      themeSetting = localStorage.getItem("theme");
+    } catch {
+      themeSetting = "system";
+    }
+  }
   if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
     themeSetting = "system";
   }
@@ -127,7 +117,7 @@ let initTheme = () => {
   document.addEventListener("DOMContentLoaded", function () {
     const mode_toggle = document.getElementById("light-toggle");
 
-    mode_toggle.addEventListener("click", function () {
+    mode_toggle?.addEventListener("click", function () {
       toggleThemeSetting();
     });
   });

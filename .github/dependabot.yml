@@ -3,21 +3,39 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
+      interval: cron
+      cronjob: "0 9 1,15 * *"
+      timezone: America/New_York
     groups:
-      actions:
+      actions-routine:
+        applies-to: version-updates
+        patterns: ["*"]
+      actions-security:
+        applies-to: security-updates
         patterns: ["*"]
   - package-ecosystem: bundler
     directory: /
     schedule:
-      interval: weekly
+      interval: cron
+      cronjob: "0 9 1,15 * *"
+      timezone: America/New_York
     groups:
-      ruby:
+      ruby-routine:
+        applies-to: version-updates
+        patterns: ["*"]
+      ruby-security:
+        applies-to: security-updates
         patterns: ["*"]
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
+      interval: cron
+      cronjob: "0 9 1,15 * *"
+      timezone: America/New_York
     groups:
-      node:
+      quality-routine:
+        applies-to: version-updates
+        patterns: ["*"]
+      quality-security:
+        applies-to: security-updates
         patterns: ["*"]

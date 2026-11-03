@@ -77,7 +77,7 @@
         loading="lazy"
       {% endif %}
       decoding="async"
-      onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+      onerror="this.onerror=null; this.closest('picture')?.querySelectorAll('source').forEach(source => source.remove());"
     >
   </picture>
 

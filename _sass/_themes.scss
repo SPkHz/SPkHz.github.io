@@ -72,16 +72,6 @@
   .only-dark {
     display: none;
   }
-
-  #back-to-top {
-    color: var(--global-back-to-top-text-color);
-    background: var(--global-back-to-top-bg-color);
-    bottom: variables.$back-to-top-bottom;
-    right: variables.$back-to-top-right;
-    height: variables.$back-to-top-height;
-    width: variables.$back-to-top-width;
-    z-index: variables.$back-to-top-z-index;
-  }
 }
 
 html[data-theme="dark"] {
@@ -150,11 +140,6 @@ html[data-theme-setting="dark"] {
 
   #light-toggle-light {
     display: none;
-  }
-
-  #back-to-top {
-    color: var(--global-back-to-top-text-color);
-    background: var(--global-back-to-top-bg-color);
   }
 }
 

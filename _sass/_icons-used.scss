@@ -1,0 +1,106 @@
+/*! Font Awesome Free 6.7.1 — fontawesome.com/license/free
+ * Icons CC BY 4.0; Fonts SIL OFL 1.1; Code MIT. Copyright 2024 Fonticons, Inc.
+ * Tabler Icons 3.20.0 — tabler.io — MIT license.
+ * Only glyphs used by the published site and code-copy helper are emitted.
+ */
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../webfonts/fa-brands-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "tabler-icons";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/tabler-icons.woff2") format("woff2");
+}
+@font-face {
+  font-family: "tabler-icons-filled";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/tabler-icons-filled.woff2") format("woff2");
+}
+.fa-solid,
+.fa-brands,
+.ti {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.fa-solid {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.fa-brands {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+.ti {
+  font-family: "tabler-icons" !important;
+}
+.ti-moon-filled,
+.ti-sun-filled {
+  font-family: "tabler-icons-filled" !important;
+}
+.fa-sm {
+  font-size: 0.875em;
+}
+.fa-xs {
+  font-size: 0.75em;
+}
+.fa-calendar::before {
+  content: "\f133";
+}
+.fa-clipboard::before {
+  content: "\f328";
+}
+.fa-clipboard-check::before {
+  content: "\f46c";
+}
+.fa-envelope::before {
+  content: "\f0e0";
+}
+.fa-github::before {
+  content: "\f09b";
+}
+.fa-hashtag::before {
+  content: "\23";
+}
+.fa-square-rss::before {
+  content: "\f143";
+}
+.fa-star::before {
+  content: "\f005";
+}
+.fa-tag::before {
+  content: "\f02b";
+}
+.fa-thumbtack::before {
+  content: "\f08d";
+}
+.ti-search::before {
+  content: "\eb1c";
+}
+.ti-sun-moon::before {
+  content: "\f4a3";
+}
+.ti-moon-filled::before {
+  content: "\f684";
+}
+.ti-sun-filled::before {
+  content: "\f6a9";
+}

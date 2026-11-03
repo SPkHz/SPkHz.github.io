@@ -7,29 +7,43 @@ validated `_site` artifact from the Pages workflow.
 
 Use the [rootless Podman devcontainer](.devcontainer/README.md) on Linux amd64.
 The project uses Ruby 3.3.13, Bundler 4.0.15, Node 24.22.1 and npm 11.19.1.
-Inside the container:
+The default container startup installs the frozen Ruby dependencies only. Site
+generation and its standard-library tests do not require Node/npm or node_modules:
 
 ```sh
-npm ci --ignore-scripts --no-audit --no-fund
-npm run format:check
 BUNDLE_FROZEN=true bundle _4.0.15_ check
 python3 -B -m unittest discover -s tests -p 'test_*.py' -v
 JEKYLL_ENV=production bundle _4.0.15_ exec jekyll build --trace
-node --check _site/assets/js/search-data.js
-npm run css:purge
 python3 -B scripts/validate_public_artifacts.py _site
 python3 -B scripts/validate_built_site.py _site
 ```
+
+Install the pinned Node quality tools explicitly when checking formatting and
+JavaScript syntax. Installation scripts stay disabled:
+
+```sh
+npm install --global npm@11.19.1 --ignore-scripts --no-audit --no-fund
+npm ci --ignore-scripts --no-audit --no-fund
+npm run format:check
+npm run js:check -- _site
+```
+
+The core Sass output is compressed by the existing Ruby compiler, with a 65,536
+byte budget and no CSS optimizer. A post-write hook fingerprints every local
+stylesheet reference from its final SHA-256 bytes before publication validation.
 
 Run `bundle exec jekyll serve --host 0.0.0.0 --port 4000` explicitly for a local
 preview. The container forwards port 4000 without starting a server.
 
 ## Deployment and updates
 
-Pull requests run **Build and validate**. Only a successful build on main can
-deploy through the github-pages environment. The workflow uses the official
-Pages actions with separate read-only build and narrowly scoped deployment
-permissions. No custom domain is configured.
+Pages has three jobs: `generate` builds and validates without project Node setup,
+`checks` runs formatting and syntax checks against that same downloaded artifact,
+and `deploy` publishes it only after both succeed on main. The required check
+remains **Build and validate**; it runs even when generation fails and explicitly
+rejects failed, cancelled or skipped generation. Artifact digest mismatches fail,
+and extraction rejects unsafe paths, links and special files. Main deployments
+are not cancelled by newer runs; superseded PR runs are cancelled.
 
 Review dependency changes through pull requests; retain exact direct versions,
 locked transitive dependencies, and disabled npm installation scripts. Regenerate
@@ -62,4 +76,16 @@ new signed PR. The former publishing configuration was already errored, so
 restoring it does not guarantee a working deployment. Preserve historical branch
 refs; publish a historical artifact only after separate validation.
 
-For theme features, consult the [upstream al-folio documentation](https://github.com/alshedivat/al-folio).
+The native HTML/CSS foundation retains technical tables, MathJax, search, image
+zoom, tabs and sliders. See [the browser dependency inventory](docs/browser-dependencies.md)
+for exact distributions, licenses, checksums, consumers and update procedures.
+Routine grouped updates run on the 1st and 15th at 09:00 America/New_York;
+security updates remain active between those windows. `NEXT_PLAN.md` is the
+canonical remaining-work backlog.
+
+The optional browser regressions use an independently provisioned Playwright
+installation and a local preview (they are separate from Node-free generation):
+
+```sh
+PLAYWRIGHT_MODULE=/path/to/playwright/index.mjs node tests/browser/runtime.mjs http://127.0.0.1:4000
+```

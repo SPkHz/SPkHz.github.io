@@ -9,7 +9,9 @@ devcontainer up --workspace-folder . --docker-path podman --frozen-lockfile
 ```
 
 The image and feature lockfile pin the environment. Startup performs frozen
-Bundler installation and npm installation with lifecycle scripts disabled.
+Bundler installation. Generation has no npm installation requirement. Node is
+available for explicit quality checks; install the pinned npm/formatter packages
+with lifecycle scripts disabled as described in the root README.
 Port 4000 is forwarded; start the server explicitly inside the container:
 
 ```sh

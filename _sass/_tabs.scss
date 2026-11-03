@@ -43,8 +43,11 @@
 }
 
 .tab-content > li {
+  display: block;
+}
+.tabs-enhanced .tab-content > li {
   display: none;
 }
-.tab-content > li.active {
+.tabs-enhanced .tab-content > li.active {
   display: block;
 }

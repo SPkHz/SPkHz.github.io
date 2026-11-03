@@ -1,9 +1,17 @@
 # Actions security
 
 The sole tracked workflow is Pages. Required PR check: **Build and validate**.
-Checkout does not persist credentials. Default permissions are empty; build has
-contents/read and pages/read. Deployment requires main and a non-PR event, with
+Checkout does not persist credentials. Default permissions are empty; `generate` has
+contents/read and pages/read, and `checks` has contents/read only. Deployment requires main and a non-PR event, with
 pages/write and id-token/write in the github-pages environment.
+
+The required `checks` job uses `always()` and fails its first gate unless
+`generate` succeeded. Failed, cancelled and skipped generation cannot produce a
+successful required check. Deployment depends on both jobs. The current run's
+named `github-pages` artifact is uploaded once, downloaded through the reviewed
+official action with `digest-mismatch: error`, safely extracted, checked and
+deployed without rebuilding. Hidden security-contact inclusion is retained.
+Only superseded pull-request runs are cancelled; active main deployments finish.
 
 Every external action names an exact reviewed release. The generated
 `.github/workflows/actions.lock` pins those releases and their transitive action

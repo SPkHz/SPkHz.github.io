@@ -35,25 +35,30 @@ signature, a successful Pages deployment and four matching clean main analyses.
 ## Priority 1 — Security and maintenance
 
 **P1-1 — Audit and reduce theme, runtime, plugin and executable browser dependencies.**
-Status: unfinished. Size: L. Sources: S1 dependency/browser contracts; S2 future
-priorities; S4 unused-collection and plugin suggestions.
+Status: approved native-foundation scope implemented; ongoing inventory upkeep remains.
+Size: L. Sources: S1, S2 and the [native foundation plan](docs/superpowers/plans/2026-11-03-native-foundation.md).
 
-Evidence: the root package surface is intentionally small and locked, but retained
-theme integrations, plugins, icon sets, sample data and assets need a usage audit.
-The generated `assets/plotly/demo.html` is still tracked and published (4,231,458
-source bytes); its only tracked references are in excluded example posts. Its
-existing formatter exclusion remains because it is generated upstream material.
-Unused Distill styling and the legacy CV fallback also need usage classification.
+The Bootstrap/MDB/jQuery foundation, Bootstrap-Toc/Table, Masonry/imagesLoaded
+and obsolete initializers are replaced by native layout and small DOM helpers.
+Required MathJax, Ninja Keys search, zoom, tabs and sliders remain. The approved
+Plotly/video samples are removed and protected by publication regressions.
+Unused Distill/CV/typogram imports and full icon-set imports leave the core path;
+only used icon glyphs are emitted there. Browser distributions, licenses, exact
+versions, SRI/checksums, consumers and update procedure are recorded in the single
+[retained browser inventory](docs/browser-dependencies.md).
 
-Next action: map each retained dependency and executable resource to published
-content or a maintenance contract. Start with the unused generated Plotly demo,
-excluded collections/examples and their support files. Propose explicit removal
-targets and native HTML/CSS replacements where practical before deleting them.
-Completion: remove approved unused surfaces, reduce executable third-party
-resources, preserve required technical features and approved routes, keep exact
-locks/SRI, and pass publication, security, browser and managed-CodeQL gates.
-Operator input: approve any public-asset or feature retirement and replacement
-behavior identified by the audit; no credentials are needed for the local inventory.
+npm now locks 7 packages instead of 34 at the same approved formatter pins.
+Removing both Ruby minifiers also removes their unreachable ExecJS/Terser closure.
+Generation and its test suite run without project Node/npm; quality checks are
+isolated from the uploaded Pages artifact's Ruby generation. Routine groups run
+on the first and fifteenth at 09:00 America/New_York; security groups remain
+separate and security services remain active between windows.
+
+Next action: maintain this smaller inventory and review retained dependencies;
+any further asset/feature retirement needs its own usage evidence and approval.
+The protected PR/main release gates carry final deployment evidence. Remaining
+source-only examples and unclassified legacy data are not certified as needed
+or approved for deletion by this delivery.
 
 **P1-2 — Renew the published security contact before expiry.**
 Status: unfinished (future maintenance). Size: S. Source: S1 and
@@ -68,10 +73,13 @@ live contact checks pass. Operator input: confirmation of the next validity peri
 Status: unfinished. Size: L. Sources: S1 build/publication requirements; S2
 performance priority; S4 responsive-image and modern-format suggestions.
 
-Evidence: the validated artifact was about 523 MiB; a cold local build generated
-2,181 responsive images and took 483.918 seconds. A build retaining those outputs
-still took about 195 seconds. Static technical downloads and generated upstream
-material contribute to the artifact; not every theme image needs publication.
+Evidence: the fresh baseline is 539,407,268 bytes, with 2,181 cold responsive-image
+conversions and generation times of 484.841 s cold / 196.308 s warm. The approved
+sample retirement removes 30,223,282 source bytes; PR #49's cleanup artifact is
+509,183,990 bytes. Native dependency/layout changes reduce it further, with final
+measurements recorded in the native-foundation execution record. This bounded
+sample reduction does not solve the broader artifact/image-processing problem.
+Required technical asset URLs and bytes are preserved.
 
 Next action: measure the largest files and all image consumers, separate required
 technical downloads from unused samples, and compare explicit resizing, generation
@@ -91,26 +99,26 @@ and content ordering. Operator input: confirm any proposed behavior change befor
 replacing the current recommendation mechanism.
 
 **P2-3 — Correct generated-asset cache keys.**
-Status: unfinished. Size: M. Sources: S2 publication-simplicity priority and
-rendered stylesheet evidence. The generated main stylesheet currently receives
-the constant empty-content digest in its query string, despite SCSS changes.
-Next action: trace the cache-busting filter's input and Jekyll render/write order,
-then derive version keys from the actual generated bytes without introducing an
-extra runtime dependency. Completion: prove changed CSS gets a changed key,
-unchanged CSS keeps a stable key, and all production/artifact checks pass.
-Operator input: approve any resulting publication-pipeline change.
+Status: implemented. Size: M. Sources: S2 and the native-foundation plan.
+`bust_css_cache(path)` emits a render-time marker; the post-write hook resolves all
+local stylesheet links from final emitted SHA-256 bytes before publication
+validation. Base URLs and third-party SRI are preserved. File-backed regressions
+cover changed/unchanged bytes, baseurl/query/fragment preservation, relative
+stylesheets, idempotent repeated writes and missing/unsafe/unresolved references.
+No replacement CSS optimizer or runtime dependency is introduced. Protected
+release gates and the final artifact comparison remain the delivery evidence.
 
 ## Priority 3 — Broader presentation and content
 
-| Item                                       | Status / size  | Source and evidence                                                                                                                                                                                                                           | Next action and completion criteria                                                                                                                                                                               | Operator input                                                        |
-| ------------------------------------------ | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| P3-1: Larger CSS/layout simplification     | Unfinished / L | S2; S4. The restrained token, typography, focus and motion changes are complete; legacy styles and duplicate theme paths remain.                                                                                                              | Inventory used selectors/layouts, propose a smaller native structure, and preserve responsive heading sizes, prose measure, technical widgets, contrast and keyboard behavior at all accepted widths/zoom levels. | Approve the broader design before implementation.                     |
-| P3-2: Navigation and search improvements   | Unfinished / M | S2; S3/S4 navigation alternatives. Current wording/routes are preserved and immediate menu/focus/search defects are repaired. The About latest-posts heading still uses the legacy `/blog/` destination while Articles lives at `/articles/`. | Start by reconciling stale internal link targets with existing routes, then review hierarchy and result usefulness. Verify keyboard, mobile, theme and reduced-motion behavior without inventing new routes.      | Confirm audience and any broader navigation/search behavior change.   |
-| P3-3: Content-type filters                 | Unfinished / M | S4's open Projects/Coursework/Notes filter proposal; S2. All 55 projects now appear, but no content-type filter is implemented.                                                                                                               | Inventory a truthful taxonomy and design filters that retain an accessible unfiltered list, stable links and all project entries.                                                                                 | Approve categories and behavior.                                      |
-| P3-4: Skills presentation                  | Unfinished / M | S4 dedicated-skills proposal; S2. Existing technical tags/tagline remain.                                                                                                                                                                     | Draft a categorized skills section supported by published work and approved résumé facts; avoid invented ratings or proficiency bars.                                                                             | Approve wording and factual claims.                                   |
-| P3-5: Approved thumbnails and brand assets | Unfinished / M | S4 thumbnail/favicon proposals; S2 approved-thumbnail priority. Responsive WebP/lazy loading exists, but some project data has blank images and the favicon retains the older accent treatment.                                               | Inventory missing thumbnails and review supplied images plus favicon/palette consistency. Preserve aspect ratios, dimensions, alt text and existing social-card policy.                                           | Supply or approve images and final asset choices.                     |
-| P3-6: Technical rendering/content audit    | Unfinished / M | S2's semantic-preservation gate and current project sources. Some pre-existing inline TeX and Markdown pipe tables need review; this cleanup preserves all project article HTML and values.                                                   | Compare affected math/tables with original lab reports, then fix only verified markup and recheck MathJax, tables, sliders and tabs.                                                                              | Resolve ambiguous formulas/values from authoritative source material. |
-| P3-7: Metadata keywords                    | Unfinished / S | S4 SEO suggestions; current `_config.yml` retains generic academic/resume terms and omits some suggested technical keywords.                                                                                                                  | Review accuracy after biography/résumé approval, remove misleading terms and add only supported topics. Keep Open Graph/schema behavior and the board social image.                                               | Approve accurate public claims and terms.                             |
+| Item                                       | Status / size                  | Source and evidence                                                                                                                                                                             | Next action and completion criteria                                                                                                                                     | Operator input                                                        |
+| ------------------------------------------ | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| P3-1: Larger CSS/layout simplification     | Implemented / L                | Native responsive layout, row listings and a small article-utility compatibility layer replace the framework foundation. Palette, typography, thumbnails and technical content are preserved.   | Keep core compressed Sass below 65,536 bytes and maintain browser/widget, keyboard, theme, zoom and motion checks. Broader content changes remain separate.             | No further implementation approval needed for the approved scope.     |
+| P3-2: Navigation and search improvements   | Approved scope implemented / M | About latest-posts now links to `/articles/`; native menu/search coordination, no-JS navigation and JSON-serialized search strings preserve wording, destinations and shortcuts.                | Maintain keyboard/mobile/theme behavior. Broader hierarchy, taxonomy, result ranking and new routes remain separate work.                                               | Approve any broader navigation or search behavior change.             |
+| P3-3: Content-type filters                 | Unfinished / M                 | S4's open Projects/Coursework/Notes filter proposal; S2. All 55 projects now appear, but no content-type filter is implemented.                                                                 | Inventory a truthful taxonomy and design filters that retain an accessible unfiltered list, stable links and all project entries.                                       | Approve categories and behavior.                                      |
+| P3-4: Skills presentation                  | Unfinished / M                 | S4 dedicated-skills proposal; S2. Existing technical tags/tagline remain.                                                                                                                       | Draft a categorized skills section supported by published work and approved résumé facts; avoid invented ratings or proficiency bars.                                   | Approve wording and factual claims.                                   |
+| P3-5: Approved thumbnails and brand assets | Unfinished / M                 | S4 thumbnail/favicon proposals; S2 approved-thumbnail priority. Responsive WebP/lazy loading exists, but some project data has blank images and the favicon retains the older accent treatment. | Inventory missing thumbnails and review supplied images plus favicon/palette consistency. Preserve aspect ratios, dimensions, alt text and existing social-card policy. | Supply or approve images and final asset choices.                     |
+| P3-6: Technical rendering/content audit    | Unfinished / M                 | S2's semantic-preservation gate and current project sources. Some pre-existing inline TeX and Markdown pipe tables need review; this cleanup preserves all project article HTML and values.     | Compare affected math/tables with original lab reports, then fix only verified markup and recheck MathJax, tables, sliders and tabs.                                    | Resolve ambiguous formulas/values from authoritative source material. |
+| P3-7: Metadata keywords                    | Unfinished / S                 | S4 SEO suggestions; current `_config.yml` retains generic academic/resume terms and omits some suggested technical keywords.                                                                    | Review accuracy after biography/résumé approval, remove misleading terms and add only supported topics. Keep Open Graph/schema behavior and the board social image.     | Approve accurate public claims and terms.                             |
 
 ## Blocked on approved content or access
 
@@ -139,7 +147,7 @@ is required to keep them; any later change needs its own scope.
 | Current navigation, header icon names and contact destination | Completed / M / done     | S4         | Existing About/Articles/Projects/Code/Contact wording and home link retained; active underline and accessible icon labels preserved. Mobile navigation remains usable at zoom.                                                                                                                                   |
 | Palette, body typography, prose links and contrast            | Completed / M / done     | S2, S3, S4 | Approved navy/light-blue, hover, muted and filled-control tokens; derived RGB; system body font, 1rem/400, 70ch prose and 1.625 paragraph leading; visible focus and body underlines.                                                                                                                            |
 | Card presentation, spacing and responsive behavior            | Completed / M / done     | S2, S4     | Existing cards, alternating thumbnails, mobile stacking, secondary meta, chips/more tags, featured section and vertical rhythm retained. Lift, zoom and large hover shadows removed from the touched cards; reduced motion respected.                                                                            |
-| Keyboard/technical functionality                              | Completed / M / done     | S1, S2, S4 | Skip link, controls, menus, search, cards, tabs, tables, sliders and math verified. Runtime MathJax CSS survives PurgeCSS; narrow screens scroll long equations internally.                                                                                                                                      |
+| Keyboard/technical functionality                              | Completed / M / done     | S1, S2, S4 | Skip link, controls, menus, search, cards, tabs, tables, sliders and math verified. Runtime MathJax CSS remains in native Sass; narrow screens scroll long equations internally.                                                                                                                                 |
 | Responsive imagery and layout stability                       | Completed / M / done     | S1, S4     | Existing responsive sizes/WebP, lazy thumbnails, reserved image dimensions/aspect ratios and decoding behavior preserved. Further generation/AVIF work is P2-1.                                                                                                                                                  |
 | Open Graph/schema and copyright                               | Completed / S / done     | S1, S4     | Metadata enabled, board social card retained and copyright/name preserved. Live LinkedIn footer destination removed.                                                                                                                                                                                             |
 | Small source/content cleanup                                  | Completed / S / done     | S2, S4     | Reddit sentence removed; placeholders unpublished; missing résumé controls hidden; EE 319 category corrected; all 55 projects present; empty sections suppressed; dropdown typo/publications duplicate fixed; unused PDF data field and genuinely stale ignore entries removed; About tag styles scoped in SCSS. |
@@ -169,7 +177,7 @@ in the source records, but they are not pending implementation.
 
 Use the exact frozen environment and coordinated dependency contracts. Run the
 formatter twice, standard-library tests, production build, generated-search syntax
-check, CSS purge, both publication validators, actionlint, warning-free ShellCheck,
+check, Node-free generation and native CSS-budget checks, both publication validators, actionlint, warning-free ShellCheck,
 whitespace checks, lock idempotence, redacted secret checks and network-free
 dependency scan counts. Report dependency risk separately from host exposure.
 

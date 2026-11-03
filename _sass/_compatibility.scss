@@ -1,0 +1,211 @@
+// Small compatibility layer for utilities in existing engineering documents.
+// These names are content contracts; no framework runtime is required.
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 0;
+  margin-inline: -0.5rem;
+}
+.row > * {
+  min-width: 0;
+  padding-inline: 0.5rem;
+}
+.col,
+.col-sm {
+  flex: 1 1 0;
+}
+[class*="col-sm-"],
+[class*="col-md-"],
+.col-12 {
+  width: 100%;
+}
+@media (min-width: 36rem) {
+  @for $n from 1 through 12 {
+    .col-sm-#{$n} {
+      width: calc(100% * #{$n} / 12);
+    }
+  }
+}
+@media (min-width: 48rem) {
+  @for $n from 1 through 12 {
+    .col-md-#{$n} {
+      width: calc(100% * #{$n} / 12);
+    }
+  }
+}
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.flex-column {
+  flex-direction: column;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-center {
+  justify-content: center;
+}
+@media (min-width: 36rem) {
+  .d-sm-none {
+    display: none;
+  }
+  .d-sm-block {
+    display: block;
+  }
+  .justify-content-sm-center {
+    justify-content: center;
+  }
+}
+@media (min-width: 48rem) {
+  .d-md-none {
+    display: none;
+  }
+  .d-md-block {
+    display: block;
+  }
+  .flex-md-row {
+    flex-direction: row;
+  }
+  .mt-md-0 {
+    margin-top: 0;
+  }
+}
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
+}
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.rounded-circle {
+  border-radius: 50%;
+}
+.font-weight-bold,
+.font-semibold {
+  font-weight: 700;
+}
+.font-weight-lighter {
+  font-weight: 300;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.m-0 {
+  margin: 0;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.mx-auto {
+  margin-inline: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.ml-1 {
+  margin-left: 0.25rem;
+}
+.mr-1 {
+  margin-right: 0.25rem;
+}
+.my-2 {
+  margin-block: 0.5rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-3 {
+  margin-bottom: 1rem;
+}
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+.mt-3 {
+  margin-top: 1rem;
+}
+.mt-5,
+.mt-12 {
+  margin-top: 3rem;
+}
+.p-0 {
+  padding: 0;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.pl-8 {
+  padding-left: 2rem;
+}
+.list-disc {
+  list-style-type: disc;
+}
+.btn {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 4px;
+  color: var(--global-theme-color);
+  background: transparent;
+  text-align: center;
+}
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+@media print {
+  .d-print-inline {
+    display: inline;
+  }
+  .site-header,
+  footer,
+  .copy,
+  #back-to-top {
+    display: none;
+  }
+}

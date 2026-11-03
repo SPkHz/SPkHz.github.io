@@ -39,7 +39,7 @@
 {% endif %}
 
 {% if page.images %}
-  {% if page.images.compare %}
+  {% if page.images.compare and content contains '<img-comparison-slider' %}
     <!-- Image comparison slider -->
     <link
       defer
@@ -50,7 +50,7 @@
     >
   {% endif %}
 
-  {% if page.images.slider %}
+  {% if page.images.slider and content contains '<swiper-container' %}
     <!-- Image slider -->
     <link
       defer

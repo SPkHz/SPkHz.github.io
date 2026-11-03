@@ -59,7 +59,7 @@ not a global cache/performance guarantee:
 | About                                      | 73 → 57                     | 54 → 43                        | 7 → 3                              |
 | Projects                                   | 118 → 69                    | 54 → 43                        | 7 → 3                              |
 | Articles                                   | 75 → 60                     | 54 → 43                        | 7 → 3                              |
-| Active band-pass filter, with tabs/sliders | 89 → 71                     | 58 → 46                        | 10 → 5                             |
+| Active band-pass filter, with tabs/sliders | 89 → 69                     | 58 → 45                        | 10 → 4                             |
 
 ## Preservation and regressions
 
@@ -85,7 +85,7 @@ first reproduced hidden jQuery coupling, blocked-storage failure and global pict
 fallback, then passed after replacement. Sidebar scroll targeting no longer double
 counts header offset. Back-to-top is a native keyboard-operable button.
 
-PASS: 46 standard-library tests with Node/npm unavailable and no root node_modules;
+PASS: 48 standard-library tests with Node/npm unavailable and no root node_modules;
 frozen Bundler checks; network-disabled cold/warm production generation; both
 publication validators; negative private/portrait/backlog/retired-sample fixtures
 and positive security.txt fixture; generated/first-party JavaScript syntax checks.
@@ -156,18 +156,18 @@ escape. Search closure returns focus to a visible opener or the mobile menu togg
 the shortcut again opens and closes the dialog. Actual browser assertions cover
 existing engineering titles, inline announcements, quotes, apostrophes, ampersands,
 Greek and supplementary-plane Unicode, and inert HTML-like text. All ten focused
-browser scenarios and the complete 46-test generation suite pass after the fix.
+browser scenarios and the complete 48-test generation suite pass after the fix.
 No deferred review findings remain. Release gates still apply to the resulting head.
 
 ## Final-source artifact and preserved measurements
 
-The final corrected source passes all 46 generation tests and a full production
+The final corrected source passes all 48 generation tests and a full production
 build with the Node installation physically hidden under an empty read-only mount,
 Node/npm absent from PATH, no node_modules in the generation source, and container
-networking disabled. Generation takes 173.370 s warm (175.010 s wall), with zero
+networking disabled. Generation takes 178.071 s warm (179.734 s wall), with zero
 new image conversions. Both publication validators pass on that exact output.
 
-The final artifact has 3,510 files and 506,945,833 bytes versus 3,526 files and
+The final artifact has 3,510 files and 506,944,887 bytes versus 3,526 files and
 539,407,268 bytes initially. Its core stylesheet is 56,443 uncompressed file bytes,
 with no PurgeCSS step. Total local CSS is 229,127 bytes: retained, unreferenced
 notebook styles are no longer pruned and account for the increase over the baseline
@@ -186,3 +186,17 @@ Cleanup main Pages run [41644782272](https://github.com/SPkHz/SPkHz.github.io/ac
 succeeds. All four main analyses match signed merge `a8bdfecc60f7ad41a3f21e73a56f73a7f366201e`
 with zero results/errors/warnings. Six retained live routes return 200 and both
 retired samples return 404. The native PR's own remote gates remain separate.
+
+A final consumer audit distinguishes real widget elements from old page flags.
+Four pages contain Swiper elements; the high-pass page's slider flag and the
+band-pass page's comparison flag had no matching elements. Both JS and CSS now
+require the flag and rendered element. Two real-Liquid regressions first failed
+in four template/library cases, then passed, preserving pinned/SRI-protected
+resources for declared consumers. Comparison-slider opt-in support remains;
+no active comparison component was removed. Image zoom was exercised on an actual
+consumer through its opened event and Escape closure. The artifact's optional
+asset reduction does not change technical content or download destinations.
+
+The final consumer probe also copies exact code text to the clipboard on the
+silicon-photonics lab page. Comparison support is verified at the real Liquid
+resource boundary; it has no current published component to exercise.

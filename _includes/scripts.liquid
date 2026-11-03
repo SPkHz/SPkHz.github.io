@@ -35,7 +35,7 @@
 
 {% if page.images %}
   <!-- Image Layouts -->
-  {% if page.images.compare %}
+  {% if page.images.compare and content contains '<img-comparison-slider' %}
     <script
       defer
       src="{{ site.third_party_libraries.img-comparison-slider.url.js }}"
@@ -44,7 +44,7 @@
     ></script>
   {% endif %}
 
-  {% if page.images.slider %}
+  {% if page.images.slider and content contains '<swiper-container' %}
     <script
       defer
       src="{{ site.third_party_libraries.swiper.url.js }}"

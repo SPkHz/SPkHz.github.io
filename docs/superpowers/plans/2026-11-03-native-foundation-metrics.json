@@ -12,15 +12,15 @@
     "warm_seconds": 196.308
   },
   "native": {
-    "artifact_bytes": 506945833,
+    "artifact_bytes": 506944887,
     "files": 3510,
     "page_routes": 204,
     "core_css_bytes": 56443,
     "npm_packages": 7,
     "cold_candidate_seconds": 461.512,
     "warm_candidate_seconds": 178.504,
-    "final_warm_seconds": 173.37,
-    "final_warm_wall_seconds": 175.01,
+    "final_warm_seconds": 178.071,
+    "final_warm_wall_seconds": 179.734,
     "node_installation_physically_hidden": true
   },
   "technical_download_sha256": {
@@ -855,5 +855,6 @@
     "review_search_cases": 24,
     "focused_scenarios": 10,
     "failures": 0
-  }
+  },
+  "generation_test_count": 48
 }

@@ -10,16 +10,19 @@
   min-width: 0;
   padding-inline: 0.5rem;
 }
-.col,
-.col-sm {
+.col {
   flex: 1 1 0;
 }
 [class*="col-sm-"],
 [class*="col-md-"],
+.col-sm,
 .col-12 {
   width: 100%;
 }
 @media (min-width: 36rem) {
+  .col-sm {
+    flex: 1 1 0;
+  }
   @for $n from 1 through 12 {
     .col-sm-#{$n} {
       width: calc(100% * #{$n} / 12);

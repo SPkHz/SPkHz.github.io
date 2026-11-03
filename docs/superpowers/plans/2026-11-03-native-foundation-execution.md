@@ -29,7 +29,7 @@ or image URL is retired by the foundation replacement.
 | Ordinary page routes                      |            204 |              204 |
 | HTML documents, including asset documents |            207 |              206 |
 | npm locked packages, excluding root       |             34 |                7 |
-| Core compressed Sass, without optimizer   |  638,957 bytes |     56,443 bytes |
+| Core compressed Sass, without optimizer   |  638,957 bytes |     56,462 bytes |
 | Baseline core CSS after PurgeCSS          |   45,557 bytes |         No purge |
 | Cold Jekyll generation                    |      484.841 s |        461.512 s |
 | Warm Jekyll generation                    |      196.308 s |        178.504 s |
@@ -93,7 +93,7 @@ and positive security.txt fixture; generated/first-party JavaScript syntax check
 PASS: 144 rendering cases at 390/768/1440 pixels, light/dark themes, 100%/200% zoom,
 normal/reduced motion, with no status, overflow, contrast or script-error cases.
 All 24 keyboard/widget combinations pass, with 4.5:1 normal-text and 3:1 applicable
-focus/control thresholds. Ten focused browser scenarios cover menu/focus/search,
+focus/control thresholds. Eleven focused browser scenarios cover menu/focus/search,
 blocked storage, picture fallback, bibliography, sidebar, back-to-top/progress and
 JavaScript-disabled navigation/tab contents, decoded search highlighting, shortcut toggle and search focus return. Screenshots stay outside publication.
 
@@ -155,7 +155,7 @@ extracts decoded text from rendered inline announcements before their single HTM
 escape. Search closure returns focus to a visible opener or the mobile menu toggle;
 the shortcut again opens and closes the dialog. Actual browser assertions cover
 existing engineering titles, inline announcements, quotes, apostrophes, ampersands,
-Greek and supplementary-plane Unicode, and inert HTML-like text. All ten focused
+Greek and supplementary-plane Unicode, and inert HTML-like text. All eleven focused
 browser scenarios and the complete 48-test generation suite pass after the fix.
 No deferred review findings remain. Release gates still apply to the resulting head.
 
@@ -164,11 +164,11 @@ No deferred review findings remain. Release gates still apply to the resulting h
 The final corrected source passes all 48 generation tests and a full production
 build with the Node installation physically hidden under an empty read-only mount,
 Node/npm absent from PATH, no node_modules in the generation source, and container
-networking disabled. Generation takes 178.071 s warm (179.734 s wall), with zero
+networking disabled. Generation takes 173.317 s warm (175.028 s wall), with zero
 new image conversions. Both publication validators pass on that exact output.
 
-The final artifact has 3,510 files and 506,944,887 bytes versus 3,526 files and
-539,407,268 bytes initially. Its core stylesheet is 56,443 uncompressed file bytes,
+The final artifact has 3,510 files and 506,944,952 bytes versus 3,526 files and
+539,407,268 bytes initially. Its core stylesheet is 56,462 uncompressed file bytes,
 with no PurgeCSS step. Total local CSS is 229,127 bytes: retained, unreferenced
 notebook styles are no longer pruned and account for the increase over the baseline
 176,362 local CSS bytes. They are not requested by the representative pages.
@@ -200,3 +200,12 @@ asset reduction does not change technical content or download destinations.
 The final consumer probe also copies exact code text to the clipboard on the
 silicon-photonics lab page. Comparison support is verified at the real Liquid
 resource boundary; it has no current published component to exercise.
+
+An automatic PR review identified a responsive compatibility regression before
+merge: `.col-sm` kept technical figures side by side below 576px. The original
+baseline stacks these figures on phones. A real-browser test first failed with
+124.67px-wide oscilloscope captures on a 390px viewport, then passed after moving
+equal-column flex into the 576px media query. It verifies both affected articles
+at 390/575/576/768/1440 pixels. All eleven browser scenarios and 48 additional
+affected-page rendering cases pass; the physical-Node-hidden production build,
+48-test suite, both validators and all-route/download parity pass again.

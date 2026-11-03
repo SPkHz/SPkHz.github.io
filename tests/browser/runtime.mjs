@@ -17,6 +17,36 @@ async function check(name, fn) {
   }
 }
 try {
+  await check("technical figure columns stack below 576px and share rows above it", async () => {
+    for (const width of [390, 575, 576, 768, 1440]) {
+      const page = await browser.newPage({ viewport: { width, height: 900 } });
+      for (const path of ["/projects/ee319_lab_02_active_band_pass_filter/", "/projects/ee322_lab_03_actively_loaded_common_source_ampflier/"]) {
+        await page.goto(new URL(path, base).href);
+        const rows = page.locator(".row:has(> .col-sm):visible");
+        assert.ok((await rows.count()) > 0, `No figure rows on ${path}`);
+        for (const row of await rows.all()) {
+          const { rowWidth, columns } = await row.evaluate((element) => ({
+            rowWidth: element.getBoundingClientRect().width,
+            columns: [...element.children]
+              .filter((child) => child.matches(".col-sm"))
+              .map((child) => {
+                const { width, top, bottom } = child.getBoundingClientRect();
+                return { width, top, bottom };
+              }),
+          }));
+          for (const [index, column] of columns.entries()) {
+            const expectedWidth = width < 576 ? rowWidth : rowWidth / columns.length;
+            assert.ok(Math.abs(column.width - expectedWidth) < 1, `${path} at ${width}px: figure width ${column.width}, expected ${expectedWidth}`);
+            if (index > 0) {
+              if (width < 576) assert.ok(column.top >= columns[index - 1].bottom, `${path}: figures should stack`);
+              else assert.ok(Math.abs(column.top - columns[0].top) < 1, `${path}: figures should share a row`);
+            }
+          }
+        }
+      }
+      await page.close();
+    }
+  });
   await check("search highlighting preserves readable inert quoted and Unicode text", async () => {
     const page = await browser.newPage();
     await page.goto(base);

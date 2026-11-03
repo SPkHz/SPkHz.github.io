@@ -6,8 +6,6 @@ _site/
 **/*.min.js
 assets/css/main.scss
 assets/js/search/*.js
-# Existing generated upstream demo; audit removal through NEXT_PLAN.md.
-assets/plotly/demo.html
 _posts/2015-10-20-math.md
 _sass/font-awesome/*.scss
 _sass/tabler-icons/*.scss

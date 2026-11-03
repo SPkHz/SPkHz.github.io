@@ -48,6 +48,15 @@ class PublicArtifacts(unittest.TestCase):
         self.assertFalse(self.validator.forbidden(Path('.well-known/security.txt')))
         self.assertEqual(self.validator.validate(self.root), [])
 
+    def test_retired_samples_cannot_be_republished(self):
+        for name in ('assets/plotly/demo.html', 'assets/video/tutorial_al_folio.mp4'):
+            with self.subTest(name=name):
+                path = self.root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(b'retired upstream sample')
+                self.assertTrue(self.validator.validate(self.root))
+                path.unlink()
+
     def test_forbidden_material(self):
         for name in ('docs/plan.md', '_scripts/search.liquid.js', '.git/config',
                      'assets/.env', 'assets/img/prof_pic.jpg', 'node_modules/x.js',

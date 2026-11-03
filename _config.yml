@@ -166,6 +166,8 @@ exclude:
   - tests/
   - scripts/
   - SECURITY.md
+  - assets/css/academicons.min.css
+  - assets/css/scholar-icons.css
   - assets/img/.prof_pic_einstein_old.jpg
   - assets/img/prof_pic.jpg
   - assets/img/prof_pic_color.png
@@ -190,7 +192,6 @@ exclude:
   - _pages/cv.md
   - _pages/dropdown.md
   - _pages/teaching.md
-  - purgecss.config.js
   - TODO_NOTES.md
   - NEXT_PLAN.md
   - TODO.md
@@ -209,13 +210,11 @@ plugins:
   - jekyll-get-json
   - jekyll-imagemagick
   - jekyll-link-attributes
-  - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll-regex-replace
   - jekyll/scholar
   - jekyll-sitemap
   - jekyll-tabs
-  - jekyll-terser
   - jekyll-toc
   - jemoji
 
@@ -228,22 +227,6 @@ defaults:
 
 sass:
   style: compressed
-
-# -----------------------------------------------------------------------------
-# Jekyll Minifier
-# -----------------------------------------------------------------------------
-
-jekyll-minifier:
-  compress_javascript: false # set to false since we are using terser as the js minifier
-  exclude: ["robots.txt", "assets/js/search/*.js"]
-
-# -----------------------------------------------------------------------------
-# Terser
-# -----------------------------------------------------------------------------
-
-terser:
-  compress:
-    drop_console: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives
@@ -395,9 +378,7 @@ lazy_loading_images: true # enables lazy loading of images (recommended)
 
 enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
-enable_masonry: true # enables automatic project cards arrangement
 enable_math: true # enables math typesetting (uses MathJax)
-enable_tooltips: true # enables automatic tooltip links generated for each section titles on pages and posts
 enable_darkmode: true # enables switching between light/dark modes
 enable_navbar_social: true # enables displaying social links in the navbar on the about page
 enable_project_categories: true # enables categorization of projects into multiple categories
@@ -413,20 +394,6 @@ enable_video_embedding: false # enables video embedding for bibtex entries. If f
 # The integrity hash is used to ensure that the library is not tampered with.
 # Integrity hashes not provided by the libraries were generated using https://www.srihash.org/
 third_party_libraries:
-  bootstrap-table:
-    version: "1.22.4"
-    url:
-      js: "https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.js"
-      css: "https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.css"
-    integrity:
-      js: "sha384-BJJUi58aYAf48aCP6OEvaED0GHzE/mkiXZkWNKzsxeSFDxFnlbpQ1hNmrXIRagDw"
-      css: "sha384-1ie48E5ptWCDY9PXLXSMxA+rTXwrP63sKHXh8d9ong3ejEItSDkhid/S5enJvDeB"
-  imagesloaded:
-    version: "5.0.0"
-    url:
-      js: "https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"
-    integrity:
-      js: "sha384-e3sbGkYzJZpi7OdZc2eUoj7saI8K/Qbn+kPTdWyUQloiKIc9HRH4RUWFVxTonzTg"
   img-comparison-slider:
     version: "8.0.6"
     url:
@@ -435,32 +402,12 @@ third_party_libraries:
     integrity:
       js: "sha384-x54aXXXAjvQJLfJCelTOjF19assbJKDdbMVHrVngH6/7ydrJqdf3uYQ6SQ1gBfDG"
       css: "sha384-G1cDNWmi4f8fIGnNsy2iiPgyC3H/+5p7jQesUfbuR8ELeKDmJGQPs8Ce95dWZ9TG"
-  jquery:
-    version: "3.6.0"
-    url:
-      js: "https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
-    integrity:
-      js: "sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   mathjax:
     version: "3.2.2"
     url:
       js: "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
     integrity:
       js: "sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei"
-  masonry:
-    version: "4.2.2"
-    url:
-      js: "https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
-    integrity:
-      js: "sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
-  mdb:
-    version: "4.20.0"
-    url:
-      js: "https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"
-      css: "https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css"
-    integrity:
-      js: "sha384-g9u62cszVM5tW8MJsEUiEaYijQme1BuUdahFGezTrN4wFxV/6MlM7od2j1N/m6mh"
-      css: "sha384-j4sCm7toK1zRBHJMQqiO7gdi/9UOUd5EqQ3MV76aboUCNdpxE8OY4o3cxU/lueMT"
   medium_zoom:
     version: "1.1.0"
     url:

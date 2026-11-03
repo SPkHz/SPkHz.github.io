@@ -1,10 +1,16 @@
-/******************************************************************************
- * Content
- ******************************************************************************/
-
 @use "variables";
 
+// Native document layout. The header stays in normal flow before it sticks.
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-padding-top: var(--header-height, 5rem);
+}
 body {
+  margin: 0;
   font-family:
     system-ui,
     -apple-system,
@@ -13,71 +19,311 @@ body {
     sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  padding-bottom: 70px;
+  line-height: 1.5;
   color: var(--global-text-color);
-  background-color: var(--global-bg-color);
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    scroll-margin-top: 66px;
-  }
+  background: var(--global-bg-color);
+  min-height: 100dvh;
 }
-
-body.fixed-top-nav {
-  // Add some padding for the nav-bar.
-  padding-top: 57px;
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
-
-body.sticky-bottom-footer {
-  // Remove padding below footer.
-  padding-bottom: 0;
+button,
+[role="button"] {
+  cursor: pointer;
 }
-
-.navbar.fixed-top {
-  max-height: 100vh;
+button {
+  color: inherit;
+}
+[hidden] {
+  display: none !important;
+}
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+img {
+  height: auto;
+}
+figure {
+  margin: 0 0 1rem;
+}
+.container {
+  width: 100%;
+  max-width: variables.$max-content-width;
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+#main-content {
+  margin-block: 2rem 4rem;
+  min-width: 0;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+.navbar {
   max-height: 100dvh;
   overflow-y: auto;
 }
-
-footer.fixed-bottom {
-  z-index: 1020;
+.navbar > .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  padding-block: 0.5rem;
 }
-
-.navbar .navbar-brand.title {
+.navbar-brand {
+  flex: 1 1 14rem;
   min-width: 0;
-  white-space: normal;
+  font-size: 1.1rem;
   overflow-wrap: anywhere;
-
-  @media (max-width: 575.98px) {
-    max-width: calc(100% - 3.5rem);
-  }
 }
-
-.container {
-  max-width: variables.$max-content-width;
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
-// Profile
-.profile {
-  img {
+.nav-link {
+  display: block;
+}
+.navbar-toggler {
+  display: none;
+  padding: 0.75rem;
+  background: transparent;
+  border: 1px solid var(--global-text-color-light);
+  border-radius: 4px;
+}
+#navbarNav {
+  margin-left: auto;
+  min-width: 0;
+}
+@media (max-width: 47.999rem) {
+  #navbarNav {
     width: 100%;
   }
+  .nav-enhanced .navbar-toggler {
+    display: block;
+  }
+  .navbar-brand {
+    flex-basis: 0;
+  }
+  .navbar-nav {
+    justify-content: flex-start;
+  }
+}
+footer.fixed-bottom {
+  position: static;
+  padding-block: 0.75rem;
+}
+.profile img {
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  scroll-margin-top: 1rem;
 }
 
-// TODO: redefine content layout.
+// Locally scroll wide technical material while keeping the document in bounds.
+article,
+.post,
+.post-content,
+.sidebar-content {
+  min-width: 0;
+}
+.post article table,
+.table-scroll,
+.table-responsive {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+table {
+  border-collapse: collapse;
+  text-align: left;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+td,
+th {
+  border-bottom: 1px solid var(--global-divider-color);
+  vertical-align: top;
+}
+.table-scroll > table {
+  display: table;
+  min-width: 100%;
+  margin: 0;
+}
+.table-scroll {
+  margin-bottom: 1rem;
+}
+.table-scroll:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 2px;
+}
+.sidebar-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+#toc-sidebar {
+  font-size: 0.875rem;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+#toc-sidebar ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+#toc-sidebar > ul {
+  padding-left: 0;
+}
+#toc-sidebar a {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  border-left: 2px solid transparent;
+}
+#toc-sidebar a[aria-current="location"] {
+  border-left-color: var(--global-theme-color);
+  font-weight: 700;
+}
+@media (min-width: 48rem) {
+  .sidebar-layout {
+    grid-template-columns: minmax(10rem, 1fr) minmax(0, 3fr);
+    align-items: start;
+  }
+  .sidebar-right {
+    grid-template-columns: minmax(0, 3fr) minmax(10rem, 1fr);
+  }
+  .sidebar-right .sidebar-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .sidebar-right #toc-sidebar {
+    grid-column: 2;
+  }
+  #toc-sidebar {
+    position: sticky;
+    top: calc(var(--header-height, 5rem) + 1rem);
+  }
+}
 
-/******************************************************************************
- * Publications
- ******************************************************************************/
-
-// TODO: redefine publications layout.
-
-/*****************************************************************************
-* Projects
-*****************************************************************************/
-
-// TODO: redefine projects layout.
+// Listings share one responsive row structure and retain their own thumbnails.
+.projects .row {
+  display: block;
+  margin: 0;
+}
+.projects .project-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  border: 0;
+  border-bottom: 1px solid var(--global-divider-color);
+  border-radius: 0;
+  padding-block: 1.25rem;
+}
+.project-row > a {
+  color: inherit;
+}
+.project-row .card-title {
+  margin-bottom: 0.5rem;
+}
+.project-row .card-body {
+  padding: 0;
+  min-width: 0;
+}
+.project-row figure {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+}
+.project-row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-row picture {
+  display: block;
+  height: 100%;
+}
+.project-row .project-thumbnail {
+  display: block;
+}
+@media (min-width: 36rem) {
+  .projects .project-row.has-thumbnail {
+    grid-template-columns: 10rem minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+}
+.featured-posts-grid {
+  display: block;
+}
+.featured-posts-grid .featured-card {
+  display: flex;
+  flex-direction: row;
+  margin-block: 1rem;
+}
+.featured-posts-grid .featured-card-thumbnail {
+  flex: 0 0 10rem;
+  width: 10rem;
+  height: auto;
+}
+@media (max-width: 35.999rem) {
+  .featured-posts-grid .featured-card {
+    flex-direction: column;
+  }
+  .featured-posts-grid .featured-card-thumbnail {
+    flex: auto;
+    width: 100%;
+    height: 160px;
+  }
+}
+.bibliography .hidden {
+  max-height: none;
+  overflow: visible;
+}
+.bibliography .links button {
+  margin: 0.25rem;
+}
+.code-display-wrapper:focus-within .copy,
+.code-display-wrapper .copy:focus-visible {
+  opacity: 1;
+}
+progress {
+  top: var(--header-height, 5rem);
+}
+@media (max-height: 32rem) {
+  .site-header {
+    position: static;
+  }
+}
+.publications ol.bibliography li .hidden {
+  max-height: none;
+  overflow: visible;
+}
+#back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--global-hover-text-color);
+  border-radius: 50%;
+  background: var(--global-theme-color);
+  color: var(--global-hover-text-color);
+  font-size: 1.5rem;
+  z-index: 20;
+}
+#back-to-top:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 3px;
+}

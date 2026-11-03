@@ -1,6 +1,7 @@
 require 'open3'
 
 Jekyll::Hooks.register :site, :post_write do |site|
+  Jekyll::CacheBust.finalize_site_css(site)
   validator = File.join(site.source, 'scripts', 'validate_public_artifacts.py')
   output, status = Open3.capture2e('python3', '-B', validator, site.dest)
   unless status.success?

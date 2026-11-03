@@ -7,26 +7,11 @@
   $max-content-width: {{ site.max_width }}
 );
 @use "themes";
-@use "layout";
 @use "base";
-@use "distill";
-@use "cv";
 @use "tabs";
-@use "typograms";
-@use "font-awesome/fontawesome";
-@use "font-awesome/brands";
-@use "font-awesome/solid";
-@use "font-awesome/regular";
-@use "tabler-icons/tabler-icons" with (
-  $ti-font-path: "../fonts"
-);
-@use "tabler-icons/tabler-icons-filled" with (
-  $ti-font-path: "../fonts"
-);
-@use "tabler-icons/tabler-icons-outline" with (
-  $ti-font-path: "../fonts"
-);
-
+@use "compatibility";
+@use "layout";
+@use "icons-used";
 @font-face {
   font-family: "JetBrains Mono";
   font-style: normal;

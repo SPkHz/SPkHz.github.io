@@ -11,11 +11,11 @@ permissions: {}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  build:
-    name: Build and validate
+  generate:
+    name: Generate site
     runs-on: ubuntu-22.04
     timeout-minutes: 30
     permissions:
@@ -28,15 +28,6 @@ jobs:
       - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
-      - uses: actions/setup-node@v7.1.0
-        with:
-          node-version: 24.22.1
-      - name: Install locked Node dependencies
-        run: |
-          npm install --global npm@11.19.1 --ignore-scripts --no-audit --no-fund
-          test "$(npm --version)" = "11.19.1"
-          npm ci --ignore-scripts --no-audit --no-fund
-      - run: npm run format:check
       - uses: ruby/setup-ruby@v1.336.0
         with:
           ruby-version: 3.3.13
@@ -49,26 +40,63 @@ jobs:
       - uses: actions/configure-pages@v6.0.0
         with:
           enablement: false
-      - name: Test security contracts
+      - name: Test security and generation contracts
         run: |
+          bundle _4.0.15_ check
           python3 -B -m unittest discover -s tests -p 'test_*.py' -v
           git ls-files -z '*.sh' | xargs -0 -r shellcheck
       - name: Build and validate publication
         run: |
           bundle _4.0.15_ exec jekyll build --trace
-          node --check _site/assets/js/search-data.js
-          npm run css:purge
           python3 -B scripts/validate_public_artifacts.py _site
           python3 -B scripts/validate_built_site.py _site
       - uses: actions/upload-pages-artifact@v5.0.0
         with:
+          name: github-pages
           path: _site
           include-hidden-files: true
+
+  checks:
+    name: Build and validate
+    needs: generate
+    if: ${{ always() }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Require successful generation
+        env:
+          GENERATION_RESULT: ${{ needs.generate.result }}
+        run: test "$GENERATION_RESULT" = success
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 24.22.1
+      - name: Install locked quality tools
+        run: |
+          npm install --global npm@11.19.1 --ignore-scripts --no-audit --no-fund
+          test "$(npm --version)" = "11.19.1"
+          npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run format:check
+      - uses: actions/download-artifact@v8.0.2
+        with:
+          name: github-pages
+          path: ${{ runner.temp }}/pages-download
+          digest-mismatch: error
+      - name: Validate the exact generated artifact
+        run: |
+          python3 -B scripts/extract_pages_artifact.py "$RUNNER_TEMP/pages-download/artifact.tar" "$RUNNER_TEMP/validated-site"
+          python3 -B scripts/validate_public_artifacts.py "$RUNNER_TEMP/validated-site"
+          python3 -B scripts/validate_built_site.py "$RUNNER_TEMP/validated-site"
+          npm run js:check -- "$RUNNER_TEMP/validated-site"
 
   deploy:
     name: Deploy
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-    needs: build
+    needs: [generate, checks]
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
@@ -82,3 +110,5 @@ jobs:
       - name: Deploy validated artifact
         id: deployment
         uses: actions/deploy-pages@v5.0.1
+        with:
+          artifact_name: github-pages

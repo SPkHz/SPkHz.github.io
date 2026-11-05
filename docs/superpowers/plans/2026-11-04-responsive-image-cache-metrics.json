@@ -1,0 +1,220 @@
+{
+  "logical_session": "spkhzghio-upd-N01b--MLCA",
+  "execution_session": "spkhzghio-upd-N01b--MLCA",
+  "observed_utc": "2026-11-04T23:26:55.200579+00:00",
+  "base_commit": "6e9e5dabc27828e85f9d5401f705c76a31e28988",
+  "status": "FINAL_LOCAL_VERIFIED_RELEASE_GATES_PENDING",
+  "cache": {
+    "records": 2181,
+    "bytes_including_metadata": 71368645,
+    "image_payload_bytes": 71039314
+  },
+  "tools": {
+    "ruby": "3.3.13",
+    "bundler": "4.0.15",
+    "jekyll": "4.4.1",
+    "imagemagick": "6.9.11-60 Q16 x86_64",
+    "quality_node": "24.22.1",
+    "quality_npm": "11.19.1",
+    "prettier": "3.9.10",
+    "liquid_plugin": "1.11.3",
+    "container_contract": "unchanged .devcontainer/devcontainer.json and devcontainer-lock.json"
+  },
+  "limits": [
+    "Single-run observations, not statistical benchmarks; control/cold overlapped exploratory verification work.",
+    "Memory is RUSAGE_CHILDREN ru_maxrss in KiB: maximum individual child-process RSS, not aggregate container peak.",
+    "LSI remained enabled; no isolated indexing cost or ranking change.",
+    "No artifact reduction, CI cache transport, commits or release.",
+    "Historical retained-output observation remains distinct from the fresh production control."
+  ],
+  "pre_review_runs": {
+    "control": {
+      "wall_seconds": 460.1262801039993,
+      "user_seconds": 421.871231,
+      "system_seconds": 62.40528,
+      "maxrss_kib": 196340,
+      "exit": 0,
+      "jekyll_seconds": 458.449,
+      "conversions": 2181
+    },
+    "empty_cache_empty_destination": {
+      "wall_seconds": 488.11971737899876,
+      "user_seconds": 435.748541,
+      "system_seconds": 64.580974,
+      "maxrss_kib": 196260,
+      "exit": 0,
+      "jekyll_seconds": 486.45,
+      "conversions": 2181,
+      "hits": 0,
+      "misses": 2181,
+      "restored_bytes": 0
+    },
+    "populated_cache_empty_destination": {
+      "wall_seconds": 187.61590545099898,
+      "user_seconds": 181.545993,
+      "system_seconds": 3.212258,
+      "maxrss_kib": 125504,
+      "exit": 0,
+      "jekyll_seconds": 185.809,
+      "conversions": 0,
+      "hits": 2181,
+      "misses": 0,
+      "restored_bytes": 71039314
+    },
+    "retained_destination_warm": {
+      "wall_seconds": 185.91927397900145,
+      "user_seconds": 179.548228,
+      "system_seconds": 3.485729,
+      "maxrss_kib": 129212,
+      "exit": 0,
+      "jekyll_seconds": 184.179,
+      "conversions": 0,
+      "hits": 2181,
+      "misses": 0,
+      "restored_bytes": 71039314
+    }
+  },
+  "pre_review_comparisons": [
+    {
+      "artifact": "accepted-cold",
+      "files": 3510,
+      "bytes": 506944952,
+      "image_files_identical": 2968,
+      "variants": 2181,
+      "downloads_matching": 6,
+      "ordinary_routes_preserved": 204,
+      "related_pages_identical": 41,
+      "only_volatile_changes": ["feed.xml", "projects/ee319_lab_02_active_band_pass_filter/index.html", "sitemap.xml"]
+    },
+    {
+      "artifact": "accepted-hit",
+      "files": 3510,
+      "bytes": 506944952,
+      "image_files_identical": 2968,
+      "variants": 2181,
+      "downloads_matching": 6,
+      "ordinary_routes_preserved": 204,
+      "related_pages_identical": 41,
+      "only_volatile_changes": ["feed.xml", "projects/ee319_lab_02_active_band_pass_filter/index.html", "sitemap.xml"]
+    },
+    {
+      "artifact": "accepted-warm",
+      "files": 3510,
+      "bytes": 506944952,
+      "image_files_identical": 2968,
+      "variants": 2181,
+      "downloads_matching": 6,
+      "ordinary_routes_preserved": 204,
+      "related_pages_identical": 41,
+      "only_volatile_changes": ["feed.xml", "projects/ee319_lab_02_active_band_pass_filter/index.html", "sitemap.xml"]
+    }
+  ],
+  "pre_review_implementation_sha256": {
+    "_plugins/image_publication.rb": "523e9d45585418f34959c517f53e23d46c440bc1af03aedc68100248ec35d66e",
+    "_plugins/responsive_image_cache.rb": "5cbbff6362c9e5bb018ff4b4713e517883c29449a6c3d352dbfe64ab92c9e3c5",
+    "tests/test_responsive_image_cache.py": "11c5742ef468ba1fda696309525efcaa06652f0df097efc63797b21eb8983f53"
+  },
+  "pre_review_verification": {
+    "generation_tests": 51,
+    "publication_validators": "PASS directly on control, cold and final warm output; intermediate fresh-hit output passed file/hash and normalized-content comparison against control.",
+    "syntax": "PASS",
+    "formatting": "PASS twice on source snapshot",
+    "shellcheck": "PASS on tracked scripts and task runner",
+    "core_css_bytes": 56462,
+    "total_local_css_bytes": 229146,
+    "dependency_scan": {
+      "manifest_count": 3,
+      "dependency_count": 115,
+      "complete": true,
+      "warnings": 0,
+      "exit": 0
+    },
+    "browser": "Not run: unchanged templates, exact image parity and normalized HTML equivalence; no preview started",
+    "remote_checks": "Not run; no GitHub access required"
+  },
+  "independent_review": {
+    "findings_resolved": [
+      "dynamic codec/config identity",
+      "failed conversion status",
+      "optional identity fallback",
+      "output parent validation before mkdir",
+      "regular source before hashing"
+    ],
+    "follow_up": "No remaining substantive blocker in bounded read-only source follow-up; final-source production checks now complete."
+  },
+  "final_source_observed_utc": "2026-11-05T00:22:42.864671+00:00",
+  "final_source_runs": {
+    "delivery-cold": {
+      "wall_seconds": 489.4035309980027,
+      "user_seconds": 434.863507,
+      "system_seconds": 65.929831,
+      "maxrss_kib": 196632,
+      "exit": 0,
+      "jekyll_seconds": 487.657,
+      "conversions": 2181,
+      "hits": 0,
+      "misses": 2181,
+      "restored_bytes": 0
+    },
+    "delivery-hit": {
+      "wall_seconds": 199.26098193100188,
+      "user_seconds": 190.996996,
+      "system_seconds": 4.032465,
+      "maxrss_kib": 126072,
+      "exit": 0,
+      "jekyll_seconds": 197.384,
+      "conversions": 0,
+      "hits": 2181,
+      "misses": 0,
+      "restored_bytes": 71039314
+    }
+  },
+  "final_source_comparisons": [
+    {
+      "artifact": "delivery-cold",
+      "files": 3510,
+      "bytes": 506944952,
+      "image_files_identical": 2968,
+      "variants": 2181,
+      "downloads_matching": 6,
+      "ordinary_routes_preserved": 204,
+      "related_pages_identical": 41,
+      "only_volatile_changes": ["feed.xml", "projects/ee319_lab_02_active_band_pass_filter/index.html", "sitemap.xml"]
+    },
+    {
+      "artifact": "delivery-hit",
+      "files": 3510,
+      "bytes": 506944952,
+      "image_files_identical": 2968,
+      "variants": 2181,
+      "downloads_matching": 6,
+      "ordinary_routes_preserved": 204,
+      "related_pages_identical": 41,
+      "only_volatile_changes": ["feed.xml", "projects/ee319_lab_02_active_band_pass_filter/index.html", "sitemap.xml"]
+    }
+  ],
+  "final_source_sha256": {
+    "_plugins/image_publication.rb": "1911f21b1815a5f35e5436ed96b7b2ed79c4eee17106a27ffd186ac343876eb7",
+    "_plugins/responsive_image_cache.rb": "3e697e5bdf5b99b9d28ade74a22330b990e485ab056d7bee03d967a5ee457ee1",
+    "_plugins/responsive_image_identity.rb": "d824c6cdea64dba00b89e4474ec58d0544645642557fb197e6becfe9841e0caf",
+    "tests/test_responsive_image_cache.py": "11c5742ef468ba1fda696309525efcaa06652f0df097efc63797b21eb8983f53",
+    "tests/test_responsive_image_review.py": "95c52ddbd7f44fb7225365a474ae78efb7c1148b42de62f25dc7b333f73d7ca3"
+  },
+  "final_source_verification": {
+    "generation_tests": 56,
+    "publication_validators": "PASS directly on final-source cold and retained fresh-destination hit outputs",
+    "ruby_and_javascript_syntax": "PASS",
+    "actionlint": "PASS",
+    "actions_lock_verification": "PASS",
+    "normal_hooks_selected_files": "PASS",
+    "secret_scan_source_snapshot": "PASS zero findings",
+    "browser": "Not rerun: backend-only changes, exact images and normalized HTML parity; no preview started",
+    "source_only_dependencies": {
+      "manifests": 3,
+      "entries": 115,
+      "complete": true,
+      "warnings": 0
+    },
+    "live_baseline_assets": 15
+  }
+}

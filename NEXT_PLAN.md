@@ -81,6 +81,10 @@ measurements recorded in the native-foundation execution record. This bounded
 sample reduction does not solve the broader artifact/image-processing problem.
 Required technical asset URLs and bytes are preserved.
 
+A verified local responsive-image cache reuses variants across output directories; see
+[its measurement record](docs/superpowers/plans/2026-11-04-responsive-image-cache.md).
+Artifact reduction, CI persistence and asset retirement remain unfinished.
+
 Next action: measure the largest files and all image consumers, separate required
 technical downloads from unused samples, and compare explicit resizing, generation
 and caching options. Review AVIF support only if measured benefits justify it.

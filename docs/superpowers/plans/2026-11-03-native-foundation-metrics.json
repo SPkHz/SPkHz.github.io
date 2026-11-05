@@ -853,8 +853,28 @@
     "render_cases": 144,
     "interaction_cases": 24,
     "review_search_cases": 24,
-    "focused_scenarios": 10,
+    "focused_scenarios": 11,
     "failures": 0
   },
-  "generation_test_count": 48
+  "generation_test_count": 48,
+  "evidence_clarification": {
+    "date": "2026-11-04",
+    "focused_scenarios": "Final historical transcript reports 11 passing; source enumerates 11. Not rerun by the read-only assessment.",
+    "retained_output": {
+      "artifact_bytes": 506949505,
+      "files": 3510,
+      "delta_from_historical_release_bytes": 4553,
+      "cause": "UNKNOWN",
+      "provenance": "Retained native-foundation worktree output; not production acceptance control."
+    },
+    "historical_release": "native.artifact_bytes remains the original reported release measurement.",
+    "follow_up_control": {
+      "date": "2026-11-04",
+      "lsi": true,
+      "artifact_bytes": 506944952,
+      "files": 3510,
+      "retained_size_delta_localization": "4553 bytes across related-link items in 41 post HTML files; these post files otherwise match. Three other changed files have equal sizes.",
+      "historical_release_identity": "UNKNOWN; original artifact unavailable"
+    }
+  }
 }

@@ -89,3 +89,21 @@ installation and a local preview (they are separate from Node-free generation):
 ```sh
 PLAYWRIGHT_MODULE=/path/to/playwright/index.mjs node tests/browser/runtime.mjs http://127.0.0.1:4000
 ```
+
+## Local responsive-image cache
+
+Responsive variants are cached under `.jekyll-cache/responsive-images-v1`, independently
+of the output directory. Entries bind source bytes/path, conversion settings,
+publication exclusions, generator/adapter code, Ruby lock and ImageMagick identity.
+Verified hits retain the existing converter's names, bytes and static-file registration.
+Missing, corrupt or incompatible entries regenerate; excluded files never reach lookup.
+The cache is disposable and must not be published or treated as a release artifact.
+A full Jekyll clean can remove it. `SPKGHIO_IMAGE_CACHE=off` bypasses caching and uses upstream conversion with the safety/error checks retained;
+use a new empty destination when validating that fallback. No CI cache transport is
+configured. The cache is local trusted build data, not a signature or a substitute
+for publication validation. Production generation remains Node-free and offline.
+
+Coder modules, codec libraries and conversion configuration participate in identity.
+If identity tooling is unavailable or a format is unsupported by the identity helper,
+generation bypasses the optional cache automatically. Failed conversion commands
+fail generation before output can enter the cache.

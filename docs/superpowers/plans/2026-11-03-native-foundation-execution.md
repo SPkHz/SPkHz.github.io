@@ -169,7 +169,7 @@ new image conversions. Both publication validators pass on that exact output.
 
 The final artifact has 3,510 files and 506,944,952 bytes versus 3,526 files and
 539,407,268 bytes initially. Its core stylesheet is 56,462 uncompressed file bytes,
-with no PurgeCSS step. Total local CSS is 229,127 bytes: retained, unreferenced
+with no PurgeCSS step. Total local CSS is 229,146 bytes: retained, unreferenced
 notebook styles are no longer pruned and account for the increase over the baseline
 176,362 local CSS bytes. They are not requested by the representative pages.
 All local JavaScript is 209,230 bytes versus 281,366 initially; optional widget CSS
@@ -209,3 +209,26 @@ equal-column flex into the 576px media query. It verifies both affected articles
 at 390/575/576/768/1440 pixels. All eleven browser scenarios and 48 additional
 affected-page rendering cases pass; the physical-Node-hidden production build,
 48-test suite, both validators and all-route/download parity pass again.
+
+## Evidence clarification — 2026-11-04
+
+The total local CSS correction above is +19 bytes after the responsive-column fix;
+229,127 described the earlier output. The final historical closeout reports 11
+focused scenarios, matching current test source; this clarification is not a new
+browser execution. Earlier release-gate prose describes the cleanup/native work
+in progress. The historical transcript subsequently reports PR #50 merged at
+6e9e5dabc27828e85f9d5401f705c76a31e28988 and main Pages run 41673392698 succeeded.
+These are attributed historical results, not current remote verification.
+
+The historical release measurement remains 506,944,952 bytes / 3,510 files.
+The separately observed retained native-foundation worktree output on 2026-11-04
+is 506,949,505 bytes / 3,510 files (+4,553 bytes). The exact file-level cause is
+UNKNOWN. Its preview provenance is not a production acceptance baseline.
+
+Follow-up authorized production control: a fresh build with LSI enabled reproduces
+3,510 files / 506,944,952 bytes. Comparing it to the retained preview localizes the
+entire +4,553-byte size difference to the related-link items in 41 post HTML files;
+those post files match after removing only the related-link items. Three other
+same-size files differ in content. This resolves the local comparison, while the
+earlier UNKNOWN records the read-only assessment's evidence state. Matching totals
+do not retroactively prove identity with the unavailable historical release artifact.

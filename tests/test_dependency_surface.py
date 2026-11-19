@@ -8,6 +8,23 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class DependencySurface(unittest.TestCase):
+    def test_node_toolchain_pin_is_consistent(self):
+        package = json.loads((ROOT / 'package.json').read_text())
+        lock = json.loads((ROOT / 'package-lock.json').read_text())
+        config = json.loads((ROOT / '.devcontainer/devcontainer.json').read_text())
+        workflow = (ROOT / '.github/workflows/pages.yml').read_text()
+        readme = (ROOT / 'README.md').read_text()
+        pins = {
+            'manifest': package['engines']['node'],
+            'lock': lock['packages']['']['engines']['node'],
+            'devcontainer': config['features']['ghcr.io/devcontainers/features/node:2']['version'],
+            'workflow': re.search(r'node-version: ([0-9.]+)', workflow)[1],
+            'readme': re.search(r'Node ([0-9.]+)', readme)[1],
+        }
+        for location, version in pins.items():
+            with self.subTest(location=location):
+                self.assertEqual(version, '24.22.3')
+
     def test_vendored_automation_removed(self):
         for name in ('.github/actions/setup-python', '.github/python-wheels',
                      '.github/ci-tools', 'tests/tooling', 'requirements.txt',

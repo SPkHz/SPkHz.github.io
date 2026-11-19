@@ -6,7 +6,7 @@ validated `_site` artifact from the Pages workflow.
 ## Development
 
 Use the [rootless Podman devcontainer](.devcontainer/README.md) on Linux amd64.
-The project uses Ruby 3.3.13, Bundler 4.0.15, Node 24.22.1 and npm 11.19.1.
+The project uses Ruby 3.3.13, Bundler 4.0.15, Node 24.22.3 and npm 11.19.1.
 The default container startup installs the frozen Ruby dependencies only. Site
 generation and its standard-library tests do not require Node/npm or node_modules:
 

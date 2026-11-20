@@ -74,7 +74,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@v7.1.0
         with:
-          node-version: 24.22.1
+          node-version: 24.22.3
       - name: Install locked quality tools
         run: |
           npm install --global npm@11.19.1 --ignore-scripts --no-audit --no-fund

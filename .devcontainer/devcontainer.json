@@ -3,7 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/jekyll@sha256:ad8cbea0eac2e962d416fd51acaf6065730bd4871ee7ae3396176920fb5a9d2c",
   "features": {
     "ghcr.io/devcontainers/features/node:2": {
-      "version": "24.22.1"
+      "version": "24.22.3"
     },
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
       "packages": "imagemagick"

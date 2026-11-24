@@ -2,9 +2,9 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Steven M. Placzek, Electrical Engineer
+title: Steven Placzek, Electrical Engineer
 first_name: Steven
-middle_name: M.
+middle_name:
 last_name: Placzek
 contact_note: "Feel free to reach out to me via email."
 description: "Electrical engineering portfolio showcasing design projects, coursework, and research in RF wireless power transfer systems, analog, mixed-signal design, SDR signal processing, and measurement-driven project work."
